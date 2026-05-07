@@ -1,0 +1,12 @@
+# MdExplorer-managed metadata (per-project state, do not version)
+.md/
+.mdMetadata/
+.mdapplicationtoopen
+.mdchangeignore
+.mdFoldersIgnore
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
