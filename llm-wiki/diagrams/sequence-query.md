@@ -33,58 +33,56 @@ skinparam sequence {
   GroupFontColor #1a202c
 }
 
-skinparam note {
-  BackgroundColor #fef3c7
-  BorderColor #d69e2e
-  FontColor #1a202c
-}
+skinparam noteBackgroundColor #fef3c7
+skinparam noteBorderColor #d69e2e
+skinparam noteFontColor #1a202c
 
 actor "👤 Curatore" as H
 participant "🛰️ MdExplorer\n(UI + search)" as MDE
 participant "🤖 Agente AI" as LLM
-participant "📚 Wiki\nfiles" as W
+participant "📚 Wiki files" as W
 participant "📜 log.md" as L
 
-H -> MDE : "Quali sono le differenze\ntra RAG e LLM Wiki?"
+H -> MDE : Quali sono le differenze\ntra RAG e LLM Wiki?
 MDE -> LLM : query + accesso file system
 
 == Discovery ==
-LLM -> W : leggi **index.md**
+LLM -> W : leggi index.md
 W --> LLM : catalogo pagine
 note right of LLM
-  Identifica **2-5 pagine candidate**
+  Identifica 2-5 pagine candidate
   basate sulle keyword e sull'index.
 end note
 
-LLM -> W : leggi **concepts/rag-vs-wiki.md**
+LLM -> W : leggi concepts/rag-vs-wiki.md
 W --> LLM : contenuto pagina
-LLM -> W : leggi **concepts/llm-wiki.md**
+LLM -> W : leggi concepts/llm-wiki.md
 W --> LLM : contenuto pagina
-LLM -> W : leggi **concepts/knowledge-compounding.md**
+LLM -> W : leggi concepts/knowledge-compounding.md
 W --> LLM : contenuto pagina
 
 == Sintesi ==
-LLM -> LLM : sintetizza\nrisposta con\ncitazioni inline
-LLM --> MDE : risposta + citazioni\n[concepts/rag-vs-wiki.md]\n[concepts/llm-wiki.md]
+LLM -> LLM : sintetizza risposta\ncon citazioni inline
+LLM --> MDE : risposta + citazioni
 MDE --> H : mostra risposta
 
 == Compounding (opzionale) ==
-LLM -> H : "La risposta era non banale.\nVuoi che la salvi come\n**pagina concept**?"
+LLM -> H : la risposta era non banale,\nsalvarla come pagina concept?
 
 alt risposta utile e riusabile
-  H -> LLM : "Sì, salvala"
-  LLM -> W : crea **concepts/<nuovo>.md**
-  LLM -> W : aggiorna **index.md**
-  LLM -> L : append `QUERY → SAVED concepts/<id>`
+  H -> LLM : sì, salvala
+  LLM -> W : crea concepts/nuovo.md
+  LLM -> W : aggiorna index.md
+  LLM -> L : append QUERY -> SAVED concepts/id
   W --> H : pagina creata, visibile nell'albero
 else risposta one-shot
-  H -> LLM : "No, basta così"
-  LLM -> L : append `QUERY (no save)`
+  H -> LLM : no, basta così
+  LLM -> L : append QUERY (no save)
 end
 
 == Gap detection ==
 opt risposta incompleta
-  LLM -> L : append `GAP: <descrizione>\n— area dove serve nuova source`
+  LLM -> L : append GAP descrizione\narea dove serve nuova source
   note right of L
     Le GAP guidano la
     cura futura delle
