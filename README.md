@@ -17,6 +17,7 @@ Mark ti porta qui dopo il "Crea progetto demo" per farti vedere un repository ma
 | [02-markdown-basics](02-markdown-basics.md) | Sintassi markdown + esempi runnable |
 | [docs/architecture](docs/architecture.md) | Schema architetturale con PlantUML |
 | [docs/features](docs/features.md) | Tour delle feature MDE-specifiche |
+| [llm-wiki/](llm-wiki/README.md) | 🛰️ **LLM Wiki** — il pattern di Karpathy applicato a un progetto MDE |
 
 > **Suggerimento di Mark**: Clicca su un link qui sopra — vedrai che MdExplorer naviga al file di destinazione mantenendo l'albero a sinistra. È così che si studia un progetto markdown reale.
 
@@ -27,6 +28,7 @@ Mark ti porta qui dopo il "Crea progetto demo" per farti vedere un repository ma
 - **PlantUML embedded** in markdown
 - **Runnable code blocks** (premi ▶ per eseguirli)
 - **YAML front-matter** (vedi l'header di questo file)
+- **LLM Wiki di Karpathy** — un esempio funzionante del pattern in [`llm-wiki/`](llm-wiki/README.md)
 
 ---
 
