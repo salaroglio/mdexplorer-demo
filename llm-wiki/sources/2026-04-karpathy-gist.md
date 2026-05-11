@@ -24,7 +24,7 @@ Andrej Karpathy pubblica ad Aprile 2026 un gist GitHub in cui descrive il patter
 - Workflow query: LLM cerca nelle pagine via index → sintetizza con citazioni → la risposta diventa potenzialmente nuova pagina
 - Lint periodico: trova contraddizioni, claim stantii, pagine orfane, cross-reference mancanti, gap di dati
 - Strumento opzionale `qmd` per BM25/vector search locale quando il wiki cresce
-- Frase-icona: *"Obsidian è l'IDE; l'LLM è il programmatore; il wiki è il codebase"*
+- Frase-icona originale di Karpathy (citata l'editor che usava lui per i suoi esperimenti): *"\[Editor markdown\] è l'IDE; l'LLM è il programmatore; il wiki è il codebase"*. Adattata a MdExplorer: *"MdExplorer è l'IDE; l'LLM è il programmatore; il wiki è il codebase"*
 - Il wiki personale di Karpathy ha raggiunto **100 articoli e 400.000 parole**
 
 ## Citabile come

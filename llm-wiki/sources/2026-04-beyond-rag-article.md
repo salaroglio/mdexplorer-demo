@@ -21,7 +21,7 @@ Articolo divulgativo su Level Up Coding (Aprile 2026) che spiega il pattern LLM 
 - Il valore principale del pattern è il **compounding**: ogni interazione lascia traccia
 - L'articolo cita NEXUS come esempio di multi-agent memory system su VPS con 6 agenti AI
 - Riporta la metrica del wiki di Karpathy: **100 articoli, 400.000 parole**, costruiti incrementalmente
-- Sottolinea che il pattern richiede un **substrato adatto** (editor markdown + Git + agenti AI integrati): Obsidian con Claude Code è una combinazione, MdExplorer è un'alternativa che integra tutto in un'unica app
+- Sottolinea che il pattern richiede un **substrato adatto** (editor markdown + Git + agenti AI integrati): setup multi-app sono possibili ma frammentati; MdExplorer è la soluzione che integra tutto in un'unica app cross-platform
 - Limiti del pattern: richiede curating umano, non scala a corpus enormi, è migliore per domini focalizzati
 
 ## Pagine derivate

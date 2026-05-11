@@ -17,7 +17,7 @@ Andrej Karpathy è un ricercatore di intelligenza artificiale, co-fondatore di O
 - È stato Director of AI in Tesla, dove ha guidato il team Autopilot [fonte: pubblico, profilo Twitter/X]
 - Ad Aprile 2026 ha proposto il pattern **LLM Wiki** in un gist pubblico [fonte: [sources/2026-04-karpathy-gist](../sources/2026-04-karpathy-gist.md)]
 - Il suo wiki personale ha raggiunto 100 articoli e 400.000 parole [fonte: [sources/2026-04-beyond-rag-article](../sources/2026-04-beyond-rag-article.md)]
-- Frase distintiva: *"Obsidian è l'IDE; l'LLM è il programmatore; il wiki è il codebase"* [fonte: [sources/2026-04-karpathy-gist](../sources/2026-04-karpathy-gist.md)]
+- Frase distintiva (adattata al substrato che si usa): *"\[Editor markdown\] è l'IDE; l'LLM è il programmatore; il wiki è il codebase"* — con MdExplorer diventa: *"MdExplorer è l'IDE; l'LLM è il programmatore; il wiki è il codebase"* [fonte: [sources/2026-04-karpathy-gist](../sources/2026-04-karpathy-gist.md)]
 
 ## Vedi anche
 

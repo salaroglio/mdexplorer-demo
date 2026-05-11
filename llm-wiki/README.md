@@ -6,10 +6,10 @@ description: Demo del pattern LLM Wiki di Andrej Karpathy applicato a un progett
 
 # 🛰️ LLM Wiki con MdExplorer
 
-> **Obsidian è l'IDE; l'LLM è il programmatore; il wiki è il codebase.**
-> — Andrej Karpathy
+> **MdExplorer è l'IDE; l'LLM è il programmatore; il wiki è il codebase.**
+> — adattamento dell'idea di Karpathy (LLM Wiki, Aprile 2026)
 
-Questa cartella è un **esempio funzionante** del pattern **LLM Wiki** proposto da [Andrej Karpathy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) ad Aprile 2026, applicato a un progetto MdExplorer.
+Questa cartella è un **esempio funzionante** del pattern **LLM Wiki** proposto da [Andrej Karpathy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) ad Aprile 2026, **applicato nativamente a MdExplorer** — dove tutti gli ingredienti (markdown project, Git, CLAUDE.md, LLM locale, PlantUML, search semantico) sono integrati in un'unica app.
 
 L'idea, in una frase: invece di fare retrieval (RAG) su documenti grezzi ad ogni domanda — riscoprendo le stesse cose mille volte — si lascia che un agente AI **mantenga un wiki strutturato in markdown** che cresce e si raffina nel tempo. Ogni risposta utile diventa una nuova pagina del wiki. La conoscenza **compone** invece di evaporare.
 
@@ -69,7 +69,7 @@ schema -[#764ba2]-> raw : guida la cura
 
 ## 🪄 Perché MdExplorer è il sostrato perfetto
 
-Karpathy nel suo gist usa Obsidian + Claude Code. Ma MdExplorer ha tutto ciò che serve **già pronto**, senza setup esterno:
+Il pattern LLM Wiki può essere implementato con setup multi-app (editor markdown generico + Git CLI + agenti AI esterni configurati a mano). MdExplorer **integra tutto out-of-the-box** in un'unica app cross-platform, senza configurazione:
 
 | Bisogno LLM Wiki | Feature MDE che lo soddisfa |
 |---|---|

@@ -21,7 +21,7 @@ last_updated: 2026-05-10
 - Il wiki contiene tipicamente: `index.md` (catalogo), `log.md` (cronologia), pagine entità, pagine concetto, pagine sintesi [fonte: [sources/2026-04-karpathy-gist](../sources/2026-04-karpathy-gist.md)]
 - L'LLM si occupa del **bookkeeping**: cross-reference, propagazione di aggiornamenti, segnalazione di contraddizioni
 - Il pattern si differenzia da RAG perché il wiki è un **artefatto persistente compoundente**, non un risultato calcolato al volo [fonte: [concepts/rag-vs-wiki](rag-vs-wiki.md)]
-- Implementazioni esistenti: Karpathy con Obsidian + Claude Code; NEXUS (sistema multi-agent su VPS); MdExplorer come substrato dedicato [fonte: [sources/2026-04-beyond-rag-article](../sources/2026-04-beyond-rag-article.md)]
+- Implementazioni esistenti: setup multi-app con editor markdown generico + Git CLI + agenti AI esterni; NEXUS (sistema multi-agent su VPS); **MdExplorer come substrato dedicato e integrato** [fonte: [sources/2026-04-beyond-rag-article](../sources/2026-04-beyond-rag-article.md)]
 
 ## Componenti tipici di un LLM Wiki
 
