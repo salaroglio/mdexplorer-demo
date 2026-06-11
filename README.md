@@ -6,6 +6,8 @@ description: Progetto demo curato per il tour di Mark — mostra le feature di M
 
 # 🚀 Benvenuto in MdExplorer Demo
 
+> **TL;DR** — Questo è il progetto demo di MdExplorer: un repository markdown navigabile che mostra cross-reference, PlantUML, code block eseguibili e il pattern LLM Wiki di Karpathy. Apri un file dalla tabella qui sotto e inizia a esplorare.
+
 Questo progetto è la **vetrina** delle funzionalità di MdExplorer.
 Mark ti porta qui dopo il "Crea progetto demo" per farti vedere un repository markdown reale, navigabile e ricco di rimandi.
 
