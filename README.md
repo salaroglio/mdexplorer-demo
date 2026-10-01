@@ -1,37 +1,91 @@
 ---
-title: Benvenuto in MdExplorer Demo
+title: MdExplorer, il progetto demo
 author: Mark
-description: Progetto demo curato per il tour di Mark — mostra le feature di MdExplorer in un contesto reale e navigabile.
+description: Progetto demo di MdExplorer. Una presentazione, otto prove da fare con le proprie mani e un caso di studio su cui far lavorare l'agente AI.
 ---
 
-# 🚀 Benvenuto in MdExplorer Demo
+# MdExplorer, il progetto demo
 
-> **TL;DR** — Questo è il progetto demo di MdExplorer: un repository markdown navigabile che mostra cross-reference, PlantUML, code block eseguibili e il pattern LLM Wiki di Karpathy. Apri un file dalla tabella qui sotto e inizia a esplorare.
+> **TL;DR** — Questo progetto mostra cosa fa MdExplorer usando MdExplorer. C'è una presentazione da
+> guardare, un percorso di otto prove da fare, e un caso di studio su cui far lavorare MarkAgent, l'agente AI.
+> Tutto ciò che vedi è un file markdown dentro un repository git.
 
-Questo progetto è la **vetrina** delle funzionalità di MdExplorer.
-Mark ti porta qui dopo il "Crea progetto demo" per farti vedere un repository markdown reale, navigabile e ricco di rimandi.
+MdExplorer è il posto dove persone e agenti AI lavorano sugli stessi documenti. Le persone leggono,
+correggono e presentano. Gli agenti leggono, scrivono e verificano. Il formato è uno solo, il markdown, e la
+cronologia è una sola, git.
 
-## 📂 Da dove partire
+## Da dove partire
 
-| File | Cosa contiene |
-|---|---|
-| [01-getting-started](01-getting-started.md) | Primi passi: come muoversi nell'albero |
-| [02-markdown-basics](02-markdown-basics.md) | Sintassi markdown + esempi runnable |
-| [docs/architecture](docs/architecture.md) | Schema architetturale con PlantUML |
-| [docs/features](docs/features.md) | Tour delle feature MDE-specifiche |
-| [llm-wiki/](llm-wiki/README.md) | 🛰️ **LLM Wiki** — il pattern di Karpathy applicato a un progetto MDE |
+| Se hai | Apri | Cosa trovi |
+|---|---|---|
+| dieci minuti | [La presentazione](presentazione/mdexplorer.md) | l'idea, in venti slide |
+| mezz'ora | [Il percorso: prova tu](tour/01-documenti-vivi.md) | otto prove da fare |
+| un'ora | [Il caso di studio](caso-studio/README.md) | un progetto su cui far lavorare l'AI |
 
-> **Suggerimento di Mark**: Clicca su un link qui sopra — vedrai che MdExplorer naviga al file di destinazione mantenendo l'albero a sinistra. È così che si studia un progetto markdown reale.
+## Il percorso: prova tu
 
-## 🎯 Cosa imparerai
+| # | Pagina | Cosa provi |
+|---|---|---|
+| 1 | [Documenti vivi](tour/01-documenti-vivi.md) | file inclusi, comandi che si eseguono, testo che si corregge sul posto |
+| 2 | [Diagrammi che rispondono](tour/02-diagrammi.md) | un clic accende le relazioni, con un colore per tipo |
+| 3 | [MarkAgent](tour/03-markagent.md) | l'agente AI che legge e scrive i documenti del progetto |
+| 4 | [Presentazioni](tour/04-presentazioni.md) | slide scritte in markdown, corrette dalla slide stessa |
+| 5 | [Word, PDF e sito](tour/05-word-pdf-sito.md) | i formati di consegna, rigenerati quando serve |
+| 6 | [Git senza terminale](tour/06-git.md) | cosa è cambiato, chi l'ha cambiato, come si salva |
+| 7 | [Regole, skill e MCP](tour/07-regole-skill-mcp.md) | come si insegna all'agente il modo di lavorare di casa |
+| 8 | [Test scritti in italiano](tour/08-test-e2e.md) | l'agente controlla un sito e lascia le prove |
 
-- **Cross-reference** tra file (i link cliccabili qui sopra)
-- **Alberi a sottocartelle** (`docs/`)
-- **PlantUML embedded** in markdown
-- **Runnable code blocks** (premi ▶ per eseguirli)
-- **YAML front-matter** (vedi l'header di questo file)
-- **LLM Wiki di Karpathy** — un esempio funzionante del pattern in [`llm-wiki/`](llm-wiki/README.md)
+## Il caso di studio
+
+[Alpina Servizi](caso-studio/README.md) è un'azienda inventata che prova un assistente AI per il suo help
+desk. Nella cartella ci sono i requisiti, l'architettura, il piano, un verbale e una presentazione.
+Nei documenti sono nascoste **tre incongruenze**: chiedi a MarkAgent di trovarle.
+
+## Un esempio in più: il wiki che si mantiene da solo
+
+La cartella [llm-wiki](llm-wiki/README.md) mostra un altro modo di usare un progetto MdExplorer: un wiki che
+un agente AI tiene aggiornato, secondo lo schema proposto da Andrej Karpathy.
+
+## Come è fatto questo progetto
+
+```plantuml
+@startmindmap
+!theme plain
+<style>
+mindmapDiagram {
+  node {
+    BackgroundColor #F1F3F4
+    LineColor #5F6368
+    RoundCorner 8
+    Padding 6
+  }
+  :depth(0) {
+    BackgroundColor #E8F0FE
+    LineColor #1A73E8
+    LineThickness 2
+    FontStyle bold
+  }
+  boxless {
+    FontColor #5F6368
+  }
+}
+</style>
+* Progetto demo
+** presentazione
+***_ la presentazione di MdExplorer
+***_ dietro le quinte
+** tour
+***_ otto prove da fare
+left side
+** caso-studio
+***_ requisiti, architettura, piano
+***_ verbale e slide del comitato
+** llm-wiki
+***_ un wiki mantenuto dall'AI
+@endmindmap
+```
 
 ---
 
-*Questo repository è mantenuto come parte del progetto [MdExplorer](https://github.com/salaroglio/MdExplorer). Mark — l'astronauta — ti accompagna durante il tour.*
+*Questo repository fa parte di [MdExplorer](https://github.com/salaroglio/MdExplorer), software libero con
+licenza MIT. In MdExplorer si apre con la guida di Mark, voce «Crea progetto demo».*

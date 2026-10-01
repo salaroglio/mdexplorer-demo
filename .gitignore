@@ -10,3 +10,14 @@
 Thumbs.db
 *.swp
 *~
+
+# Test e2e: cartelle di compilazione e credenziali (mai in git)
+tour/test-e2e/bin/
+tour/test-e2e/obj/
+credenziali-*.txt
+
+# File che MdExplorer scrive a ogni installazione: skill, agenti, configurazione MCP (non vanno in git)
+.github/**/mde-*
+.claude/**/mde-*
+.opencode/**/mde-*
+.vscode/mcp.json
