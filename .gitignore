@@ -21,3 +21,5 @@ credenziali-*.txt
 .claude/**/mde-*
 .opencode/**/mde-*
 .vscode/mcp.json
+# MDE — posti di lavoro degli agenti: aree di lavoro, non contenuto
+.worktrees/
