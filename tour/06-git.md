@@ -25,7 +25,7 @@ le righe tolte e quelle aggiunte.
 ## Da provare
 
 1. Apri [Documenti vivi](01-documenti-vivi.md) e correggi l'errore di battitura con il tasto destro.
-2. Guarda il contatore «da committare»: è salito di uno.
+2. Guarda il contatore «da committare»: ora conta anche la tua correzione.
 3. Apri la scheda «Differenze» e leggi la riga cambiata.
 4. Apri il pannello «Da committare» e premi «Committa».
 5. Nella finestra «Messaggio di Commit» premi «Genera con AI», leggi la proposta e conferma.
