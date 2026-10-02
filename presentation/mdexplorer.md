@@ -30,8 +30,8 @@ Everything shown in the hour is inside this demo project: no outside material.
 ## Why AI stalls in a company
 
 - Knowledge lives in Word, in wikis and in people's heads: **AI cannot read it** <!-- .element: class="fragment fade-up" -->
-- The most capable tools live in the terminal: **only programmers use them** <!-- .element: class="fragment fade-up" -->
-- Everyone uses AI their own way: **no shared rules, no verification** <!-- .element: class="fragment fade-up" -->
+- The most capable tools: **only programmers use them** <!-- .element: class="fragment fade-up" -->
+- Everyone uses AI their own way: **no shared rules** <!-- .element: class="fragment fade-up" -->
 
 Note:
 Ask whether at least one of the three points sounds familiar. They are the three obstacles the three parts
@@ -80,20 +80,42 @@ MdExplorer makes both comfortable for people who do not program and governable f
 
 <!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
 
-## Three things to remember
+<div class="r-hstack" style="gap:28px; justify-content:center; align-items:center; margin-bottom:18px">
+<h2 style="margin:0">Three ideas, one method</h2>
+<img src="assets/razzo.svg" alt="The animated MdExplorer rocket" width="130" style="margin:0">
+</div>
 
-<div class="r-hstack" style="gap:50px; align-items:center; justify-content:center">
-<div style="max-width:860px">
+<div class="r-hstack" style="gap:28px; align-items:stretch; justify-content:center">
 
-1. **Living documents**: knowledge is readable by people and by AI <!-- .element: class="fragment fade-up" -->
-2. **MarkAgent**: AI works inside the project, with shared rules <!-- .element: class="fragment fade-up" -->
-3. **Control**: every change is visible, and what matters is verified <!-- .element: class="fragment fade-up" -->
+<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #1a73e8; border-radius:14px; padding:26px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:1.5em; color:#1a73e8; font-weight:700">01</div>
+
+### Living documents
+
+People and AI read and update the same knowledge.
+</div>
+
+<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #7b61ff; border-radius:14px; padding:26px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:1.5em; color:#7b61ff; font-weight:700">02</div>
+
+### MarkAgent
+
+AI works inside the project and follows the house rules.
+</div>
+
+<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #188038; border-radius:14px; padding:26px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:1.5em; color:#188038; font-weight:700">03</div>
+
+### Control
+
+Every change is visible and what matters is verified.
+</div>
 
 </div>
-<div>
-<img src="assets/razzo.svg" alt="The MdExplorer rocket" width="230">
-</div>
-</div>
+
+Note:
+These are the three parts of the presentation. Announcing them here helps the audience find their way:
+first the documents, then the agent, finally the control.
 
 ---
 
@@ -362,28 +384,6 @@ A plan written in markdown, an agent that carries it out, a verification, a comm
 - Documents stay on the computer and in the company's git
 - Windows and Linux
 - No proprietary format: they are markdown files
-
----
-
-<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
-
-## The next step
-
-<div class="r-hstack" style="gap:50px; align-items:center; justify-content:center">
-<div style="max-width:860px">
-
-1. One team, one real project, four weeks
-2. The house rules written as skills
-3. Measure what changes: time, quality, use
-
-</div>
-<div>
-<img src="assets/razzo.svg" alt="The MdExplorer rocket" width="230">
-</div>
-</div>
-
-Note:
-Adapt this slide to what you want to ask your audience.
 
 ---
 
