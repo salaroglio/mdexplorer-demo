@@ -88,4 +88,5 @@ left side
 ---
 
 *Questo repository fa parte di [MdExplorer](https://github.com/salaroglio/MdExplorer), software libero con
-licenza MIT. In MdExplorer si apre con la guida di Mark, voce «Crea progetto demo».*
+licenza MIT. In MdExplorer si apre con la guida di Mark, voce «Crea progetto demo». La versione inglese di questo
+demo è nel ramo `en` dello stesso repository: Mark scarica quella della lingua impostata in MdExplorer.*
