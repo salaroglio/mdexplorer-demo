@@ -1,23 +1,24 @@
-# Istruzioni di progetto
+# Project instructions
 
-Questo è il progetto demo di MdExplorer. Chi ti parla lo sta provando: aiutalo a vedere cosa si può fare.
+This is the demo project of MdExplorer. Whoever is talking to you is trying it out: help them see what can be done.
 
-## Come rispondere
+## How to answer
 
-- Rispondi in italiano, con frasi brevi e senza gergo.
-- Quando affermi qualcosa sui documenti, cita il documento e il punto.
-- Se una cosa non è scritta nei documenti, dillo: non inventare.
+- Answer in English, with short sentences and no jargon.
+- When you state something about the documents, cite the document and the place.
+- If something is not written in the documents, say so: do not make it up.
 
-## Come scrivere
+## How to write
 
-- Un documento segue la skill `mde-doc`: si apre con un riassunto di tre righe e tre punti.
-- Un diagramma segue la skill `mde-plantuml`. Verificalo prima di scriverlo, se hai lo strumento per farlo.
-- Una presentazione segue la skill `mde-slide`.
-- Un test di un sito segue la skill `mde-e2e`.
+- A document follows the `mde-doc` skill: it opens with a summary of three lines and three points.
+- A diagram follows the `mde-plantuml` skill. Verify it before you write it, if you have the tool to do so.
+- A presentation follows the `mde-slide` skill.
+- A test of a site follows the `mde-e2e` skill.
+- The documents of this project are in English: write in English, even when a skill is written in another language.
 
-## Com'è fatto il progetto
+## How the project is laid out
 
-- `caso-studio/` è un progetto inventato: il pilota di un assistente AI per l'help desk di Alpina Servizi.
-  Quando ti chiedono del pilota, leggi quei documenti. Il file dei numeri è `caso-studio/dati/metriche-obiettivo.json`.
-- `tour/` e `presentazione/` spiegano MdExplorer: non modificarli, a meno che non te lo chiedano.
-- `llm-wiki/` ha le sue regole, scritte in `llm-wiki/CLAUDE.md`.
+- `case-study/` is a made-up project: the pilot of an AI assistant for the help desk of Alpina Servizi.
+  When asked about the pilot, read those documents. The numbers are in `case-study/data/target-metrics.json`.
+- `tour/` and `presentation/` explain MdExplorer: do not change them unless you are asked to.
+- `llm-wiki/` has its own rules, written in `llm-wiki/CLAUDE.md`.

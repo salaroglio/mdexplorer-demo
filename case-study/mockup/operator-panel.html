@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Operator panel</title>
+<style>
+  :root { --border:#d0d5db; --text:#1f2937; --muted:#5f6368; --blue:#1a73e8; --green:#188038; --red:#d93025; --amber:#f29900; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:20px; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color:var(--text); background:#f6f7f9; }
+  h1 { font-size:18px; margin:0 0 14px; }
+  .grid { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+  .card { background:#fff; border:1px solid var(--border); border-radius:10px; padding:16px; }
+  .card h2 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:0 0 10px; }
+  .meta { font-size:13px; color:var(--muted); margin-bottom:8px; }
+  p { line-height:1.5; margin:0 0 10px; }
+  .confidence { display:inline-block; font-size:12px; font-weight:600; color:var(--green); border:1px solid var(--green); border-radius:999px; padding:2px 10px; }
+  ul { margin:6px 0 0; padding-left:18px; font-size:14px; }
+  li { margin-bottom:4px; }
+  .actions { display:flex; gap:10px; margin-top:16px; }
+  button { font:inherit; font-weight:600; padding:8px 16px; border-radius:8px; border:1px solid var(--border); background:#fff; cursor:pointer; }
+  button.accept { background:var(--green); border-color:var(--green); color:#fff; }
+  button.discard { color:var(--red); border-color:var(--red); }
+  #outcome { margin-top:14px; font-size:14px; min-height:20px; color:var(--muted); }
+  textarea { width:100%; min-height:150px; font:inherit; line-height:1.5; padding:10px; border:1px solid var(--border); border-radius:8px; resize:vertical; }
+  textarea[readonly] { background:#fafbfc; }
+  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<h1>Ticket 48213 · Cold radiators on the third floor</h1>
+<div class="grid">
+  <div class="card">
+    <h2>The ticket</h2>
+    <div class="meta">Le Betulle apartment building · opened today at 08:42</div>
+    <p>Good morning, since last night the radiators on the third floor have been cold, while the floors below work.
+    The boiler is on. Can you send someone?</p>
+    <h2 style="margin-top:18px">Sources found</h2>
+    <ul>
+      <li>Article 112 · Air in the radiators of the upper floors</li>
+      <li>Ticket 45120 · Same building, November 2025</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>The assistant's draft <span class="confidence">confidence 0.86</span></h2>
+    <textarea id="draft" readonly>Good morning,
+when the lower floors heat up and the top one does not, there is usually air in the system. You can try to bleed the radiators with the small valve at the top right, holding a glass underneath.
+
+If they are still cold after bleeding, we will send a technician tomorrow morning between 8 and 10: can you confirm the time?</textarea>
+    <div class="actions">
+      <button class="accept" onclick="rate('accepted')">Accept and send</button>
+      <button onclick="startEditing()">Edit</button>
+      <button class="discard" onclick="rate('discarded')">Discard</button>
+    </div>
+    <div id="outcome"></div>
+  </div>
+</div>
+<script>
+  var edited = false;
+  function startEditing() {
+    var t = document.getElementById('draft');
+    t.removeAttribute('readonly'); t.focus(); edited = true;
+    document.getElementById('outcome').textContent = 'Draft being edited: when you are done press "Accept and send".';
+  }
+  function rate(outcome) {
+    if (outcome === 'accepted' && edited) outcome = 'edited';
+    var time = new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+    document.getElementById('outcome').textContent = 'Rating recorded at ' + time + ': draft ' + outcome + '.';
+  }
+</script>
+</body>
+</html>

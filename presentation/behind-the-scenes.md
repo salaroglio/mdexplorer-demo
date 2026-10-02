@@ -1,5 +1,5 @@
 ---
-title: Dietro le quinte
+title: Behind the scenes
 document_type: slides
 reveal:
   theme: white
@@ -13,38 +13,38 @@ reveal:
 
 <!-- .slide: data-background-color="#0f1b2d" data-background-image="assets/sfondo-spazio.svg" -->
 
-<img src="assets/razzo.svg" alt="Il razzo di MdExplorer" width="200">
+<img src="assets/razzo.svg" alt="The MdExplorer rocket" width="200">
 
-# Dietro le quinte
+# Behind the scenes
 
-Come è costruito MdExplorer
+How MdExplorer is built
 
 Note:
-Questa presentazione si apre da un link della principale. La traccia in alto a sinistra riporta alla
-slide di partenza.
+This presentation opens from a link of the main one. The trail at the top left takes you back to the
+slide you left from.
 
 ---
 
 <!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
 
-## I numeri
+## The numbers
 
-| Dato | Valore |
+| Fact | Value |
 |---|---|
-| Righe di codice C# | circa 150.000 |
-| Righe di codice TypeScript | circa 43.000 |
-| Progetti nella soluzione | 22 |
-| Test automatici | più di 1.300 |
-| Commit da marzo 2021 | 1.311 |
-| Piani di sprint | 54 |
+| Lines of C# code | about 150,000 |
+| Lines of TypeScript code | about 43,000 |
+| Projects in the solution | 22 |
+| Automated tests | more than 1,300 |
+| Commits since March 2021 | 1,311 |
+| Sprint plans | 54 |
 
-Misurati sul repository il 1° ottobre 2026.
+Measured on the repository on 1 October 2026.
 
 ---
 
 <!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
 
-## Sei anni, un'accelerazione
+## Six years, one acceleration
 
 <div style="width:860px; margin:24px auto 0; font-size:26px; text-align:left">
 <div style="display:flex; align-items:center; margin:8px 0"><span style="width:80px">2021</span><span style="display:inline-block; height:30px; width:135px; background:#9aa0a6; border-radius:0 4px 4px 0"></span><span style="margin-left:12px">149</span></div>
@@ -55,16 +55,16 @@ Misurati sul repository il 1° ottobre 2026.
 <div style="display:flex; align-items:center; margin:8px 0"><span style="width:80px">2026</span><span style="display:inline-block; height:30px; width:600px; background:#1a73e8; border-radius:0 4px 4px 0"></span><span style="margin-left:12px"><b>662</b></span></div>
 </div>
 
-Commit per anno. Nel 2026, fino al 1° ottobre, 638 su 662 sono firmati insieme a un agente AI.
+Commits per year. In 2026, up to 1 October, 638 out of 662 are co-signed with an AI agent.
 
 Note:
-Il salto non viene da più ore di lavoro. Viene dal metodo della slide successiva.
+The jump does not come from more hours of work. It comes from the method on the next slide.
 
 ---
 
 <!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
 
-## Il metodo
+## The method
 
 ```plantuml
 @startuml
@@ -76,34 +76,34 @@ skinparam RectangleBackgroundColor #F1F3F4
 skinparam RectangleBorderColor #5F6368
 skinparam ArrowColor #5F6368
 skinparam rectangle {
-  BackgroundColor<<Centro>> #E8F0FE
-  BorderColor<<Centro>> #1A73E8
+  BackgroundColor<<Centre>> #E8F0FE
+  BorderColor<<Centre>> #1A73E8
 }
 hide stereotype
 
-rectangle "Piano di sprint\nin markdown" as P <<Centro>>
-rectangle "L'agente esegue\nuna fase" as A
-rectangle "Prova nell'app\nvera" as V
+rectangle "Sprint plan\nin markdown" as P <<Centre>>
+rectangle "The agent carries out\na phase" as A
+rectangle "Trial in the\nreal app" as V
 rectangle "Commit" as C
 
 P --> A
 A --> V
 V --> C
-C --> P : il piano si aggiorna
+C --> P : the plan is updated
 @enduml
 ```
 
-Il piano è un documento vivo: decisioni, fasi, cosa è stato provato e cosa resta.
+The plan is a living document: decisions, phases, what has been tried and what remains.
 
 Note:
-Ogni funzione vista oggi ha il suo piano di sprint, scritto e letto dentro MdExplorer.
-La persona decide e controlla, l'agente esegue e documenta.
+Every function seen today has its sprint plan, written and read inside MdExplorer.
+The person decides and checks, the agent carries out and documents.
 
 ---
 
 <!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
 
-## Com'è fatto
+## How it is made
 
 ```plantuml
 @startuml
@@ -117,18 +117,18 @@ skinparam DatabaseBackgroundColor #F1F3F4
 skinparam DatabaseBorderColor #5F6368
 skinparam ArrowColor #5F6368
 skinparam rectangle {
-  BackgroundColor<<Centro>> #E8F0FE
-  BorderColor<<Centro>> #1A73E8
+  BackgroundColor<<Centre>> #E8F0FE
+  BorderColor<<Centre>> #1A73E8
 }
 hide stereotype
 
-rectangle "Applicazione desktop\nWindows e Linux" as E
-rectangle "Interfaccia\nAngular" as UI
-rectangle "Servizio\n.NET 8" as S <<Centro>>
-database "Indice e impostazioni\nSQLite, sul computer" as DB
+rectangle "Desktop application\nWindows and Linux" as E
+rectangle "Angular\ninterface" as UI
+rectangle ".NET 8\nservice" as S <<Centre>>
+database "Index and settings\nSQLite, on the computer" as DB
 rectangle "Git" as G
-rectangle "Server MCP" as MCP
-rectangle "Motore AI\nscelto dal progetto" as AI
+rectangle "MCP server" as MCP
+rectangle "AI engine\nchosen by the project" as AI
 
 E --> UI
 UI --> S
@@ -144,11 +144,11 @@ MCP --> S
 
 <!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
 
-## Tre cose imparate
+## Three lessons learned
 
-1. **Il piano scritto vale più della richiesta.** Un agente con un piano chiaro lavora per ore senza perdersi <!-- .element: class="fragment" -->
-2. **Prima si verifica, poi si cambia.** L'agente prova nell'applicazione vera, non suppone <!-- .element: class="fragment" -->
-3. **La memoria è fatta di documenti.** Ciò che l'agente impara resta scritto, e lo legge anche una persona <!-- .element: class="fragment" -->
+1. **The written plan is worth more than the request.** An agent with a clear plan works for hours without getting lost <!-- .element: class="fragment" -->
+2. **Verify first, change after.** The agent tries things in the real application, it does not assume <!-- .element: class="fragment" -->
+3. **Memory is made of documents.** What the agent learns stays written, and a person can read it too <!-- .element: class="fragment" -->
 
 Note:
-Sono le stesse tre cose che servono a un'azienda che adotta l'AI: conoscenza scritta, verifica, regole comuni.
+They are the same three things a company adopting AI needs: written knowledge, verification, shared rules.

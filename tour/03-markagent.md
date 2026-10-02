@@ -6,86 +6,86 @@ title: MarkAgent
 
 ## TL;DR
 
-MarkAgent è l'agente AI di MdExplorer: una conversazione che legge e scrive i documenti del progetto
-aperto. Usa il motore che il progetto ha scelto e le regole che il progetto si porta dietro. Questa pagina
-dice dove si trova, come si sceglie il motore e cosa chiedergli sul caso di studio.
+MarkAgent is the AI agent of MdExplorer: a conversation that reads and writes the documents of the open
+project. It uses the engine the project has chosen and the rules the project carries with it. This page
+says where it is, how the engine is chosen and what to ask it about the case study.
 
-- Sta nella scheda «Mark Agent», in fondo al pannello di sinistra.
-- Il motore si sceglie **una volta, per progetto**: GitHub Copilot, Claude Code oppure opencode.
-- Ciò che scrive è una modifica nei file: la vedi nella scheda «Differenze» prima di accettarla.
+- It lives in the "Mark Agent" tab, at the bottom of the left panel.
+- The engine is chosen **once, per project**: GitHub Copilot, Claude Code or opencode.
+- What it writes is a change in the files: you see it in the "Changes" tab before you accept it.
 
-## Dove si trova
+## Where it is
 
-In fondo al pannello di sinistra ci sono quattro schede: «Documenti progetto», «Differenze», «Mark Search»
-e «Mark Agent». La scheda «Mark Agent» compare quando il progetto è un repository git, come questo.
+At the bottom of the left panel there are four tabs: "Project docs", "Changes", "Mark Search"
+and "Mark Agent". The "Mark Agent" tab appears when the project is a git repository, like this one.
 
-Nella scheda trovi la casella «Chiedi a Mark Agent...», la tendina «Modello» e il pulsante
-«Nuova sessione chat».
+In the tab you find the "Ask Mark Agent..." box, the "Model" drop-down and the
+"New chat session" button.
 
-## Scegliere il motore
+## Choosing the engine
 
-Nella pagina dei progetti, la rotella sulla scheda del progetto apre «Impostazioni Progetto».
-Lì, nella scheda «AI & RAG», c'è il riquadro «Ambiente agentico».
+On the projects page, the gear on the project card opens "Project Settings".
+There, in the "AI & RAG" tab, is the "Agent environment" box.
 
-| Scelta | Dove MdExplorer scrive regole e skill |
+| Choice | Where MdExplorer writes rules and skills |
 |---|---|
-| GitHub Copilot | cartella `.github/` |
-| Claude Code | cartella `.claude/` e file `CLAUDE.md` |
-| opencode | cartella `.opencode/` e file `AGENTS.md` |
+| GitHub Copilot | the `.github/` folder |
+| Claude Code | the `.claude/` folder and the `CLAUDE.md` file |
+| opencode | the `.opencode/` folder and the `AGENTS.md` file |
 
-La scelta è scritta in un file del progetto, quindi vale per tutto il gruppo di lavoro. Tutte le funzioni
-AI di MdExplorer usano quel motore: la conversazione, la spiegazione dei diagrammi, il messaggio di commit,
-i test.
+The choice is written in a file of the project, so it holds for the whole team. Every AI function
+of MdExplorer uses that engine: the conversation, the explanation of diagrams, the commit message,
+the tests.
 
-## Cosa chiedergli sul caso di studio
+## What to ask it about the case study
 
-Il [caso di studio](../caso-studio/README.md) è un piccolo progetto scritto apposta. Copia una richiesta
-nella casella di MarkAgent.
+The [case study](../case-study/README.md) is a small project written for this purpose. Copy a request
+into MarkAgent's box.
 
-**Capire in fretta**
+**Understand quickly**
 
-> Leggi i documenti della cartella caso-studio e dimmi in cinque righe di cosa parla il progetto e a che
-> punto è.
+> Read the documents in the case-study folder and tell me in five lines what the project is about and
+> where it stands.
 
-**Trovare ciò che non torna**
+**Find what does not add up**
 
-> Confronta requisiti, architettura, piano e verbale del caso di studio. Quali incongruenze trovi?
-> Per ognuna cita il documento e il punto.
+> Compare requirements, architecture, plan and minutes of the case study. Which inconsistencies do you find?
+> For each one, cite the document and the place.
 
-Nei documenti ci sono tre incongruenze messe apposta. Le trova tutte?
+There are three inconsistencies placed in the documents on purpose. Does it find them all?
 
-**Mettere in ordine**
+**Put things in order**
 
-> Aggiorna requisiti, piano e file dei dati del caso di studio con le decisioni D2 e D3 del verbale.
+> Update requirements, plan and data file of the case study with decisions D2 and D3 of the minutes.
 
-Poi apri la scheda «Differenze»: ogni riga cambiata è lì, da leggere prima di fare commit.
+Then open the "Changes" tab: every changed line is there, to read before you commit.
 
-**Preparare una riunione**
+**Prepare a meeting**
 
-> Aggiungi alla presentazione caso-studio/slide-comitato.md una slide con i tre rischi principali del piano.
+> Add to the presentation case-study/committee-slides.md a slide with the three main risks of the plan.
 
-Apri la [presentazione del comitato](../caso-studio/slide-comitato.md): la slide nuova è già lì.
+Open the [committee presentation](../case-study/committee-slides.md): the new slide is already there.
 
-## Le altre porte verso lo stesso agente
+## The other doors to the same agent
 
-| Dove | Cosa fa |
+| Where | What it does |
 |---|---|
-| scheda «Mark Search» | cerca nei documenti del progetto e risponde citando le fonti |
-| tasto destro su un diagramma, «💬 Ask to MarkAgent» | spiega l'elemento |
-| tasto destro su un punto di una slide, «💬 Chiedi a MarkAgent» | spiega quel punto con i documenti del progetto |
-| selezione di testo, «✨ Usa AI» | riscrive il pezzo selezionato, con approvazione |
-| finestra del commit, «Genera con AI» | propone il messaggio di commit |
+| the "Mark Search" tab | searches the documents of the project and answers citing its sources |
+| right click on a diagram, "💬 Ask to MarkAgent" | explains the element |
+| right click on a point of a slide, "💬 Ask MarkAgent" | explains that point with the documents of the project |
+| a text selection, the "✨ Usa AI" button | rewrites the selected piece, with your approval |
+| the commit window, "Generate with AI" | proposes the commit message |
 
-## Dove vanno i dati
+## Where the data goes
 
-I documenti restano sul computer e nel repository git. Quando chiedi qualcosa a MarkAgent, il testo che gli
-serve va al fornitore del motore scelto, con le condizioni del contratto che l'azienda ha con quel fornitore.
-La ricerca nei documenti e l'indice sono locali.
+The documents stay on the computer and in the git repository. When you ask MarkAgent something, the text it
+needs goes to the provider of the chosen engine, under the terms of the contract your company has with that
+provider. Search in the documents and the index are local.
 
-## Cosa serve
+## What you need
 
-- Il progetto deve essere un repository git.
-- La riga di comando del motore scelto, installata e con l'accesso fatto: `copilot`, `claude` oppure `opencode`.
-- La rete.
+- The project must be a git repository.
+- The command line of the chosen engine, installed and signed in: `copilot`, `claude` or `opencode`.
+- The network.
 
-Avanti: [Presentazioni](04-presentazioni.md) · Indietro: [Diagrammi](02-diagrammi.md) · [Torna all'inizio](../README.md)
+Next: [Presentations](04-presentations.md) · Back: [Diagrams](02-diagrams.md) · [Back to the start](../README.md)

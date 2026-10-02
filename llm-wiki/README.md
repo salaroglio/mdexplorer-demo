@@ -1,19 +1,19 @@
 ---
-title: LLM Wiki — un Wiki che si auto-mantiene con l'AI
+title: LLM Wiki — a wiki that maintains itself with AI
 author: Mark
-description: Demo del pattern LLM Wiki di Andrej Karpathy applicato a un progetto MdExplorer. La conoscenza si accumula nel tempo invece di essere ri-cercata ad ogni domanda.
+description: Demo of Andrej Karpathy's LLM Wiki pattern applied to an MdExplorer project. Knowledge builds up over time instead of being searched again at every question.
 ---
 
-# 🛰️ LLM Wiki con MdExplorer
+# 🛰️ LLM Wiki with MdExplorer
 
-> **MdExplorer è l'IDE; l'LLM è il programmatore; il wiki è il codebase.**
-> — adattamento dell'idea di Karpathy (LLM Wiki, Aprile 2026)
+> **MdExplorer is the IDE; the LLM is the programmer; the wiki is the codebase.**
+> — adapted from Karpathy's idea (LLM Wiki, April 2026)
 
-Questa cartella è un **esempio funzionante** del pattern **LLM Wiki** proposto da [Andrej Karpathy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) ad Aprile 2026, **applicato nativamente a MdExplorer** — dove tutti gli ingredienti (markdown project, Git, CLAUDE.md, LLM locale, PlantUML, search semantico) sono integrati in un'unica app.
+This folder is a **working example** of the **LLM Wiki** pattern proposed by [Andrej Karpathy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) in April 2026, **applied natively to MdExplorer** — where all the ingredients are built into a single app: markdown project, Git, CLAUDE.md, an AI agent (GitHub Copilot, Claude Code or opencode), PlantUML, full-text search.
 
-L'idea, in una frase: invece di fare retrieval (RAG) su documenti grezzi ad ogni domanda — riscoprendo le stesse cose mille volte — si lascia che un agente AI **mantenga un wiki strutturato in markdown** che cresce e si raffina nel tempo. Ogni risposta utile diventa una nuova pagina del wiki. La conoscenza **compone** invece di evaporare.
+The idea, in one sentence: instead of running retrieval (RAG) on raw documents at every question — rediscovering the same things a thousand times — you let an AI agent **maintain a structured markdown wiki** that grows and gets better over time. Every useful answer becomes a new wiki page. Knowledge **compounds** instead of evaporating.
 
-## 🧱 I tre livelli
+## 🧱 The three layers
 
 ```plantuml
 @startuml
@@ -31,70 +31,70 @@ skinparam rectangle {
   BorderThickness 2
 }
 
-rectangle "📥 **Raw Sources**\n(immutabili)\nPDF, articoli, transcripts" as raw
-rectangle "📚 **Wiki**\n(mantenuto dall'LLM)\npagine entità + concetti + sintesi" as wiki
-rectangle "📜 **Schema** (CLAUDE.md)\nle regole: come strutturare,\ncome aggiornare, come citare" as schema #f093fb
+rectangle "📥 **Raw Sources**\n(immutable)\nPDFs, articles, transcripts" as raw
+rectangle "📚 **Wiki**\n(maintained by the LLM)\nentity pages + concepts + summaries" as wiki
+rectangle "📜 **Schema** (CLAUDE.md)\nthe rules: how to structure,\nhow to update, how to cite" as schema #f093fb
 
-raw --> wiki : ingest\n(LLM legge,\nriassume,\ncollega)
-schema -[#764ba2]-> wiki : governa
-schema -[#764ba2]-> raw : guida la cura
+raw --> wiki : ingest\n(the LLM reads,\nsummarizes,\nlinks)
+schema -[#764ba2]-> wiki : governs
+schema -[#764ba2]-> raw : guides curation
 @enduml
 ```
 
-| Layer | Cos'è | Chi lo modifica |
+| Layer | What it is | Who changes it |
 |---|---|---|
-| **📥 Raw Sources** | I documenti originali (PDF, articoli, screenshot, transcript) — **mai modificati** | Il curatore umano (li raccoglie, li annota) |
-| **📚 Wiki** | Pagine markdown sintetiche: entità, concetti, riassunti, sintesi, indice, log | L'LLM (riscrive, aggiorna cross-reference, risolve contraddizioni) |
-| **📜 Schema** | Un singolo file (`CLAUDE.md`) che dice all'LLM **come** strutturare il wiki | L'umano lo definisce, l'LLM lo segue |
+| **📥 Raw Sources** | The original documents (PDFs, articles, screenshots, transcripts) — **never modified** | The human curator (collects them, annotates them) |
+| **📚 Wiki** | Short markdown pages: entities, concepts, summaries, syntheses, index, log | The LLM (rewrites, updates cross-references, resolves contradictions) |
+| **📜 Schema** | A single file (`CLAUDE.md`) that tells the LLM **how** to structure the wiki | The human defines it, the LLM follows it |
 
-## 🗺️ Naviga la demo
+## 🗺️ Browse the demo
 
-| Cartella | Contiene |
+| Folder | Contains |
 |---|---|
-| [`CLAUDE.md`](CLAUDE.md) | **Lo schema** — le regole che l'LLM segue per mantenere questo wiki |
-| [`index.md`](index.md) | **Catalogo** orientato al contenuto — una riga per pagina, raggruppato per categoria |
-| [`log.md`](log.md) | **Diario** append-only di ingest, query e operazioni di lint |
-| [`sources/`](sources/) | I documenti grezzi (immutabili) e i loro riassunti |
-| [`entities/`](entities/) | Pagine entità (persone, organizzazioni, prodotti) |
-| [`concepts/`](concepts/) | Pagine concetto (idee, pattern, tecniche) |
-| [`diagrams/`](diagrams/) | Diagrammi PlantUML che spiegano il funzionamento |
+| [`CLAUDE.md`](CLAUDE.md) | **The schema** — the rules the LLM follows to maintain this wiki |
+| [`index.md`](index.md) | Content-oriented **catalogue** — one line per page, grouped by category |
+| [`log.md`](log.md) | Append-only **journal** of ingests, queries and lint runs |
+| [`sources/`](sources/) | The raw documents (immutable) and their summaries |
+| [`entities/`](entities/) | Entity pages (people, organizations, products) |
+| [`concepts/`](concepts/) | Concept pages (ideas, patterns, techniques) |
+| [`diagrams/`](diagrams/) | PlantUML diagrams that explain how it works |
 
-## 📊 Diagrammi del flusso
+## 📊 Flow diagrams
 
-| Diagramma | Cosa illustra |
+| Diagram | What it shows |
 |---|---|
-| [Use case](diagrams/use-case.md) | Chi fa cosa nel sistema (umano + agente AI + MdExplorer) |
-| [Workflow di ingest](diagrams/workflow-ingestion.md) | Cosa succede quando arriva una nuova fonte |
-| [Sequence di query](diagrams/sequence-query.md) | Come una domanda diventa una risposta (e una nuova pagina) |
+| [Use case](diagrams/use-case.md) | Who does what in the system (human + AI agent + MdExplorer) |
+| [Ingest workflow](diagrams/workflow-ingestion.md) | What happens when a new source arrives |
+| [Query sequence](diagrams/sequence-query.md) | How a question becomes an answer (and a new page) |
 
-## 🪄 Perché MdExplorer è il sostrato perfetto
+## 🪄 Why MdExplorer is the perfect foundation
 
-Il pattern LLM Wiki può essere implementato con setup multi-app (editor markdown generico + Git CLI + agenti AI esterni configurati a mano). MdExplorer **integra tutto out-of-the-box** in un'unica app cross-platform, senza configurazione:
+The LLM Wiki pattern can be implemented with a multi-app setup (a generic markdown editor + the Git CLI + external AI agents configured by hand). MdExplorer **integrates everything out of the box** in a single cross-platform app, with no configuration:
 
-| Bisogno LLM Wiki | Feature MDE che lo soddisfa |
+| LLM Wiki need | MDE feature that meets it |
 |---|---|
-| Strutturare progetti markdown con cross-link | Project-based, link tracking nativo |
-| Schema document letto da agenti AI | `CLAUDE.md` (o `.github/copilot-instructions.md`) già supportati |
-| Versioning del wiki (vedere cosa l'LLM ha cambiato) | Git integrato (commit/push/diff/blame) |
-| Trovare velocemente una pagina | Full-text search + indicizzazione semantica con embeddings locali |
-| Diagrammi nelle pagine concetto | PlantUML embedded con render live |
-| Eseguire l'LLM senza cloud | LLamaSharp + supporto modelli locali |
-| Embed agenti esterni (Claude Code, Copilot CLI) | App Store interno + iframe via `.mdeapps.json` |
+| Structure markdown projects with cross-links | Project-based, native link tracking |
+| Schema document read by AI agents | `CLAUDE.md` (or `.github/copilot-instructions.md`) already supported |
+| Versioning of the wiki (see what the LLM changed) | Built-in Git (commit/push/diff/blame) |
+| Find a page quickly | Full-text search |
+| Diagrams in concept pages | Embedded PlantUML with live rendering |
+| Run the LLM that maintains the wiki | An AI agent (GitHub Copilot, Claude Code or opencode) |
+| Embed external agents (Claude Code, Copilot CLI) | Internal App Store + iframe via `.mdeapps.json` |
 
-## ▶️ Da dove iniziare
+## ▶️ Where to start
 
-1. Apri [`CLAUDE.md`](CLAUDE.md) — capisci le regole
-2. Sfoglia [`index.md`](index.md) — vedi la mappa del wiki
-3. Apri una pagina entità (es. [`entities/karpathy.md`](entities/karpathy.md)) — vedi com'è scritta
-4. Guarda [`log.md`](log.md) — segui la storia del wiki
-5. Esamina [`diagrams/use-case.md`](diagrams/use-case.md) — vedi il flusso completo
+1. Open [`CLAUDE.md`](CLAUDE.md) — understand the rules
+2. Browse [`index.md`](index.md) — see the map of the wiki
+3. Open an entity page (e.g. [`entities/karpathy.md`](entities/karpathy.md)) — see how it is written
+4. Look at [`log.md`](log.md) — follow the history of the wiki
+5. Study [`diagrams/use-case.md`](diagrams/use-case.md) — see the full flow
 
-## 📚 Riferimenti
+## 📚 References
 
-- [Karpathy — gist originale](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
-- [README del progetto demo](../README.md) — torna alla home
-- [Sito ufficiale MdExplorer](https://www.mdexplorer.net)
+- [Karpathy — original gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
+- [README of the demo project](../README.md) — back to the home page
+- [MdExplorer official site](https://www.mdexplorer.net)
 
 ---
 
-*Mark — l'astronauta — ti accompagna durante il tour del LLM Wiki. Premi `?` se ti perdi.*
+*Mark — the astronaut — guides you through the LLM Wiki tour. Press `?` if you get lost.*

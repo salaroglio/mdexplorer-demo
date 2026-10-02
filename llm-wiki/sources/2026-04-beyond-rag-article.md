@@ -1,35 +1,35 @@
 ---
-title: "Beyond RAG: come l'LLM Wiki di Karpathy costruisce conoscenza che si accumula" — Plaban Nayak
+title: "Beyond RAG: How Andrej Karpathy's LLM Wiki Pattern Builds Knowledge That Actually Compounds" — Plaban Nayak
 kind: source
-tags: [articolo, plaban-nayak, llm-wiki, rag, divulgazione]
+tags: [article, plaban-nayak, llm-wiki, rag, explainer]
 last_updated: 2026-05-10
 source_url: https://levelup.gitconnected.com/beyond-rag-how-andrej-karpathys-llm-wiki-pattern-builds-knowledge-that-actually-compounds-31a08528665e
 ingested_at: 2026-05-10
 ---
 
-# Source: Beyond RAG (articolo di Plaban Nayak, Aprile 2026)
+# Source: Beyond RAG (article by Plaban Nayak, April 2026)
 
-> ⚠️ Pagina riassunto. La fonte originale è all'URL nel front-matter.
+> ⚠️ Summary page. The original source is at the URL in the front matter.
 
-## Sintesi
+## Summary
 
-Articolo divulgativo su Level Up Coding (Aprile 2026) che spiega il pattern LLM Wiki di Karpathy a un pubblico tecnico più ampio. Approfondisce il confronto con RAG ed esplora implementazioni esistenti (NEXUS multi-agent system, l'esperienza di Karpathy stesso).
+Explanatory article on Level Up Coding (April 2026) that explains Karpathy's LLM Wiki pattern to a wider technical audience. It goes deeper into the comparison with RAG and explores existing implementations (the NEXUS multi-agent system, Karpathy's own experience).
 
-## Punti chiave estratti
+## Key points extracted
 
-- Il pattern LLM Wiki si differenzia da RAG perché produce un **artefatto persistente** (i file markdown) invece di un risultato ricalcolato ad ogni query
-- Il valore principale del pattern è il **compounding**: ogni interazione lascia traccia
-- L'articolo cita NEXUS come esempio di multi-agent memory system su VPS con 6 agenti AI
-- Riporta la metrica del wiki di Karpathy: **100 articoli, 400.000 parole**, costruiti incrementalmente
-- Sottolinea che il pattern richiede un **substrato adatto** (editor markdown + Git + agenti AI integrati): setup multi-app sono possibili ma frammentati; MdExplorer è la soluzione che integra tutto in un'unica app cross-platform
-- Limiti del pattern: richiede curating umano, non scala a corpus enormi, è migliore per domini focalizzati
+- The LLM Wiki pattern differs from RAG because it produces a **persistent artifact** (the markdown files) instead of a result that is recomputed at every query
+- The main value of the pattern is **compounding**: every interaction leaves a trace
+- The article cites NEXUS as an example of a multi-agent memory system on a VPS with 6 AI agents
+- It reports the figures of Karpathy's wiki: **100 articles, 400,000 words**, built incrementally
+- It stresses that the pattern needs a **suitable foundation** (markdown editor + Git + integrated AI agents): multi-app setups are possible but fragmented; MdExplorer is the solution that integrates everything in a single cross-platform app
+- Limits of the pattern: it needs human curation, it does not scale to huge corpora, it works best for focused domains
 
-## Pagine derivate
+## Derived pages
 
-- [`concepts/rag-vs-wiki.md`](../concepts/rag-vs-wiki.md) — confronto sistematico
-- [`entities/karpathy.md`](../entities/karpathy.md) — aggiornata con metriche
-- [`entities/mdexplorer.md`](../entities/mdexplorer.md) — citato come substrato adatto
+- [`concepts/rag-vs-wiki.md`](../concepts/rag-vs-wiki.md) — systematic comparison
+- [`entities/karpathy.md`](../entities/karpathy.md) — updated with the figures
+- [`entities/mdexplorer.md`](../entities/mdexplorer.md) — cited as a suitable foundation
 
-## Storico
+## History
 
-- 2026-05-10 — Source ingerita. Touched: index.md, concepts/rag-vs-wiki.md (NEW), entities/karpathy.md (UPDATED), entities/mdexplorer.md (NEW)
+- 2026-05-10 — Source ingested. Touched: index.md, concepts/rag-vs-wiki.md (NEW), entities/karpathy.md (UPDATED), entities/mdexplorer.md (NEW)

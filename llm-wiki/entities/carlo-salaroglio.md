@@ -1,30 +1,30 @@
 ---
 title: Carlo Salaroglio
 kind: entity
-tags: [persone, sviluppatori, italia, creator]
+tags: [people, developers, italy, creator]
 last_updated: 2026-05-10
 ---
 
 # Carlo Salaroglio
 
-## Sintesi
+## Summary
 
-Carlo Salaroglio è un software engineer italiano, creatore e mantainer di [MdExplorer](mdexplorer.md). Ha iniziato il progetto a Marzo 2021 come tool interno per Spec Driven Development e l'ha rilasciato open source ad Ottobre 2025 sotto licenza MIT.
+Carlo Salaroglio is an Italian software engineer, creator and maintainer of [MdExplorer](mdexplorer.md). He started the project in March 2021 as an internal tool for Spec Driven Development and released it as open source in October 2025 under the MIT license.
 
-## Punti chiave
+## Key points
 
-- Software engineer basato in Italia [fonte: timezone CET nei commit Git, lingua del sito ufficiale]
-- Creatore di MdExplorer dal 2021-03-21 (primo commit) [fonte: [git log](https://github.com/salaroglio/MdExplorer)]
-- Open source release: 2025-10-08 [fonte: commit `chore: prepare repository for open source release`]
+- Software engineer based in Italy [source: CET timezone in the Git commits, language of the official site]
+- Creator of MdExplorer since 2021-03-21 (first commit) [source: [git log](https://github.com/salaroglio/MdExplorer)]
+- Open source release: 2025-10-08 [source: commit `chore: prepare repository for open source release`]
 - GitHub: [@salaroglio](https://github.com/salaroglio)
-- Sito: [mdexplorer.net](https://www.mdexplorer.net)
+- Site: [mdexplorer.net](https://www.mdexplorer.net)
 
-## Vedi anche
+## See also
 
-- [MdExplorer](mdexplorer.md) — il prodotto
+- [MdExplorer](mdexplorer.md) — the product
 - GitHub: https://github.com/salaroglio
 - Sponsor: https://paypal.me/cesalaroglio
 
-## Storico
+## History
 
-- 2026-05-10 — pagina creata (menzionato in `entities/mdexplorer.md`)
+- 2026-05-10 — page created (mentioned in `entities/mdexplorer.md`)

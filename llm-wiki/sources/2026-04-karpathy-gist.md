@@ -1,44 +1,44 @@
 ---
-title: Karpathy gist su LLM Wiki (Aprile 2026)
+title: Karpathy gist on LLM Wiki (April 2026)
 kind: source
-tags: [karpathy, llm-wiki, fonte-primaria]
+tags: [karpathy, llm-wiki, primary-source]
 last_updated: 2026-05-10
 source_url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 ingested_at: 2026-05-10
 ---
 
-# Source: Karpathy gist su LLM Wiki
+# Source: Karpathy gist on LLM Wiki
 
-> ⚠️ Questa è una **pagina riassunto** — il file originale è immutabile e si trova al link sopra. NON modificare il riassunto in modo che cambi le claim originali; aggiungi solo annotazioni se serve.
+> ⚠️ This is a **summary page** — the original file is immutable and is at the link above. Do NOT change the summary in a way that alters the original claims; only add annotations if needed.
 
-## Sintesi
+## Summary
 
-Andrej Karpathy pubblica ad Aprile 2026 un gist GitHub in cui descrive il pattern **LLM Wiki**, un'alternativa a RAG dove un agente AI mantiene attivamente un wiki strutturato di pagine markdown invece di fare retrieval ad ogni query. Il pattern si articola in tre layer (Raw Sources, Wiki, Schema) ed enfatizza il principio del **knowledge compounding**.
+In April 2026 Andrej Karpathy publishes a GitHub gist in which he describes the **LLM Wiki** pattern, an alternative to RAG where an AI agent actively maintains a structured wiki of markdown pages instead of running retrieval at every query. The pattern has three layers (Raw Sources, Wiki, Schema) and emphasizes the principle of **knowledge compounding**.
 
-## Punti chiave estratti
+## Key points extracted
 
-- Tre layer: **Raw Sources** (immutabili), **Wiki** (LLM-mantenuto), **Schema** (un file di config)
-- Il file di schema è tipicamente `CLAUDE.md` — definisce convenzioni, naming, workflow di update, criteri di lint
-- File standard del wiki: `index.md` (catalogo), `log.md` (cronologia append-only), pagine entità, pagine concetto, pagine sintesi
-- Workflow ingest: LLM legge fonte → riassume → aggiorna 10-15 file rilevanti → logga
-- Workflow query: LLM cerca nelle pagine via index → sintetizza con citazioni → la risposta diventa potenzialmente nuova pagina
-- Lint periodico: trova contraddizioni, claim stantii, pagine orfane, cross-reference mancanti, gap di dati
-- Strumento opzionale `qmd` per BM25/vector search locale quando il wiki cresce
-- Frase-icona originale di Karpathy (citata l'editor che usava lui per i suoi esperimenti): *"\[Editor markdown\] è l'IDE; l'LLM è il programmatore; il wiki è il codebase"*. Adattata a MdExplorer: *"MdExplorer è l'IDE; l'LLM è il programmatore; il wiki è il codebase"*
-- Il wiki personale di Karpathy ha raggiunto **100 articoli e 400.000 parole**
+- Three layers: **Raw Sources** (immutable), **Wiki** (maintained by the LLM), **Schema** (one config file)
+- The schema file is typically `CLAUDE.md` — it defines conventions, naming, update workflow, lint criteria
+- Standard files of the wiki: `index.md` (catalogue), `log.md` (append-only chronology), entity pages, concept pages, synthesis pages
+- Ingest workflow: the LLM reads the source → summarizes → updates 10-15 relevant files → logs
+- Query workflow: the LLM searches the pages via the index → synthesizes with citations → the answer can become a new page
+- Periodic lint: finds contradictions, stale claims, orphan pages, missing cross-references, data gaps
+- Optional tool `qmd` for local BM25/vector search when the wiki grows
+- Karpathy's original signature phrase (it named the editor he used for his own experiments): *"\[Markdown editor\] is the IDE; the LLM is the programmer; the wiki is the codebase"*. Adapted to MdExplorer: *"MdExplorer is the IDE; the LLM is the programmer; the wiki is the codebase"*
+- Karpathy's personal wiki has reached **100 articles and 400,000 words**
 
-## Citabile come
+## Citable as
 
-> Karpathy, Andrej. *"LLM Wiki: a persistent, structured knowledge base maintained by AI agents."* GitHub Gist, Aprile 2026. https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+> Karpathy, Andrej. *"LLM Wiki: a persistent, structured knowledge base maintained by AI agents."* GitHub Gist, April 2026. https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 
-## Pagine derivate (entities/concepts toccate da questa source)
+## Derived pages (entities/concepts touched by this source)
 
-- [`entities/karpathy.md`](../entities/karpathy.md) — autore
-- [`concepts/llm-wiki.md`](../concepts/llm-wiki.md) — il pattern
-- [`concepts/knowledge-compounding.md`](../concepts/knowledge-compounding.md) — il principio
-- [`diagrams/use-case.md`](../diagrams/use-case.md) — diagramma derivato
-- [`diagrams/workflow-ingestion.md`](../diagrams/workflow-ingestion.md) — diagramma derivato
+- [`entities/karpathy.md`](../entities/karpathy.md) — author
+- [`concepts/llm-wiki.md`](../concepts/llm-wiki.md) — the pattern
+- [`concepts/knowledge-compounding.md`](../concepts/knowledge-compounding.md) — the principle
+- [`diagrams/use-case.md`](../diagrams/use-case.md) — derived diagram
+- [`diagrams/workflow-ingestion.md`](../diagrams/workflow-ingestion.md) — derived diagram
 
-## Storico
+## History
 
-- 2026-05-10 — Source ingerita. Touched: index.md, entities/karpathy.md (NEW), concepts/llm-wiki.md (NEW), concepts/knowledge-compounding.md (NEW)
+- 2026-05-10 — Source ingested. Touched: index.md, entities/karpathy.md (NEW), concepts/llm-wiki.md (NEW), concepts/knowledge-compounding.md (NEW)

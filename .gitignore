@@ -11,15 +11,15 @@ Thumbs.db
 *.swp
 *~
 
-# Test e2e: cartelle di compilazione e credenziali (mai in git)
-tour/test-e2e/bin/
-tour/test-e2e/obj/
+# E2E tests: build folders and credentials (never in git)
+tour/e2e-tests/bin/
+tour/e2e-tests/obj/
 credenziali-*.txt
 
-# File che MdExplorer scrive a ogni installazione: skill, agenti, configurazione MCP (non vanno in git)
+# Files MdExplorer writes at every install: skills, agents, MCP configuration (not for git)
 .github/**/mde-*
 .claude/**/mde-*
 .opencode/**/mde-*
 .vscode/mcp.json
-# MDE — posti di lavoro degli agenti: aree di lavoro, non contenuto
+# MDE — agent workplaces: work areas, not content
 .worktrees/

@@ -7,48 +7,48 @@ last_updated: 2026-05-10
 
 # LLM Wiki
 
-## Sintesi
+## Summary
 
-**LLM Wiki** è un pattern di knowledge management proposto da [Andrej Karpathy](../entities/karpathy.md) ad Aprile 2026. L'idea centrale: invece di fare retrieval su documenti grezzi ad ogni query (RAG classico), si lascia che un agente AI **costruisca e mantenga attivamente un wiki strutturato in markdown**. Le risposte utili diventano nuove pagine, e la conoscenza **compone** nel tempo.
+**LLM Wiki** is a knowledge management pattern proposed by [Andrej Karpathy](../entities/karpathy.md) in April 2026. The central idea: instead of running retrieval on raw documents at every query (classic RAG), you let an AI agent **actively build and maintain a structured markdown wiki**. Useful answers become new pages, and knowledge **compounds** over time.
 
-## Punti chiave
+## Key points
 
-- È un pattern, non un prodotto — implementabile con qualsiasi editor markdown + qualsiasi LLM agent [fonte: [sources/2026-04-karpathy-gist](../sources/2026-04-karpathy-gist.md)]
-- Si basa su **tre layer** chiaramente separati:
-  - **Raw Sources** — documenti immutabili curati dall'umano
-  - **Wiki** — pagine markdown mantenute dall'LLM
-  - **Schema** — file di configurazione (es. `CLAUDE.md`) che governa la struttura
-- Il wiki contiene tipicamente: `index.md` (catalogo), `log.md` (cronologia), pagine entità, pagine concetto, pagine sintesi [fonte: [sources/2026-04-karpathy-gist](../sources/2026-04-karpathy-gist.md)]
-- L'LLM si occupa del **bookkeeping**: cross-reference, propagazione di aggiornamenti, segnalazione di contraddizioni
-- Il pattern si differenzia da RAG perché il wiki è un **artefatto persistente compoundente**, non un risultato calcolato al volo [fonte: [concepts/rag-vs-wiki](rag-vs-wiki.md)]
-- Implementazioni esistenti: setup multi-app con editor markdown generico + Git CLI + agenti AI esterni; NEXUS (sistema multi-agent su VPS); **MdExplorer come substrato dedicato e integrato** [fonte: [sources/2026-04-beyond-rag-article](../sources/2026-04-beyond-rag-article.md)]
+- It is a pattern, not a product — it can be implemented with any markdown editor + any LLM agent [source: [sources/2026-04-karpathy-gist](../sources/2026-04-karpathy-gist.md)]
+- It is based on **three layers** that are clearly separated:
+  - **Raw Sources** — immutable documents curated by the human
+  - **Wiki** — markdown pages maintained by the LLM
+  - **Schema** — a configuration file (e.g. `CLAUDE.md`) that governs the structure
+- The wiki typically contains: `index.md` (catalogue), `log.md` (chronology), entity pages, concept pages, synthesis pages [source: [sources/2026-04-karpathy-gist](../sources/2026-04-karpathy-gist.md)]
+- The LLM takes care of the **bookkeeping**: cross-references, propagation of updates, flagging of contradictions
+- The pattern differs from RAG because the wiki is a **persistent, compounding artifact**, not a result computed on the fly [source: [concepts/rag-vs-wiki](rag-vs-wiki.md)]
+- Existing implementations: multi-app setups with a generic markdown editor + the Git CLI + external AI agents; NEXUS (a multi-agent system on a VPS); **MdExplorer as a dedicated, integrated foundation** [source: [sources/2026-04-beyond-rag-article](../sources/2026-04-beyond-rag-article.md)]
 
-## Componenti tipici di un LLM Wiki
+## Typical components of an LLM Wiki
 
-| File / cartella | Ruolo |
+| File / folder | Role |
 |---|---|
-| `CLAUDE.md` | Schema — regole strutturali, convenzioni di naming, workflow di update |
-| `index.md` | Catalogo orientato al contenuto, una riga per pagina |
-| `log.md` | Append-only log di ingest, query, lint |
-| `sources/` | Riassunti dei documenti grezzi (i raw sotto `sources/raw/`) |
-| `entities/` | Pagine per persone, organizzazioni, prodotti |
-| `concepts/` | Pagine per idee, pattern, tecniche |
+| `CLAUDE.md` | Schema — structural rules, naming conventions, update workflow |
+| `index.md` | Content-oriented catalogue, one line per page |
+| `log.md` | Append-only log of ingests, queries, lint runs |
+| `sources/` | Summaries of the raw documents (the raw files are under `sources/raw/`) |
+| `entities/` | Pages for people, organizations, products |
+| `concepts/` | Pages for ideas, patterns, techniques |
 
-## Workflow chiave
+## Key workflows
 
-1. **Ingest** — nuova source → LLM riassume → propaga su entità/concetti → logga
-2. **Query** — domanda → LLM legge index → legge pagine candidate → sintetizza con citazioni → propone di salvare la risposta come nuova pagina
-3. **Lint** — settimanale → trova pagine orfane, link rotti, contraddizioni, gap
+1. **Ingest** — new source → the LLM summarizes → propagates to entities/concepts → logs
+2. **Query** — question → the LLM reads the index → reads the candidate pages → synthesizes with citations → proposes to save the answer as a new page
+3. **Lint** — weekly → finds orphan pages, broken links, contradictions, gaps
 
-## Vedi anche
+## See also
 
-- [Andrej Karpathy](../entities/karpathy.md) — autore del pattern
-- [Knowledge Compounding](knowledge-compounding.md) — l'idea fondante
-- [RAG vs Wiki](rag-vs-wiki.md) — il confronto col pattern alternativo
-- [MdExplorer](../entities/mdexplorer.md) — un substrato adatto
-- [Diagramma use case](../diagrams/use-case.md) — chi fa cosa
-- [Diagramma workflow ingest](../diagrams/workflow-ingestion.md) — il flusso
+- [Andrej Karpathy](../entities/karpathy.md) — author of the pattern
+- [Knowledge Compounding](knowledge-compounding.md) — the founding idea
+- [RAG vs Wiki](rag-vs-wiki.md) — the comparison with the alternative pattern
+- [MdExplorer](../entities/mdexplorer.md) — a suitable foundation
+- [Use case diagram](../diagrams/use-case.md) — who does what
+- [Ingest workflow diagram](../diagrams/workflow-ingestion.md) — the flow
 
-## Storico
+## History
 
-- 2026-05-10 — pagina creata da ingest di `sources/2026-04-karpathy-gist`
+- 2026-05-10 — page created from the ingest of `sources/2026-04-karpathy-gist`

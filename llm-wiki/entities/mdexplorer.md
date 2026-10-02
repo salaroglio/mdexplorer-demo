@@ -1,45 +1,45 @@
 ---
 title: MdExplorer
 kind: entity
-tags: [prodotti, markdown, knowledge-management, electron]
+tags: [products, markdown, knowledge-management, electron]
 last_updated: 2026-05-10
 ---
 
 # MdExplorer
 
-## Sintesi
+## Summary
 
-MdExplorer è un editor markdown professionale per Spec Driven Development, sviluppato dal 2021 da [Carlo Salaroglio](carlo-salaroglio.md) e rilasciato come open source nell'Ottobre 2025 sotto licenza MIT. Combina editing markdown, integrazione Git, diagrammi PlantUML, AI assistant con LLM locale, ed export PDF/Word — il tutto come desktop app cross-platform basata su Electron. È particolarmente adatto come substrato per implementare il pattern [LLM Wiki](../concepts/llm-wiki.md).
+MdExplorer is a professional markdown editor for Spec Driven Development, developed since 2021 by [Carlo Salaroglio](carlo-salaroglio.md) and released as open source in October 2025 under the MIT license. It combines markdown editing, Git integration, PlantUML diagrams, an AI assistant that runs on an AI agent (GitHub Copilot, Claude Code or opencode), and PDF/Word export — all as a cross-platform desktop app based on Electron. It is particularly suitable as a foundation for implementing the [LLM Wiki](../concepts/llm-wiki.md) pattern.
 
-## Punti chiave
+## Key points
 
-- Open source dall'Ottobre 2025, licenza MIT [fonte: [README ufficiale](https://github.com/salaroglio/MdExplorer)]
-- Stack: ASP.NET Core 8.0 + Angular 11 + Electron + LLamaSharp [fonte: [README](https://github.com/salaroglio/MdExplorer)]
-- Architettura tre database SQLite: User settings, Engine (per progetto), Project (locale)
-- Supporta nativamente file `CLAUDE.md` come "schema document" per agenti AI
-- Indicizzazione semantica locale via `nomic-embed-text` (no cloud)
-- Embedding di app esterne via `.mdeapps.json` + iframe (può ospitare Claude Code, Copilot CLI)
-- Supporta tutti i requisiti del pattern LLM Wiki out-of-the-box [fonte: [concepts/llm-wiki](../concepts/llm-wiki.md)]
+- Open source since October 2025, MIT license [source: [official README](https://github.com/salaroglio/MdExplorer)]
+- Stack: ASP.NET Core 8.0 + Angular 11 + Electron + LLamaSharp [source: [README](https://github.com/salaroglio/MdExplorer)]
+- Architecture with three SQLite databases: User settings, Engine (per project), Project (local)
+- Natively supports `CLAUDE.md` files as the "schema document" for AI agents
+- Local semantic indexing via `nomic-embed-text` (no cloud)
+- Embedding of external apps via `.mdeapps.json` + iframe (it can host Claude Code, Copilot CLI)
+- Supports all the requirements of the LLM Wiki pattern out of the box [source: [concepts/llm-wiki](../concepts/llm-wiki.md)]
 
-## Perché è adatto al pattern LLM Wiki
+## Why it suits the LLM Wiki pattern
 
-| Requisito LLM Wiki | Feature MDE |
+| LLM Wiki requirement | MDE feature |
 |---|---|
-| Progetti markdown con cross-link | Project-based, link tracking nativo |
-| Schema document AI-readable | `CLAUDE.md` supportato nativamente |
-| Versioning del wiki | Git integrato (LibGit2Sharp) |
-| Search rapido | Full-text + semantic embeddings |
-| Diagrammi nelle pagine | PlantUML embedded, render live |
-| LLM locale | LLamaSharp |
-| Embed agenti esterni | App Store + iframe |
+| Markdown projects with cross-links | Project-based, native link tracking |
+| AI-readable schema document | `CLAUDE.md` natively supported |
+| Versioning of the wiki | Built-in Git (LibGit2Sharp) |
+| Fast search | Full-text search |
+| Diagrams in the pages | Embedded PlantUML, live rendering |
+| An LLM that maintains the wiki | An AI agent (GitHub Copilot, Claude Code or opencode) |
+| Embed external agents | App Store + iframe |
 
-## Vedi anche
+## See also
 
-- [Carlo Salaroglio](carlo-salaroglio.md) — creatore
-- [LLM Wiki](../concepts/llm-wiki.md) — il pattern supportato
+- [Carlo Salaroglio](carlo-salaroglio.md) — creator
+- [LLM Wiki](../concepts/llm-wiki.md) — the supported pattern
 - Repository: https://github.com/salaroglio/MdExplorer
-- Sito: https://www.mdexplorer.net
+- Site: https://www.mdexplorer.net
 
-## Storico
+## History
 
-- 2026-05-10 — pagina creata (entità menzionata in 2 sources senza pagina dedicata)
+- 2026-05-10 — page created (entity mentioned in 2 sources without a dedicated page)

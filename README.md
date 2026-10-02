@@ -1,52 +1,51 @@
 ---
-title: MdExplorer, il progetto demo
+title: MdExplorer, the demo project
 author: Mark
-description: Progetto demo di MdExplorer. Una presentazione, otto prove da fare con le proprie mani e un caso di studio su cui far lavorare l'agente AI.
+description: The demo project of MdExplorer. A presentation, eight things to try with your own hands, and a case study for the AI agent to work on.
 ---
 
-# MdExplorer, il progetto demo
+# MdExplorer, the demo project
 
-> **TL;DR** — Questo progetto mostra cosa fa MdExplorer usando MdExplorer. C'è una presentazione da
-> guardare, un percorso di otto prove da fare, e un caso di studio su cui far lavorare MarkAgent, l'agente AI.
-> Tutto ciò che vedi è un file markdown dentro un repository git.
+> **TL;DR** — This project shows what MdExplorer does by using MdExplorer. There is a presentation to
+> watch, a tour of eight things to try, and a case study for MarkAgent, the AI agent, to work on.
+> Everything you see is a markdown file inside a git repository.
 
-MdExplorer è il posto dove persone e agenti AI lavorano sugli stessi documenti. Le persone leggono,
-correggono e presentano. Gli agenti leggono, scrivono e verificano. Il formato è uno solo, il markdown, e la
-cronologia è una sola, git.
+MdExplorer is the place where people and AI agents work on the same documents. People read, correct and
+present. Agents read, write and verify. There is one format, markdown, and one history, git.
 
-## Da dove partire
+## Where to start
 
-| Se hai | Apri | Cosa trovi |
+| If you have | Open | What you find |
 |---|---|---|
-| dieci minuti | [La presentazione](presentazione/mdexplorer.md) | l'idea, in venti slide |
-| mezz'ora | [Il percorso: prova tu](tour/01-documenti-vivi.md) | otto prove da fare |
-| un'ora | [Il caso di studio](caso-studio/README.md) | un progetto su cui far lavorare l'AI |
+| ten minutes | [The presentation](presentation/mdexplorer.md) | the idea, in twenty slides |
+| half an hour | [The tour: try it yourself](tour/01-living-documents.md) | eight things to try |
+| an hour | [The case study](case-study/README.md) | a project for the AI to work on |
 
-## Il percorso: prova tu
+## The tour: try it yourself
 
-| # | Pagina | Cosa provi |
+| # | Page | What you try |
 |---|---|---|
-| 1 | [Documenti vivi](tour/01-documenti-vivi.md) | file inclusi, comandi che si eseguono, testo che si corregge sul posto |
-| 2 | [Diagrammi che rispondono](tour/02-diagrammi.md) | un clic accende le relazioni, con un colore per tipo |
-| 3 | [MarkAgent](tour/03-markagent.md) | l'agente AI che legge e scrive i documenti del progetto |
-| 4 | [Presentazioni](tour/04-presentazioni.md) | slide scritte in markdown, corrette dalla slide stessa |
-| 5 | [Word, PDF e sito](tour/05-word-pdf-sito.md) | i formati di consegna, rigenerati quando serve |
-| 6 | [Git senza terminale](tour/06-git.md) | cosa è cambiato, chi l'ha cambiato, come si salva |
-| 7 | [Regole, skill e MCP](tour/07-regole-skill-mcp.md) | come si insegna all'agente il modo di lavorare di casa |
-| 8 | [Test scritti in italiano](tour/08-test-e2e.md) | l'agente controlla un sito e lascia le prove |
+| 1 | [Living documents](tour/01-living-documents.md) | included files, commands that run, text you correct in place |
+| 2 | [Diagrams that answer](tour/02-diagrams.md) | a click lights up the relations, one colour per type |
+| 3 | [MarkAgent](tour/03-markagent.md) | the AI agent that reads and writes the documents of the project |
+| 4 | [Presentations](tour/04-presentations.md) | slides written in markdown, corrected from the slide itself |
+| 5 | [Word, PDF and site](tour/05-word-pdf-site.md) | the delivery formats, regenerated when needed |
+| 6 | [Git without the terminal](tour/06-git.md) | what changed, who changed it, how to save |
+| 7 | [Rules, skills and MCP](tour/07-rules-skills-mcp.md) | how the agent learns the way your team works |
+| 8 | [Tests written in plain language](tour/08-e2e-tests.md) | the agent checks a site and leaves the evidence |
 
-## Il caso di studio
+## The case study
 
-[Alpina Servizi](caso-studio/README.md) è un'azienda inventata che prova un assistente AI per il suo help
-desk. Nella cartella ci sono i requisiti, l'architettura, il piano, un verbale e una presentazione.
-Nei documenti sono nascoste **tre incongruenze**: chiedi a MarkAgent di trovarle.
+[Alpina Servizi](case-study/README.md) is a made-up company trying an AI assistant for its help desk.
+The folder holds the requirements, the architecture, the plan, the minutes of a meeting and a presentation.
+**Three inconsistencies** are hidden in the documents: ask MarkAgent to find them.
 
-## Un esempio in più: il wiki che si mantiene da solo
+## One more example: the wiki that maintains itself
 
-La cartella [llm-wiki](llm-wiki/README.md) mostra un altro modo di usare un progetto MdExplorer: un wiki che
-un agente AI tiene aggiornato, secondo lo schema proposto da Andrej Karpathy.
+The [llm-wiki](llm-wiki/README.md) folder shows another way to use an MdExplorer project: a wiki that an AI
+agent keeps up to date, following the pattern proposed by Andrej Karpathy.
 
-## Come è fatto questo progetto
+## How this project is laid out
 
 ```plantuml
 @startmindmap
@@ -70,22 +69,23 @@ mindmapDiagram {
   }
 }
 </style>
-* Progetto demo
-** presentazione
-***_ la presentazione di MdExplorer
-***_ dietro le quinte
+* Demo project
+** presentation
+***_ the MdExplorer presentation
+***_ behind the scenes
 ** tour
-***_ otto prove da fare
+***_ eight things to try
 left side
-** caso-studio
-***_ requisiti, architettura, piano
-***_ verbale e slide del comitato
+** case-study
+***_ requirements, architecture, plan
+***_ minutes and committee slides
 ** llm-wiki
-***_ un wiki mantenuto dall'AI
+***_ a wiki maintained by the AI
 @endmindmap
 ```
 
 ---
 
-*Questo repository fa parte di [MdExplorer](https://github.com/salaroglio/MdExplorer), software libero con
-licenza MIT. In MdExplorer si apre con la guida di Mark, voce «Crea progetto demo».*
+*This repository is part of [MdExplorer](https://github.com/salaroglio/MdExplorer), free software under the
+MIT licence. In MdExplorer it opens from Mark's guide, with "Create demo project". The Italian version of
+this demo is on the `main` branch of the same repository.*

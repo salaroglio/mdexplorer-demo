@@ -1,0 +1,19 @@
+{
+  "pilot": "AI assistant for the help desk",
+  "durationWeeks": 8,
+  "operatorsInvolved": 20,
+  "metrics": {
+    "averageFirstResponseTime": { "today": "4 h 10 min", "target": "1 h 30 min" },
+    "ticketsSolvedAtFirstContact": { "today": "58%", "target": "70%" },
+    "draftsAcceptedWithoutChanges": { "today": "not measured", "target": "40%" },
+    "customerSatisfaction": { "today": "3.9 out of 5", "target": "4.2 out of 5" }
+  },
+  "thresholds": {
+    "minimumConfidenceToProposeTheDraft": 0.75,
+    "minimumSourcesCited": 1
+  },
+  "stopCriteria": [
+    "a reply containing another customer's personal data",
+    "satisfaction below 3.5 for two weeks in a row"
+  ]
+}

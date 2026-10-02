@@ -1,13 +1,13 @@
 ---
-title: Use Case del LLM Wiki
+title: LLM Wiki use case
 kind: diagram
 diagram_type: use-case
 last_updated: 2026-05-10
 ---
 
-# 🎭 Use Case: chi fa cosa nel LLM Wiki
+# 🎭 Use Case: who does what in the LLM Wiki
 
-Questo diagramma mostra gli **attori** del sistema LLM Wiki (umano curatore, agente AI) e le loro **interazioni principali** col substrato (MdExplorer).
+This diagram shows the **actors** of the LLM Wiki system (human curator, AI agent) and their **main interactions** with the foundation (MdExplorer).
 
 ```plantuml
 @startuml
@@ -40,22 +40,22 @@ skinparam rectangle {
 skinparam ArrowColor #5568d3
 skinparam ArrowFontColor #4a5568
 
-actor "👤 Curatore\numano" as Human
-actor "🤖 Agente\nAI" as LLM
+actor "👤 Human\ncurator" as Human
+actor "🤖 AI\nagent" as LLM
 
-rectangle "**MdExplorer**\n(substrato del wiki)" as MDE {
+rectangle "**MdExplorer**\n(foundation of the wiki)" as MDE {
 
-  usecase "📥 Aggiunge\nuna source\ngrezza" as UC1
-  usecase "💬 Pone una\ndomanda al wiki" as UC2
-  usecase "✅ Approva\ni cambiamenti\nproposti" as UC3
-  usecase "🧹 Lancia\nil lint\nperiodico" as UC4
+  usecase "📥 Adds\na raw\nsource" as UC1
+  usecase "💬 Asks the wiki\na question" as UC2
+  usecase "✅ Approves\nthe proposed\nchanges" as UC3
+  usecase "🧹 Runs\nthe periodic\nlint" as UC4
 
-  usecase "📝 Scrive il\nriassunto della\nsource" as UC5
-  usecase "🔄 Aggiorna\nentità e\nconcetti" as UC6
-  usecase "🔍 Cerca nelle\npagine via\nindex" as UC7
-  usecase "✍️ Sintetizza\nla risposta\ncon citazioni" as UC8
-  usecase "📜 Logga le\noperazioni" as UC9
-  usecase "🚨 Segnala\ncontraddizioni\ne gap" as UC10
+  usecase "📝 Writes the\nsummary of the\nsource" as UC5
+  usecase "🔄 Updates\nentities and\nconcepts" as UC6
+  usecase "🔍 Searches the\npages via the\nindex" as UC7
+  usecase "✍️ Synthesizes\nthe answer\nwith citations" as UC8
+  usecase "📜 Logs the\noperations" as UC9
+  usecase "🚨 Flags\ncontradictions\nand gaps" as UC10
 }
 
 Human --> UC1
@@ -80,29 +80,29 @@ UC2 ..> UC8 : <<triggers>>
 UC4 ..> UC10 : <<triggers>>
 
 note right of UC3
-  L'umano resta nel loop:
-  vede il diff, approva
-  o richiede modifiche.
+  The human stays in the loop:
+  sees the diff, approves
+  or asks for changes.
 end note
 
 note bottom of LLM
-  L'agente segue le regole
+  The agent follows the rules
   in **CLAUDE.md** (schema).
-  Niente decisioni unilaterali.
+  No unilateral decisions.
 end note
 
 @enduml
 ```
 
-## Attori
+## Actors
 
-| Attore | Ruolo | Decisioni |
+| Actor | Role | Decisions |
 |---|---|---|
-| 👤 **Curatore umano** | Cura le fonti, fa domande, approva i cambiamenti | Cosa includere, cosa escludere, priorità |
-| 🤖 **Agente AI** (LLM) | Mantiene il wiki: scrive, aggiorna, sintetizza, segnala | Come strutturare seguendo lo schema |
+| 👤 **Human curator** | Curates the sources, asks questions, approves the changes | What to include, what to leave out, priorities |
+| 🤖 **AI agent** (LLM) | Maintains the wiki: writes, updates, synthesizes, flags | How to structure it, following the schema |
 
-## Vedi anche
+## See also
 
-- [Workflow di ingest](workflow-ingestion.md) — l'attività dietro UC1+UC5+UC6
-- [Sequence di query](sequence-query.md) — l'attività dietro UC2+UC7+UC8
-- [Concept LLM Wiki](../concepts/llm-wiki.md) — il pattern generale
+- [Ingest workflow](workflow-ingestion.md) — the activity behind UC1+UC5+UC6
+- [Query sequence](sequence-query.md) — the activity behind UC2+UC7+UC8
+- [LLM Wiki concept](../concepts/llm-wiki.md) — the general pattern

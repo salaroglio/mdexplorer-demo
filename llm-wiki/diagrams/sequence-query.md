@@ -1,13 +1,13 @@
 ---
-title: Sequence di una query (domanda → risposta → nuova pagina)
+title: Sequence of a query (question → answer → new page)
 kind: diagram
 diagram_type: sequence
 last_updated: 2026-05-10
 ---
 
-# 💬 Sequence: dalla domanda alla nuova pagina
+# 💬 Sequence: from the question to the new page
 
-Quando l'umano fa una domanda al wiki, l'LLM non si limita a rispondere — la risposta utile diventa **nuova conoscenza permanente**. Questo è il meccanismo del **knowledge compounding**.
+When the human asks the wiki a question, the LLM does not just answer — the useful answer becomes **new permanent knowledge**. This is the mechanism of **knowledge compounding**.
 
 ```plantuml
 @startuml
@@ -37,72 +37,72 @@ skinparam noteBackgroundColor #fef3c7
 skinparam noteBorderColor #d69e2e
 skinparam noteFontColor #1a202c
 
-actor "👤 Curatore" as H
+actor "👤 Curator" as H
 participant "🛰️ MdExplorer\n(UI + search)" as MDE
-participant "🤖 Agente AI" as LLM
+participant "🤖 AI agent" as LLM
 participant "📚 Wiki files" as W
 participant "📜 log.md" as L
 
-H -> MDE : Quali sono le differenze\ntra RAG e LLM Wiki?
-MDE -> LLM : query + accesso file system
+H -> MDE : What are the differences\nbetween RAG and LLM Wiki?
+MDE -> LLM : query + file system access
 
 == Discovery ==
-LLM -> W : leggi index.md
-W --> LLM : catalogo pagine
+LLM -> W : read index.md
+W --> LLM : page catalogue
 note right of LLM
-  Identifica 2-5 pagine candidate
-  basate sulle keyword e sull'index.
+  Identifies 2-5 candidate pages
+  based on the keywords and the index.
 end note
 
-LLM -> W : leggi concepts/rag-vs-wiki.md
-W --> LLM : contenuto pagina
-LLM -> W : leggi concepts/llm-wiki.md
-W --> LLM : contenuto pagina
-LLM -> W : leggi concepts/knowledge-compounding.md
-W --> LLM : contenuto pagina
+LLM -> W : read concepts/rag-vs-wiki.md
+W --> LLM : page content
+LLM -> W : read concepts/llm-wiki.md
+W --> LLM : page content
+LLM -> W : read concepts/knowledge-compounding.md
+W --> LLM : page content
 
-== Sintesi ==
-LLM -> LLM : sintetizza risposta\ncon citazioni inline
-LLM --> MDE : risposta + citazioni
-MDE --> H : mostra risposta
+== Synthesis ==
+LLM -> LLM : synthesizes the answer\nwith inline citations
+LLM --> MDE : answer + citations
+MDE --> H : shows the answer
 
-== Compounding (opzionale) ==
-LLM -> H : la risposta era non banale,\nsalvarla come pagina concept?
+== Compounding (optional) ==
+LLM -> H : the answer was non-trivial,\nsave it as a concept page?
 
-alt risposta utile e riusabile
-  H -> LLM : sì, salvala
-  LLM -> W : crea concepts/nuovo.md
-  LLM -> W : aggiorna index.md
+alt useful and reusable answer
+  H -> LLM : yes, save it
+  LLM -> W : create concepts/new.md
+  LLM -> W : update index.md
   LLM -> L : append QUERY -> SAVED concepts/id
-  W --> H : pagina creata, visibile nell'albero
-else risposta one-shot
-  H -> LLM : no, basta così
+  W --> H : page created, visible in the tree
+else one-shot answer
+  H -> LLM : no, that is enough
   LLM -> L : append QUERY (no save)
 end
 
 == Gap detection ==
-opt risposta incompleta
-  LLM -> L : append GAP descrizione\narea dove serve nuova source
+opt incomplete answer
+  LLM -> L : append GAP description\narea where a new source is needed
   note right of L
-    Le GAP guidano la
-    cura futura delle
-    fonti grezze.
+    The GAPs guide the
+    future curation of the
+    raw sources.
   end note
 end
 
 @enduml
 ```
 
-## Cosa rende speciale questo flusso
+## What makes this flow special
 
-1. **Search via index, non via embeddings**: l'LLM legge `index.md` (è il TOC del wiki) e identifica le pagine candidate. Niente vector DB richiesto.
-2. **Lettura completa, non chunk**: se una pagina è candidata, l'LLM la legge **per intero** invece di prendere solo i top-k chunk. Questo evita risposte frammentate.
-3. **Citazione inline obbligatoria**: ogni claim nella risposta ha `[fonte]` puntuale alla pagina del wiki.
-4. **Compounding opt-in**: l'umano decide caso per caso se "promuovere" una risposta a pagina permanente.
-5. **Gap come lavoro futuro**: se la risposta è incompleta, viene loggato un `GAP` che guida la prossima ingestione di fonti.
+1. **Search via the index, not via embeddings**: the LLM reads `index.md` (it is the TOC of the wiki) and identifies the candidate pages. No vector DB required.
+2. **Full reading, not chunks**: if a page is a candidate, the LLM reads it **in full** instead of taking only the top-k chunks. This avoids fragmented answers.
+3. **Inline citation is mandatory**: every claim in the answer has a `[source]` that points to the exact wiki page.
+4. **Opt-in compounding**: the human decides case by case whether to "promote" an answer to a permanent page.
+5. **Gaps as future work**: if the answer is incomplete, a `GAP` is logged, and it guides the next ingest of sources.
 
-## Vedi anche
+## See also
 
-- [Use case](use-case.md) — vista d'insieme degli attori
-- [Workflow di ingest](workflow-ingestion.md) — l'altro flusso principale
-- [Knowledge Compounding](../concepts/knowledge-compounding.md) — il concetto teorico dietro questo flusso
+- [Use case](use-case.md) — overview of the actors
+- [Ingest workflow](workflow-ingestion.md) — the other main flow
+- [Knowledge Compounding](../concepts/knowledge-compounding.md) — the theoretical concept behind this flow

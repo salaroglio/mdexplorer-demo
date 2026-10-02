@@ -1,88 +1,88 @@
 # LLM Wiki — Schema (CLAUDE.md)
 
-Questo file è lo **schema** del wiki: definisce le regole che ogni agente AI (Claude, Copilot, Gemini, locale) **deve seguire** quando aggiorna il wiki. È il contratto tra umano e LLM.
+This file is the **schema** of the wiki: it defines the rules that every AI agent (Claude Code, GitHub Copilot, opencode) **must follow** when it updates the wiki. It is the contract between the human and the LLM.
 
-> ⚠️ Questo è un esempio dimostrativo. Adattalo al tuo dominio.
+> ⚠️ This is a demonstration example. Adapt it to your own domain.
 
-## 🎯 Mission del wiki
+## 🎯 Mission of the wiki
 
-Costruire una conoscenza **compoundente** su un dominio specifico (qui: pattern di knowledge management con AI).
-Ogni risposta utile diventa una nuova pagina o aggiorna pagine esistenti, **in modo che il wiki cresca** in qualità nel tempo invece di rispondere ogni volta da zero ai documenti grezzi.
+Build **compounding** knowledge about a specific domain (here: knowledge management patterns with AI).
+Every useful answer becomes a new page or updates existing pages, **so that the wiki grows** in quality over time instead of answering from the raw documents from scratch every time.
 
-## 📂 Struttura delle cartelle
+## 📂 Folder structure
 
-| Cartella | Contiene | Naming |
+| Folder | Contains | Naming |
 |---|---|---|
-| `sources/` | Riassunti di documenti grezzi (1 file per source) | `YYYY-MM-titolo-breve.md` |
-| `entities/` | Pagine entità (persone, prodotti, organizzazioni) | `nome-cognome.md` o `nome-prodotto.md` (kebab-case) |
-| `concepts/` | Pagine concetto (idee, pattern, tecniche) | `nome-concetto.md` (kebab-case) |
-| `diagrams/` | Diagrammi PlantUML che illustrano il dominio | `descrizione-tipo.md` |
-| `index.md` | Catalogo navigabile, una riga per pagina, raggruppato per categoria | (file unico) |
-| `log.md` | Diario append-only di tutte le operazioni | (file unico) |
+| `sources/` | Summaries of raw documents (1 file per source) | `YYYY-MM-short-title.md` |
+| `entities/` | Entity pages (people, products, organizations) | `first-name-last-name.md` or `product-name.md` (kebab-case) |
+| `concepts/` | Concept pages (ideas, patterns, techniques) | `concept-name.md` (kebab-case) |
+| `diagrams/` | PlantUML diagrams that illustrate the domain | `description-type.md` |
+| `index.md` | Browsable catalogue, one line per page, grouped by category | (single file) |
+| `log.md` | Append-only journal of all operations | (single file) |
 
-## 🧾 Regole per i file di pagina
+## 🧾 Rules for page files
 
-Ogni pagina (`sources/`, `entities/`, `concepts/`) **deve avere**:
+Every page (`sources/`, `entities/`, `concepts/`) **must have**:
 
-1. **Front-matter YAML** con campi: `title`, `kind` (`source`/`entity`/`concept`), `tags` (lista), `last_updated` (ISO date)
-2. **Sezione "Sintesi"** in apertura — 2-4 righe che spiegano cosa è la cosa
-3. **Sezione "Punti chiave"** — bullet list di affermazioni indipendenti, ognuna con `[fonte: source-id#anchor]`
-4. **Sezione "Vedi anche"** — link a entità e concetti correlati (`[[entities/nome]]` o `[concepts/nome](concepts/nome.md)`)
-5. **Footer "Storico"** — append-only delle modifiche (data + riga di descrizione)
+1. **YAML front matter** with the fields: `title`, `kind` (`source`/`entity`/`concept`), `tags` (list), `last_updated` (ISO date)
+2. **A "Summary" section** at the top — 2-4 lines that explain what the thing is
+3. **A "Key points" section** — a bullet list of independent statements, each with `[source: source-id#anchor]`
+4. **A "See also" section** — links to related entities and concepts (`[[entities/name]]` or `[concepts/name](concepts/name.md)`)
+5. **A "History" footer** — append-only list of changes (date + one line of description)
 
-## 🛠️ Workflow: ingest di una nuova source
+## 🛠️ Workflow: ingest of a new source
 
-Quando l'umano aggiunge un documento nuovo a `sources/raw/` (file PDF, link, transcript):
+When the human adds a new document to `sources/raw/` (PDF file, link, transcript):
 
-1. Crea `sources/YYYY-MM-titolo.md` con il riassunto (3-5 paragrafi max)
-2. Identifica le **entità nuove o aggiornate** → crea/aggiorna `entities/*.md`
-3. Identifica i **concetti nuovi o aggiornati** → crea/aggiorna `concepts/*.md`
-4. Aggiungi tutte le pagine toccate a `index.md` (sotto la categoria giusta)
-5. Append una riga in `log.md`:
-   `[YYYY-MM-DD HH:MM] INGEST sources/<id> → touched: <lista file>`
-6. Se trovi una **contraddizione** con pagine esistenti, NON sovrascrivere: aggiungi una nota
-   `> ⚠️ Contraddizione con [pagina X]: ...` e logga in `log.md` come `CONFLICT`
-7. Mostra all'umano un **diff sintetico** dei file toccati e attendi approvazione prima di committare
+1. Create `sources/YYYY-MM-title.md` with the summary (3-5 paragraphs at most)
+2. Identify the **new or updated entities** → create/update `entities/*.md`
+3. Identify the **new or updated concepts** → create/update `concepts/*.md`
+4. Add all the touched pages to `index.md` (under the right category)
+5. Append one line to `log.md`:
+   `[YYYY-MM-DD HH:MM] INGEST sources/<id> → touched: <file list>`
+6. If you find a **contradiction** with existing pages, do NOT overwrite: add a note
+   `> ⚠️ Contradiction with [page X]: ...` and log it in `log.md` as `CONFLICT`
+7. Show the human a **short diff** of the touched files and wait for approval before committing
 
-## 🔍 Workflow: rispondere a una domanda
+## 🔍 Workflow: answering a question
 
-Quando l'umano fa una domanda:
+When the human asks a question:
 
-1. Leggi `index.md` (è il TOC del wiki)
-2. Identifica **2-5 pagine candidate** per la risposta
-3. Leggi le pagine candidate **per intero** (non spezzettare in chunk se non necessario)
-4. Sintetizza una risposta con **citazioni inline** del tipo `[entities/karpathy.md]`
-5. Se la risposta è **non banale e riusabile**, proponi all'umano:
-   - "Vuoi che la salvi come pagina concept in `concepts/...`?"
-   - Se sì: scrivi la pagina, aggiorna `index.md`, logga `QUERY → SAVED concepts/<id>`
-6. Se la risposta NON è completa con il wiki attuale, logga `GAP: <descrizione>` in `log.md` per ricerche future
+1. Read `index.md` (it is the TOC of the wiki)
+2. Identify **2-5 candidate pages** for the answer
+3. Read the candidate pages **in full** (do not split them into chunks unless necessary)
+4. Synthesize an answer with **inline citations** such as `[entities/karpathy.md]`
+5. If the answer is **non-trivial and reusable**, propose to the human:
+   - "Do you want me to save it as a concept page in `concepts/...`?"
+   - If yes: write the page, update `index.md`, log `QUERY → SAVED concepts/<id>`
+6. If the answer is NOT complete with the current wiki, log `GAP: <description>` in `log.md` for future research
 
-## 🧪 Lint periodico (settimanale)
+## 🧪 Periodic lint (weekly)
 
-Una volta a settimana l'umano lancia un **lint** sul wiki. L'LLM deve:
+Once a week the human runs a **lint** on the wiki. The LLM must:
 
-1. Trovare **pagine orfane** (non linkate da nessuno) → suggerire dove linkarle
-2. Trovare **link rotti** (puntano a file inesistenti)
-3. Trovare **contraddizioni** non risolte tra pagine
-4. Trovare **claim senza fonte** (bullet senza `[fonte: ...]`)
-5. Suggerire **pagine mancanti** (entità menzionate molte volte ma senza pagina dedicata)
-6. Output: report markdown in `log.md` sotto sezione `# Lint YYYY-MM-DD`
+1. Find **orphan pages** (not linked from anywhere) → suggest where to link them
+2. Find **broken links** (they point to files that do not exist)
+3. Find unresolved **contradictions** between pages
+4. Find **claims without a source** (bullets without `[source: ...]`)
+5. Suggest **missing pages** (entities mentioned many times but without a dedicated page)
+6. Output: a markdown report in `log.md` under the section `# Lint YYYY-MM-DD`
 
-## 🎨 Stile di scrittura
+## 🎨 Writing style
 
-- **Italiano**, frasi brevi, paragrafi <5 righe
-- Tono **enciclopedico** (informativo, non promozionale)
-- **Niente prima persona** ("io", "noi") nelle pagine entità/concetti
-- **Sì prima persona** in `log.md` (l'LLM è il narratore del log)
-- **Sempre citare**: ogni claim non banale ha `[fonte: ...]`
+- **English**, short sentences, paragraphs <5 lines
+- **Encyclopedic** tone (informative, not promotional)
+- **No first person** ("I", "we") in entity/concept pages
+- **First person allowed** in `log.md` (the LLM is the narrator of the log)
+- **Always cite**: every non-trivial claim has `[source: ...]`
 
-## 🚫 Cosa NON fare
+## 🚫 What NOT to do
 
-- Non cancellare contenuto in `sources/raw/` (sono **immutabili**)
-- Non modificare `log.md` se non in append (mai editare righe vecchie)
-- Non inventare fonti — se non hai una fonte, scrivi `[fonte: TODO]` e logga in `log.md`
-- Non creare nuove cartelle senza prima aggiornare questo `CLAUDE.md`
+- Do not delete content in `sources/raw/` (it is **immutable**)
+- Do not change `log.md` except by appending (never edit old lines)
+- Do not invent sources — if you have no source, write `[source: TODO]` and log it in `log.md`
+- Do not create new folders without updating this `CLAUDE.md` first
 
 ---
 
-*Schema versione 1.0 — 2026-05-10. Quando aggiorni questo file, append una riga in `log.md`: `SCHEMA-UPDATE: <descrizione>`.*
+*Schema version 1.0 — 2026-05-10. When you update this file, append one line to `log.md`: `SCHEMA-UPDATE: <description>`.*

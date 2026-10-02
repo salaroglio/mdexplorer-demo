@@ -1,43 +1,43 @@
 ---
-title: Indice del wiki
+title: Wiki index
 kind: index
 last_updated: 2026-05-10
 ---
 
-# 📚 Indice del wiki
+# 📚 Wiki index
 
-Catalogo orientato al contenuto. Una riga per pagina, raggruppato per categoria.
+Content-oriented catalogue. One line per page, grouped by category.
 
-> Questo file viene aggiornato dall'LLM ad ogni ingest e ad ogni nuova pagina concept salvata. Vedi le regole in [`CLAUDE.md`](CLAUDE.md).
+> The LLM updates this file at every ingest and every time a new concept page is saved. See the rules in [`CLAUDE.md`](CLAUDE.md).
 
-## 👥 Entità
+## 👥 Entities
 
-- [Andrej Karpathy](entities/karpathy.md) — ricercatore AI, autore del pattern LLM Wiki (Aprile 2026)
-- [MdExplorer](entities/mdexplorer.md) — editor markdown professionale con AI integrata, supporta nativamente il pattern LLM Wiki
-- [Carlo Salaroglio](entities/carlo-salaroglio.md) — creatore e mantainer di MdExplorer
+- [Andrej Karpathy](entities/karpathy.md) — AI researcher, author of the LLM Wiki pattern (April 2026)
+- [MdExplorer](entities/mdexplorer.md) — professional markdown editor with built-in AI, natively supports the LLM Wiki pattern
+- [Carlo Salaroglio](entities/carlo-salaroglio.md) — creator and maintainer of MdExplorer
 
-## 🧠 Concetti
+## 🧠 Concepts
 
-- [LLM Wiki](concepts/llm-wiki.md) — pattern di knowledge management dove un LLM mantiene un wiki strutturato in markdown
-- [Knowledge Compounding](concepts/knowledge-compounding.md) — l'idea che la conoscenza utile debba accumularsi nel tempo invece di essere ri-derivata ad ogni query
-- [RAG vs Wiki](concepts/rag-vs-wiki.md) — differenze tra retrieval-augmented generation e LLM wiki maintenance
+- [LLM Wiki](concepts/llm-wiki.md) — knowledge management pattern where an LLM maintains a structured markdown wiki
+- [Knowledge Compounding](concepts/knowledge-compounding.md) — the idea that useful knowledge should build up over time instead of being derived again at every query
+- [RAG vs Wiki](concepts/rag-vs-wiki.md) — differences between retrieval-augmented generation and LLM wiki maintenance
 
 ## 📥 Sources
 
-- [2026-04 — Karpathy gist su LLM Wiki](sources/2026-04-karpathy-gist.md) — il documento originale che ha lanciato il pattern
-- [2026-04 — Articolo Beyond RAG](sources/2026-04-beyond-rag-article.md) — articolo divulgativo sul pattern, by Plaban Nayak
+- [2026-04 — Karpathy gist on LLM Wiki](sources/2026-04-karpathy-gist.md) — the original document that launched the pattern
+- [2026-04 — Beyond RAG article](sources/2026-04-beyond-rag-article.md) — explanatory article about the pattern, by Plaban Nayak
 
-## 📊 Diagrammi
+## 📊 Diagrams
 
-- [Use case del LLM Wiki](diagrams/use-case.md) — chi fa cosa nel sistema
-- [Workflow di ingest](diagrams/workflow-ingestion.md) — flusso di un nuovo source
-- [Sequence di query](diagrams/sequence-query.md) — sequenza di una domanda → risposta → nuova pagina
+- [LLM Wiki use case](diagrams/use-case.md) — who does what in the system
+- [Ingest workflow](diagrams/workflow-ingestion.md) — flow of a new source
+- [Query sequence](diagrams/sequence-query.md) — sequence of a question → answer → new page
 
-## 📜 Operazioni
+## 📜 Operations
 
-- [`log.md`](log.md) — diario append-only di tutte le operazioni
-- [`CLAUDE.md`](CLAUDE.md) — schema (regole per gli agenti AI)
+- [`log.md`](log.md) — append-only journal of all operations
+- [`CLAUDE.md`](CLAUDE.md) — schema (rules for the AI agents)
 
 ---
 
-*Pagine totali: 11 — Last updated by LLM agent: 2026-05-10*
+*Total pages: 11 — Last updated by LLM agent: 2026-05-10*

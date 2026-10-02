@@ -1,13 +1,13 @@
 ---
-title: Workflow di ingest di una nuova source
+title: Ingest workflow of a new source
 kind: diagram
 diagram_type: activity
 last_updated: 2026-05-10
 ---
 
-# 🔄 Workflow: ingest di una nuova source
+# 🔄 Workflow: ingest of a new source
 
-Cosa succede quando l'umano aggiunge un documento grezzo al wiki: l'agente AI legge, riassume, propaga, e logga — il tutto sotto il controllo dell'umano (che approva o richiede modifiche).
+What happens when the human adds a raw document to the wiki: the AI agent reads, summarizes, propagates, and logs — all under the control of the human (who approves or asks for changes).
 
 ```plantuml
 @startuml
@@ -39,71 +39,71 @@ skinparam noteBackgroundColor #fef3c7
 skinparam noteBorderColor #d69e2e
 skinparam noteFontColor #1a202c
 
-|👤 Umano|
+|👤 Human|
 start
-:Aggiunge un file in sources/raw/\n(PDF, transcript, articolo);
+:Adds a file to sources/raw/\n(PDF, transcript, article);
 
-|🤖 Agente AI|
-:Legge la fonte\n(intero documento);
+|🤖 AI agent|
+:Reads the source\n(whole document);
 
-:Estrae claim chiave\ncon riferimenti puntuali;
+:Extracts the key claims\nwith exact references;
 
-:Scrive sources/YYYY-MM-titolo.md\n(riassunto 3-5 paragrafi);
+:Writes sources/YYYY-MM-title.md\n(summary of 3-5 paragraphs);
 
 note right
-  Niente sintesi creative:
-  solo claim verificabili
-  con citazione alla source.
+  No creative synthesis:
+  only verifiable claims
+  with a citation of the source.
 end note
 
-:Identifica entita menzionate\n(nuove o esistenti);
+:Identifies the entities mentioned\n(new or existing);
 
-if (entita esiste gia?) then (si)
-  :Aggiorna entities/nome.md\n(append Punti chiave\n+ Storico);
+if (entity already exists?) then (yes)
+  :Updates entities/name.md\n(append Key points\n+ History);
 else (no)
-  :Crea entities/nome.md\nseguendo il template;
+  :Creates entities/name.md\nfollowing the template;
 endif
 
-:Identifica concetti menzionati;
+:Identifies the concepts mentioned;
 
-if (concetto esiste gia?) then (si)
-  if (la nuova fonte\ncontraddice quella vecchia?) then (si)
-    #f093fb:Segnala CONTRADDIZIONE\nnon sovrascrive;
-    :Logga CONFLICT in log.md;
+if (concept already exists?) then (yes)
+  if (the new source\ncontradicts the old one?) then (yes)
+    #f093fb:Flags the CONTRADICTION\ndoes not overwrite;
+    :Logs CONFLICT in log.md;
   else (no)
-    :Aggiorna concepts/nome.md;
+    :Updates concepts/name.md;
   endif
 else (no)
-  :Crea concepts/nome.md;
+  :Creates concepts/name.md;
 endif
 
-:Aggiorna index.md\n(aggiunge le nuove pagine\nsotto la categoria giusta);
+:Updates index.md\n(adds the new pages\nunder the right category);
 
-:Append in log.md:\nINGEST sources/id\n-> touched: lista file;
+:Append to log.md:\nINGEST sources/id\n-> touched: file list;
 
-|👤 Umano|
-:Esamina il diff sintetico\ndelle pagine toccate;
+|👤 Human|
+:Reviews the short diff\nof the touched pages;
 
-if (modifiche OK?) then (si)
-  :Commit in Git\n(git commit -m ingest titolo);
+if (changes OK?) then (yes)
+  :Commit in Git\n(git commit -m ingest title);
   stop
 else (no)
-  #f093fb:Richiede modifiche all'agente;
+  #f093fb:Asks the agent for changes;
   detach
 endif
 
 @enduml
 ```
 
-## Note operative
+## Operating notes
 
-- **Niente decisioni unilaterali**: il diff viene sempre mostrato all'umano prima del commit
-- **Contraddizioni mai sovrascritte**: vengono segnalate esplicitamente come marker visibile (`> ⚠️ Contraddizione...`) e loggate
-- **Touched list**: il log riporta esattamente quali file sono cambiati, per poter riprodurre/auditare
-- **Ingestion batch**: per progetti grandi si può ingerire più sources in un colpo, ma con minor controllo umano
+- **No unilateral decisions**: the diff is always shown to the human before the commit
+- **Contradictions are never overwritten**: they are flagged explicitly with a visible marker (`> ⚠️ Contradiction...`) and logged
+- **Touched list**: the log records exactly which files changed, so the operation can be reproduced/audited
+- **Batch ingestion**: for large projects you can ingest several sources in one go, but with less human control
 
-## Vedi anche
+## See also
 
-- [Use case](use-case.md) — vista d'insieme degli attori
-- [Sequence di query](sequence-query.md) — l'altro flusso principale
-- [CLAUDE.md](../CLAUDE.md) — le regole che l'agente segue
+- [Use case](use-case.md) — overview of the actors
+- [Query sequence](sequence-query.md) — the other main flow
+- [CLAUDE.md](../CLAUDE.md) — the rules the agent follows

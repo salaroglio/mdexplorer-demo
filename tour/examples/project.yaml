@@ -1,0 +1,12 @@
+# Any file of the project: the document shows it, it does not copy it.
+project: "help-desk-assistant"
+lead: "Giulia Ferraris"
+phases:
+  - name: "preparation"
+    weeks: 2
+  - name: "shadow"
+    weeks: 1
+  - name: "small group"
+    weeks: 2
+  - name: "whole group"
+    weeks: 3

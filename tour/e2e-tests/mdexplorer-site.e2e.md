@@ -3,7 +3,7 @@ title: Il sito di MdExplorer
 e2e:
   baseUrl: https://www.mdexplorer.net
   siteMap: mappa-sito-mdexplorer.md
-  artifacts: sito-mdexplorer.e2e/
+  artifacts: mdexplorer-site.e2e/
 ---
 # Il sito di MdExplorer
 

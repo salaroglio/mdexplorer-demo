@@ -1,45 +1,45 @@
 ---
 title: RAG vs LLM Wiki
 kind: concept
-tags: [knowledge-management, confronto, rag]
+tags: [knowledge-management, comparison, rag]
 last_updated: 2026-05-10
 ---
 
 # RAG vs LLM Wiki
 
-## Sintesi
+## Summary
 
-**RAG** (Retrieval-Augmented Generation) e **LLM Wiki** sono due approcci alternativi per dare ad un LLM accesso a conoscenza specifica di dominio. RAG fa retrieval su documenti grezzi ad ogni query; LLM Wiki costruisce un wiki sintetico mantenuto dall'LLM stesso. Le differenze sono profonde nei costi, nella qualità delle risposte, e nella manutenibilità.
+**RAG** (Retrieval-Augmented Generation) and **LLM Wiki** are two alternative approaches for giving an LLM access to domain-specific knowledge. RAG runs retrieval on raw documents at every query; LLM Wiki builds a condensed wiki maintained by the LLM itself. The differences run deep in cost, in the quality of the answers, and in maintainability.
 
-## Confronto
+## Comparison
 
-| Aspetto | RAG | LLM Wiki |
+| Aspect | RAG | LLM Wiki |
 |---|---|---|
-| **Sorgente di conoscenza** | Documenti grezzi (PDF, HTML, transcript) | Wiki markdown sintetico |
-| **Storage** | Vector DB (embeddings) | File markdown su disco |
-| **Operazione per query** | Embedding + retrieval + reranking + generazione | Lettura `index.md` + lettura 2-5 pagine + sintesi |
-| **Knowledge compounding** | ❌ La conoscenza non si accumula | ✅ Ogni risposta utile diventa pagina |
-| **Visibilità sulla conoscenza** | ❌ I chunk sono opachi | ✅ Pagine leggibili, diffabili, versionabili |
-| **Gestione contraddizioni** | ❌ Nascosta nei chunk | ✅ Segnalata esplicitamente |
-| **Costi marginali per query** | Vector search + LLM call | Solo LLM call (search è grep su markdown) |
-| **Setup** | Pipeline ingestion + vector DB | Markdown + uno schema CLAUDE.md |
-| **Quando usarlo** | Grandi corpus eterogenei, query molto varie | Domini specifici, knowledge stabile, pochi utenti expert |
+| **Source of knowledge** | Raw documents (PDF, HTML, transcripts) | Condensed markdown wiki |
+| **Storage** | Vector DB (embeddings) | Markdown files on disk |
+| **Operation per query** | Embedding + retrieval + reranking + generation | Read `index.md` + read 2-5 pages + synthesis |
+| **Knowledge compounding** | ❌ Knowledge does not build up | ✅ Every useful answer becomes a page |
+| **Visibility of the knowledge** | ❌ The chunks are opaque | ✅ Pages you can read, diff and version |
+| **Handling of contradictions** | ❌ Hidden in the chunks | ✅ Flagged explicitly |
+| **Marginal cost per query** | Vector search + LLM call | LLM call only (search is a grep on markdown) |
+| **Setup** | Ingestion pipeline + vector DB | Markdown + a CLAUDE.md schema |
+| **When to use it** | Large, mixed corpora, very varied queries | Specific domains, stable knowledge, a few expert users |
 
-## I due approcci sono complementari
+## The two approaches complement each other
 
-Il pattern [LLM Wiki](llm-wiki.md) non sostituisce RAG in tutti i casi. Linee guida pratiche:
+The [LLM Wiki](llm-wiki.md) pattern does not replace RAG in every case. Practical guidelines:
 
-- **Usa RAG** quando: corpus enorme (>10k documenti), query molto eterogenee, tutti gli utenti hanno esigenze diverse, niente budget per curating umano
-- **Usa LLM Wiki** quando: dominio focalizzato, pochi power-user (o uno solo), la qualità della risposta importa più della copertura, vuoi capitalizzare ogni interazione
+- **Use RAG** when: the corpus is huge (>10k documents), queries are very mixed, every user has different needs, there is no budget for human curation
+- **Use LLM Wiki** when: the domain is focused, there are a few power users (or just one), the quality of the answer matters more than coverage, you want to capitalize on every interaction
 
-In alcuni progetti possono coesistere: il wiki cattura le conoscenze stabili curate, RAG copre il long-tail dei documenti grezzi non ancora processati.
+In some projects they can coexist: the wiki captures the stable, curated knowledge, and RAG covers the long tail of raw documents that have not been processed yet.
 
-## Vedi anche
+## See also
 
-- [LLM Wiki](llm-wiki.md) — il pattern wiki
-- [Knowledge Compounding](knowledge-compounding.md) — il principio del compounding
-- [Andrej Karpathy](../entities/karpathy.md) — autore del confronto
+- [LLM Wiki](llm-wiki.md) — the wiki pattern
+- [Knowledge Compounding](knowledge-compounding.md) — the principle of compounding
+- [Andrej Karpathy](../entities/karpathy.md) — author of the comparison
 
-## Storico
+## History
 
-- 2026-05-10 — pagina creata da ingest di `sources/2026-04-beyond-rag-article`
+- 2026-05-10 — page created from the ingest of `sources/2026-04-beyond-rag-article`
