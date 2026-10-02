@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" preserveAspectRatio="xMidYMax slice">
+<title>Sfondo: paesaggio lunare con la Terra all'orizzonte</title>
+<style>
+.st { animation: brilla 4s ease-in-out infinite; }
+.s2 { animation-duration: 5.5s; animation-delay: -1.3s; } .s3 { animation-duration: 3.2s; animation-delay: -2.1s; } .s4 { animation-duration: 6.5s; animation-delay: -3.4s; }
+@keyframes brilla { 0%,100% { opacity: .9; } 50% { opacity: .25; } }
+
+.ast { transform-box: fill-box; transform-origin: center; }
+.a1 { animation: deriva1 26s ease-in-out infinite alternate; }
+.a2 { animation: deriva2 34s ease-in-out infinite alternate; }
+.a3 { animation: deriva3 22s ease-in-out infinite alternate; }
+@keyframes deriva1 { from { transform: translate(0,0) rotate(0deg); } to { transform: translate(34px,-22px) rotate(70deg); } }
+@keyframes deriva2 { from { transform: translate(0,0) rotate(0deg); } to { transform: translate(-40px,26px) rotate(-90deg); } }
+@keyframes deriva3 { from { transform: translate(0,0) rotate(0deg); } to { transform: translate(22px,30px) rotate(120deg); } }
+.a4 { animation: deriva4 24s ease-in-out infinite alternate; }
+@keyframes deriva4 { from { transform: translate(0,0) rotate(0deg); } to { transform: translate(10px,-6px) rotate(80deg); } }
+
+.continenti { animation: gira 48s linear infinite; }
+.nuvole { animation: gira 30s linear infinite; }
+@keyframes gira { from { transform: translateX(0); } to { transform: translateX(192px); } }
+
+.fiamma { transform-box: fill-box; transform-origin: 50% 0%; animation: fiamma .28s ease-in-out infinite alternate; }
+@keyframes fiamma { from { transform: scaleY(.78) scaleX(.94); } to { transform: scaleY(1.12) scaleX(1.04); } }
+
+.razzo-vola { animation: lontano 36s linear infinite; }
+@keyframes lontano { 0% { transform: translate(-80px, 240px); } 40% { transform: translate(1380px, 30px); } 100% { transform: translate(1380px, 30px); } }
+
+.bandiera { transform-box: fill-box; transform-origin: 0 50%; animation: sventola 3.6s ease-in-out infinite alternate; }
+@keyframes sventola { from { transform: skewY(-5deg) scaleX(1); } to { transform: skewY(5deg) scaleX(.94); } }
+.cadente { animation: cadente 14s linear infinite; opacity: 0; }
+@keyframes cadente { 0%,86% { opacity: 0; transform: translate(0,0); } 88% { opacity: 1; } 96% { opacity: 0; transform: translate(-260px,150px); } 100% { opacity: 0; transform: translate(-260px,150px); } }
+</style>
+<defs>
+  <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1322"/><stop offset=".7" stop-color="#152a47"/><stop offset="1" stop-color="#22426b"/></linearGradient>
+  <linearGradient id="suolo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe4ec"/><stop offset="1" stop-color="#aab3c2"/></linearGradient>
+  <radialGradient id="ombra-terra" cx=".32" cy=".3" r=".9"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".38"/></radialGradient>
+</defs>
+<rect width="1280" height="720" fill="url(#cielo)"/>
+<circle class="st s4" cx="579" cy="313" r="2.2" fill="#fff"/>
+<circle class="st s4" cx="578" cy="479" r="1.1" fill="#fff"/>
+<circle class="st s3" cx="806" cy="444" r="0.9" fill="#fff"/>
+<circle class="st s1" cx="181" cy="302" r="2.1" fill="#fff"/>
+<circle class="st s2" cx="762" cy="222" r="1.5" fill="#fff"/>
+<circle class="st s1" cx="798" cy="466" r="0.9" fill="#fff"/>
+<circle class="st s4" cx="243" cy="135" r="0.8" fill="#fff"/>
+<circle class="st s2" cx="418" cy="331" r="1.1" fill="#fff"/>
+<circle class="st s4" cx="820" cy="280" r="1.8" fill="#fff"/>
+<circle class="st s1" cx="838" cy="228" r="1.6" fill="#fff"/>
+<circle class="st s3" cx="906" cy="177" r="1.1" fill="#fff"/>
+<circle class="st s1" cx="38" cy="315" r="1.0" fill="#fff"/>
+<circle class="st s1" cx="1084" cy="216" r="2.2" fill="#fff"/>
+<circle class="st s4" cx="273" cy="519" r="0.9" fill="#fff"/>
+<circle class="st s2" cx="1255" cy="223" r="0.9" fill="#fff"/>
+<circle class="st s3" cx="996" cy="151" r="0.9" fill="#fff"/>
+<circle class="st s2" cx="19" cy="230" r="2.2" fill="#fff"/>
+<circle class="st s4" cx="315" cy="57" r="0.9" fill="#fff"/>
+<circle class="st s2" cx="227" cy="313" r="1.5" fill="#fff"/>
+<circle class="st s4" cx="1261" cy="431" r="1.4" fill="#fff"/>
+<circle class="st s3" cx="149" cy="236" r="1.1" fill="#fff"/>
+<circle class="st s1" cx="1106" cy="546" r="1.7" fill="#fff"/>
+<circle class="st s1" cx="270" cy="221" r="2.1" fill="#fff"/>
+<circle class="st s1" cx="54" cy="82" r="1.5" fill="#fff"/>
+<circle class="st s1" cx="989" cy="184" r="1.2" fill="#fff"/>
+<circle class="st s1" cx="95" cy="117" r="1.8" fill="#fff"/>
+<circle class="st s4" cx="770" cy="208" r="1.5" fill="#fff"/>
+<circle class="st s2" cx="1065" cy="76" r="1.4" fill="#fff"/>
+<circle class="st s2" cx="398" cy="128" r="1.7" fill="#fff"/>
+<circle class="st s4" cx="203" cy="352" r="1.6" fill="#fff"/>
+<circle class="st s1" cx="1129" cy="338" r="1.4" fill="#fff"/>
+<circle class="st s4" cx="140" cy="287" r="1.2" fill="#fff"/>
+<circle class="st s3" cx="329" cy="461" r="1.7" fill="#fff"/>
+<circle class="st s2" cx="666" cy="520" r="2.3" fill="#fff"/>
+<circle class="st s1" cx="292" cy="313" r="2.1" fill="#fff"/>
+<circle class="st s1" cx="359" cy="514" r="1.1" fill="#fff"/>
+<circle class="st s1" cx="89" cy="230" r="1.2" fill="#fff"/>
+<circle class="st s2" cx="226" cy="207" r="1.7" fill="#fff"/>
+<circle class="st s3" cx="118" cy="78" r="1.5" fill="#fff"/>
+<circle class="st s2" cx="841" cy="387" r="1.7" fill="#fff"/>
+<circle class="st s3" cx="755" cy="517" r="1.5" fill="#fff"/>
+<circle class="st s1" cx="897" cy="539" r="0.8" fill="#fff"/>
+<circle class="st s1" cx="617" cy="409" r="1.3" fill="#fff"/>
+<circle class="st s2" cx="96" cy="306" r="1.9" fill="#fff"/>
+<circle class="st s4" cx="1015" cy="512" r="1.3" fill="#fff"/>
+<circle class="st s1" cx="1153" cy="488" r="1.4" fill="#fff"/>
+<circle class="st s4" cx="1105" cy="321" r="1.7" fill="#fff"/>
+<circle class="st s1" cx="485" cy="7" r="0.9" fill="#fff"/>
+<circle class="st s3" cx="818" cy="556" r="2.1" fill="#fff"/>
+<circle class="st s4" cx="497" cy="412" r="1.7" fill="#fff"/>
+<circle class="st s1" cx="592" cy="303" r="1.6" fill="#fff"/>
+<circle class="st s1" cx="397" cy="49" r="0.8" fill="#fff"/>
+<circle class="st s3" cx="636" cy="344" r="2.2" fill="#fff"/>
+<circle class="st s2" cx="1147" cy="206" r="1.0" fill="#fff"/>
+<circle class="st s4" cx="664" cy="422" r="1.3" fill="#fff"/>
+<circle class="st s3" cx="638" cy="135" r="1.4" fill="#fff"/>
+<circle class="st s2" cx="254" cy="241" r="2.0" fill="#fff"/>
+<circle class="st s3" cx="1127" cy="215" r="1.7" fill="#fff"/>
+<circle class="st s1" cx="269" cy="75" r="1.3" fill="#fff"/>
+<circle class="st s2" cx="910" cy="532" r="1.2" fill="#fff"/>
+<circle class="st s4" cx="144" cy="264" r="2.2" fill="#fff"/>
+<circle class="st s4" cx="490" cy="291" r="1.8" fill="#fff"/>
+<circle class="st s1" cx="410" cy="464" r="1.2" fill="#fff"/>
+<circle class="st s1" cx="868" cy="157" r="1.3" fill="#fff"/>
+<circle class="st s3" cx="820" cy="227" r="1.1" fill="#fff"/>
+<circle class="st s1" cx="304" cy="79" r="0.9" fill="#fff"/>
+<circle class="st s3" cx="571" cy="353" r="1.8" fill="#fff"/>
+<circle class="st s4" cx="1227" cy="383" r="1.1" fill="#fff"/>
+<circle class="st s1" cx="328" cy="400" r="1.9" fill="#fff"/>
+<circle class="st s2" cx="229" cy="153" r="1.3" fill="#fff"/>
+<circle class="st s1" cx="504" cy="443" r="2.2" fill="#fff"/>
+<circle class="st s4" cx="525" cy="500" r="1.4" fill="#fff"/>
+<circle class="st s4" cx="581" cy="350" r="2.2" fill="#fff"/>
+<circle class="st s3" cx="704" cy="365" r="1.6" fill="#fff"/>
+<circle class="st s1" cx="594" cy="365" r="1.1" fill="#fff"/>
+<circle class="st s3" cx="273" cy="504" r="2.3" fill="#fff"/>
+<circle class="st s1" cx="687" cy="443" r="1.3" fill="#fff"/>
+<circle class="st s4" cx="446" cy="46" r="1.5" fill="#fff"/>
+<circle class="st s1" cx="983" cy="273" r="0.8" fill="#fff"/>
+<circle class="st s2" cx="549" cy="20" r="1.6" fill="#fff"/>
+<circle class="st s4" cx="602" cy="560" r="2.2" fill="#fff"/>
+<circle class="st s1" cx="1211" cy="276" r="2.2" fill="#fff"/>
+<circle class="st s2" cx="970" cy="246" r="1.6" fill="#fff"/>
+<circle class="st s3" cx="669" cy="472" r="1.6" fill="#fff"/>
+<circle class="st s2" cx="859" cy="535" r="2.1" fill="#fff"/>
+<circle class="st s3" cx="390" cy="79" r="1.6" fill="#fff"/>
+<circle class="st s1" cx="733" cy="113" r="1.6" fill="#fff"/>
+<circle class="st s4" cx="775" cy="16" r="2.3" fill="#fff"/>
+<circle class="st s1" cx="696" cy="554" r="1.0" fill="#fff"/>
+<circle class="st s4" cx="884" cy="37" r="1.6" fill="#fff"/>
+<circle class="st s2" cx="1179" cy="448" r="1.4" fill="#fff"/>
+<circle class="st s4" cx="606" cy="71" r="1.5" fill="#fff"/>
+<circle class="st s1" cx="672" cy="61" r="1.4" fill="#fff"/>
+<circle class="st s1" cx="1184" cy="72" r="2.0" fill="#fff"/>
+<circle class="st s3" cx="46" cy="87" r="0.8" fill="#fff"/>
+<circle class="st s1" cx="412" cy="199" r="1.7" fill="#fff"/>
+<circle class="st s3" cx="640" cy="326" r="2.1" fill="#fff"/>
+<circle class="st s1" cx="919" cy="393" r="2.1" fill="#fff"/>
+<circle class="st s2" cx="481" cy="232" r="1.6" fill="#fff"/>
+<circle class="st s2" cx="689" cy="484" r="1.6" fill="#fff"/>
+<circle class="st s2" cx="678" cy="477" r="1.7" fill="#fff"/>
+<circle class="st s2" cx="298" cy="415" r="2.0" fill="#fff"/>
+<circle class="st s2" cx="404" cy="176" r="2.2" fill="#fff"/>
+<circle class="st s2" cx="996" cy="109" r="0.9" fill="#fff"/>
+<circle class="st s4" cx="170" cy="49" r="1.4" fill="#fff"/>
+<circle class="st s2" cx="1065" cy="236" r="2.0" fill="#fff"/>
+<circle class="st s1" cx="257" cy="352" r="2.0" fill="#fff"/>
+<circle class="st s3" cx="257" cy="382" r="2.2" fill="#fff"/>
+<circle class="st s2" cx="148" cy="283" r="1.9" fill="#fff"/>
+<circle class="st s4" cx="1028" cy="270" r="0.8" fill="#fff"/>
+<circle class="st s2" cx="188" cy="103" r="1.1" fill="#fff"/>
+<circle class="st s1" cx="1268" cy="519" r="0.9" fill="#fff"/>
+<circle class="st s1" cx="172" cy="381" r="0.9" fill="#fff"/>
+<circle class="st s4" cx="418" cy="261" r="1.6" fill="#fff"/>
+<circle class="st s1" cx="269" cy="209" r="1.8" fill="#fff"/>
+<circle class="st s3" cx="1081" cy="102" r="1.5" fill="#fff"/>
+<circle class="st s1" cx="519" cy="109" r="1.0" fill="#fff"/>
+<circle class="st s4" cx="414" cy="48" r="2.1" fill="#fff"/>
+<circle class="st s3" cx="729" cy="107" r="1.7" fill="#fff"/>
+<circle class="st s2" cx="1030" cy="145" r="2.2" fill="#fff"/>
+<path class="cadente" d="M900,60 l46,-26" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<g transform="translate(1080 150)">
+  <clipPath id="terra-disco"><circle r="96"/></clipPath>
+  <circle r="96" fill="#3a95e6"/>
+  <g clip-path="url(#terra-disco)">
+    <g class="continenti"><g transform="scale(1.2)">
+    <path d="M-70,-40 C-50,-66 -14,-62 -6,-40 C0,-22 -20,-10 -30,6 C-38,20 -60,18 -72,2 C-84,-12 -82,-28 -70,-40 Z" fill="#63bf6a"/>
+    <path d="M10,10 C30,-4 56,6 58,28 C60,48 40,64 22,56 C6,48 -4,24 10,10 Z" fill="#63bf6a"/>
+    <path d="M40,-58 C56,-66 76,-56 74,-42 C72,-30 52,-30 42,-38 C36,-44 34,-54 40,-58 Z" fill="#63bf6a"/>
+    <path d="M-40,44 C-28,36 -10,42 -12,56 C-14,68 -34,70 -42,60 C-46,54 -46,48 -40,44 Z" fill="#63bf6a"/></g><g transform="translate(-192 0) scale(1.2)">
+    <path d="M-70,-40 C-50,-66 -14,-62 -6,-40 C0,-22 -20,-10 -30,6 C-38,20 -60,18 -72,2 C-84,-12 -82,-28 -70,-40 Z" fill="#63bf6a"/>
+    <path d="M10,10 C30,-4 56,6 58,28 C60,48 40,64 22,56 C6,48 -4,24 10,10 Z" fill="#63bf6a"/>
+    <path d="M40,-58 C56,-66 76,-56 74,-42 C72,-30 52,-30 42,-38 C36,-44 34,-54 40,-58 Z" fill="#63bf6a"/>
+    <path d="M-40,44 C-28,36 -10,42 -12,56 C-14,68 -34,70 -42,60 C-46,54 -46,48 -40,44 Z" fill="#63bf6a"/></g></g>
+    <g class="nuvole" fill="#fff" opacity=".85">
+      <rect x="-67.19999999999999" y="-24.0" width="67.19999999999999" height="10.56" rx="5.28"/>
+      <rect x="9.600000000000001" y="26.880000000000003" width="57.599999999999994" height="9.600000000000001" rx="4.800000000000001"/>
+      <rect x="-19.200000000000003" y="-67.19999999999999" width="48.0" height="8.64" rx="4.32"/>
+      <rect x="33.599999999999994" y="-43.2" width="38.400000000000006" height="7.68" rx="3.84"/>
+      <rect x="-259.20000000000005" y="-24.0" width="67.19999999999999" height="10.56" rx="5.28"/>
+      <rect x="-182.39999999999998" y="26.880000000000003" width="57.599999999999994" height="9.600000000000001" rx="4.800000000000001"/>
+      <rect x="-211.20000000000002" y="-67.19999999999999" width="48.0" height="8.64" rx="4.32"/>
+      <rect x="-158.39999999999998" y="-43.2" width="38.400000000000006" height="7.68" rx="3.84"/>
+    </g>
+    <circle r="96" fill="url(#ombra-terra)"/>
+  </g>
+  <circle r="96" fill="none" stroke="#22344d" stroke-width="4"/>
+</g>
+<g transform="translate(210 110)"><g class="ast a1"><g transform="rotate(30) scale(0.5)">
+  <path d="M-38,-8 C-40,-30 -14,-44 8,-40 C30,-38 46,-20 42,2 C40,22 26,38 4,40 C-18,42 -36,30 -42,12 Z" fill="#9aa5b8" stroke="#22344d" stroke-width="8.0" stroke-linejoin="round"/>
+  <path d="M-30,10 C-22,28 -4,34 14,30 C0,32 -20,26 -30,10 Z" fill="#7d899e"/>
+  <ellipse cx="-12" cy="-12" rx="10" ry="8" fill="#7d899e" stroke="#22344d" stroke-width="6.0"/>
+  <ellipse cx="18" cy="6" rx="7" ry="6" fill="#7d899e" stroke="#22344d" stroke-width="6.0"/>
+  <ellipse cx="4" cy="-28" rx="4" ry="3" fill="#7d899e"/>
+</g></g></g>
+<g transform="translate(420 210)"><g class="ast a3"><g transform="rotate(-20) scale(0.28)">
+  <path d="M-38,-8 C-40,-30 -14,-44 8,-40 C30,-38 46,-20 42,2 C40,22 26,38 4,40 C-18,42 -36,30 -42,12 Z" fill="#9aa5b8" stroke="#22344d" stroke-width="14.3" stroke-linejoin="round"/>
+  <path d="M-30,10 C-22,28 -4,34 14,30 C0,32 -20,26 -30,10 Z" fill="#7d899e"/>
+  <ellipse cx="-12" cy="-12" rx="10" ry="8" fill="#7d899e" stroke="#22344d" stroke-width="10.7"/>
+  <ellipse cx="18" cy="6" rx="7" ry="6" fill="#7d899e" stroke="#22344d" stroke-width="10.7"/>
+  <ellipse cx="4" cy="-28" rx="4" ry="3" fill="#7d899e"/>
+</g></g></g>
+<g class="razzo-vola"><g transform="rotate(82) scale(0.3)">
+  <g class="fiamma">
+    <path d="M-13,55 Q0,104 13,55 Z" fill="#f29900" stroke="#0b5c84" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M-6,57 Q0,84 6,57 Z" fill="#ffe08a"/>
+  </g>
+  <path d="M-22,12 L-48,40 L-48,62 L-22,46 Z" fill="#d3efff" stroke="#0b5c84" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M22,12 L48,40 L48,62 L22,46 Z" fill="#d3efff" stroke="#0b5c84" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M-12,40 L-17,56 L17,56 L12,40 Z" fill="#4fc3f7" stroke="#0b5c84" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M-22,42 L-22,-22 C-22,-62 -9,-84 0,-94 C9,-84 22,-62 22,-22 L22,42 Z" fill="#4fc3f7" stroke="#0b5c84" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M-20.5,-40 C-17,-64 -8,-82 0,-91 C8,-82 17,-64 20.5,-40 Z" fill="#d3efff"/>
+  <path d="M-21,-40 L21,-40" stroke="#0b5c84" stroke-width="5" stroke-linecap="round"/>
+  <rect x="-25" y="28" width="50" height="12" rx="3" fill="#d3efff" stroke="#0b5c84" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="0" cy="-8" r="12" fill="#fff" stroke="#0b5c84" stroke-width="5"/>
+  <path d="M-6,-12 A8,8 0 0 1 2,-15" fill="none" stroke="#d3efff" stroke-width="3" stroke-linecap="round"/></g></g>
+<path d="M0,640 C160,600 300,612 430,636 C560,660 700,604 860,612 C1010,620 1140,592 1280,618 L1280,720 L0,720 Z" fill="#8f9bb0" stroke="#22344d" stroke-width="4" stroke-linejoin="round"/>
+<path d="M0,672 C200,636 380,668 560,676 C760,686 900,640 1080,650 C1170,655 1230,662 1280,670 L1280,720 L0,720 Z" fill="url(#suolo)" stroke="#22344d" stroke-width="4" stroke-linejoin="round"/>
+<g fill="#b3bccb" stroke="#22344d" stroke-width="3">
+  <ellipse cx="260" cy="694" rx="46" ry="9"/><ellipse cx="640" cy="704" rx="30" ry="6"/><ellipse cx="930" cy="684" rx="54" ry="10"/><ellipse cx="1160" cy="700" rx="26" ry="6"/>
+</g>
+<g transform="translate(118 604)">
+  <path d="M0,0 L0,66" stroke="#22344d" stroke-width="5" stroke-linecap="round"/>
+  <g class="bandiera">
+    <rect x="2" y="0" width="74" height="44" rx="4" fill="#111" stroke="#22344d" stroke-width="3"/>
+    <g transform="translate(6 3) scale(.32 .3)" fill="#fff"><path d="M30 98V30h20l20 25 20-25h20v68H90V59L70 84 50 59v39z"/><path d="M155 98l-30-33h20V30h20v35h20z"/></g>
+  </g>
+</g>
+</svg>

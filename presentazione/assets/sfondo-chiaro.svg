@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" preserveAspectRatio="xMidYMid slice">
+<title>Sfondo chiaro: Saturno, asteroidi e suolo lunare appena accennati</title>
+<style>
+.ast { transform-box: fill-box; transform-origin: center; }
+.a1 { animation: deriva1 26s ease-in-out infinite alternate; }
+.a2 { animation: deriva2 34s ease-in-out infinite alternate; }
+.a3 { animation: deriva3 22s ease-in-out infinite alternate; }
+@keyframes deriva1 { from { transform: translate(0,0) rotate(0deg); } to { transform: translate(34px,-22px) rotate(70deg); } }
+@keyframes deriva2 { from { transform: translate(0,0) rotate(0deg); } to { transform: translate(-40px,26px) rotate(-90deg); } }
+@keyframes deriva3 { from { transform: translate(0,0) rotate(0deg); } to { transform: translate(22px,30px) rotate(120deg); } }
+.a4 { animation: deriva4 24s ease-in-out infinite alternate; }
+@keyframes deriva4 { from { transform: translate(0,0) rotate(0deg); } to { transform: translate(10px,-6px) rotate(80deg); } }
+
+.fiamma { transform-box: fill-box; transform-origin: 50% 0%; animation: fiamma .28s ease-in-out infinite alternate; }
+@keyframes fiamma { from { transform: scaleY(.78) scaleX(.94); } to { transform: scaleY(1.12) scaleX(1.04); } }
+
+.razzo-vola { animation: sorvola 40s linear infinite; }
+@keyframes sorvola { 0% { transform: translate(-60px, 58px); } 30% { transform: translate(1360px, -30px); } 100% { transform: translate(1360px, -30px); } }
+
+.fasce { animation: fasce 18s ease-in-out infinite alternate; }
+@keyframes fasce { from { transform: translateX(-12px); } to { transform: translateX(12px); } }
+.croce { animation: pulsa 6s ease-in-out infinite; } .c2 { animation-delay: -2s; } .c3 { animation-delay: -4s; }
+@keyframes pulsa { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+.fiamma path:first-child { fill: #f6e3c0; } .fiamma path:last-child { fill: #fbf2df; }
+</style>
+<defs>
+  <linearGradient id="carta" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f1f6fc"/></linearGradient>
+</defs>
+<rect width="1280" height="720" fill="url(#carta)"/>
+<g opacity=".9"><g transform="translate(1214 62) rotate(-18)">
+  <clipPath id="sat-palla"><circle r="58"/></clipPath>
+  <clipPath id="sat-davanti"><rect x="-137.3" y="0" width="274.6" height="59.0"/></clipPath>
+  <ellipse rx="107.30000000000001" ry="29.0" fill="none" stroke="#c5d5ec" stroke-width="15"/>
+  <ellipse rx="107.30000000000001" ry="29.0" fill="none" stroke="#eef3fb" stroke-width="9"/>
+  <circle r="58" fill="#eef3fb" stroke="#c5d5ec" stroke-width="3"/>
+  <g clip-path="url(#sat-palla)"><g class="fasce">
+    <rect x="-116" y="-31.900000000000002" width="232" height="12.76" fill="#dfe9f7"/>
+    <rect x="-116" y="-5.800000000000001" width="232" height="9.28" fill="#dfe9f7"/>
+    <rect x="-116" y="19.720000000000002" width="232" height="15.08" fill="#dfe9f7"/>
+  </g></g>
+  <circle r="58" fill="none" stroke="#c5d5ec" stroke-width="3"/>
+  <g clip-path="url(#sat-davanti)">
+    <ellipse rx="107.30000000000001" ry="29.0" fill="none" stroke="#c5d5ec" stroke-width="15"/>
+    <ellipse rx="107.30000000000001" ry="29.0" fill="none" stroke="#eef3fb" stroke-width="9"/>
+  </g>
+</g></g>
+<g transform="translate(60 64)"><g class="ast a4"><g transform="rotate(20) scale(0.46)">
+  <path d="M-38,-8 C-40,-30 -14,-44 8,-40 C30,-38 46,-20 42,2 C40,22 26,38 4,40 C-18,42 -36,30 -42,12 Z" fill="#e6eef9" stroke="#c5d5ec" stroke-width="8.7" stroke-linejoin="round"/>
+  <path d="M-30,10 C-22,28 -4,34 14,30 C0,32 -20,26 -30,10 Z" fill="#d9e5f5"/>
+  <ellipse cx="-12" cy="-12" rx="10" ry="8" fill="#d9e5f5" stroke="#c5d5ec" stroke-width="6.5"/>
+  <ellipse cx="18" cy="6" rx="7" ry="6" fill="#d9e5f5" stroke="#c5d5ec" stroke-width="6.5"/>
+  <ellipse cx="4" cy="-28" rx="4" ry="3" fill="#d9e5f5"/>
+</g></g></g>
+<g transform="translate(300 44)"><g class="ast a4"><g transform="rotate(60) scale(0.26)">
+  <path d="M-38,-8 C-40,-30 -14,-44 8,-40 C30,-38 46,-20 42,2 C40,22 26,38 4,40 C-18,42 -36,30 -42,12 Z" fill="#e6eef9" stroke="#c5d5ec" stroke-width="15.4" stroke-linejoin="round"/>
+  <path d="M-30,10 C-22,28 -4,34 14,30 C0,32 -20,26 -30,10 Z" fill="#d9e5f5"/>
+  <ellipse cx="-12" cy="-12" rx="10" ry="8" fill="#d9e5f5" stroke="#c5d5ec" stroke-width="11.5"/>
+  <ellipse cx="18" cy="6" rx="7" ry="6" fill="#d9e5f5" stroke="#c5d5ec" stroke-width="11.5"/>
+  <ellipse cx="4" cy="-28" rx="4" ry="3" fill="#d9e5f5"/>
+</g></g></g>
+<g stroke="#c5d5ec" stroke-width="3" stroke-linecap="round">
+  <path class="croce" d="M170,30 h14 M177,23 v14"/><path class="croce c2" d="M1030,70 h12 M1036,64 v12"/>
+  <path class="croce c3" d="M540,22 h10 M545,17 v10"/><path class="croce c2" d="M760,40 h12 M766,34 v12"/>
+  <path class="croce" d="M420,56 h10 M425,51 v10"/><path class="croce c3" d="M900,24 h10 M905,19 v10"/>
+</g>
+<g class="razzo-vola"><g transform="rotate(86) scale(0.26)">
+  <g class="fiamma">
+    <path d="M-13,55 Q0,104 13,55 Z" fill="#f29900" stroke="#c5d5ec" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M-6,57 Q0,84 6,57 Z" fill="#ffe08a"/>
+  </g>
+  <path d="M-22,12 L-48,40 L-48,62 L-22,46 Z" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M22,12 L48,40 L48,62 L22,46 Z" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M-12,40 L-17,56 L17,56 L12,40 Z" fill="#e6eef9" stroke="#c5d5ec" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M-22,42 L-22,-22 C-22,-62 -9,-84 0,-94 C9,-84 22,-62 22,-22 L22,42 Z" fill="#e6eef9" stroke="#c5d5ec" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M-20.5,-40 C-17,-64 -8,-82 0,-91 C8,-82 17,-64 20.5,-40 Z" fill="#f3f7fc"/>
+  <path d="M-21,-40 L21,-40" stroke="#c5d5ec" stroke-width="5" stroke-linecap="round"/>
+  <rect x="-25" y="28" width="50" height="12" rx="3" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="0" cy="-8" r="12" fill="#fff" stroke="#c5d5ec" stroke-width="5"/>
+  <path d="M-6,-12 A8,8 0 0 1 2,-15" fill="none" stroke="#f3f7fc" stroke-width="3" stroke-linecap="round"/></g></g>
+<path d="M0,690 C170,664 330,676 470,692 C620,708 760,672 920,678 C1060,684 1170,668 1280,684 L1280,720 L0,720 Z" fill="#e6eef9" stroke="#c5d5ec" stroke-width="3" stroke-linejoin="round"/>
+<g fill="#d9e5f5" stroke="#c5d5ec" stroke-width="2.5">
+  <ellipse cx="230" cy="704" rx="40" ry="7"/><ellipse cx="700" cy="708" rx="26" ry="5"/><ellipse cx="1010" cy="700" rx="46" ry="8"/>
+</g>
+</svg>

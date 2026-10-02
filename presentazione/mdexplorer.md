@@ -11,7 +11,9 @@ reveal:
     pdfSeparateFragments: false
 ---
 
-<img src="assets/mdexplorer.png" alt="MdExplorer" width="170">
+<!-- .slide: data-background-color="#0a1322" data-background-image="assets/sfondo-luna.svg" -->
+
+<img src="assets/astronauta.svg" alt="L'astronauta di MdExplorer" width="230">
 
 # MdExplorer
 
@@ -23,11 +25,13 @@ Tutto quello che si vedrà nell'ora è dentro questo progetto demo: nessun mater
 
 ---
 
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
+
 ## Perché l'AI in azienda si ferma
 
-- La conoscenza sta in Word, nelle wiki e nelle teste: **l'AI non la legge** <!-- .element: class="fragment" -->
-- Gli strumenti più capaci vivono nel terminale: **li usa solo chi programma** <!-- .element: class="fragment" -->
-- Ognuno usa l'AI a modo suo: **nessuna regola comune, nessuna verifica** <!-- .element: class="fragment" -->
+- La conoscenza sta in Word, nelle wiki e nelle teste: **l'AI non la legge** <!-- .element: class="fragment fade-up" -->
+- Gli strumenti più capaci vivono nel terminale: **li usa solo chi programma** <!-- .element: class="fragment fade-up" -->
+- Ognuno usa l'AI a modo suo: **nessuna regola comune, nessuna verifica** <!-- .element: class="fragment fade-up" -->
 
 Note:
 Chiedere se si riconosce in almeno uno dei tre punti. Sono i tre ostacoli a cui rispondono le tre parti
@@ -35,11 +39,14 @@ della presentazione.
 
 ---
 
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
+
 ## L'idea
 
 ```plantuml
 @startuml
 !theme plain
+skinparam backgroundColor transparent
 scale 1.8
 left to right direction
 skinparam RectangleBackgroundColor #F1F3F4
@@ -71,21 +78,36 @@ MdExplorer rende le due cose comode per chi non programma e governabili per chi 
 
 ---
 
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
+
 ## Tre cose da ricordare
 
-1. **Documenti vivi**: la conoscenza è leggibile dalle persone e dall'AI
-2. **MarkAgent**: l'AI lavora dentro il progetto, con regole comuni
-3. **Controllo**: ogni modifica si vede, e ciò che conta si verifica
+<div class="r-hstack" style="gap:50px; align-items:center; justify-content:center">
+<div style="max-width:860px">
+
+1. **Documenti vivi**: la conoscenza è leggibile dalle persone e dall'AI <!-- .element: class="fragment fade-up" -->
+2. **MarkAgent**: l'AI lavora dentro il progetto, con regole comuni <!-- .element: class="fragment fade-up" -->
+3. **Controllo**: ogni modifica si vede, e ciò che conta si verifica <!-- .element: class="fragment fade-up" -->
+
+</div>
+<div>
+<img src="assets/razzo.svg" alt="Il razzo di MdExplorer" width="230">
+</div>
+</div>
 
 ---
 
-<!-- .slide: data-background-color="#1b2a3a" -->
+<!-- .slide: data-background-color="#0f1b2d" data-background-image="assets/sfondo-spazio.svg" data-transition="zoom" -->
+
+<img src="assets/astronauta.svg" alt="L'astronauta di MdExplorer" width="210">
 
 ## 1 · Documenti vivi
 
 La conoscenza in un formato che leggono tutti
 
 ---
+
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
 
 ## Un documento che fa da solo
 
@@ -102,11 +124,14 @@ disegnato dal file JSON, il prototipo HTML. Tornare qui con la freccia indietro 
 
 ---
 
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
+
 ## Un diagramma che si interroga
 
 ```plantuml
 @startuml
 !theme plain
+skinparam backgroundColor transparent
 scale 1.8
 left to right direction
 hide empty members
@@ -140,6 +165,8 @@ Cliccare Bozza. Poi il pulsante con l'occhio per vederlo a tutta pagina.
 
 ---
 
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
+
 ## Da un markdown a tutto il resto
 
 <div class="r-hstack" style="gap:40px; align-items:flex-start">
@@ -170,13 +197,17 @@ Qui correggere dal vivo una parola di questa slide con «Modifica», poi annotar
 
 ---
 
-<!-- .slide: data-background-color="#1b2a3a" -->
+<!-- .slide: data-background-color="#0f1b2d" data-background-image="assets/sfondo-spazio.svg" data-transition="zoom" -->
+
+<img src="assets/mark.svg" alt="Mark al pannello radio" width="430">
 
 ## 2 · MarkAgent
 
 L'AI dentro il progetto, con regole comuni
 
 ---
+
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
 
 ## L'AI lavora dove sta la conoscenza
 
@@ -193,11 +224,14 @@ verbale: chiedere a MarkAgent di trovarle. Poi chiedere di aggiungere una slide 
 
 ---
 
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
+
 ## Un motore solo, a scelta dell'azienda
 
 ```plantuml
 @startuml
 !theme plain
+skinparam backgroundColor transparent
 scale 1.8
 left to right direction
 skinparam RectangleBackgroundColor #F1F3F4
@@ -228,6 +262,8 @@ Niente funzioni che di nascosto usano un altro modello.
 
 ---
 
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
+
 ## Le regole viaggiano con il progetto
 
 | Skill | Cosa insegna all'agente |
@@ -245,6 +281,8 @@ aggiungere le proprie. È il modo in cui le buone pratiche diventano comportamen
 
 ---
 
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
+
 ## La conoscenza aperta a ogni agente
 
 - Un server MCP espone il progetto agli agenti: cerca nei documenti, verifica i diagrammi
@@ -259,13 +297,17 @@ riduce il contesto consumato a ogni conversazione.
 
 ---
 
-<!-- .slide: data-background-color="#1b2a3a" -->
+<!-- .slide: data-background-color="#0f1b2d" data-background-image="assets/sfondo-spazio.svg" data-transition="zoom" -->
+
+<img src="assets/astronauta-ok.svg" alt="L'astronauta fa ok" width="230">
 
 ## 3 · Controllo
 
 Fidarsi dell'AI, e verificare
 
 ---
+
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
 
 ## Ogni modifica si vede
 
@@ -276,6 +318,8 @@ Fidarsi dell'AI, e verificare
 [Prova: git senza terminale](../tour/06-git.md)
 
 ---
+
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
 
 ## Ciò che conta si verifica
 
@@ -290,6 +334,8 @@ Il test end-to-end è l'esempio più chiaro di AI verificabile: l'agente esegue,
 esito e uno script. Dalla volta dopo lo script gira da solo e non costa niente.
 
 ---
+
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
 
 ## MdExplorer è costruito così
 
@@ -308,6 +354,8 @@ Un piano scritto in markdown, un agente che lo esegue, una verifica, un commit.
 
 ---
 
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
+
 ## Aperto e sotto controllo
 
 - Codice aperto, licenza MIT
@@ -317,19 +365,38 @@ Un piano scritto in markdown, un agente che lo esegue, una verifica, un commit.
 
 ---
 
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
+
 ## Il prossimo passo
+
+<div class="r-hstack" style="gap:50px; align-items:center; justify-content:center">
+<div style="max-width:860px">
 
 1. Un gruppo, un progetto vero, quattro settimane
 2. Le regole di casa scritte come skill
 3. Si misura cosa cambia: tempi, qualità, uso
+
+</div>
+<div>
+<img src="assets/razzo.svg" alt="Il razzo di MdExplorer" width="230">
+</div>
+</div>
 
 Note:
 Adattare questa slide alla richiesta che si vuole fare all'interlocutore.
 
 ---
 
+<!-- .slide: data-background-color="#0a1322" data-background-image="assets/sfondo-luna.svg" -->
+
+<img src="assets/astronauta-ok.svg" alt="L'astronauta fa ok" width="180">
+
 ## Grazie
+
+<div style="display:inline-block; background:rgba(255,255,255,.94); color:#1b2a3a; border-radius:14px; padding:0 30px">
 
 [mdexplorer.net](https://www.mdexplorer.net) · [github.com/salaroglio/MdExplorer](https://github.com/salaroglio/MdExplorer)
 
-Il progetto demo che avete visto si apre da MdExplorer con «Crea progetto demo».
+Il progetto demo che avete visto si apre con «Crea progetto demo».
+
+</div>

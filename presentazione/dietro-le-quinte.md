@@ -11,6 +11,10 @@ reveal:
     pdfSeparateFragments: false
 ---
 
+<!-- .slide: data-background-color="#0f1b2d" data-background-image="assets/sfondo-spazio.svg" -->
+
+<img src="assets/razzo.svg" alt="Il razzo di MdExplorer" width="200">
+
 # Dietro le quinte
 
 Come è costruito MdExplorer
@@ -20,6 +24,8 @@ Questa presentazione si apre da un link della principale. La traccia in alto a s
 slide di partenza.
 
 ---
+
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
 
 ## I numeri
 
@@ -35,6 +41,8 @@ slide di partenza.
 Misurati sul repository il 1° ottobre 2026.
 
 ---
+
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
 
 ## Sei anni, un'accelerazione
 
@@ -54,11 +62,14 @@ Il salto non viene da più ore di lavoro. Viene dal metodo della slide successiv
 
 ---
 
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
+
 ## Il metodo
 
 ```plantuml
 @startuml
 !theme plain
+skinparam backgroundColor transparent
 scale 1.5
 left to right direction
 skinparam RectangleBackgroundColor #F1F3F4
@@ -90,11 +101,14 @@ La persona decide e controlla, l'agente esegue e documenta.
 
 ---
 
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
+
 ## Com'è fatto
 
 ```plantuml
 @startuml
 !theme plain
+skinparam backgroundColor transparent
 scale 1.5
 left to right direction
 skinparam RectangleBackgroundColor #F1F3F4
@@ -127,6 +141,8 @@ MCP --> S
 ```
 
 ---
+
+<!-- .slide: data-background-image="assets/sfondo-chiaro.svg" -->
 
 ## Tre cose imparate
 

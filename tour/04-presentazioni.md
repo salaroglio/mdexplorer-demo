@@ -70,6 +70,12 @@ Sopra un diagramma, al passaggio del mouse, compaiono lo zoom e l'occhio 👁, c
 4. Vai all'ultima slide e segui un link: in alto a sinistra compare la traccia per tornare.
 5. Tasto destro su un punto di elenco, poi «💬 Chiedi a MarkAgent»: la spiegazione usa i documenti del progetto.
 
+## Sfondi e personaggi
+
+La presentazione di MdExplorer ha sfondi che si muovono e personaggi animati: l'astronauta, il razzo, Mark.
+Sono file SVG nella cartella `presentazione/assets`, richiamati dalle slide per nome. Per cambiarne uno basta
+sostituire il file: l'elenco, con misure e regole, è nella pagina [Gli asset della presentazione](../presentazione/assets/README.md).
+
 ## Collegare le presentazioni
 
 Un link markdown verso un'altra presentazione la apre, e la traccia in alto a sinistra riporta alla slide di
