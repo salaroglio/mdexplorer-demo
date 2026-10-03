@@ -48,7 +48,7 @@ Regole che valgono sempre:
 2. Se **ne manca almeno una**: come ultima azione invia a `user` UN `[ESITO]` che dice quale scheda hai ricevuto e quali mancano. Poi basta: non scrivere altro.
 3. Se ci sono **tutte e tre**: leggile e scrivi `citta-degli-agenti/gara/schede/sintesi.md` nel formato qui sotto. Poi aggiungi la riga del bando in `citta-degli-agenti/gara/registro-bandi.md` (decisione «in valutazione»). Come ultima azione invia a `user` UN `[ESITO]` con la raccomandazione e i cinque indicatori, in poche righe.
 
-Usa **solo** ciò che c'è nelle tre schede: non rileggere il capitolato per decidere al posto dei responsabili. Quando una scheda dice una cosa e un'altra ne dice un'altra sullo stesso punto, scrivilo nella parte «Dove le schede si sommano o si contraddicono»: è lì che serve la sintesi.
+Per le valutazioni usa **solo** ciò che c'è nelle tre schede: non rileggere il capitolato per decidere al posto dei responsabili. Per il resto leggi due cose, e solo quelle: il **titolo** del bando in `citta-degli-agenti/gara/portale-nordica/bandi.md` e la riga «Data di lavoro» di `citta-degli-agenti/gara/profilo-pentagroup.md`, che ti serve per calcolare i giorni che mancano alle scadenze e per scrivere «Visto il» nel registro (usa quella data, **non** la data di oggi). Quando una scheda dice una cosa e un'altra ne dice un'altra sullo stesso punto, scrivilo nella parte «Dove le schede si sommano o si contraddicono»: è lì che serve la sintesi.
 
 ### Formato di `citta-degli-agenti/gara/schede/sintesi.md`
 
