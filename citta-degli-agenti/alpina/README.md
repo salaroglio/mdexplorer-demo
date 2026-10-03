@@ -30,8 +30,9 @@ come lavorare.
 
 Un agente non legge i documenti degli altri per conto suo: se il suo documento dice una cosa diversa da quello
 di un collega, **gli scrive** con due righe e le due cifre. Il collega controlla e risponde. Per non far
-rimbalzare i messaggi all'infinito, ogni messaggio comincia con `[DOMANDA]` o con `[RISPOSTA]`: una domanda si
-scrive solo quando ti ha lanciato una persona, e a una risposta non si replica mai. Se qualcosa sfugge, c'è
+rimbalzare i messaggi all'infinito, ogni messaggio comincia con `[DOMANDA]`, `[RISPOSTA]` o `[ESITO]`: una domanda si
+scrive solo quando ti ha lanciato una persona, a una risposta non si replica mai, e il risultato finale arriva a te,
+nella posta in arrivo, come `[ESITO]`. Se qualcosa sfugge, c'è
 comunque un tetto: dopo sei rimbalzi la conversazione si chiude da sola e solo tu puoi riaprirla.
 
 ```plantuml
