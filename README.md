@@ -21,6 +21,7 @@ cronologia è una sola, git.
 | dieci minuti | [La presentazione](presentazione/mdexplorer.md) | l'idea, in venti slide |
 | mezz'ora | [Il percorso: prova tu](tour/01-documenti-vivi.md) | otto prove da fare |
 | un'ora | [Il caso di studio](caso-studio/README.md) | un progetto su cui far lavorare l'AI |
+| mezz'ora in più | [La città degli agenti](citta-degli-agenti/README.md) | gli agenti AI che abitano il progetto e si scrivono tra loro |
 
 ## Il percorso: prova tu
 
@@ -34,6 +35,12 @@ cronologia è una sola, git.
 | 6 | [Git senza terminale](tour/06-git.md) | cosa è cambiato, chi l'ha cambiato, come si salva |
 | 7 | [Regole, skill e MCP](tour/07-regole-skill-mcp.md) | come si insegna all'agente il modo di lavorare di casa |
 | 8 | [Test scritti in italiano](tour/08-test-e2e.md) | l'agente controlla un sito e lascia le prove |
+
+## La città degli agenti
+
+Gli agenti AI possono anche **abitare** il progetto: ognuno con un nome, un ruolo e un documento da presidiare, e con
+la possibilità di scriversi tra loro. Tu decidi di chi fidarti e ricevi il risultato nella posta.
+[Sei prove](citta-degli-agenti/README.md) per vederlo con le tue mani, sul caso di studio di Alpina Servizi.
 
 ## Il caso di studio
 
