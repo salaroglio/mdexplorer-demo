@@ -1,5 +1,5 @@
 ---
-title: La città degli agenti
+title: Un assistente per ogni persona
 document_type: slides
 reveal:
   theme: white
@@ -13,481 +13,573 @@ reveal:
 
 <!-- .slide: data-background-color="#0a1322" data-background-image="assets/citta-sfondo.svg" -->
 
-<div style="display:flex; justify-content:center; align-items:flex-end; gap:34px; margin-bottom:6px">
-<img src="assets/custode-requisiti.svg" alt="Il custode dei requisiti" width="128" style="margin:0">
-<img src="assets/custode-piano.svg" alt="Il custode del piano" width="150" style="margin:0">
-<img src="assets/custode-verbali.svg" alt="Il custode dei verbali" width="128" style="margin:0">
+<div style="display:flex; justify-content:center; align-items:flex-end; gap:30px; margin-bottom:4px">
+<img src="assets/agente-account.svg" alt="L'assistente dell'account manager" width="130" style="margin:0">
+<img src="assets/agente-tecnico.svg" alt="L'assistente del responsabile tecnico" width="130" style="margin:0">
+<img src="assets/agente-legale.svg" alt="L'assistente del responsabile legale" width="130" style="margin:0">
+<img src="assets/agente-delivery.svg" alt="L'assistente del responsabile delivery" width="130" style="margin:0">
 </div>
 
-# La città degli agenti
+# Un assistente per ogni persona
 
-Agenti AI che abitano il progetto, si scrivono tra loro e rispondono a te
+Lui prepara. **Tu verifichi. Tu decidi.**
 
 Note:
-Aprire dicendo che i tre personaggi sono tre agenti veri, che si vedranno al lavoro. Tutto ciò che si mostra
-è dentro il progetto demo: un caso di studio inventato, Alpina Servizi, con tre documenti scritti da persone diverse.
+Aprire dicendo cosa si vedrà: una gara d'appalto vera nella forma, inventata nei nomi. Quattro persone, ognuna con un assistente
+AI. Il messaggio da portare a casa è uno: gli assistenti preparano il lavoro, ma nessun lavoro passa al passo successivo
+senza un gesto di una persona.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Tre documenti, tre verità
+## Una gara. Quattro sguardi. Una decisione.
 
-<div class="r-hstack" style="gap:26px; align-items:stretch; justify-content:center; margin-top:10px">
+<div style="display:flex; gap:20px; justify-content:center; margin-top:8px; text-align:left">
 
-<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #7b61ff; border-radius:14px; padding:20px 24px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<div style="font-size:.62em; color:#7b61ff; font-weight:800; letter-spacing:.08em">REQUISITI</div>
-<div style="font-size:1.5em; font-weight:800; line-height:1.15; margin-top:6px">8 settimane<br>20 operatori</div>
+<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #1a73e8; border-radius:14px; padding:16px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:.55em; color:#1a73e8; font-weight:800; letter-spacing:.08em">TECNICO</div>
+<div style="font-size:.95em; font-weight:700; line-height:1.2; margin-top:6px">Reggiamo i requisiti?</div>
 </div>
 
-<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #1a73e8; border-radius:14px; padding:20px 24px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<div style="font-size:.62em; color:#1a73e8; font-weight:800; letter-spacing:.08em">PIANO</div>
-<div style="font-size:1.5em; font-weight:800; line-height:1.15; margin-top:6px">8 settimane<br>5, poi «tutti»</div>
+<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #7b61ff; border-radius:14px; padding:16px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:.55em; color:#7b61ff; font-weight:800; letter-spacing:.08em">LEGALE</div>
+<div style="font-size:.95em; font-weight:700; line-height:1.2; margin-top:6px">Possiamo firmare queste clausole?</div>
 </div>
 
-<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #188038; border-radius:14px; padding:20px 24px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<div style="font-size:.62em; color:#188038; font-weight:800; letter-spacing:.08em">VERBALE DEL COMITATO</div>
-<div style="font-size:1.5em; font-weight:800; line-height:1.15; margin-top:6px">6 settimane<br>12 operatori</div>
+<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #188038; border-radius:14px; padding:16px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:.55em; color:#188038; font-weight:800; letter-spacing:.08em">DELIVERY</div>
+<div style="font-size:.95em; font-weight:700; line-height:1.2; margin-top:6px">I tempi e le persone bastano?</div>
+</div>
+
+<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #f29900; border-radius:14px; padding:16px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:.55em; color:#f29900; font-weight:800; letter-spacing:.08em">ACCOUNT MANAGER</div>
+<div style="font-size:.95em; font-weight:700; line-height:1.2; margin-top:6px">Partecipiamo o no?</div>
 </div>
 
 </div>
 
-<div class="fragment fade-up" style="margin-top:26px; font-size:1.05em">
+<div class="fragment fade-up" style="margin-top:28px; font-size:.95em">
 
-**Scritti in momenti diversi, da persone diverse. Chi li confronta, ogni volta che cambia qualcosa?**
+Un capitolato lungo, da leggere quattro volte con occhi diversi. **Chi ne ha il tempo?**
 
 </div>
 
 Note:
-È il pilota di Alpina Servizi, un'azienda inventata. Nessun documento è sbagliato da solo: sono tre fotografie scattate
-in momenti diversi. Succede in ogni progetto. Un assistente in chat li legge se glielo chiedi, ma tu devi ricordarti di chiederglielo.
+Pentagroup, un'azienda inventata di servizi gestiti, riceve un invito a una gara di un committente. Il capitolato è lungo e
+ogni responsabile deve leggerlo cercando cose diverse. In pratica ognuno legge le sue parti e spera che gli altri leggano le loro.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Un custode per documento
+## L'idea: ogni persona ha il suo assistente
 
-<img src="assets/citta-agenti.svg" alt="La città di Alpina: tre custodi si scrivono e il risultato arriva a te nella posta" width="960" style="margin:4px 0 0 0">
+<div style="display:flex; align-items:center; justify-content:center; gap:14px; margin-top:20px">
 
-Si scrivono tra loro. **Tu decidi di chi fidarti** e ricevi il risultato nella posta.
+<div class="fragment fade-in" style="background:#fff; border-radius:16px; padding:22px 26px; box-shadow:0 8px 24px rgba(15,27,45,.12); width:250px">
+<div style="font-size:.5em; color:#5f6368; font-weight:800; letter-spacing:.08em">L'ASSISTENTE</div>
+<div style="font-size:1.35em; font-weight:800; color:#1a73e8; margin:6px 0">PREPARA</div>
+<div style="font-size:.6em; line-height:1.3">legge, confronta, scrive una scheda e <b>cita la fonte</b></div>
+</div>
+
+<div style="font-size:1.6em; color:#8a99ad">→</div>
+
+<div class="fragment fade-in" style="background:#fff; border-radius:16px; padding:22px 26px; box-shadow:0 8px 24px rgba(15,27,45,.12); width:250px">
+<div style="font-size:.5em; color:#5f6368; font-weight:800; letter-spacing:.08em">TU</div>
+<div style="font-size:1.35em; font-weight:800; color:#f29900; margin:6px 0">VERIFICHI</div>
+<div style="font-size:.6em; line-height:1.3">leggi la scheda, controlli i punti dubbi, approvi o rifiuti</div>
+</div>
+
+<div style="font-size:1.6em; color:#8a99ad">→</div>
+
+<div class="fragment fade-in" style="background:#fff; border-radius:16px; padding:22px 26px; box-shadow:0 8px 24px rgba(15,27,45,.12); width:250px">
+<div style="font-size:.5em; color:#5f6368; font-weight:800; letter-spacing:.08em">TU</div>
+<div style="font-size:1.35em; font-weight:800; color:#188038; margin:6px 0">DECIDI</div>
+<div style="font-size:.6em; line-height:1.3">a chi passare il lavoro, e se partecipare alla gara</div>
+</div>
+
+</div>
+
+<div class="fragment fade-up" style="margin-top:34px; font-size:.9em">
+
+**L'assistente non decide e non passa il lavoro da solo.**
+
+</div>
 
 Note:
-Questa è la scena che vedremo in azione. Tre edifici, tre agenti: ognuno conosce solo il suo documento.
-Le buste che volano sono messaggi veri: la domanda, la risposta e l'esito che arriva alla cassetta della posta, cioè a te.
-
----
-
-<!-- .slide: data-background-color="#0f1b2d" data-background-image="assets/citta-sfondo.svg" data-transition="zoom" -->
-
-<img src="assets/custode-piano.svg" alt="Il custode del piano" width="170">
-
-## 1 · Chi abita la città
-
-Un agente è un file, e dipende da te
+Questa è la slide da ricordare. Tre verbi. L'assistente prepara e porta le fonti; la persona verifica e decide. Non si chiede
+alla persona di fidarsi: si chiede di controllare, e le schede sono scritte per rendere il controllo facile.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Un agente è un file markdown
+## I quattro, in un colpo d'occhio
 
-<div class="r-hstack" style="gap:30px; align-items:center; justify-content:center">
-<div style="flex:1.5">
+<div style="display:flex; gap:22px; justify-content:center; align-items:flex-start; margin-top:4px">
 
-```yaml [2-3|4-8|10-11]
----
-description: Presidia il piano del pilota
-tools: [read, search]
-a2a:
-  name: custode-piano
-  role: Custode del piano del pilota
-  accepts_messages_from: [custode-verbali]
-  max_hops: 6
----
-Sei il custode del piano.
-Leggi solo il tuo documento.
-```
-
-</div>
-<div style="flex:1; text-align:left; font-size:.82em; line-height:1.5">
-
-<div class="fragment fade-up" data-fragment-index="1" style="margin-bottom:14px; padding-left:16px; border-left:6px solid #1a73e8"><b>Chi è</b>: nome e ruolo</div>
-
-<div class="fragment fade-up" data-fragment-index="2" style="margin-bottom:14px; padding-left:16px; border-left:6px solid #7b61ff"><b>Cosa può usare</b>: i suoi strumenti</div>
-
-<div class="fragment fade-up" data-fragment-index="3" style="padding-left:16px; border-left:6px solid #188038"><b>Con chi parla</b>: chi può scrivergli e un tetto di passaggi</div>
-
-</div>
+<div style="width:270px; text-align:center">
+<img src="assets/agente-account.svg" alt="Account manager" width="120" style="margin:0">
+<div style="font-size:.7em; font-weight:800; color:#f29900; margin-top:4px">ACCOUNT MANAGER</div>
+<div style="font-size:.55em; line-height:1.3; margin-top:4px">cerca i bandi, avvia il giro, scrive la <b>sintesi</b></div>
 </div>
 
-Il testo sotto la scheda dice **come lavorare**.
+<div style="width:270px; text-align:center">
+<img src="assets/agente-tecnico.svg" alt="Responsabile tecnico" width="120" style="margin:0">
+<div style="font-size:.7em; font-weight:800; color:#1a73e8; margin-top:4px">TECNICO</div>
+<div style="font-size:.55em; line-height:1.3; margin-top:4px">la scheda di <b>fattibilità</b>: cosa copriamo e cosa no</div>
+</div>
+
+<div style="width:270px; text-align:center">
+<img src="assets/agente-legale.svg" alt="Responsabile legale" width="120" style="margin:0">
+<div style="font-size:.7em; font-weight:800; color:#7b61ff; margin-top:4px">LEGALE</div>
+<div style="font-size:.55em; line-height:1.3; margin-top:4px">la scheda delle <b>clausole</b>: accettabili, da negoziare, critiche</div>
+</div>
+
+<div style="width:270px; text-align:center">
+<img src="assets/agente-delivery.svg" alt="Responsabile delivery" width="120" style="margin:0">
+<div style="font-size:.7em; font-weight:800; color:#188038; margin-top:4px">DELIVERY</div>
+<div style="font-size:.55em; line-height:1.3; margin-top:4px">la scheda di <b>team e date</b>: i tempi reggono?</div>
+</div>
+
+</div>
+
+<div style="margin-top:14px; font-size:.7em">
+
+Nel demo **le quattro parti le fai tu**, una dopo l'altra.
+
+</div>
 
 Note:
-Niente di nuovo da installare: è un file nel repository, si legge, si corregge, si versiona come ogni altro documento.
-La parte tra i trattini dice chi è l'agente e cosa può fare; il testo sotto, in italiano semplice, come deve lavorare.
+Quattro assistenti, ognuno con un file di testo nel progetto che dice chi è e cosa può fare. In un'azienda vera sarebbero quattro
+persone su quattro computer. Nel demo le interpreti tutte tu, ed è il modo più rapido per vedere come passa il lavoro.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Nessuno entra senza la tua fiducia
+## Prima li abiliti tu, uno per uno
 
-<div class="r-hstack" style="gap:22px; align-items:center; justify-content:center; margin-top:14px">
+<div style="display:flex; gap:34px; align-items:center; justify-content:center; margin-top:0">
 
-<div class="fragment fade-up" data-fragment-index="1" style="background:#fff; border:3px solid #9aa5b8; border-radius:16px; padding:20px 26px; box-shadow:0 8px 24px rgba(15,27,45,.12); text-align:left">
-<div style="font-weight:800; font-size:1.05em">custode-piano</div>
-<div style="font-size:.7em; margin-top:4px; color:#5f6368">Skill: verifica-piano · Tool: read, search</div>
-<div style="margin-top:10px; display:inline-block; background:#eef1f5; color:#5f6368; font-weight:800; font-size:.62em; padding:4px 12px; border-radius:20px">NON FIDATO</div>
+<img src="assets/schermate/fiducia.png" alt="La finestra che si apre prima di abilitare un agente" height="560" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+
+<div style="width:470px; text-align:left; font-size:.62em; line-height:1.35">
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #ef6c00; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:14px">
+<b>«Che cosa fa»</b><br>Lo scrive l'autore dell'agente. <b>Nessuno lo verifica</b>: lo leggi con la testa.
 </div>
 
-<div class="fragment fade-up" data-fragment-index="2" style="font-size:2em; color:#1a73e8">➜</div>
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #2e7d32; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:14px">
+<b>«Cosa può fare sul tuo computer»</b><br>Lo calcola l'app dagli strumenti. <b>Questa parte è garantita.</b>
+</div>
 
-<div class="fragment fade-up" data-fragment-index="2" style="background:#1a73e8; color:#fff; border-radius:14px; padding:14px 22px; font-weight:800; font-size:.8em; box-shadow:0 8px 24px rgba(26,115,232,.35)">Concedi trust</div>
-
-<div class="fragment fade-up" data-fragment-index="3" style="font-size:2em; color:#188038">➜</div>
-
-<div class="fragment fade-up" data-fragment-index="3" style="background:#fff; border:3px solid #188038; border-radius:16px; padding:20px 26px; box-shadow:0 8px 24px rgba(24,128,56,.22); text-align:left">
-<div style="font-weight:800; font-size:1.05em">custode-piano</div>
-<div style="font-size:.7em; margin-top:4px; color:#5f6368">Skill: verifica-piano · Tool: read, search</div>
-<div style="margin-top:10px; display:inline-block; background:#188038; color:#fff; font-weight:800; font-size:.62em; padding:4px 12px; border-radius:20px">FIDATO</div>
+<div class="fragment fade-up">
+<b>Questo agente non può eseguire comandi.</b> Tutto ciò che scrive resta in una copia a parte finché non lo approvi.
 </div>
 
 </div>
-
-<div class="fragment fade-up" data-fragment-index="4" style="margin-top:34px; background:#fdecea; border-left:8px solid #d93025; border-radius:10px; padding:14px 22px; display:inline-block; text-align:left; font-size:.86em">
-
-**Se qualcuno cambia la scheda** (gli strumenti, o chi può scrivergli), **la fiducia decade**. Va data di nuovo, con gli occhi aperti.
 
 </div>
 
 Note:
-La fiducia è tua, sul tuo computer, per agente. Senza, l'agente può essere lanciato a mano ma i colleghi non lo vedono.
-Il punto forte è l'ultimo: un permesso in più non può passare in silenzio da una modifica al file. Prova 2 e prova 5.
-
----
-
-<!-- .slide: data-background-color="#0f1b2d" data-background-image="assets/citta-sfondo.svg" data-transition="zoom" -->
-
-<img src="assets/busta.svg" alt="Un messaggio tra agenti" width="260">
-
-## 2 · Come si parlano
-
-Domande, risposte, un esito
+Un agente è un file di testo, e un file si può modificare. Per questo nessun agente parte finché non lo abiliti, dopo aver letto
+questa finestra. Distinguere le due parti è importante: sopra c'è ciò che qualcuno ha scritto, sotto c'è ciò che l'app può
+garantire. Se cambia la scheda dopo il tuo sì, l'abilitazione decade e va rifatta.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Un dialogo in due messaggi
+## Passo 1: l'account manager cerca il bando
 
-```plantuml
-@startuml
-!theme plain
-skinparam backgroundColor transparent
-scale 1.5
-hide footbox
-skinparam ParticipantBackgroundColor #F1F3F4
-skinparam ParticipantBorderColor #5F6368
-skinparam SequenceLifeLineBorderColor #5F6368
-skinparam ArrowColor #5F6368
-skinparam participant {
-  BackgroundColor<<Piano>> #CFE1FB
-  BorderColor<<Piano>> #1A73E8
-  BackgroundColor<<Verbali>> #C9ECD2
-  BorderColor<<Verbali>> #188038
-}
-hide stereotype
+<div style="display:flex; gap:34px; align-items:center; justify-content:center">
 
-actor "Tu" as U
-participant "custode-piano" as P <<Piano>>
-participant "custode-verbali" as V <<Verbali>>
+<img src="assets/schermate/scoperta.png" alt="Il messaggio dell'account manager con i tre bandi nuovi" height="520" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 
-U -> P ++ : lanci l'agente
-P -> P : legge il suo documento
-P -[#1A73E8]> V ++ : [DOMANDA] cosa ha deciso il comitato?
-deactivate P
-V -> V : legge il verbale
-V -[#188038]> P ++ : [RISPOSTA] D2: 6 settimane, D3: 12 operatori
-deactivate V
-P -> P : confronta le cifre
-P -[#F29900]-> U -- : [ESITO] nella posta in arrivo
-@enduml
-```
+<div style="width:500px; text-align:left; font-size:.64em; line-height:1.4">
 
-Ognuno legge **solo il suo documento**: il resto lo chiede al collega.
+<div class="fragment fade-up">
+
+1. Legge il **sito dei bandi** e il registro di quelli già visti.
+2. Li confronta con i **criteri di Pentagroup**.
+3. Ti scrive **un messaggio**: uno compatibile, due scartati, con il motivo.
+
+</div>
+
+<div class="fragment fade-up" style="margin-top:12px; background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12)">
+Chiude con una <b>domanda</b>, non con un'azione: <i>«Vuoi che avvii il giro?»</i>
+</div>
+
+<div class="fragment fade-up" style="margin-top:12px; font-size:.8em; color:#5f6368">
+Il sito dei bandi è un file di esempio: nel demo <b>simula</b> quello del committente.
+</div>
+
+</div>
+
+</div>
 
 Note:
-Il piano legge il suo documento, trova «otto settimane» e chiede al custode dei verbali cosa ha deciso il comitato.
-Il custode dei verbali risponde con le sue cifre. Il piano confronta e scrive a te. Due messaggi tra agenti, uno per te.
-Prova 4: si lancia un agente dall'albero dei file e si guarda la conversazione.
+Il primo assistente fa il lavoro noioso: guardare ogni giorno cosa c'è di nuovo. Scarta due procedure con un motivo che si può
+controllare (una è fuori dall'attività, una ha pochi giorni per rispondere) e ne propone una. Non avvia niente: aspetta te.
+Onestà: il sito è un file nel progetto, in azienda l'assistente lo leggerebbe con uno strumento di navigazione.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Tre etichette, niente rimbalzi
+## Passo 2: rispondi «avvia»
 
-<div class="r-hstack" style="gap:26px; align-items:stretch; justify-content:center; margin-top:16px">
+<div style="display:flex; flex-direction:column; align-items:center; gap:18px; margin-top:6px">
 
-<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #1a73e8; border-radius:14px; padding:22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<div style="display:inline-block; background:#1a73e8; color:#fff; font-weight:800; font-size:.62em; padding:4px 14px; border-radius:20px; letter-spacing:.06em">DOMANDA</div>
+<img src="assets/schermate/risposta.png" alt="La risposta avvia NC-2027-014 nella posta" width="640" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 
-Solo se ti ha lanciato **una persona**. Una per collega.
+<div class="r-hstack" style="gap:16px; align-items:center; font-size:.62em">
+<div style="background:#fff; border-radius:12px; padding:10px 18px; box-shadow:0 6px 18px rgba(15,27,45,.12); font-weight:800; color:#f29900">account manager</div>
+<div class="fragment fade-in" style="font-size:1.4em; color:#8a99ad">→ incarico a →</div>
+<div class="fragment fade-in" style="display:flex; gap:10px">
+<div style="background:#fff; border-top:6px solid #1a73e8; border-radius:10px; padding:8px 14px; box-shadow:0 6px 18px rgba(15,27,45,.12)">tecnico</div>
+<div style="background:#fff; border-top:6px solid #7b61ff; border-radius:10px; padding:8px 14px; box-shadow:0 6px 18px rgba(15,27,45,.12)">legale</div>
+<div style="background:#fff; border-top:6px solid #188038; border-radius:10px; padding:8px 14px; box-shadow:0 6px 18px rgba(15,27,45,.12)">delivery</div>
 </div>
-
-<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #188038; border-radius:14px; padding:22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<div style="display:inline-block; background:#188038; color:#fff; font-weight:800; font-size:.62em; padding:4px 14px; border-radius:20px; letter-spacing:.06em">RISPOSTA</div>
-
-Un solo messaggio, a chi ha chiesto. **A una risposta non si replica.**
-</div>
-
-<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #f29900; border-radius:14px; padding:22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<div style="display:inline-block; background:#f29900; color:#fff; font-weight:800; font-size:.62em; padding:4px 14px; border-radius:20px; letter-spacing:.06em">ESITO</div>
-
-Il risultato per **te**, nella posta in arrivo. L'unico modo in cui ti scrivono.
 </div>
 
 </div>
 
 Note:
-Senza queste regole due agenti educati continuerebbero a ringraziarsi. Provandolo davvero, con la sola regola «non rispondere a una risposta»
-il giro durava nove risvegli invece di tre: le etichette hanno risolto. È un dettaglio da sapere se si scrivono agenti propri.
+Una riga di testo, nella casella di risposta: è il tuo gesto. L'assistente si risveglia nella stessa conversazione e incarica i tre
+responsabili. Da qui in poi lavorano per conto loro, in parallelo, ognuno nella propria copia del progetto.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Il risultato arriva a te
+## Lo stesso capitolato, tre sguardi diversi
 
-<div style="max-width:880px; margin:8px auto 0; background:#fff; border-radius:18px; box-shadow:0 14px 40px rgba(15,27,45,.18); text-align:left; overflow:hidden">
+<div style="display:flex; gap:30px; align-items:center; justify-content:center">
 
-<div style="display:flex; align-items:center; gap:14px; background:#1b2a3a; color:#fff; padding:14px 24px">
-<div style="background:#ff5d5d; color:#fff; font-weight:800; border-radius:50%; width:30px; height:30px; display:flex; align-items:center; justify-content:center; font-size:.66em">1</div>
-<div style="font-weight:800; font-size:.86em">Messaggi degli agenti · Posta in arrivo</div>
+<img src="assets/schermate/esiti.png" alt="I messaggi del responsabile tecnico e del responsabile legale" height="560" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+
+<div style="width:520px; text-align:left; font-size:.6em; line-height:1.3">
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:14px">
+<b>Il tecnico trova</b><br>La notifica degli incidenti: noi 24 ore, il capitolato ne chiede 4 <i>(§8.2)</i>.
 </div>
 
-<div style="padding:18px 26px 8px">
-<span style="background:#1a73e8; color:#fff; font-weight:800; font-size:.56em; padding:3px 12px; border-radius:20px">custode-piano</span>
-<span style="background:#f29900; color:#fff; font-weight:800; font-size:.56em; padding:3px 12px; border-radius:20px; margin-left:6px">ESITO</span>
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #7b61ff; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:14px">
+<b>Il legale trova</b><br>Se il decreto non esce entro il 31/07/2027, il committente può recedere senza indennizzo <i>(§3.9)</i>.
 </div>
 
-<table style="width:100%; border-collapse:collapse; font-size:.74em; margin:0 0 14px">
-<tr style="color:#5f6368"><th style="text-align:left; padding:8px 26px">Cosa non torna</th><th style="text-align:left">Nel piano</th><th style="text-align:left">Nel verbale</th></tr>
-<tr class="fragment fade-up" style="border-top:1px solid #e3e8ef"><td style="padding:10px 26px; font-weight:700">La durata</td><td>8 settimane</td><td style="color:#188038; font-weight:800">6 settimane (D2)</td></tr>
-<tr class="fragment fade-up" style="border-top:1px solid #e3e8ef"><td style="padding:10px 26px; font-weight:700">Le persone</td><td>cinque, poi «tutti»</td><td style="color:#188038; font-weight:800">12 operatori (D3)</td></tr>
-<tr class="fragment fade-up" style="border-top:1px solid #e3e8ef"><td style="padding:10px 26px; font-weight:700">I dati dei ticket</td><td>da chiarire col DPO</td><td style="color:#188038; font-weight:800">anonimizzati (D4)</td></tr>
-</table>
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12)">
+<b>Il delivery trova</b><br>Nove mesi di lavoro: per attivare entro il 01/01/2028 la firma dovrebbe essere entro il 01/04/2027 <i>(§7.4.7)</i>.
+</div>
+
+</div>
 
 </div>
 
 Note:
-Questo è il risultato vero di una prova, riscritto: tre differenze, ciascuna con le due cifre e il punto. Le parole cambiano a ogni giro perché c'è un modello,
-le tre differenze no. Non è un'ipotesi: è ciò che gli agenti trovano nel caso di studio.
+Hanno letto lo stesso documento, ma ognuno ha letto il proprio capitolo del profilo di Pentagroup. Per questo trovano cose
+diverse. Notare che ogni affermazione cita la sezione del capitolato: la persona può andare a controllare.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## E se non smettono di scriversi?
+## Ti arrivano tre richieste da rivedere
 
-<div style="display:flex; justify-content:center; gap:12px; margin:26px 0 8px">
-<div class="fragment" style="width:110px; height:34px; border-radius:10px; background:#1a73e8"></div>
-<div class="fragment" style="width:110px; height:34px; border-radius:10px; background:#1a73e8"></div>
-<div class="fragment" style="width:110px; height:34px; border-radius:10px; background:#1a73e8"></div>
-<div class="fragment" style="width:110px; height:34px; border-radius:10px; background:#f29900"></div>
-<div class="fragment" style="width:110px; height:34px; border-radius:10px; background:#f29900"></div>
-<div class="fragment" style="width:110px; height:34px; border-radius:10px; background:#d93025"></div>
+<div style="display:flex; gap:34px; align-items:center; justify-content:center">
+
+<img src="assets/schermate/revisione.png" alt="Due delle tre richieste di revisione, con la scelta del destinatario" height="560" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+
+<div style="width:470px; text-align:left; font-size:.62em; line-height:1.4">
+
+<div class="fragment fade-up">
+
+- **Una richiesta per scheda**, ciascuna col suo file e un riassunto di chi è l'agente.
+- Nessuna scheda è ancora nel progetto: sono **rami da approvare**.
+- **Autorizza**, **Ci metto mano** o **Rifiuta**.
+
 </div>
 
-<div class="fragment fade-up" style="font-size:.9em; margin-top:18px">
+<div class="fragment fade-up" style="margin-top:12px; background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12)">
+<b>«A chi passa il lavoro?»</b><br>Sei <b>tu</b> a scegliere. L'agente non lo fa da solo.
+</div>
 
-Dopo **sei passaggi** la conversazione si ferma da sola: <span style="background:#fdecea; color:#d93025; font-weight:800; padding:2px 12px; border-radius:20px">esaurita</span>
-
-Solo **tu** puoi riaprirla.
+</div>
 
 </div>
 
 Note:
-Il tetto sta nella scheda dell'agente, riga max_hops. Nella prova senza etichette si è visto davvero: una conversazione ha toccato il sei su sei e si è fermata,
-come previsto. Il pulsante è «Riapri»; «Termina thread» la chiude subito.
-
----
-
-<!-- .slide: data-background-color="#0f1b2d" data-background-image="assets/citta-sfondo.svg" data-transition="zoom" -->
-
-<img src="assets/astronauta-ok.svg" alt="L'astronauta fa ok" width="230">
-
-## 3 · Chi decide
-
-Il lavoro passa dalla tua approvazione
+Questo è il momento in cui la scheda entra o non entra nel progetto. Ogni agente ha lavorato nella sua copia, quindi le richieste
+sono tre e distinte. Il blocco «a chi passa il lavoro» mostra il destinatario dichiarato nella scheda dell'agente: se fossero due,
+sceglieresti; se non vuoi avvisare nessuno, scegli «a nessuno».
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## L'agente non tocca la tua cartella
+## Leggi, non fidarti
 
-<div class="r-hstack" style="gap:18px; align-items:center; justify-content:center; margin-top:8px; font-size:.78em">
-<div class="fragment fade-up" style="background:#fff; border-radius:12px; padding:14px 18px; box-shadow:0 6px 18px rgba(15,27,45,.12)">una <b>copia isolata</b></div>
-<div style="color:#1a73e8; font-size:1.6em">➜</div>
-<div class="fragment fade-up" style="background:#fff; border-radius:12px; padding:14px 18px; box-shadow:0 6px 18px rgba(15,27,45,.12)">un <b>ramo</b> con la sua firma<br><span style="font-size:.78em; color:#5f6368">custode@agents.mde</span></div>
-<div style="color:#1a73e8; font-size:1.6em">➜</div>
-<div class="fragment fade-up" style="background:#fff; border-radius:12px; padding:14px 18px; box-shadow:0 6px 18px rgba(15,27,45,.12)">una <b>richiesta</b> per te</div>
+<div style="display:flex; gap:26px; justify-content:center; align-items:stretch; text-align:left; margin-top:4px">
+
+<div style="flex:1.2; background:#fff; border-top:8px solid #188038; border-radius:14px; padding:16px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:.5em; color:#188038; font-weight:800; letter-spacing:.08em">DALLA SCHEDA DELIVERY, «DA VERIFICARE DA TE»</div>
+<div style="font-size:.6em; line-height:1.4; margin-top:8px">
+<b>La percentuale senior:</b> il 20% è raggiunto solo con una squadra di 20 persone e tutti e quattro i senior <i>(§7.2)</i>.<br><br>
+<b>La fattibilità delle date:</b> il 30/04/2027 è uno scenario ottimistico, non una data scritta nel capitolato <i>(§9)</i>.<br><br>
+<b>La copertura delle prime fasi:</b> l'architetto è libero solo da settembre <i>(§7.2, §7.4.2)</i>.
+</div>
 </div>
 
-<div class="r-hstack" style="gap:24px; align-items:stretch; justify-content:center; margin-top:26px">
+<div style="flex:1; font-size:.6em; line-height:1.4; align-self:center">
 
-<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #188038; border-radius:14px; padding:20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<div style="font-size:1.2em; font-weight:800; color:#188038">Autorizza</div>
-<div style="font-size:.7em; margin-top:6px">Il ramo entra in <code>main</code>. Il commit è dell'agente.</div>
+<div class="fragment fade-up" style="margin-bottom:14px">
+<b>1.</b> L'assistente <b>ti dice dove è meno sicuro</b>: parti da lì.
 </div>
 
-<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #f29900; border-radius:14px; padding:20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<div style="font-size:1.2em; font-weight:800; color:#d98400">Ci metto mano</div>
-<div style="font-size:.7em; margin-top:6px">Apri il suo lavoro, correggi tu.</div>
+<div class="fragment fade-up" style="margin-bottom:14px">
+<b>2.</b> Ogni frase cita la <b>sezione</b>: aprila e controlla che dica quello che la scheda dice.
 </div>
 
-<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #d93025; border-radius:14px; padding:20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<div style="font-size:1.2em; font-weight:800; color:#d93025">Rifiuta</div>
-<div style="font-size:.7em; margin-top:6px">Non entra nulla. Il ramo resta.</div>
+<div class="fragment fade-up">
+<b>3.</b> Rifai il <b>calcolo</b>: 9 mesi prima del 01/01/2028 è il 01/04/2027.
+</div>
+
 </div>
 
 </div>
 
 Note:
-Questa parte non è nel demo scaricabile, per una ragione onesta: «Autorizza» pubblica sul repository remoto, e chi clona il demo non ha il permesso di scrivere
-su quello pubblico. Si prova su un repository proprio; la prova 6 spiega come. Se non si riesce a pubblicare, l'agente lo scrive nella posta: non si perde nulla in silenzio.
+Il punto che distingue un assistente utile da uno pericoloso: non ti chiede di fidarti. Ti dice dove è meno sicuro, cita
+la fonte per ogni affermazione e scrive il calcolo accanto al risultato, così lo puoi rifare a mano. Se non trova un'informazione,
+scrive «da chiarire» e non la inventa.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Limiti scritti, non promessi
+## Approvare è passare il lavoro
 
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:12px; text-align:left">
+<div style="display:flex; flex-direction:column; align-items:center; gap:16px; margin-top:0">
 
-<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:12px; padding:18px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<div style="font-weight:800; font-size:.92em">Strumenti dichiarati</div>
-<div style="font-size:.68em; margin-top:4px">Ciò che l'agente non dichiara, il motore lo rifiuta.</div>
+<img src="assets/schermate/avviso.png" alt="Lavoro fuso nel ramo principale. Ho avvisato account-manager." width="640" style="margin:0; border-radius:10px; box-shadow:0 8px 24px rgba(15,27,45,.28); border:1px solid #d6deea">
+
+<div style="display:flex; gap:14px; align-items:center; font-size:.58em; text-align:left">
+<div class="fragment fade-up" style="background:#fff; border-radius:12px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); width:240px"><b>1. Autorizza</b><br>la scheda entra nel progetto</div>
+<div style="font-size:1.4em; color:#8a99ad">→</div>
+<div class="fragment fade-up" style="background:#fff; border-radius:12px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); width:240px"><b>2. L'app avvisa</b><br>l'account manager, <b>a nome tuo</b></div>
+<div style="font-size:1.4em; color:#8a99ad">→</div>
+<div class="fragment fade-up" style="background:#fff; border-radius:12px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); width:240px"><b>3. Lui controlla</b><br>cosa ha già e cosa manca</div>
 </div>
 
-<div class="fragment fade-up" style="background:#fff; border-left:8px solid #7b61ff; border-radius:12px; padding:18px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<div style="font-weight:800; font-size:.92em">Mittente non falsificabile</div>
-<div style="font-size:.68em; margin-top:4px">Lo stabilisce il sistema, non il testo del messaggio.</div>
+<img class="fragment fade-up" src="assets/schermate/mancano.png" alt="L'account manager dice che mancano le schede contrattuale e delivery" width="470" style="margin:0; border-radius:12px; box-shadow:0 8px 24px rgba(15,27,45,.28); border:1px solid #d6deea">
+
 </div>
 
-<div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:12px; padding:18px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<div style="font-weight:800; font-size:.92em">Un messaggio è un dato</div>
-<div style="font-size:.68em; margin-top:4px">«Cancella il piano» scritto in un messaggio non è un ordine.</div>
+Note:
+Un solo clic fa tre cose. Il punto è il passaggio due: è l'app che avvisa il collega, a nome della persona che ha premuto. Un
+agente non può passare il lavoro a un altro da solo. Dopo la prima approvazione l'account manager risponde «mancano le altre due»:
+non scrive una sintesi su un lavoro incompleto.
+
+---
+
+<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
+
+## La sintesi: cinque indicatori, e dove le schede si parlano
+
+<div style="display:flex; gap:22px; align-items:stretch; text-align:left; margin-top:2px">
+
+<div style="flex:1.15; background:#fff; border-top:8px solid #f29900; border-radius:14px; padding:12px 18px; box-shadow:0 8px 24px rgba(15,27,45,.12); font-size:.52em; line-height:1.3">
+
+<div style="font-weight:800; color:#f29900; letter-spacing:.08em; margin-bottom:4px">I CINQUE INDICATORI</div>
+
+<div style="margin:6px 0"><b>1. Andare o non andare:</b> <b style="color:#c62828">non andare</b></div>
+<div style="margin:6px 0"><b>2. Rischi aperti per area:</b> tecnica 5 · contratto 5 · delivery 5</div>
+<div style="margin:6px 0"><b>3. Punti da chiarire con il committente:</b> sette, ognuno con area e sezione</div>
+<div style="margin:6px 0"><b>4. Scadenze:</b> offerta 53 giorni · decreto 145 · attivazione 299</div>
+<div style="margin:6px 0"><b>5. Cosa serve da ciascuno:</b> un elenco per persona</div>
+
 </div>
 
-<div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:12px; padding:18px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<div style="font-weight:800; font-size:.92em">Un tetto ai passaggi</div>
-<div style="font-size:.68em; margin-top:4px">Sei, poi la conversazione si ferma e decidi tu.</div>
+<div style="flex:1; background:#fff; border-top:8px solid #c62828; border-radius:14px; padding:12px 18px; box-shadow:0 8px 24px rgba(15,27,45,.12); font-size:.52em; line-height:1.3">
+
+<div style="font-weight:800; color:#c62828; letter-spacing:.08em; margin-bottom:4px">DOVE LE SCHEDE SI SOMMANO</div>
+
+<div class="fragment fade-up" style="margin:6px 0"><b>Timeline e recesso:</b> la firma dovrebbe essere entro il 01/04, prima della scadenza dell'offerta; e se il decreto non arriva entro il 31/07 il committente può recedere.</div>
+<div class="fragment fade-up" style="margin:6px 0"><b>Servizio ed uscita:</b> il divario tecnico sugli incidenti è anche un divario contrattuale.</div>
+
 </div>
 
 </div>
 
 Note:
-Quattro garanzie che non dipendono dalla buona volontà dell'agente. La prima vale su GitHub Copilot e nelle versioni successive al 3 ottobre 2026:
-prima i tool dichiarati erano un'intenzione, non un divieto: si è scoperto provando, ed è stato corretto.
+Con le tre schede approvate, l'account manager scrive la sintesi, con gli indicatori che interessano a lui. La parte più utile
+è «dove le schede si sommano»: un punto che compare in due schede con due nomi diversi, o due punti che da soli sembrano
+piccoli e insieme sono un problema. Anche la sintesi arriva da approvare: la leggi prima, come le altre.
+
+---
+
+<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
+
+## Nessuna scheda da sola dice «non andare»
+
+<div style="display:flex; align-items:flex-start; justify-content:center; gap:0; margin-top:22px; text-align:center; font-size:.52em">
+
+<div style="width:210px">
+<div style="width:18px; height:18px; border-radius:50%; background:#5f6368; margin:0 auto"></div>
+<div style="font-weight:800; margin-top:8px">08/03/2027</div>
+<div style="color:#5f6368">oggi</div>
+</div>
+
+<div style="flex:none; width:60px; border-top:4px solid #d6deea; margin-top:8px"></div>
+
+<div class="fragment fade-up" style="width:210px">
+<div style="width:18px; height:18px; border-radius:50%; background:#188038; margin:0 auto"></div>
+<div style="font-weight:800; margin-top:8px; color:#188038">01/04/2027</div>
+<div>firma-limite per 9 mesi di lavoro <i>(delivery)</i></div>
+</div>
+
+<div style="flex:none; width:60px; border-top:4px solid #d6deea; margin-top:8px"></div>
+
+<div class="fragment fade-up" style="width:210px">
+<div style="width:18px; height:18px; border-radius:50%; background:#c62828; margin:0 auto"></div>
+<div style="font-weight:800; margin-top:8px; color:#c62828">30/04/2027</div>
+<div>scade l'offerta <i>(portale)</i></div>
+</div>
+
+<div style="flex:none; width:60px; border-top:4px solid #d6deea; margin-top:8px"></div>
+
+<div class="fragment fade-up" style="width:210px">
+<div style="width:18px; height:18px; border-radius:50%; background:#7b61ff; margin:0 auto"></div>
+<div style="font-weight:800; margin-top:8px; color:#7b61ff">31/07/2027</div>
+<div>senza decreto, recesso senza indennizzo <i>(legale)</i></div>
+</div>
+
+<div style="flex:none; width:60px; border-top:4px solid #d6deea; margin-top:8px"></div>
+
+<div style="width:210px">
+<div style="width:18px; height:18px; border-radius:50%; background:#1a73e8; margin:0 auto"></div>
+<div style="font-weight:800; margin-top:8px; color:#1a73e8">01/01/2028</div>
+<div>attivazione richiesta <i>(capitolato)</i></div>
+</div>
+
+</div>
+
+<div class="fragment fade-up" style="margin-top:34px; font-size:.85em">
+
+**La firma servirebbe prima ancora di poter presentare l'offerta.** La sintesi lo mette in fila: *non andare*.
+
+</div>
+
+Note:
+Questo è un esempio reale uscito da una prova: le parole cambiano a ogni esecuzione, ma questo incrocio c'è sempre. Il delivery
+calcola che per attivare entro l'anno nuovo la firma dovrebbe essere ad aprile; il portale dice che l'offerta si presenta fino
+a fine aprile; il legale segnala il recesso se il decreto ritarda. Ognuno ha una tessera, la sintesi le mette in fila.
+
+---
+
+<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
+
+## Chi fa cosa
+
+<div style="display:flex; gap:26px; justify-content:center; margin-top:4px; text-align:left">
+
+<div style="flex:1; background:#fff; border-top:8px solid #1a73e8; border-radius:14px; padding:16px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:.55em; color:#1a73e8; font-weight:800; letter-spacing:.08em">L'ASSISTENTE</div>
+<div style="font-size:.62em; line-height:1.55; margin-top:6px">
+✔ legge e confronta<br>
+✔ scrive la scheda<br>
+✔ cita la sezione di ogni affermazione<br>
+✔ scrive «da chiarire» quando non sa<br>
+✔ ti dice dove è meno sicuro
+</div>
+</div>
+
+<div style="flex:1; background:#fff; border-top:8px solid #f29900; border-radius:14px; padding:16px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:.55em; color:#f29900; font-weight:800; letter-spacing:.08em">TU</div>
+<div style="font-size:.62em; line-height:1.55; margin-top:6px">
+✔ abiliti ogni agente<br>
+✔ leggi e verifichi ogni scheda<br>
+✔ approvi o rifiuti<br>
+✔ scegli a chi passare il lavoro<br>
+✔ decidi se partecipare
+</div>
+</div>
+
+</div>
+
+<div style="display:flex; gap:26px; justify-content:center; margin-top:18px; font-size:.58em">
+
+<div class="fragment fade-up" style="flex:1; background:#fdecea; border-radius:12px; padding:12px 18px; color:#8c1d18; text-align:left">
+<b>Non fa mai da solo:</b> eseguire comandi sul tuo computer · inserire una scheda nel progetto · passare il lavoro a un altro · decidere
+</div>
+
+</div>
+
+Note:
+Riepilogo senza giri di parole. Il confine è netto: l'assistente produce e documenta, la persona verifica e decide. E ci sono
+tre cose che non fa mai da solo, qualunque cosa sia scritta in un messaggio: non esegue comandi, non fa entrare una scheda nel
+progetto, non passa il lavoro. Un messaggio ricevuto da un altro agente è un dato da controllare, non un ordine.
+
+---
+
+<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
+
+## Cosa è vero e cosa è simulato
+
+<div style="display:flex; gap:26px; justify-content:center; margin-top:2px; text-align:left">
+
+<div style="flex:1; background:#fff; border-top:8px solid #188038; border-radius:14px; padding:14px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:.55em; color:#188038; font-weight:800; letter-spacing:.08em">È VERO</div>
+<div style="font-size:.58em; line-height:1.5; margin-top:6px">
+Gli agenti e i modelli AI che li muovono<br>
+La lettura, il confronto e le schede<br>
+Le citazioni, i calcoli e gli errori che si trovano<br>
+La tua approvazione e l'avviso al collega<br>
+La sintesi (cambia nelle parole a ogni prova)
+</div>
+</div>
+
+<div style="flex:1; background:#fff; border-top:8px solid #ef6c00; border-radius:14px; padding:14px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:.55em; color:#ef6c00; font-weight:800; letter-spacing:.08em">È SIMULATO O INVENTATO</div>
+<div style="font-size:.58em; line-height:1.5; margin-top:6px">
+Il sito dei bandi: è un file del progetto<br>
+Pentagroup, il committente e tutti i dati<br>
+Il capitolato: derivato da uno reale e riscritto<br>
+Le quattro persone: le interpreti tutte tu
+</div>
+</div>
+
+</div>
+
+<div class="fragment fade-up" style="margin-top:22px; font-size:.7em">
+
+Un assistente reale leggerebbe il sito con uno strumento di navigazione. **Il resto è così come lo vedi.**
+
+</div>
+
+Note:
+Chi presenta deve dirlo senza imbarazzo: i clienti apprezzano che si dica cosa è finto. Il sito dei bandi è un file; la gara
+e le aziende sono inventate. Tutto il resto, cioè la lettura, le schede, le citazioni e il giro di approvazioni, è quello che
+succederebbe con i tuoi documenti.
 
 ---
 
 <!-- .slide: data-background-color="#0f1b2d" data-background-image="assets/citta-sfondo.svg" -->
 
-<div style="display:inline-block; background:rgba(255,255,255,.94); color:#1b2a3a; border-radius:18px; padding:8px 40px 18px; max-width:880px">
+# Provalo con le tue mani
 
-<h2 style="color:#1b2a3a; margin-top:.4em">Oltre il tuo computer</h2>
+Sei prove, circa un'ora: **abiliti, cerchi, avvii, verifichi, approvi, decidi.**
 
-Le città di **persone diverse** possono chiedersi aiuto, attraverso un relay cifrato.
-
-**Prima che parta qualunque agente, un umano approva.**
-
-<span style="background:#e8f0fe; color:#1a73e8; font-weight:800; font-size:.62em; padding:4px 14px; border-radius:20px">SI MOSTRA DAL VIVO</span>
-
+<div style="display:flex; justify-content:center; align-items:flex-end; gap:24px; margin-top:6px">
+<img src="assets/agente-account.svg" alt="" width="90" style="margin:0">
+<img src="assets/agente-tecnico.svg" alt="" width="90" style="margin:0">
+<img src="assets/agente-legale.svg" alt="" width="90" style="margin:0">
+<img src="assets/agente-delivery.svg" alt="" width="90" style="margin:0">
 </div>
 
 Note:
-La federazione richiede un relay e una chiave di stanza che non possono stare in un repository pubblico, per questo non è nel demo. In due righe:
-una richiesta d'aiuto viaggia cifrata fino alla macchina del responsabile dell'ambito, che deve dire sì prima che l'agente parta.
-Chi non l'ha visto dal vivo può leggere la pagina del caso di studio, che la spiega.
-
----
-
-<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
-
-## Provalo: sei prove, mezz'ora
-
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:16px 26px; text-align:left; font-size:.74em; margin-top:12px">
-
-<div class="fragment fade-up" style="display:flex; align-items:center; gap:16px; background:#fff; border-left:8px solid #1a73e8; border-radius:12px; padding:12px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<span style="font-size:1.9em; font-weight:800; color:#1a73e8; line-height:1">1</span>
-
-[Accendi la città](../prove/01-accendi-la-citta.md)
-
-</div>
-
-<div class="fragment fade-up" style="display:flex; align-items:center; gap:16px; background:#fff; border-left:8px solid #7b61ff; border-radius:12px; padding:12px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<span style="font-size:1.9em; font-weight:800; color:#7b61ff; line-height:1">2</span>
-
-[Il registro e la fiducia](../prove/02-registro-e-fiducia.md)
-
-</div>
-
-<div class="fragment fade-up" style="display:flex; align-items:center; gap:16px; background:#fff; border-left:8px solid #188038; border-radius:12px; padding:12px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<span style="font-size:1.9em; font-weight:800; color:#188038; line-height:1">3</span>
-
-[Il primo agente al lavoro](../prove/03-il-primo-agente.md)
-
-</div>
-
-<div class="fragment fade-up" style="display:flex; align-items:center; gap:16px; background:#fff; border-left:8px solid #f29900; border-radius:12px; padding:12px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<span style="font-size:1.9em; font-weight:800; color:#f29900; line-height:1">4</span>
-
-[Il dialogo tra due agenti](../prove/04-il-dialogo.md)
-
-</div>
-
-<div class="fragment fade-up" style="display:flex; align-items:center; gap:16px; background:#fff; border-left:8px solid #d93025; border-radius:12px; padding:12px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<span style="font-size:1.9em; font-weight:800; color:#d93025; line-height:1">5</span>
-
-[La fiducia che decade](../prove/05-la-fiducia-che-decade.md)
-
-</div>
-
-<div class="fragment fade-up" style="display:flex; align-items:center; gap:16px; background:#fff; border-left:8px solid #12b5cb; border-radius:12px; padding:12px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
-<span style="font-size:1.9em; font-weight:800; color:#12b5cb; line-height:1">6</span>
-
-[Il lavoro che passa dalla tua approvazione](../prove/06-lavoro-e-revisione.md)
-
-</div>
-
-</div>
-
-[La città di Alpina: chi sono i tre custodi](../alpina/README.md)
-
-Note:
-Ogni prova dice solo ciò che è stato visto davvero nell'app. Servono un motore AI già configurato (Copilot, Claude Code o opencode) e la rete.
-Ogni risveglio consuma un po' dell'abbonamento: le prove sono pensate per costare poco.
-
----
-
-<!-- .slide: data-background-color="#0a1322" data-background-image="assets/citta-sfondo.svg" -->
-
-<div style="display:flex; justify-content:center; align-items:flex-end; gap:26px; margin-bottom:4px">
-<img src="assets/custode-requisiti.svg" alt="Il custode dei requisiti" width="104" style="margin:0">
-<img src="assets/astronauta-ok.svg" alt="L'astronauta fa ok" width="190" style="margin:0">
-<img src="assets/custode-verbali.svg" alt="Il custode dei verbali" width="104" style="margin:0">
-</div>
-
-## Grazie
-
-<div style="display:inline-block; background:rgba(255,255,255,.94); color:#1b2a3a; border-radius:14px; padding:0 30px">
-
-[mdexplorer.net](https://www.mdexplorer.net) · [github.com/salaroglio/MdExplorer](https://github.com/salaroglio/MdExplorer)
-
-Sei prove, mezz'ora, dal progetto demo.
-
-</div>
+Chiusura: rimandare alle sei prove nella stessa sezione. Ricordare che ogni prova consuma un po' dell'abbonamento al motore AI,
+che servono circa dieci chiamate in tutto e che il percorso più semplice parte da «Crea progetto demo».
