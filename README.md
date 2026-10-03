@@ -38,10 +38,9 @@ cronologia è una sola, git.
 
 ## La città degli agenti
 
-Gli agenti AI possono anche **abitare** il progetto: ognuno con un nome, un ruolo e un documento da presidiare, e con
-la possibilità di scriversi tra loro. Tu decidi di chi fidarti e ricevi il risultato nella posta.
-[Sei prove](citta-degli-agenti/README.md) per vederlo con le tue mani, sul caso di studio di Alpina Servizi, e una
-[presentazione](citta-degli-agenti/presentazione/citta-degli-agenti.md) di dieci minuti.
+Gli agenti AI possono anche **abitare** il progetto: ognuno è l'assistente di una persona, prepara il lavoro e te lo
+consegna da verificare, e tu decidi se passarlo al passo dopo. [Sei prove](citta-degli-agenti/README.md) per vederlo con le
+tue mani, su una gara d'appalto: quattro persone, quattro agenti, una sintesi finale.
 
 ## Il caso di studio
 

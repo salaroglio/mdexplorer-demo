@@ -6,51 +6,44 @@ title: La città degli agenti
 
 ## TL;DR
 
-In MdExplorer gli agenti AI non sono solo una conversazione: possono abitare un progetto, ognuno con un nome, un
-ruolo e un documento da presidiare, e scriversi tra loro. Tu decidi di chi fidarti, vedi cosa si dicono e
-ricevi il risultato nella posta. Questa sezione ti fa provare tutto con le mani, su un caso di studio che
-contiene tre incongruenze.
+In MdExplorer gli agenti AI possono abitare un progetto, ognuno con un nome, un ruolo e il lavoro di una persona. Questa
+sezione ti fa provare **come si lavora con loro**: ogni persona ha il suo agente, l'agente prepara, la persona verifica e
+decide se passare il lavoro al passo dopo. Il caso è una gara d'appalto di un'azienda inventata, Pentagroup.
 
-- Sei prove, in ordine, circa mezz'ora in tutto.
-- Gli agenti del demo **non modificano nessun file**: leggono, si scrivono e ti riferiscono.
+- Sei prove, in ordine, circa un'ora in tutto (la maggior parte è attesa).
+- Gli agenti **scrivono schede**, ma nessuna scheda entra nel progetto senza la tua approvazione.
 - Serve un motore AI già configurato (GitHub Copilot, Claude Code o opencode) e la rete.
 
-## La presentazione
+## Il caso
 
-Dieci minuti per capire l'idea, prima di toccare qualcosa: [La città degli agenti](presentazione/citta-degli-agenti.md),
-17 slide con i tre custodi, la scena di Alpina e i messaggi che volano. Si apre come una presentazione, dal pulsante
-**Presenta**.
+Pentagroup riceve un invito a una gara di Nordica Crediti: un capitolato lungo, da leggere con occhi diversi prima di
+decidere se partecipare. [La gara di Nordica](gara/README.md) dice chi sono i quattro agenti, cosa fa ciascuno e come passa il lavoro: leggila
+prima di cominciare.
 
 ## Il percorso
 
 | # | Pagina | Cosa provi | Tempo |
 |---|---|---|---|
-| 1 | [Accendi la città](prove/01-accendi-la-citta.md) | una casella nelle impostazioni, e cosa cambia nel progetto | 3 min |
-| 2 | [Il registro e la fiducia](prove/02-registro-e-fiducia.md) | chi abita la città e a chi dai fiducia | 5 min |
-| 3 | [Il primo agente al lavoro](prove/03-il-primo-agente.md) | lanci un agente e leggi il risultato nella posta | 5 min |
-| 4 | [Il dialogo tra due agenti](prove/04-il-dialogo.md) | due agenti si scrivono per trovare le incongruenze | 8 min |
-| 5 | [La fiducia che decade](prove/05-la-fiducia-che-decade.md) | cambi la scheda di un agente e la fiducia sparisce | 5 min |
-| 6 | [Il lavoro che passa dalla tua approvazione](prove/06-lavoro-e-revisione.md) | un agente che modifica i file, e come lo rivedi | 5 min |
-
-## Il caso di studio
-
-Gli agenti lavorano sui documenti del pilota di Alpina Servizi, lo stesso [caso di studio](../caso-studio/README.md)
-del resto del demo. [La città di Alpina](alpina/README.md) dice chi sono i tre agenti, come si parlano e cosa devono
-trovare: leggila prima di cominciare.
+| 1 | [Accendi la città](prove/01-accendi-la-citta.md) | una casella nelle impostazioni, e dove consegnano gli agenti | 3 min |
+| 2 | [Abilita gli agenti](prove/02-abilita-gli-agenti.md) | leggi cosa fa e cosa può fare ciascun agente, poi lo abiliti | 7 min |
+| 3 | [L'account manager cerca il bando](prove/03-l-account-manager-cerca-il-bando.md) | lanci il primo agente e controlli ciò che propone | 5 min |
+| 4 | [Avvia il giro e leggi le schede](prove/04-avvia-il-giro.md) | dici «avvia», aspetti tre schede e le leggi prima di approvarle | 12 min |
+| 5 | [Approva e passa il lavoro](prove/05-approva-e-passa-il-lavoro.md) | approvi tre schede: ogni approvazione avvisa il collega | 10 min |
+| 6 | [La sintesi e la tua decisione](prove/06-la-sintesi-e-la-tua-decisione.md) | leggi la sintesi, cerchi dove le schede si parlano, decidi | 8 min |
 
 ## Prima di cominciare
 
-- Apri questo progetto in MdExplorer: è un repository git, come gli altri.
+- Apri questo progetto in MdExplorer. La strada più semplice è **«Crea progetto demo»**: prepara tutto, compreso il
+  repository su cui gli agenti consegnano.
 - La città è **spenta** finché non la accendi (prova 1). Gli agenti ci sono già, in `.github/agents/`.
-- Ogni agente chiama il motore AI scelto per il progetto: ogni prova consuma un po' del tuo abbonamento.
-- Se usi opencode, scrivi nella scheda dell'agente anche un modello (`runtime: model:`): senza, il livello
-  gratuito non basta.
+- Ogni agente chiama il motore AI scelto per il progetto: l'intero percorso fa una decina di chiamate e consuma un po' del
+  tuo abbonamento.
+- Se usi opencode, scrivi nella scheda dell'agente anche un modello (`runtime: model:`): senza, il livello gratuito non basta.
 
 ## Cosa non vedrai qui
 
-La federazione tra città di persone diverse, la memoria degli agenti e la fusione automatica del lavoro in `main`
-hanno bisogno di cose che un repository pubblico non può dare (una chiave di stanza, un relay, un componente
-in più, un repository su cui puoi scrivere). Si mostrano dal vivo; la [pagina del caso di studio](alpina/README.md)
-dice cosa sono e perché mancano.
+La federazione tra città di persone diverse, la memoria degli agenti e il lavoro di più persone su computer diversi hanno
+bisogno di cose che un repository pubblico non può dare (una chiave di stanza, un relay, un componente in più). Si mostrano
+dal vivo. In questo caso le quattro persone sono tutte tu.
 
 [Torna all'inizio](../README.md)

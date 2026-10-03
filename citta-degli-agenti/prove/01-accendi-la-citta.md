@@ -52,9 +52,21 @@ agentCity:
 > **Non fare commit di `.development.yml` in questo demo.** Il repository è pubblico: la chiave non deve finirci.
 > Per tornare com'eri ripristina il file con git: `git checkout .development.yml`.
 
+## Dove consegnano gli agenti
+
+Gli agenti di questo caso **scrivono documenti**, e un documento scritto da un agente non entra mai nella tua
+cartella da solo: lo consegna su un ramo a parte e tu lo approvi. Per consegnare, l'agente ha bisogno di un
+repository su cui poter scrivere, che nel linguaggio di git si chiama `origin`.
+
+- Se hai creato il progetto con **«Crea progetto demo»**, MdExplorer ha già preparato tutto: accanto alla cartella
+  del progetto c'è una cartella `<nome>.origin.git`, e il repository pubblico del demo è rimasto come `upstream`.
+  Non devi fare niente, e non rovina nessun altro progetto: lo fa solo per il clone del demo.
+- Se invece hai clonato il demo a mano, `origin` è il repository pubblico, su cui non puoi scrivere: la consegna
+  non riesce e ti arriva un messaggio che lo dice. Fai prima un **fork** sul tuo account e lavora su quello.
+
 ## Perché è spenta di partenza
 
 Una città accesa può svegliare agenti AI e farli parlare, e ogni risveglio consuma il tuo abbonamento. Per questo
 è una scelta esplicita, **di progetto**: sta in un file che il gruppo di lavoro condivide.
 
-[Prova 2: il registro e la fiducia](02-registro-e-fiducia.md) · [Indice della sezione](../README.md)
+[Prova 2: abilita gli agenti](02-abilita-gli-agenti.md) · [Indice della sezione](../README.md)

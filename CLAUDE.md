@@ -19,5 +19,8 @@ Questo è il progetto demo di MdExplorer. Chi ti parla lo sta provando: aiutalo 
 
 - `caso-studio/` è un progetto inventato: il pilota di un assistente AI per l'help desk di Alpina Servizi.
   Quando ti chiedono del pilota, leggi quei documenti. Il file dei numeri è `caso-studio/dati/metriche-obiettivo.json`.
+- `citta-degli-agenti/gara/` è la gara di Nordica Crediti (Progetto ATLANTE) per cui lavora Pentagroup, un'azienda inventata:
+  il capitolato, il profilo dell'azienda, il registro dei bandi e le schede che scrivono gli agenti. Quando ti chiedono della gara,
+  leggi quei documenti; ogni affermazione cita la sezione del capitolato.
 - `tour/` e `presentazione/` spiegano MdExplorer: non modificarli, a meno che non te lo chiedano.
 - `llm-wiki/` ha le sue regole, scritte in `llm-wiki/CLAUDE.md`.
