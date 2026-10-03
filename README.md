@@ -20,6 +20,7 @@ present. Agents read, write and verify. There is one format, markdown, and one h
 | ten minutes | [The presentation](presentation/mdexplorer.md) | the idea, in twenty slides |
 | half an hour | [The tour: try it yourself](tour/01-living-documents.md) | eight things to try |
 | an hour | [The case study](case-study/README.md) | a project for the AI to work on |
+| half an hour more | [The agent city](agent-city/README.md) | AI agents that live in the project and write to each other |
 
 ## The tour: try it yourself
 
@@ -33,6 +34,12 @@ present. Agents read, write and verify. There is one format, markdown, and one h
 | 6 | [Git without the terminal](tour/06-git.md) | what changed, who changed it, how to save |
 | 7 | [Rules, skills and MCP](tour/07-rules-skills-mcp.md) | how the agent learns the way your team works |
 | 8 | [Tests written in plain language](tour/08-e2e-tests.md) | the agent checks a site and leaves the evidence |
+
+## The agent city
+
+AI agents can also **live** in the project: each with a name, a role and a document to look after, and able to write
+to each other. You decide whom to trust and you get the result in your inbox.
+[Six trials](agent-city/README.md) to see it with your own hands, on the Alpina Servizi case study.
 
 ## The case study
 
