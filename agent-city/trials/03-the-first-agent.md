@@ -12,7 +12,8 @@ inbox.
 
 - You launch it with the robot icon on the `.agent.md` file, in the left panel.
 - It works in an isolated copy of the project and uses the AI engine chosen for the project.
-- The result arrives as a message: it does **not** appear in the list of executions, which only shows status and time.
+- The result arrives as a message in your inbox; the full text of the execution can also be read in the list of
+  executions.
 
 ## Launch it
 
@@ -55,7 +56,8 @@ Click the speech bubble. The **Inbox** tab has a message from `minutes-keeper` t
 - D5 — Drafts are rated with one click: accepted, edited, discarded — line 41.
 ```
 
-The words may change, because there is a model behind it: the five decisions and the lines, no. Check them in the
+The words may change, because there is a model behind it: the five decisions, no. The line numbers can be off by one or
+two: check them in the
 [minutes](../../case-study/minutes/2026-09-18-steering-committee.md).
 
 ## What happened
@@ -71,5 +73,9 @@ The words may change, because there is a model behind it: the five decisions and
 - **No notice after two minutes.** The AI engine does not answer: check that the command line (`copilot`, `claude` or
   `opencode`) is installed and logged in, or choose another engine in the launch window.
 - **The speech bubble has no number.** Open the «Inbox» tab and click **Refresh**.
+- **The message does not arrive but the agent has finished.** A model sometimes writes the result only in its own
+  reply and does not send it. The reply can still be read: right-click the agent's file → **Agent scheduling…** →
+  **Executions** → **Show output** on the latest row. That button exists in the versions of MdExplorer after
+  3 October 2026.
 
 [Trial 4: the dialogue between two agents](04-the-dialogue.md) · [Section index](../README.md)
