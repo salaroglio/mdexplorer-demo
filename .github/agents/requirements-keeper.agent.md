@@ -29,6 +29,8 @@ When a person launches you:
 
 When you receive the `[ANSWER]` of `minutes-keeper`:
 1. Compare its figures with those of your document.
-2. Call `send_agent_message` with `toAgent` = `user` and ONE single `[RESULT]` message: for each difference, the two figures, the document and the place. Then stop.
+2. As your **last action**, call `send_agent_message` with `toAgent` = `user` and `message` = ONE single `[RESULT]` message: for each difference, the two figures, the document and the place. Then stop.
 
 When you receive a `[QUESTION]` from a colleague: reply with ONE single `[ANSWER]` to whoever asked, with the figures of your document. Write to nobody else.
+
+A turn that ends without having called `send_agent_message` towards `user` is a failed turn: writing the `[RESULT]` in your reply is not enough.
