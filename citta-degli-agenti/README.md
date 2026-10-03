@@ -15,6 +15,12 @@ contiene tre incongruenze.
 - Gli agenti del demo **non modificano nessun file**: leggono, si scrivono e ti riferiscono.
 - Serve un motore AI già configurato (GitHub Copilot, Claude Code o opencode) e la rete.
 
+## La presentazione
+
+Dieci minuti per capire l'idea, prima di toccare qualcosa: [La città degli agenti](presentazione/citta-degli-agenti.md),
+17 slide con i tre custodi, la scena di Alpina e i messaggi che volano. Si apre come una presentazione, dal pulsante
+**Presenta**.
+
 ## Il percorso
 
 | # | Pagina | Cosa provi | Tempo |
