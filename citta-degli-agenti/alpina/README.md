@@ -28,8 +28,8 @@ come lavorare.
 
 ## Come si parlano
 
-Un agente non legge i documenti degli altri per conto suo: se il suo documento dice una cosa diversa da quello
-di un collega, **gli scrive** con due righe e le due cifre. Il collega controlla e risponde. Per non far
+Ogni agente legge **solo il proprio documento**. Quello che gli serve sugli altri lo **chiede al collega** che li
+conosce: gli scrive con due righe e le due cifre. Il collega controlla e risponde. Per non far
 rimbalzare i messaggi all'infinito, ogni messaggio comincia con `[DOMANDA]`, `[RISPOSTA]` o `[ESITO]`: una domanda si
 scrive solo quando ti ha lanciato una persona, a una risposta non si replica mai, e il risultato finale arriva a te,
 nella posta in arrivo, come `[ESITO]`. Se qualcosa sfugge, c'è
@@ -52,13 +52,15 @@ actor "Tu" as U
 participant "custode-piano" as P <<Focus>>
 participant "custode-verbali" as V
 
-U -> P ++ : controlla il piano
-P -> P : legge il piano: 8 settimane
-P -> V ++ : "il piano dice 8 settimane, e il comitato?"
+U -> P ++ : lanci l'agente
+P -> P : legge il piano: 8 settimane, 5 operatori
+P -> V ++ : [DOMANDA] cosa ha deciso il comitato?
+deactivate P
 V -> V : legge il verbale
-V -> P -- : "decisione D2: 6 settimane"
-P -> P : confronta le due cifre
-P --> U -- : "il piano è disallineato di 2 settimane"
+V -> P ++ : [RISPOSTA] D2: 6 settimane, D3: 12 operatori
+deactivate V
+P -> P : confronta le cifre
+P --> U -- : [ESITO] nella posta in arrivo
 @enduml
 ```
 
@@ -73,13 +75,12 @@ dal punto di vista del proprio documento.
 
 | Cosa non torna | Dove dice una cosa | Dove ne dice un'altra | Chi se ne accorge |
 |---|---|---|---|
-| La durata del pilota | requisiti e piano: 8 settimane | verbale, decisione D2: 6 settimane | `custode-piano`, interrogando `custode-verbali` |
-| Le persone coinvolte | requisiti, R8: 20 operatori | verbale, decisione D3: 12 operatori | `custode-requisiti`, interrogando `custode-verbali` |
-| Dove va il testo dei ticket | architettura: va in cloud «così com'è» | requisito R6 e decisione D4: nessun testo esce senza anonimizzazione | `custode-requisiti` e `custode-verbali` |
+| La durata del pilota | requisiti e piano: 8 settimane | verbale, decisione D2: 6 settimane | `custode-piano` e `custode-requisiti`, interrogando `custode-verbali` |
+| Le persone coinvolte | requisiti, R8: 20 operatori | verbale, decisione D3: 12 operatori | `custode-requisiti`; `custode-piano` nota che il piano non dice il totale |
+| Dove va il testo dei ticket | architettura: va in cloud «così com'è» | requisito R6 e decisione D4: nessun testo esce senza anonimizzazione | `custode-requisiti` e `custode-piano` vedono la regola del comitato; l'architettura la viola, ma nessun agente la legge |
 
-L'architettura non ha un agente: la terza incongruenza si vede dal confronto tra requisiti e verbale, che
-parlano di ciò che l'architettura non rispetta. Se vuoi, aggiungi tu un `custode-architettura`: è un file di
-dieci righe, e le prove spiegano come.
+L'architettura non ha un agente: per questo la terza incongruenza emerge solo a metà. Se vuoi, aggiungi tu un
+`custode-architettura`: è un file di poche righe, uguale agli altri tre.
 
 ## Chi è responsabile di cosa
 
