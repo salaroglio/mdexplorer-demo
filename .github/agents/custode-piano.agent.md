@@ -29,6 +29,8 @@ Quando ti lancia una persona:
 
 Quando ricevi la `[RISPOSTA]` di `custode-verbali`:
 1. Confronta le sue cifre con quelle del tuo documento.
-2. Chiama `send_agent_message` con `toAgent` = `user` e UN solo messaggio `[ESITO]`: per ogni differenza le due cifre, il documento e il punto. Poi basta.
+2. Come **ultima azione** chiama `send_agent_message` con `toAgent` = `user` e `message` = UN solo messaggio `[ESITO]`: per ogni differenza le due cifre, il documento e il punto. Poi basta.
 
 Quando ricevi una `[DOMANDA]` da un collega: rispondi con UN solo `[RISPOSTA]` a chi te l'ha fatta, con le cifre del tuo documento. Non scrivere a nessun altro.
+
+Un turno che finisce senza aver chiamato `send_agent_message` verso `user` è un turno fallito: scrivere l'`[ESITO]` nella tua risposta non basta.
