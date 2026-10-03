@@ -39,7 +39,8 @@ present. Agents read, write and verify. There is one format, markdown, and one h
 
 AI agents can also **live** in the project: each with a name, a role and a document to look after, and able to write
 to each other. You decide whom to trust and you get the result in your inbox.
-[Six trials](agent-city/README.md) to see it with your own hands, on the Alpina Servizi case study.
+[Six trials](agent-city/README.md) to see it with your own hands, on the Alpina Servizi case study, and a ten-minute
+[presentation](agent-city/presentation/agent-city.md).
 
 ## The case study
 

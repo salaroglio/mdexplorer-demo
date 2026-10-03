@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 130" width="200" height="130">
+<title>Un messaggio tra agenti</title>
+<style>
+.vola { animation: vola 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes vola { 0%,100% { transform: translate(0,2px) rotate(-5deg); } 50% { transform: translate(6px,-6px) rotate(4deg); } }
+.scia { stroke: #7aa7e6; stroke-width: 5; stroke-linecap: round; stroke-dasharray: 14 20; animation: scia .8s linear infinite; }
+@keyframes scia { to { stroke-dashoffset: -34; } }
+</style>
+<g opacity=".85">
+  <path class="scia" d="M8,52 L60,52"/><path class="scia" d="M0,70 L56,70" style="animation-delay:-.3s"/><path class="scia" d="M14,88 L62,88" style="animation-delay:-.15s"/>
+</g>
+<g transform="translate(118 64)"><g class="vola"><g transform="scale(1.35)">
+  <rect x="-34" y="-22" width="68" height="46" rx="7" fill="#ffffff" stroke="#22344d" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M-33,-19 L0,6 L33,-19" fill="none" stroke="#22344d" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M-33,21 L-8,-1 M33,21 L8,-1" fill="none" stroke="#22344d" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+  <circle cx="0" cy="6" r="6.5" fill="#1a73e8" stroke="#22344d" stroke-width="3"/>
+  
+</g></g></g>
+</svg>

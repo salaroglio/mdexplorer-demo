@@ -15,6 +15,12 @@ contains three inconsistencies.
 - The agents of the demo **do not modify any file**: they read, write to each other and report to you.
 - You need an AI engine already set up (GitHub Copilot, Claude Code or opencode) and a network connection.
 
+## The presentation
+
+Ten minutes to grasp the idea, before touching anything: [The agent city](presentation/agent-city.md),
+17 slides with the three keepers, the Alpina scene and flying messages. It opens as a presentation, from the
+**Present** button.
+
 ## The path
 
 | # | Page | What you try | Time |

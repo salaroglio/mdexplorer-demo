@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-90 -150 180 290" width="220" height="354">
+<title>The keeper of the requirements</title>
+<style>
+.fluttua { animation: fluttua 3.4s ease-in-out infinite; }
+@keyframes fluttua { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+.occhio { transform-box: fill-box; transform-origin: center; animation: ammicca 5.2s infinite; }
+@keyframes ammicca { 0%,91%,100% { transform: scaleY(1); } 94% { transform: scaleY(.08); } }
+.punta { animation: lampeggia 1.3s steps(2, jump-none) infinite; }
+@keyframes lampeggia { 0% { opacity: 1; } 100% { opacity: .25; } }
+.getto { transform-box: fill-box; transform-origin: 50% 0%; animation: getto .26s ease-in-out infinite alternate; }
+@keyframes getto { from { transform: scaleY(.7) scaleX(.92); } to { transform: scaleY(1.15) scaleX(1.05); } }
+.foglio { transform-box: fill-box; transform-origin: 50% 0%; animation: foglio 3.4s ease-in-out infinite; }
+@keyframes foglio { 0%,100% { transform: rotate(-2.5deg); } 50% { transform: rotate(2.5deg); } }
+.ombra { transform-box: fill-box; transform-origin: center; animation: ombra 3.4s ease-in-out infinite; }
+@keyframes ombra { 0%,100% { transform: scale(1); opacity: .35; } 50% { transform: scale(.82); opacity: .22; } }
+.riga-f { transform-box: fill-box; transform-origin: 0 50%; animation: scrive 4.6s steps(10, end) infinite; }
+.riga-f.r2 { animation-delay: .4s; } .riga-f.r3 { animation-delay: .8s; }
+@keyframes scrive { 0% { transform: scaleX(0); } 35%,88% { transform: scaleX(1); } 100% { transform: scaleX(0); } }
+</style>
+
+<g class="fluttua" style="animation-delay:-1.10s">
+  <g class="getto" style="animation-delay:-1.10s">
+    <path d="M-17,66 Q0,134 17,66 Z" fill="#f29900" stroke="#22344d" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M-8,70 Q0,108 8,70 Z" fill="#ffe08a"/>
+  </g>
+  <!-- antenna -->
+  <path d="M0,-102 L0,-124" stroke="#22344d" stroke-width="5" stroke-linecap="round"/>
+  <circle class="punta" cx="0" cy="-131" r="8" fill="#ff5d5d" stroke="#22344d" stroke-width="4"/>
+  <!-- orecchie -->
+  <rect x="-60" y="-70" width="14" height="34" rx="7" fill="#5340c4" stroke="#22344d" stroke-width="4.5"/>
+  <rect x="46" y="-70" width="14" height="34" rx="7" fill="#5340c4" stroke="#22344d" stroke-width="4.5"/>
+  <!-- corpo -->
+  <rect x="-38" y="-14" width="76" height="86" rx="24" fill="#7b61ff" stroke="#22344d" stroke-width="5"/>
+  <rect x="-26" y="52" width="52" height="12" rx="6" fill="#5340c4" opacity=".55"/>
+  <circle cx="-22" cy="6" r="4.5" fill="#e0d9ff"/><circle cx="-8" cy="6" r="4.5" fill="#fff" opacity=".85"/><circle cx="6" cy="6" r="4.5" fill="#e0d9ff"/>
+  <!-- testa -->
+  <rect x="-50" y="-108" width="100" height="92" rx="30" fill="#e0d9ff" stroke="#22344d" stroke-width="5"/>
+  <rect x="-36" y="-92" width="72" height="58" rx="20" fill="#12263f" stroke="#22344d" stroke-width="3.5"/>
+  <g class="occhio" style="animation-delay:-1.10s"><ellipse cx="-17" cy="-66" rx="9" ry="12" fill="#7fe3ff"/><circle cx="-14" cy="-71" r="3.4" fill="#fff"/></g>
+  <g class="occhio" style="animation-delay:-1.10s"><ellipse cx="17" cy="-66" rx="9" ry="12" fill="#7fe3ff"/><circle cx="20" cy="-71" r="3.4" fill="#fff"/></g>
+  <path d="M-10,-47 Q0,-40 10,-47" fill="none" stroke="#7fe3ff" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="-30" cy="-44" rx="6" ry="4" fill="#ff9aa8" opacity=".75"/><ellipse cx="30" cy="-44" rx="6" ry="4" fill="#ff9aa8" opacity=".75"/>
+  <!-- il foglio che custodisce -->
+  <g class="foglio" style="animation-delay:-1.10s">
+    <rect x="-27" y="14" width="54" height="64" rx="5" fill="#fff" stroke="#22344d" stroke-width="4.5"/>
+    <rect x="-27" y="14" width="54" height="15" rx="4" fill="#7b61ff" stroke="#22344d" stroke-width="4.5"/>
+    <g fill="#22344d" opacity=".78">
+      <rect class="riga-f" x="-19" y="38" width="38" height="5" rx="2"/>
+      <rect class="riga-f r2" x="-19" y="49" width="30" height="5" rx="2"/>
+      <rect class="riga-f r3" x="-19" y="60" width="34" height="5" rx="2"/>
+    </g>
+  </g>
+  <!-- braccia -->
+  <path d="M-38,10 Q-52,34 -30,44" fill="none" stroke="#22344d" stroke-width="12" stroke-linecap="round"/>
+  <path d="M-38,10 Q-52,34 -30,44" fill="none" stroke="#7b61ff" stroke-width="5.5" stroke-linecap="round"/>
+  <path d="M38,10 Q52,34 30,44" fill="none" stroke="#22344d" stroke-width="12" stroke-linecap="round"/>
+  <path d="M38,10 Q52,34 30,44" fill="none" stroke="#7b61ff" stroke-width="5.5" stroke-linecap="round"/>
+  <circle cx="-30" cy="44" r="7" fill="#e0d9ff" stroke="#22344d" stroke-width="4"/><circle cx="30" cy="44" r="7" fill="#e0d9ff" stroke="#22344d" stroke-width="4"/>
+</g>
+</svg>
