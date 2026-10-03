@@ -75,7 +75,7 @@ ogni responsabile deve leggerlo cercando cose diverse. In pratica ognuno legge l
 
 ## L'idea: ogni persona ha il suo assistente
 
-<div style="display:flex; align-items:center; justify-content:center; gap:14px; margin-top:20px">
+<div style="display:flex; align-items:stretch; justify-content:center; gap:14px; margin-top:20px">
 
 <div class="fragment fade-in" style="background:#fff; border-radius:16px; padding:22px 26px; box-shadow:0 8px 24px rgba(15,27,45,.12); width:250px">
 <div style="font-size:.5em; color:#5f6368; font-weight:800; letter-spacing:.08em">L'ASSISTENTE</div>

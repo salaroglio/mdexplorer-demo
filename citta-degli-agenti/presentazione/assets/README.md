@@ -6,65 +6,77 @@ title: Gli asset della presentazione sulla città degli agenti
 
 ## TL;DR
 
-Sfondi e personaggi della presentazione sulla città degli agenti sono file a sé, in questa cartella. Le slide li
-richiamano per nome: per cambiare un'illustrazione basta sostituire il file con uno nuovo dallo stesso nome, senza
-toccare le slide. Qui c'è l'elenco, con le misure da rispettare e dove ogni file è usato.
+Personaggi, sfondi e schermate della presentazione sono file a sé, in questa cartella. Le slide li richiamano per nome: per
+cambiare un'illustrazione o una schermata basta sostituire il file, senza toccare le slide. Qui c'è l'elenco, con le misure
+da rispettare.
 
-- Nove file SVG: tre custodi, una busta, la scena della città, due sfondi e i due astronauti.
-- Le animazioni stanno **dentro** ogni file, quindi viaggiano con lui.
-- Stesso nome e stesse proporzioni: la sostituzione non richiede altro.
+- Quattro personaggi SVG animati (uno per agente) e due sfondi.
+- Nove schermate vere dell'app, catturate durante una prova del caso, in `schermate/`.
+- Le animazioni stanno **dentro** ogni SVG; le schermate sono immagini ferme.
 
 ## I personaggi
 
-| File | Misure | Cosa fa |
-|---|---|---|
-| `custode-piano.svg` | 180 × 290 | fluttua, ammicca, la lucina dell'antenna lampeggia, le righe del foglio si scrivono |
-| `custode-requisiti.svg` | 180 × 290 | come sopra, in viola |
-| `custode-verbali.svg` | 180 × 290 | come sopra, in verde |
-| `busta.svg` | 200 × 130 | un messaggio in volo, con la scia |
-| `astronauta.svg`, `astronauta-ok.svg` | 290 × 255 | gli stessi della presentazione su MdExplorer |
+| File | Chi è | Colore | Misure |
+|---|---|---|---|
+| `agente-account.svg` | l'assistente dell'account manager | ambra | 180 × 290 |
+| `agente-tecnico.svg` | l'assistente del responsabile tecnico | blu | 180 × 290 |
+| `agente-legale.svg` | l'assistente del responsabile legale | viola | 180 × 290 |
+| `agente-delivery.svg` | l'assistente del responsabile delivery | verde | 180 × 290 |
 
-![Il custode del piano](custode-piano.svg)
+Fluttuano, ammiccano e la lucina dell'antenna lampeggia. Lo stesso colore tiene insieme persona, agente e scheda in tutta la
+presentazione.
 
-![Il custode dei requisiti](custode-requisiti.svg)
+![L'assistente dell'account manager](agente-account.svg)
+![L'assistente del tecnico](agente-tecnico.svg)
+![L'assistente del legale](agente-legale.svg)
+![L'assistente del delivery](agente-delivery.svg)
 
-![Il custode dei verbali](custode-verbali.svg)
-
-![Un messaggio tra agenti](busta.svg)
-
-## La scena e gli sfondi
+## Gli sfondi
 
 | File | Cosa mostra | Misure | Dove è usato |
 |---|---|---|---|
-| `citta-agenti.svg` | tre edifici con i loro custodi, la posta e i messaggi che volano (domanda, risposta, esito) | 1100 × 470 | la slide «Un custode per documento» |
-| `citta-sfondo.svg` | la città di notte, con le finestre che si accendono e le buste che attraversano il cielo | 1280 × 720 | apertura, divisori e chiusura |
-| `citta-sfondo-chiaro.svg` | la skyline appena accennata, per le slide di contenuto | 1280 × 720 | tutte le altre slide |
+| `citta-sfondo.svg` | la città di notte, con le finestre che si accendono e le buste che attraversano il cielo | 1280 × 720 | apertura e chiusura |
+| `citta-sfondo-chiaro.svg` | la skyline appena accennata | 1280 × 720 | tutte le altre slide |
 
-![La scena: la città di Alpina](citta-agenti.svg)
+## Le schermate
 
-![Sfondo: la città di notte](citta-sfondo.svg)
+Sono l'app vera, durante il giro della gara. **Le parole del modello cambiano a ogni prova**: se ne rifai una, i testi
+saranno diversi, ma il percorso è lo stesso.
 
-![Sfondo chiaro](citta-sfondo-chiaro.svg)
+| File | Cosa mostra | Slide |
+|---|---|---|
+| `schermate/fiducia.png` | la finestra che si apre prima di abilitare un agente | «Prima li abiliti tu» |
+| `schermate/registro.png` | l'elenco degli agenti con i loro riassunti | (disponibile, non usata) |
+| `schermate/scoperta.png` | il messaggio dell'account manager con i bandi nuovi | «Passo 1» |
+| `schermate/risposta.png` | la risposta «avvia» nella posta | «Passo 2» |
+| `schermate/esiti.png` | i messaggi del tecnico e del legale | «Lo stesso capitolato» |
+| `schermate/revisione.png` | due richieste da rivedere, con la scelta del destinatario | «Ti arrivano tre richieste» |
+| `schermate/avviso.png` | «Lavoro fuso nel ramo principale. Ho avvisato account-manager.» | «Approvare è passare il lavoro» |
+| `schermate/mancano.png` | l'account manager dice cosa manca | «Approvare è passare il lavoro» |
+| `schermate/sintesi-richiesta.png` | la quarta richiesta, con la sintesi e il registro | (disponibile, non usata) |
+
+Nella finestra della fiducia è coperta con un rettangolo bianco **una sola riga**: il percorso della cartella del computer in
+cui è stata catturata. Se rifai una schermata, copri il percorso o aprila da una cartella con un nome neutro.
 
 ## Come le slide li richiamano
 
-Un personaggio è un'immagine dentro la slide:
+Un personaggio o una schermata è un'immagine dentro la slide:
 
 ```markdown
-<img src="assets/custode-piano.svg" alt="Il custode del piano" width="170">
+<img src="assets/agente-tecnico.svg" alt="L'assistente del responsabile tecnico" width="130">
+<img src="assets/schermate/fiducia.png" alt="La finestra di abilitazione" height="560">
 ```
 
 Uno sfondo è un commento sulla prima riga della slide:
 
 ```markdown
-<!-- .slide: data-background-color="#0f1b2d" data-background-image="assets/citta-sfondo.svg" -->
+<!-- .slide: data-background-color="#0a1322" data-background-image="assets/citta-sfondo.svg" -->
 ```
 
 ## Come sono nati
 
-Un programma Python, `citta.py`, scrive i sette file nuovi (gli astronauti vengono dalla presentazione su MdExplorer).
-Serve solo a chi vuole ritoccarli partendo da come sono nati: le slide usano i file SVG, non il programma, e un
-asset si può sostituire con qualunque altro strumento. Sta in `docs-internal/pitch/asset-generatori/` del repository
-di sviluppo di MdExplorer. L'unico file con testo, `citta-agenti.svg`, cambia con la lingua.
+I personaggi e gli sfondi li scrive un programma Python, `citta.py`, che sta in `docs-internal/pitch/asset-generatori/` del
+repository di sviluppo di MdExplorer. Serve solo a chi vuole ritoccarli: le slide usano i file SVG, non il programma. Le
+schermate si catturano dall'app con lo zoom del browser su una regione.
 
 [Torna alla sezione](../../README.md)
