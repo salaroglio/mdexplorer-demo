@@ -12,7 +12,8 @@ nella posta in arrivo.
 
 - Si lancia con l'icona del robot sul file `.agent.md`, nel pannello di sinistra.
 - Lavora in una copia isolata del progetto e usa il motore AI scelto per il progetto.
-- Il risultato arriva come messaggio: **non** compare nell'elenco delle esecuzioni, che mostra solo stato e ora.
+- Il risultato arriva come messaggio nella posta; il testo completo dell'esecuzione si legge anche nell'elenco delle
+  esecuzioni.
 
 ## Lancialo
 
@@ -55,7 +56,8 @@ Clicca il fumetto. La scheda **Posta in arrivo** ha un messaggio di `custode-ver
 - D5 — La valutazione delle bozze si fa con un clic: accettata, modificata, scartata — riga 41.
 ```
 
-Le parole possono cambiare, perché dietro c'è un modello: le cinque decisioni e le righe, no. Controllale nel
+Le parole possono cambiare, perché dietro c'è un modello: le cinque decisioni, no. I numeri di riga possono sbagliare di
+una o due righe: controllale nel
 [verbale](../../caso-studio/verbali/2026-09-18-comitato-guida.md).
 
 ## Cosa è successo
@@ -71,5 +73,9 @@ Le parole possono cambiare, perché dietro c'è un modello: le cinque decisioni 
 - **Nessun avviso dopo due minuti.** Il motore AI non risponde: controlla che la riga di comando (`copilot`,
   `claude` o `opencode`) sia installata e con l'accesso fatto, o scegli un altro motore nella finestra di lancio.
 - **Il fumetto non ha il numero.** Apri la scheda «Posta in arrivo» e clicca **Aggiorna**.
+- **Il messaggio non arriva ma l'agente ha finito.** Un modello a volte scrive l'esito solo nella propria risposta e
+  non lo invia. La risposta si legge comunque: tasto destro sul file dell'agente → **Schedulazione agente…** →
+  **Esecuzioni** → **Mostra l'output** sulla riga più recente. Questo pulsante c'è nelle versioni di MdExplorer
+  successive al 3 ottobre 2026.
 
 [Prova 4: il dialogo tra due agenti](04-il-dialogo.md) · [Indice della sezione](../README.md)
