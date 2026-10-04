@@ -23,8 +23,8 @@ prima di cominciare.
 ## Le presentazioni
 
 - [Un assistente per ogni persona](presentazione/citta-degli-agenti.md): l'idea, in sedici slide.
-- [La gara, passo per passo](presentazione/guida-passo-passo.md): cosa fare e dove cliccare. Per ora ci sono la **parte 1**
-  (l'account manager cerca il bando) e la **parte 2** (avvia il giro e leggi una scheda).
+- [La gara, passo per passo](presentazione/guida-passo-passo.md): cosa fare e dove cliccare, in tre parti e nove gesti:
+  cerca il bando, avvia il giro e leggi una scheda, approva e decidi.
 
 ## Il percorso
 
