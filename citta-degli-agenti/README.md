@@ -20,6 +20,12 @@ Pentagroup riceve un invito a una gara di Nordica Crediti: un capitolato lungo, 
 decidere se partecipare. [La gara di Nordica](gara/README.md) dice chi sono i quattro agenti, cosa fa ciascuno e come passa il lavoro: leggila
 prima di cominciare.
 
+## Le presentazioni
+
+- [Un assistente per ogni persona](presentazione/citta-degli-agenti.md): l'idea, in sedici slide.
+- [La gara, passo per passo](presentazione/guida-passo-passo.md): cosa fare e dove cliccare. Per ora c'è la **parte 1**, fino al
+  messaggio dell'account manager.
+
 ## Il percorso
 
 | # | Pagina | Cosa provi | Tempo |
