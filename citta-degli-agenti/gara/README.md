@@ -28,10 +28,44 @@ un'azienda ciascuna sarebbe una persona diversa, sul proprio computer.
 
 ## Come gira
 
-```text
-sito dei bandi ──► account manager ──► [tu: «avvia»] ──► tecnico ─┐
-  (simulato)         (propone)                           legale  ─┼─► [tu approvi ciascuna] ─► account manager ─► sintesi
-                                                         delivery ─┘                                              [tu approvi]
+```plantuml
+@startuml
+!theme plain
+skinparam ActivityBackgroundColor #F1F3F4
+skinparam ActivityBorderColor #5F6368
+skinparam ArrowColor #5F6368
+
+|#F1F3F4|Sito dei bandi|
+start
+:Pubblica il bando\n(simulato);
+
+|#F1F3F4|Account manager|
+:Proponi la gara;
+
+|#FEF7E0|Tu|
+:Avvia l'analisi;
+
+fork
+  |#F1F3F4|Tecnico|
+  :Valuta gli aspetti tecnici;
+fork again
+  |#F1F3F4|Legale|
+  :Valuta gli aspetti legali;
+fork again
+  |#F1F3F4|Delivery|
+  :Valuta la fattibilità;
+end fork
+
+|#FEF7E0|Tu|
+:Approva ciascun contributo;
+
+|#F1F3F4|Account manager|
+:Prepara la sintesi;
+
+|#FEF7E0|Tu|
+:Approva la sintesi;
+stop
+@enduml
 ```
 
 1. L'agente dell'account manager **legge il sito dei bandi** e propone quelli nuovi e compatibili. Non avvia niente da solo.
