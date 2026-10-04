@@ -35,31 +35,46 @@ accanto. La parte 1 arriva fino al messaggio dell'account manager; le parti succ
 <div style="font-size:1.3em; font-weight:800; color:#5f6368">1</div>
 <div style="font-size:.7em; font-weight:700; margin-top:4px">Il progetto demo è aperto</div>
 <div style="font-size:.55em; line-height:1.35; margin-top:6px">Creato con <b>«Crea progetto demo»</b>: prepara anche il posto dove gli agenti consegnano.</div>
+<div style="font-size:.58em; margin-top:10px; font-weight:700">
+
+[Come lo verifico →](../guida/verifica-1-progetto-demo.md)
+
+</div>
 </div>
 
 <div style="flex:1; background:#fff; border-top:8px solid #5f6368; border-radius:14px; padding:16px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
 <div style="font-size:1.3em; font-weight:800; color:#5f6368">2</div>
 <div style="font-size:.7em; font-weight:700; margin-top:4px">La città è accesa</div>
-<div style="font-size:.55em; line-height:1.35; margin-top:6px">Impostazioni del progetto → «Abilita la città degli agenti». È la <b>prova 1</b>.</div>
+<div style="font-size:.55em; line-height:1.35; margin-top:6px">Nella barra in alto ci sono le due persone e il fumetto.</div>
+<div style="font-size:.58em; margin-top:10px; font-weight:700">
+
+[Come lo verifico →](../guida/verifica-2-citta-accesa.md)
+
+</div>
 </div>
 
 <div style="flex:1; background:#fff; border-top:8px solid #5f6368; border-radius:14px; padding:16px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
 <div style="font-size:1.3em; font-weight:800; color:#5f6368">3</div>
 <div style="font-size:.7em; font-weight:700; margin-top:4px">I quattro agenti sono abilitati</div>
-<div style="font-size:.55em; line-height:1.35; margin-top:6px">Icona delle due persone → «Concedi trust» su ciascuno. È la <b>prova 2</b>.</div>
+<div style="font-size:.55em; line-height:1.35; margin-top:6px">Nel registro, ciascuno dei quattro ha il segno verde «Fidato».</div>
+<div style="font-size:.58em; margin-top:10px; font-weight:700">
+
+[Come lo verifico →](../guida/verifica-3-agenti-abilitati.md)
+
+</div>
 </div>
 
 </div>
 
 <div style="margin-top:26px; font-size:.75em">
 
-Se manca una di queste tre, **fermati e falla**: senza, il resto non parte.
+Ogni riquadro porta a una pagina con le schermate: **cosa guardare, e cosa fare se manca**.
 
 </div>
 
 Note:
-Non si rispiega qui come si accende la città o come si abilita un agente: ci sono le prove 1 e 2. Questa guida parte dal
-momento in cui tutto è pronto e l'account manager comincia la sua giornata.
+I tre link aprono tre pagine di verifica, con le schermate di ciò che si deve vedere e i passi da fare se qualcosa manca.
+Dalla pagina si torna alla guida con il link in fondo o con la freccia indietro di MdExplorer.
 
 ---
 
