@@ -91,7 +91,19 @@ su cui si scrive; `upstream` è l'originale, da cui si prendono gli aggiornament
 | **Autorizza** | il ramo principale di `origin` (locale) |
 | **Scarica tutto** | da `origin` (locale) alla cartella del progetto |
 | Commit e pubblicazione dalla barra git | `origin` (locale) |
-| Aggiornare il demo a una versione nuova | da `upstream` (GitHub), solo con un comando git: `git pull upstream main` |
+| Aggiornare il demo a una versione nuova | da `upstream` (GitHub), con **Scarica gli aggiornamenti** |
+
+## Quando esce una versione nuova del demo
+
+Il «da pullare» di MdExplorer guarda `origin`, quindi il repository locale: gli aggiornamenti del demo su GitHub lì non compaiono.
+Per questo, quando la sorgente ha del nuovo, in alto a destra compare un pulsante azzurro, per esempio **«3 aggiornamenti»**.
+
+1. Passaci sopra con il mouse: si apre «Aggiornamenti dalla sorgente», con l'indirizzo da cui arrivano.
+2. Clicca **Scarica gli aggiornamenti**.
+
+MdExplorer porta la versione nuova nella tua cartella e poi la copia anche nel repository locale, così gli agenti ripartono da
+quella. Verso GitHub non manda mai niente. Se gli aggiornamenti toccano un file che hai cambiato anche tu, non scarica niente, lascia
+il progetto com'era e ti dice quale file è: committa o annulla la tua modifica e riprova.
 
 ## Come controllarlo
 
