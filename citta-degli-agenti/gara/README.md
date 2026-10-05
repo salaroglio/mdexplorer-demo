@@ -11,7 +11,7 @@ leggere con occhi diversi (tecnici, legali, di delivery) prima di decidere se pa
 prepara la sua scheda; lei la verifica e decide se passarla avanti; alla fine l'account manager ha una sintesi.
 
 - Quattro persone e quattro agenti: l'account manager e tre responsabili (tecnico, legale, delivery).
-- **Gli agenti preparano, le persone decidono**: nessun lavoro passa al passo dopo senza la tua approvazione.
+- **Gli agenti preparano, le persone decidono**: nessun lavoro passa al passo dopo senza l'approvazione di chi ne risponde.
 - Tutto è inventato: l'azienda, il committente, la gara (derivata da un capitolato reale, riscritto) e il sito dei bandi.
 
 ## Chi c'è
@@ -42,45 +42,56 @@ skinparam ActivityBackgroundColor #F1F3F4
 skinparam ActivityBorderColor #5F6368
 skinparam ArrowColor #5F6368
 
-|#F1F3F4|Sito dei bandi|
+|Prima di cominciare|
 start
-:Pubblica il bando\n(simulato);
+#E8F0FE:Ogni persona prende in carico\nil proprio agente;
 
-|#F1F3F4|Account manager|
-:Cerca i bandi nuovi,\nscrive la ricerca\ne propone la gara;
-
-|#FEF7E0|Tu|
-:Leggi la ricerca\ne avvia l'analisi;
+|Account manager|
+:Il suo agente cerca i bandi nuovi\ne scrive la ricerca;
+#FEF7E0:Legge la ricerca\ne avvia il giro;
+:Il suo agente incarica\ni tre responsabili;
 
 fork
-  |#F1F3F4|Tecnico|
-  :Valuta gli aspetti tecnici;
+  |Responsabile tecnico|
+  :Il suo agente scrive\nla scheda tecnica;
+  #FEF7E0:La verifica, la approva\ne la passa avanti;
 fork again
-  |#F1F3F4|Legale|
-  :Valuta gli aspetti legali;
+  |Responsabile legale|
+  :Il suo agente scrive\nla scheda contrattuale;
+  #FEF7E0:La verifica, la approva\ne la passa avanti;
 fork again
-  |#F1F3F4|Delivery|
-  :Valuta la fattibilità;
+  |Responsabile delivery|
+  :Il suo agente scrive\nla scheda di team e piano;
+  #FEF7E0:La verifica, la approva\ne la passa avanti;
 end fork
 
-|#FEF7E0|Tu|
-:Approva ciascun contributo;
-
-|#F1F3F4|Account manager|
-:Prepara la sintesi;
-
-|#FEF7E0|Tu|
-:Approva la sintesi;
+|Account manager|
+:Il suo agente scrive la sintesi\ndalle tre schede approvate;
+#FEF7E0:Legge la sintesi\ne decide se partecipare;
 stop
+
+legend right
+  grigio = lo fa l'agente
+  <color:#F29900>ambra</color> = lo fa la persona: verifica e decide
+  <color:#1A73E8>blu</color> = una volta sola, all'inizio
+endlegend
 @enduml
 ```
 
+**Prima di cominciare**, ogni persona prende in carico il proprio agente: da quel momento ne risponde, e l'agente lavora
+solo sul suo computer. Poi:
+
 1. L'agente dell'account manager **legge il sito dei bandi**, fa un primo filtro (la natura del bando e il tempo per
    rispondere) e scrive la **ricerca**: quali bandi sono nuovi, e quali meritano il giro. Non avvia niente da solo.
-2. Tu leggi la ricerca e gli dici di avviare il giro: lui incarica i tre responsabili. La ricerca la approvi quando vuoi.
-3. Ognuno **legge il capitolato con i suoi occhi** e scrive la sua scheda, che arriva da approvare.
-4. Quando **approvi** una scheda, scegli tu di passare il lavoro all'account manager: è il tuo gesto che lo avvisa.
-5. Quando ha le tre schede, l'account manager scrive la **sintesi** con i suoi indicatori. Anche quella la approvi tu.
+2. **L'account manager** legge la ricerca e dice al suo agente di avviare il giro: l'agente incarica i tre responsabili.
+3. L'agente di ogni responsabile **legge il capitolato con gli occhi del suo responsabile** e scrive la sua scheda.
+4. **Ogni responsabile** verifica la scheda del proprio agente, la approva e sceglie di passarla all'account manager: è il suo
+   gesto che avvisa, non l'agente.
+5. Quando ci sono le tre schede approvate, l'agente dell'account manager scrive la **sintesi**. **L'account manager** la
+   legge e decide se partecipare.
+
+Nel grafico non c'è una corsia per «te»: ogni passo ambra è della persona di quella corsia. Nel demo le quattro persone sei
+tu, una dopo l'altra, e il passo blu lo fai una volta sola per tutti e quattro gli agenti («Sono tutti miei»).
 
 ## I file
 
@@ -98,7 +109,7 @@ Gli agenti stanno in [.github/agents](../../.github/agents/account-manager.agent
 
 ## Cosa non fanno gli agenti
 
-- **Non decidono.** Propongono; ogni passaggio al passo successivo è un tuo gesto.
+- **Non decidono.** Propongono; ogni passaggio al passo successivo è il gesto di una persona.
 - **Non scrivono nel progetto da soli.** Ogni documento resta in una copia a parte dell'agente finché non lo approvi.
 - **Non inventano.** Se un'informazione non c'è nel capitolato o nel profilo scrivono «da chiarire»; ogni affermazione
   cita la sezione del capitolato, così puoi controllarla.
