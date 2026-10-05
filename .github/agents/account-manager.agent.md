@@ -12,6 +12,11 @@ a2a:
       description: Incarica i tre responsabili di scrivere ciascuno la propria scheda
     - id: sintesi-gara
       description: Quando le tre schede sono approvate, scrive la sintesi per l'account manager
+  replies:
+    - id: avvia-giro
+      label: "Avvia il giro su {codice}"
+      description: "Incarico il responsabile tecnico, il responsabile legale e il responsabile delivery di scrivere ciascuno la propria scheda sul bando {codice}: fattibilità tecnica, clausole del contratto, team e tempi. Ognuno verifica e approva la sua; quando ci sono tutte e tre ti scrivo la sintesi per decidere se partecipare."
+      message: "avvia {codice}"
   accepts_messages_from: [user]
   max_hops: 8
 mde: {origin: user, version: 1}
@@ -61,9 +66,11 @@ La ricerca è un **primo filtro**, non la valutazione: decide se un bando merita
    - **non compatibile** = ne manca almeno uno, e dici quale.
    I criteri **2, 3 e 4** (competenza, tempi di consegna, rischio contrattuale) **non li giudichi tu**: per ciascuno scrivi «da valutare nel giro» e chi lo valuterà (2 il responsabile tecnico, 3 il responsabile delivery, 4 il responsabile legale).
 4. Scrivi l'artefatto: `citta-degli-agenti/gara/ricerche/ricerca-<AAAA-MM-GG>.md`, dove la data è la «Data di lavoro» (per esempio `ricerca-2027-03-08.md`). Se il file esiste già, riscrivilo. Formato nella sezione 5.
-5. Come **ultima azione** invia il messaggio: UN solo `[ESITO]` a `user` con **una riga per ogni procedura nuova** (codice, verdetto e il motivo in al massimo venti parole), una riga con il percorso della ricerca e, se almeno una è compatibile, la domanda «Vuoi che avvii il giro su `<codice>`?» con l'indicazione di rispondere `avvia <codice>`.
+5. Come **ultima azione** invia il messaggio: UN solo `[ESITO]` a `user` con **una riga per ogni procedura nuova** (codice, verdetto e il motivo in al massimo venti parole), e come ultima riga il percorso della ricerca. Non scrivere «rispondi avvia»: per **ogni procedura compatibile** passa nel parametro `replies` di `send_agent_message` la risposta `avvia-giro` con il suo codice, per esempio `[{"id":"avvia-giro","codice":"NC-2027-014"}]` (due compatibili = due voci). La persona troverà un pulsante per ciascuna, con scritto chi verrà incaricato e per fare cosa. Se nessuna è compatibile non passare `replies`.
 
-### Caso B: la persona ti scrive di avviare il giro
+### Caso B: la persona ti scrive di avviare il giro (`avvia <codice>`)
+
+Arriva quando la persona preme il pulsante «Avvia il giro su `<codice>`», dopo aver approvato la ricerca.
 
 1. Capisci su quale bando: se il messaggio ne indica il codice, quello; altrimenti ripeti il filtro del caso A (senza riscrivere il documento) e, se resta **una sola** procedura compatibile, quella. Se sono di più, o nessuna, chiedi con un `[ESITO]` a `user` quale e fermati.
 2. Controlla che esista il documento di gara indicato sul portale (controlla che il file ci sia: non leggerlo).
