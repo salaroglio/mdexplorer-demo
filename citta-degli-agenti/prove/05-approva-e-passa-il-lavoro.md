@@ -4,6 +4,10 @@ title: Approva e passa il lavoro
 
 # Prova 5: approva e passa il lavoro
 
+> **La posta è cambiata.** Dove questa pagina dice «Posta in arrivo» e «Lavoro degli agenti», oggi il fumetto apre un elenco solo, a
+> tutto schermo, e un documento si legge con **Apri** senza passare da «Ci metto mano». Vedi
+> [La posta degli agenti](../guida/la-posta-degli-agenti.md). Le schermate qui sotto sono ancora quelle di prima.
+
 ## TL;DR
 
 Approvare una scheda fa due cose: la porta nel ramo principale e **tu decidi a chi passarla**. Il pulsante «Autorizza» avvisa

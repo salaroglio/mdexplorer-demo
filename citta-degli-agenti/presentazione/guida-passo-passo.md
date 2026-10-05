@@ -73,6 +73,7 @@ Ogni riquadro porta a una pagina con le schermate: **cosa guardare, e cosa fare 
 </div>
 
 Note:
+Dal 5 ottobre la posta degli agenti è una pagina a tutto schermo, con messaggi e lavori da approvare in un elenco solo: le schermate di questa guida mostrano ancora la finestra di prima. La pagina «La posta degli agenti», nella cartella guida, la descrive.
 I tre link aprono tre pagine di verifica, con le schermate di ciò che si deve vedere e i passi da fare se qualcosa manca.
 Dalla pagina si torna alla guida con il link in fondo o con la freccia indietro di MdExplorer.
 

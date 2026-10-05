@@ -4,6 +4,10 @@ title: La sintesi e la tua decisione
 
 # Prova 6: la sintesi e la tua decisione
 
+> **La posta è cambiata.** Dove questa pagina dice «Posta in arrivo» e «Lavoro degli agenti», oggi il fumetto apre un elenco solo, a
+> tutto schermo, e un documento si legge con **Apri** senza passare da «Ci metto mano». Vedi
+> [La posta degli agenti](../guida/la-posta-degli-agenti.md). Le schermate qui sotto sono ancora quelle di prima.
+
 ## TL;DR
 
 Con le tre schede approvate, l'account manager scrive la **sintesi** con i cinque indicatori che interessano a lui e

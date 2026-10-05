@@ -4,6 +4,10 @@ title: L'account manager cerca il bando
 
 # Prova 3: l'account manager cerca il bando
 
+> **La posta è cambiata.** Dove questa pagina dice «Posta in arrivo» e «Lavoro degli agenti», oggi il fumetto apre un elenco solo, a
+> tutto schermo, e un documento si legge con **Apri** senza passare da «Ci metto mano». Vedi
+> [La posta degli agenti](../guida/la-posta-degli-agenti.md). Le schermate qui sotto sono ancora quelle di prima.
+
 ## TL;DR
 
 Sei l'account manager di Pentagroup e hai un agente che controlla per te il sito dei bandi di Nordica. Lo lanci, lui legge
@@ -44,8 +48,9 @@ Vuoi che avvii il giro su NC-2027-014? Rispondi `avvia NC-2027-014`.
 
 ## Leggi il documento
 
-Il messaggio è il riassunto; il ragionamento sta nel documento. Nella stessa finestra apri la scheda **Lavoro degli agenti**: c'è una
-richiesta di `account-manager` con un file, `gara/ricerche/ricerca-2027-03-08.md`. Dentro trovi:
+Il messaggio è il riassunto; il ragionamento sta nel documento. Sotto il testo del messaggio, nella sezione **Artefatti**, c'è
+`gara/ricerche/ricerca-2027-03-08.md` con lo stato «nella copia dell'agente, in attesa della tua approvazione». Clicca **Apri**: il
+documento si apre lì accanto. Dentro trovi:
 
 - la tabella delle procedure trovate, con i giorni che mancano alla scadenza;
 - per ogni procedura i cinque criteri: i due che bloccano (la natura del bando e il tempo per rispondere) li giudica
@@ -54,7 +59,8 @@ richiesta di `account-manager` con un file, `gara/ricerche/ricerca-2027-03-08.md
 
 **Compatibile** qui vuol dire «merita il giro dei tre responsabili», non «conviene partecipare»: quello lo diranno le loro schede.
 
-Clicca **Autorizza** per archiviare la ricerca nel progetto. Puoi farlo anche più tardi: per avviare il giro non serve.
+Clicca **Torna**, poi **Vai alla richiesta** e **Autorizza** per archiviare la ricerca nel progetto. Puoi farlo anche più tardi: per
+avviare il giro non serve.
 
 ## Controllalo
 

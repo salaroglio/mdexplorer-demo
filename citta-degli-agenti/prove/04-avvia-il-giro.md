@@ -4,6 +4,10 @@ title: Avvia il giro e leggi le schede
 
 # Prova 4: avvia il giro e leggi le schede
 
+> **La posta è cambiata.** Dove questa pagina dice «Posta in arrivo» e «Lavoro degli agenti», oggi il fumetto apre un elenco solo, a
+> tutto schermo, e un documento si legge con **Apri** senza passare da «Ci metto mano». Vedi
+> [La posta degli agenti](../guida/la-posta-degli-agenti.md). Le schermate qui sotto sono ancora quelle di prima.
+
 ## TL;DR
 
 Rispondi all'account manager «avvia» e lui incarica i tre responsabili. Ognuno legge lo stesso capitolato con i **suoi**
