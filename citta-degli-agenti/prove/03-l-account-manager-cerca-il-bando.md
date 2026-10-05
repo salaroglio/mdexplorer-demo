@@ -38,9 +38,14 @@ un modello, ma il contenuto è questo:
 NC-2027-014 — compatibile: piattaforma per tributi degli Enti Locali, con 53 giorni per rispondere.
 NC-2027-012 — non compatibile: fornitura di licenze esclusa; mancano solo 16 giorni.
 NC-2027-011 — non compatibile: manutenzione immobiliare, non servizi gestiti o piattaforme.
-Documento: `citta-degli-agenti/gara/ricerche/ricerca-2027-03-08.md`
-Vuoi che avvii il giro su NC-2027-014? Rispondi `avvia NC-2027-014`.
+citta-degli-agenti/gara/ricerche/ricerca-2027-03-08.md
 ```
+
+Sotto il messaggio, al posto di una casella in cui scrivere, c'è un **pulsante**: «Avvia il giro su NC-2027-014», con scritto
+che cosa succede premendolo (chi viene incaricato, e per fare cosa). Le risposte possibili le dichiara la scheda dell'agente:
+tu non devi indovinare che cosa scrivere. Per ora il pulsante è **chiuso**: prima devi decidere sulla ricerca.
+
+![Il pulsante di risposta chiuso finché la ricerca non è approvata](../presentazione/assets/schermate/posta-risposta-chiusa.png)
 
 ## Leggi il documento
 
@@ -55,8 +60,11 @@ documento si apre lì accanto. Dentro trovi:
 
 **Compatibile** qui vuol dire «merita il giro dei tre responsabili», non «conviene partecipare»: quello lo diranno le loro schede.
 
-Clicca **Torna**, poi **Vai alla richiesta** e **Autorizza** per archiviare la ricerca nel progetto. Puoi farlo anche più tardi: per
-avviare il giro non serve.
+Clicca **Torna**. Nell'elenco a sinistra, **sotto** il messaggio dell'account manager, c'è la riga rientrata «Da approvare:
+l'artefatto»: è la richiesta di approvazione di questa ricerca. Cliccala e premi **Autorizza**: la ricerca entra nel progetto.
+
+Solo adesso il pulsante «Avvia il giro» si apre. È una regola dell'app, non una cortesia dell'agente: un lavoro non passa
+avanti finché non hai approvato quello che lo giustifica.
 
 ## Controllalo
 

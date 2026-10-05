@@ -41,7 +41,7 @@ prima di cominciare.
 | 1 | [Accendi la città](prove/01-accendi-la-citta.md) | una casella nelle impostazioni, e dove consegnano gli agenti | 3 min |
 | 2 | [Abilita gli agenti](prove/02-abilita-gli-agenti.md) | leggi cosa fa e cosa può fare ciascun agente, poi lo abiliti | 7 min |
 | 3 | [L'account manager cerca il bando](prove/03-l-account-manager-cerca-il-bando.md) | lanci il primo agente e controlli ciò che propone | 5 min |
-| 4 | [Avvia il giro e leggi le schede](prove/04-avvia-il-giro.md) | dici «avvia», aspetti tre schede e le leggi prima di approvarle | 12 min |
+| 4 | [Avvia il giro e leggi le schede](prove/04-avvia-il-giro.md) | approvi la ricerca, premi «Avvia il giro», segui le tre schede e le leggi prima di approvarle | 12 min |
 | 5 | [Approva e passa il lavoro](prove/05-approva-e-passa-il-lavoro.md) | approvi tre schede: ogni approvazione avvisa il collega | 10 min |
 | 6 | [La sintesi e la tua decisione](prove/06-la-sintesi-e-la-tua-decisione.md) | leggi la sintesi, cerchi dove le schede si parlano, decidi | 8 min |
 

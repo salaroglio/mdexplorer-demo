@@ -8,6 +8,7 @@ a2a:
   skills:
     - id: scheda-delivery
       description: Scrive citta-degli-agenti/gara/schede/delivery.md
+  replies: []
   accepts_messages_from: [account-manager, user]
   max_hops: 6
   on_approval_notify: [account-manager]

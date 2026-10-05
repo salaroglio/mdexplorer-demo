@@ -229,11 +229,11 @@ Onestà: il sito è un file nel progetto, in azienda l'assistente lo leggerebbe 
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Passo 2: rispondi «avvia»
+## Passo 2: premi «Avvia il giro»
 
 <div style="display:flex; flex-direction:column; align-items:center; gap:18px; margin-top:6px">
 
-<img src="assets/schermate/risposta.png" alt="La risposta avvia NC-2027-014 nella posta" width="640" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/risposta.png" alt="Il pulsante Avvia il giro su NC-2027-014 sotto il messaggio dell'account manager" width="640" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 
 <div class="r-hstack" style="gap:16px; align-items:center; font-size:.62em">
 <div style="background:#fff; border-radius:12px; padding:10px 18px; box-shadow:0 6px 18px rgba(15,27,45,.12); font-weight:800; color:#f29900">account manager</div>
@@ -248,7 +248,7 @@ Onestà: il sito è un file nel progetto, in azienda l'assistente lo leggerebbe 
 </div>
 
 Note:
-Una riga di testo, nella casella di risposta: è il tuo gesto. L'assistente si risveglia nella stessa conversazione e incarica i tre
+Un pulsante sotto il messaggio, con scritto chi viene incaricato e per fare cosa: è il tuo gesto, e si apre solo dopo che hai approvato la ricerca. L'assistente si risveglia nella stessa conversazione e incarica i tre
 responsabili. Da qui in poi lavorano per conto loro, in parallelo, ognuno nella propria copia del progetto.
 
 ---
@@ -299,7 +299,7 @@ diverse. Notare che ogni affermazione cita la sezione del capitolato: la persona
 
 - **Una richiesta per scheda**, ciascuna col suo file e un riassunto di chi è l'agente.
 - Nessuna scheda è ancora nel progetto: sono **rami da approvare**.
-- **Autorizza**, **Ci metto mano** o **Rifiuta**.
+- **Autorizza**, **Ci metto mano**, o (l'eccezione) **Rifiuta** con il motivo.
 
 </div>
 

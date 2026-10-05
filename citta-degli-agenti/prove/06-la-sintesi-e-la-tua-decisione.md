@@ -54,8 +54,9 @@ alla frase originale. Se un punto non regge, ti sei appena guadagnato la ragione
 Approva la sintesi con **Autorizza**: non ha un destinatario a cui passarla, è la fine del giro. Il registro dei bandi ora
 contiene la gara, «in valutazione».
 
-Se non sei d'accordo, hai due vie. **Rifiuta**: non entra niente, il ramo resta. Oppure **Ci metto mano**, correggi tu e
-chiudi con «Ho finito».
+Se non sei d'accordo, la strada normale è correggerla tu: entri nella copia dell'agente dal selettore del ramo («Worktree»),
+sistemi la sintesi, torni al tuo lavoro e la approvi. **Rifiuta** è l'eccezione: ti chiede il motivo e chiude lì. La sintesi
+l'avevi chiesta tu, quindi nessuno la aspetta: per riprovare rilanci l'account manager.
 
 ## La decisione è tua
 

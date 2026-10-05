@@ -48,7 +48,12 @@ saranno diversi, ma il percorso è lo stesso.
 | `schermate/fiducia.png` | la finestra che si apre prima di abilitare un agente | «Prima li abiliti tu» |
 | `schermate/registro.png` | l'elenco degli agenti con i loro riassunti | (disponibile, non usata) |
 | `schermate/scoperta.png` | il messaggio dell'account manager con i bandi nuovi | «Passo 1» |
-| `schermate/risposta.png` | la risposta «avvia» nella posta | «Passo 2» |
+| `schermate/risposta.png` | il pulsante «Avvia il giro» sotto il messaggio | «Passo 2» |
+| `schermate/posta-risposta.png` | il messaggio con il pulsante di risposta aperto | guida passo per passo, gesto 4; prova 4 |
+| `schermate/posta-risposta-chiusa.png` | lo stesso pulsante chiuso, prima dell'approvazione | prova 3 |
+| `schermate/posta-stati.png` | le righe di stato dei lavori attesi | guida passo per passo; prova 4 |
+| `schermate/posta-rifiuto.png` | il rifiuto con il motivo | (di scorta) |
+| `schermate/posta-fermo.png` | un lavoro rifiutato e fermo, con «Fai ripartire» | prova 4; guida della posta |
 | `schermate/esiti.png` | i messaggi del tecnico e del legale | «Lo stesso capitolato» |
 | `schermate/revisione.png` | due richieste da rivedere, con la scelta del destinatario | «Ti arrivano tre richieste» |
 | `schermate/avviso.png` | «Lavoro fuso nel ramo principale. Ho avvisato account-manager.» | «Approvare è passare il lavoro» |

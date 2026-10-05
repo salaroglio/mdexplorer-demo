@@ -18,11 +18,59 @@ da un agente si apre lì dentro, anche prima che tu lo approvi.
 
 | Icona | Che cos'è | Cosa fai a destra |
 |---|---|---|
-| il robot | un messaggio di un agente | lo leggi, apri gli artefatti, rispondi |
-| la lista con la spunta, in arancione | un lavoro **da approvare** | apri i file, poi **Autorizza**, **Ci metto mano** o **Rifiuta** |
+| il robot | un messaggio di un agente | lo leggi, apri gli artefatti, rispondi con i suoi pulsanti |
+| la lista con la spunta, in arancione, rientrata sotto un messaggio | l'artefatto di quel lavoro, **da approvare** | apri i file, poi **Autorizza**, **Ci metto mano** o **Rifiuta** |
+| una riga colorata, rientrata sotto un messaggio | un lavoro che quell'agente ha chiesto a un altro e che stai **aspettando** | niente: la riga cambia stato da sola |
 | il nodo, in viola | la **richiesta di un collega**: il suo agente chiede il lavoro del tuo | **Autorizza** o **Rifiuta**: il tuo agente parte solo se accetti |
 
 Aprire un messaggio lo segna come letto: sparisce il pallino, ma il messaggio resta nell'elenco finché ti serve.
+
+## Un lavoro, una riga
+
+Un agente che lavora lascia due cose: il messaggio che ti scrive e la richiesta di approvazione del suo artefatto. Nell'elenco
+non sono due voci slegate: la richiesta sta **sotto** il messaggio dello stesso lavoro, rientrata, con scritto «Da approvare:
+l'artefatto». Il legame è l'identificativo del turno di lavoro, non l'ora.
+
+## Rispondere a un agente
+
+Sotto un messaggio trovi **che cosa puoi rispondere**: un pulsante per ogni risposta che l'agente accetta, con scritto che cosa
+succede premendolo (chi viene contattato, e per ottenere cosa). Le risposte le dichiara la scheda dell'agente, nel blocco coperto
+dalla fiducia: un pulsante può inviare solo ciò che hai già visto dando fiducia all'agente.
+
+![Il pulsante di risposta con la sua descrizione](../presentazione/assets/schermate/posta-risposta.png)
+
+- **Finché l'artefatto di quel lavoro non è approvato, i pulsanti sono chiusi.** Prima decidi su ciò che l'agente ha prodotto,
+  poi gli dici di andare avanti.
+- Un agente che non ti chiede niente non ha né pulsanti né casella.
+- La casella per scrivere liberamente resta solo per gli agenti che non dichiarano le loro risposte.
+
+## Rifiutare
+
+Il rifiuto è l'eccezione: di solito un artefatto che non convince si corregge nella copia dell'agente e poi si approva.
+**Rifiuta** chiede sempre il motivo, e poi ferma tutto: niente riparte da solo.
+
+| Il lavoro l'aveva chiesto | Dopo il rifiuto |
+|---|---|
+| un altro agente, che lo aspetta | resta nella posta come «Rifiutato: il lavoro è fermo». Quando vuoi premi **Fai ripartire**: l'agente riceve lo stesso incarico e il tuo motivo. Prima, se serve, correggi la sua scheda |
+| tu | è un ramo chiuso: i pulsanti di risposta restano bloccati. Per riprovare rilanci l'agente |
+
+![Un lavoro rifiutato e fermo, con Fai ripartire](../presentazione/assets/schermate/posta-fermo.png)
+
+## I lavori che aspetti
+
+![Le righe di stato sotto il messaggio che ha avviato il giro](../presentazione/assets/schermate/posta-stati.png)
+
+Quando un tuo agente incarica altri agenti, sotto il suo messaggio compare una riga per ogni lavoro atteso. La riga cambia
+stato da sola, e quando cambia lampeggia per qualche secondo.
+
+| Stato | Sfondo |
+|---|---|
+| sta lavorando, in rilavorazione | azzurro |
+| in approvazione (aspetta la decisione di chi ne risponde) | ambra |
+| approvato, concluso | verde |
+| rifiutato e fermo, non riuscito | rosso |
+
+Oggi queste righe si vedono quando chi aspetta e chi approva lavorano sullo stesso computer, come nel demo.
 
 ## Archiviare
 

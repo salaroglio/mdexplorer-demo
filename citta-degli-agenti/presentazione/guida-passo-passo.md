@@ -361,7 +361,7 @@ diranno le schede dei responsabili. Le due procedure già nel registro non compa
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>3. Clicca «Torna»</b><br>Riporta al messaggio. Il documento lo approvi quando vuoi: per avviare il giro non serve.
+<b>3. Clicca «Torna», poi approva</b><br>Sotto il messaggio c'è la riga «Da approvare: l'artefatto»: cliccala e premi «Autorizza». Finché non lo fai, la risposta è chiusa.
 </div>
 
 </div>
@@ -455,31 +455,31 @@ solo quando la approvi. E la sua scheda dice di proporre e aspettare: l'avvio de
 **Avvia il giro** e leggi una scheda prima di approvarla
 
 Note:
-La parte 1 è finita con una domanda dell'account manager: «Vuoi che avvii il giro?». La parte 2 comincia dalla risposta e
+La parte 1 è finita con la ricerca approvata e con un pulsante sotto il messaggio dell'account manager. La parte 2 comincia da quel pulsante e
 arriva fino alla lettura di una scheda. L'approvazione è nella parte 3.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Gesto 4: rispondi «avvia»
+## Gesto 4: premi «Avvia il giro»
 
 <div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/posta-risposta.png" alt="La casella di risposta con scritto avvia NC-2027-014" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+<img src="assets/schermate/posta-risposta.png" alt="Il pulsante Avvia il giro su NC-2027-014 sotto il messaggio, con la sua descrizione" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
 <div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>1. Resta sul messaggio</b><br>Quello dell'account manager, con la domanda in fondo.
+<b>1. Resta sul messaggio</b><br>Quello dell'account manager. Sotto il testo c'è «Che cosa puoi rispondere».
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>2. Scrivi nella casella</b><br><code>avvia NC-2027-014</code>
+<b>2. Leggi che cosa fa il pulsante</b><br>Incarica il responsabile tecnico, il legale e il delivery di scrivere ciascuno la sua scheda.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>3. Clicca «Rispondi»</b><br>L'assistente si sveglia, incarica i tre responsabili e te lo conferma con un messaggio.
+<b>3. Premi «Avvia il giro su NC-2027-014»</b><br>L'assistente si sveglia, incarica i tre responsabili e te lo conferma con un messaggio.
 </div>
 
 </div>
@@ -487,8 +487,41 @@ arriva fino alla lettura di una scheda. L'approvazione è nella parte 3.
 </div>
 
 Note:
-Non c'è un pulsante «avvia il giro»: l'avvio è una risposta, scritta dalla persona. Dopo mezzo minuto arriva la conferma:
-«Giro avviato su NC-2027-014: incarichi inviati ai tre responsabili».
+Le risposte possibili le dichiara la scheda dell'agente e diventano pulsanti: la persona legge chi verrà contattato e per fare
+cosa, invece di indovinare che cosa scrivere. Il pulsante resta chiuso finché la ricerca non è approvata. Dopo mezzo minuto arriva
+la conferma, «Giro avviato su NC-2027-014», e sotto quel messaggio compare una riga per ogni scheda attesa, che cambia stato da sola.
+
+---
+
+<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
+
+## Intanto: a che punto sono le schede
+
+<div style="display:flex; gap:28px; align-items:center; justify-content:center">
+
+<img src="assets/schermate/posta-stati.png" alt="Sotto il messaggio Giro avviato, una riga per ogni scheda attesa con il suo stato" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+
+<div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Una riga per scheda attesa</b><br>Sta sotto il messaggio «Giro avviato», e cambia stato da sola.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Il colore dice lo stato</b><br>Azzurro: sta lavorando. Ambra: in approvazione. Verde: approvata. Rosso: rifiutata, ferma.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>È per chi aspetta</b><br>L'account manager vede a che punto è ogni collega, senza chiederglielo.
+</div>
+
+</div>
+
+</div>
+
+Note:
+Una scheda rifiutata non riparte da sola: resta ferma, in rosso, finché chi ne risponde non preme «Fai ripartire». Nel frattempo
+può correggere la scheda dell'agente, se l'errore viene da lì.
 
 ---
 
@@ -641,7 +674,7 @@ Non devi rileggere tutto il capitolato: **controlli a campione**, dove conta.
 
 Note:
 Questo è il lavoro della persona, ed è quello che dà valore al giro. Tre controlli a campione bastano per capire se la scheda
-è affidabile. Se un punto non torna, si può correggere il file oppure rifiutare la richiesta.
+è affidabile. Se un punto non torna, la strada normale è correggere il file nella copia dell'agente; rifiutare è l'eccezione, chiede il motivo e ferma il lavoro finché non lo si fa ripartire.
 
 ---
 
@@ -678,7 +711,7 @@ cartella. È la parte in cui si vede che il lavoro passa di mano solo per un tuo
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>3. Oppure</b><br>«Ci metto mano» per correggerla tu, «Rifiuta» per scartarla.
+<b>3. Oppure</b><br>La correggi tu nella copia dell'agente. «Rifiuta» è l'eccezione: chiede il motivo e ferma il lavoro.
 </div>
 
 </div>
@@ -954,7 +987,7 @@ scritto cosa c'è da decidere
 <div style="flex:1; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-top:8px solid #f29900; padding:16px 22px">
 <div style="font-size:.55em; color:#f29900; font-weight:800; letter-spacing:.08em">TU HAI</div>
 <div style="font-size:.62em; line-height:1.55; margin-top:6px">
-detto «avvia»<br>
+premuto «Avvia il giro»<br>
 letto e verificato a campione<br>
 approvato quattro volte<br>
 <b>e ora decidi se partecipare</b>
@@ -994,7 +1027,7 @@ chiarire con il committente» sono la lista con cui presentarsi all'incontro tec
 <div style="flex:1; background:#fff; border-top:8px solid #1a73e8; border-radius:14px; padding:14px 18px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
 <div style="font-size:.5em; color:#1a73e8; font-weight:800; letter-spacing:.08em">PARTE 2 · AVVIA E LEGGI</div>
 <div style="font-size:.56em; line-height:1.6; margin-top:6px">
-<b>4.</b> rispondi «avvia»<br>
+<b>4.</b> premi «Avvia il giro»<br>
 <b>5.</b> Apri una scheda<br>
 <span style="color:#5f6368">cinque minuti di attesa, col robot giallo nella barra</span>
 </div>
