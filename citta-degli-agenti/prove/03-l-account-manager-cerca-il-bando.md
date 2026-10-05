@@ -25,6 +25,13 @@ con l'esito della ricerca e un messaggio breve che ti dice cosa propone. Non avv
 3. Lascia le altre opzioni come sono (motore del progetto, modello vuoto, «Lavora in un posto di lavoro isolato»
    spuntato) e clicca **Lancia ora**.
 
+**La prima volta compare una finestra: «Prima di avviare account-manager: c'è lavoro non salvato».** È giusto così. Accendendo
+la città e assegnandoti gli agenti hai modificato due file (`.development.yml` e `gara/responsabilita.md`), e l'agente
+lavora in una copia che parte da ciò che è **pubblicato**: quei due file non li vedrebbe. Scrivi un messaggio, per esempio
+«città accesa», e clicca **Committa, pubblica e avvia**. Va tutto nel tuo repository locale, non su quello pubblico del demo.
+
+![La finestra che compare prima di avviare un agente, con i file non salvati](../presentazione/assets/schermate/prima-di-avviare.png)
+
 Dopo circa un minuto compare «🤖 Agente "account-manager.agent.md" completato.» e sul fumetto «Messaggi degli agenti»
 nella barra degli strumenti compare un numero.
 

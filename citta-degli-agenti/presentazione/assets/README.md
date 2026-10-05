@@ -55,6 +55,7 @@ saranno diversi, ma il percorso è lo stesso.
 | `schermate/posta-rifiuto.png` | il rifiuto con il motivo | (di scorta) |
 | `schermate/posta-fermo.png` | un lavoro rifiutato e fermo, con «Fai ripartire» | prova 4; guida della posta |
 | `schermate/copia-dentro.png` | la finestra che lavora nella copia di un agente | guida «Lavorare nella copia di un agente» |
+| `schermate/prima-di-avviare.png` | la finestra «c'è lavoro non salvato» prima di avviare un agente | prova 3 |
 | `schermate/copia-uscita.png` | la finestra di uscita con «Committa e pubblica» | guida «Lavorare nella copia di un agente» |
 | `schermate/scoperta.png`, `esiti.png`, `revisione.png`, `mancano.png` | ritagli delle schermate della posta | presentazione corta |
 | `schermate/esiti.png` | i messaggi del tecnico e del legale | «Lo stesso capitolato» |
