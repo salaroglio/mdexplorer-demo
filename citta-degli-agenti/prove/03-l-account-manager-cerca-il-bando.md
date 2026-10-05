@@ -44,7 +44,7 @@ Vuoi che avvii il giro su NC-2027-014? Rispondi `avvia NC-2027-014`.
 
 ## Leggi il documento
 
-Il messaggio è il riassunto; il ragionamento sta nel documento. Nella stessa finestra apri la scheda **Da rivedere**: c'è una
+Il messaggio è il riassunto; il ragionamento sta nel documento. Nella stessa finestra apri la scheda **Lavoro degli agenti**: c'è una
 richiesta di `account-manager` con un file, `gara/ricerche/ricerca-2027-03-08.md`. Dentro trovi:
 
 - la tabella delle procedure trovate, con i giorni che mancano alla scadenza;
