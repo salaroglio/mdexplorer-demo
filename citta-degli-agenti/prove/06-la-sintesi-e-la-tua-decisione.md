@@ -4,10 +4,6 @@ title: La sintesi e la tua decisione
 
 # Prova 6: la sintesi e la tua decisione
 
-> **La posta è cambiata.** Dove questa pagina dice «Posta in arrivo» e «Lavoro degli agenti», oggi il fumetto apre un elenco solo, a
-> tutto schermo, e un documento si legge con **Apri** senza passare da «Ci metto mano». Vedi
-> [La posta degli agenti](../guida/la-posta-degli-agenti.md). Le schermate qui sotto sono ancora quelle di prima.
-
 ## TL;DR
 
 Con le tre schede approvate, l'account manager scrive la **sintesi** con i cinque indicatori che interessano a lui e
@@ -22,9 +18,11 @@ invece, non è di nessun agente: è tua.
 
 1. Dopo l'approvazione della terza scheda, aspetta circa un minuto: `account-manager` ti scrive un messaggio con la
    raccomandazione e i cinque indicatori.
-2. In «Lavoro degli agenti» c'è una **quarta richiesta**, di `account-manager`, con due file:
+2. Sotto quel messaggio c'è la riga **Da approvare: l'artefatto**: è la richiesta di `account-manager`, con due file,
    `schede/sintesi.md` e `registro-bandi.md`.
-3. Come nella prova 4: **Ci metto mano**, la scheda **Differenze**, clicca `sintesi.md`, leggi, poi **Ho finito**.
+3. Come nella prova 4: sul file `sintesi.md` clicca **Apri**, leggi, poi **Torna**.
+
+   ![Il messaggio con la raccomandazione e la sintesi da approvare](../presentazione/assets/schermate/posta-sintesi.png)
 
 ## I cinque indicatori
 
@@ -72,8 +70,8 @@ con il pull dalla barra git. Se vuoi ripartire da zero, riapri il demo con «Cre
 
 ## E se non succede niente
 
-- **Non arriva il messaggio con la sintesi.** Controlla in «Lavoro degli agenti» che le tre schede siano state approvate
-  tutte e tre, e in «Posta in arrivo» cosa ha scritto l'account manager dopo l'ultima.
+- **Non arriva il messaggio con la sintesi.** Sotto «Giro avviato» le tre righe devono essere verdi (approvato): se una è
+  ancora ambra, quella scheda non è approvata. Poi leggi cosa ha scritto l'account manager dopo l'ultima.
 - **La sintesi dice che non può calcolare i giorni.** Non ha trovato la «Data di lavoro» nel profilo: controlla che il
   [profilo di Pentagroup](../gara/profilo-pentagroup.md) sia intatto.
 

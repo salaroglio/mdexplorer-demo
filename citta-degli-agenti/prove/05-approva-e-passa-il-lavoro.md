@@ -4,10 +4,6 @@ title: Approva e passa il lavoro
 
 # Prova 5: approva e passa il lavoro
 
-> **La posta è cambiata.** Dove questa pagina dice «Posta in arrivo» e «Lavoro degli agenti», oggi il fumetto apre un elenco solo, a
-> tutto schermo, e un documento si legge con **Apri** senza passare da «Ci metto mano». Vedi
-> [La posta degli agenti](../guida/la-posta-degli-agenti.md). Le schermate qui sotto sono ancora quelle di prima.
-
 ## TL;DR
 
 Approvare una scheda fa due cose: la porta nel ramo principale e **tu decidi a chi passarla**. Il pulsante «Autorizza» avvisa
@@ -20,13 +16,22 @@ serve per scrivere la sintesi.
 
 ## Approva la prima scheda
 
-1. Nel fumetto apri **Lavoro degli agenti**: la richiesta di `responsabile-tecnico` ha il blocco «Dopo l'approvazione, a
-   chi passa il lavoro?» con una voce, `account-manager`, già selezionata (e la voce «A nessuno»). Se una scheda di
-   agente dichiarasse due destinatari, **Autorizza** resterebbe spento finché non scegli tu.
+1. Nella posta, sotto il messaggio di `responsabile-tecnico`, clicca la riga rientrata **Da approvare: l'artefatto**. La
+   richiesta ha il blocco «Dopo l'approvazione, a chi passa il lavoro?» con una voce, `account-manager`, già selezionata
+   (e la voce «A nessuno»). Se una scheda di agente dichiarasse due destinatari, **Autorizza** resterebbe spento finché
+   non scegli tu.
+
+   ![La richiesta di approvazione, con la scelta del collega e i tre gesti](../presentazione/assets/schermate/posta-da-approvare.png)
+
 2. Clicca **Autorizza**. Compare «Lavoro fuso nel ramo principale. Ho avvisato account-manager.»
 
 Dopo circa mezzo minuto, nella posta, `account-manager` ti scrive qualcosa come: «Ho ricevuto la scheda del responsabile
 tecnico. Mancano le schede del legale e del delivery». Non scrive la sintesi: **non ci sono ancora le tre**.
+
+Guarda anche sotto il messaggio «Giro avviato»: la riga «Lavoro di responsabile-tecnico» è diventata **verde**, approvato.
+Le altre due sono ancora ambra, in approvazione.
+
+![Dopo la prima approvazione: una riga verde e due ambra](../presentazione/assets/schermate/posta-mancano.png)
 
 ## Approva la seconda e la terza
 
@@ -60,8 +65,8 @@ avviso di 20 secondi: il lavoro è già approvato, ma l'agente non è stato avvi
 
 ## E se non succede niente
 
-- **Nessun messaggio dall'account manager dopo un minuto.** Controlla in «Posta in arrivo» e premi **Aggiorna**.
-- **L'account manager scrive che manca una scheda che hai già approvato.** Aspetta qualche secondo e controlla in «Lavoro
-  degli agenti» che la richiesta non sia ancora lì: significa che l'approvazione non è finita.
+- **Nessun messaggio dall'account manager dopo un minuto.** La posta si rilegge da sola; se vuoi forzarla, la freccia circolare in alto a destra.
+- **L'account manager scrive che manca una scheda che hai già approvato.** Aspetta qualche secondo e controlla che sotto il
+  messaggio di quel responsabile non ci sia più la riga «Da approvare»: se c'è ancora, l'approvazione non è finita.
 
 [Prova 6: la sintesi e la tua decisione](06-la-sintesi-e-la-tua-decisione.md) · [Prova 4](04-avvia-il-giro.md) · [Indice della sezione](../README.md)

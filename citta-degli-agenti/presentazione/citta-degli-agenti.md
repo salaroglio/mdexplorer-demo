@@ -196,7 +196,7 @@ garantire. Se cambia la scheda dopo il tuo sì, l'abilitazione decade e va rifat
 
 <div style="display:flex; gap:34px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/scoperta.png" alt="Il messaggio dell'account manager con i tre bandi nuovi" height="520" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/scoperta.png" alt="Il messaggio dell'account manager con i tre bandi nuovi, l'artefatto e il pulsante di risposta ancora chiuso" width="640" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 
 <div style="width:500px; text-align:left; font-size:.64em; line-height:1.4">
 
@@ -209,7 +209,7 @@ garantire. Se cambia la scheda dopo il tuo sì, l'abilitazione decade e va rifat
 </div>
 
 <div class="fragment fade-up" style="margin-top:12px; background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12)">
-Chiude con una <b>domanda</b>, non con un'azione: <i>«Vuoi che avvii il giro?»</i>
+Chiude con una <b>proposta</b>, non con un'azione: il pulsante <i>«Avvia il giro»</i>, che si apre solo dopo che hai approvato la ricerca.
 </div>
 
 <div class="fragment fade-up" style="margin-top:12px; font-size:.8em; color:#5f6368">
@@ -255,11 +255,44 @@ responsabili. Da qui in poi lavorano per conto loro, in parallelo, ognuno nella 
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
+## Intanto vedi a che punto sono
+
+<div style="display:flex; gap:30px; align-items:center; justify-content:center">
+
+<img src="assets/schermate/posta-stati.png" alt="Sotto il messaggio Giro avviato, una riga per ogni scheda attesa con il suo stato" width="700" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+
+<div style="width:440px; text-align:left; font-size:.62em; line-height:1.4">
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Una riga per scheda attesa</b><br>Sotto «Giro avviato», e cambia stato da sola.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Il colore dice lo stato</b><br>Sta lavorando, in approvazione, approvata, rifiutata.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #d93025; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12)">
+<b>Rifiutata vuol dire ferma</b><br>Non riparte da sola: la fa ripartire chi ne risponde, quando è pronto.
+</div>
+
+</div>
+
+</div>
+
+Note:
+È quello che vede chi aspetta: l'account manager sa a che punto è ogni collega senza chiederglielo. Il rifiuto è l'eccezione: di
+solito una scheda che non convince si corregge e si approva. Se viene rifiutata resta ferma, così chi ne risponde può prima
+correggere le istruzioni dell'agente.
+
+---
+
+<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
+
 ## Lo stesso capitolato, tre sguardi diversi
 
 <div style="display:flex; gap:30px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/esiti.png" alt="I messaggi del responsabile tecnico e del responsabile legale" height="560" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/esiti.png" alt="I messaggi dei tre responsabili nella posta, ciascuno con sotto il suo artefatto da approvare" width="430" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 
 <div style="width:520px; text-align:left; font-size:.6em; line-height:1.3">
 
@@ -291,13 +324,13 @@ diverse. Notare che ogni affermazione cita la sezione del capitolato: la persona
 
 <div style="display:flex; gap:34px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/revisione.png" alt="Due delle tre richieste di revisione, con la scelta del destinatario" height="560" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/revisione.png" alt="La richiesta di approvazione della scheda tecnica, con la scelta del destinatario e i tre gesti" width="680" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 
 <div style="width:470px; text-align:left; font-size:.62em; line-height:1.4">
 
 <div class="fragment fade-up">
 
-- **Una richiesta per scheda**, ciascuna col suo file e un riassunto di chi è l'agente.
+- **Una richiesta per scheda**, sotto il messaggio del suo agente, col suo file e un riassunto di chi è l'agente.
 - Nessuna scheda è ancora nel progetto: sono **rami da approvare**.
 - **Autorizza**, **Ci metto mano**, o (l'eccezione) **Rifiuta** con il motivo.
 
@@ -374,7 +407,7 @@ scrive «da chiarire» e non la inventa.
 <div class="fragment fade-up" style="background:#fff; border-radius:12px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); width:240px"><b>3. Lui controlla</b><br>cosa ha già e cosa manca</div>
 </div>
 
-<img class="fragment fade-up" src="assets/schermate/mancano.png" alt="L'account manager dice che mancano le schede contrattuale e delivery" width="470" style="margin:0; border-radius:12px; box-shadow:0 8px 24px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img class="fragment fade-up" src="assets/schermate/mancano.png" alt="L'account manager dice che mancano le schede contrattuale e delivery" width="620" style="margin:0; border-radius:12px; box-shadow:0 8px 24px rgba(15,27,45,.28); border:1px solid #d6deea">
 
 </div>
 

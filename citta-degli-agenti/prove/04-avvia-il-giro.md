@@ -77,6 +77,7 @@ Cosa guardare, in ordine:
 
 La strada normale è **correggerla tu**: dal selettore del ramo scegli «Worktree» e l'agente, e lavori nella sua copia come dopo
 un cambio di ramo. Sistemi la scheda, torni al tuo lavoro (l'app ti chiede di committare e pubblicare) e poi la approvi.
+È spiegato in [Lavorare nella copia di un agente](../guida/lavorare-nella-copia-di-un-agente.md).
 
 **Rifiuta** è l'eccezione, per quando la scheda è così sbagliata che conviene rifarla. Ti chiede il motivo, e poi **ferma**:
 

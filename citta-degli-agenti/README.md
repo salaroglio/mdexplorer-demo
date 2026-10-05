@@ -29,6 +29,7 @@ prima di cominciare.
 ## Per chi vuole capire cosa c'è sotto
 
 - [La posta degli agenti](guida/la-posta-degli-agenti.md). Dove leggi i messaggi, apri i documenti e approvi il lavoro.
+- [Lavorare nella copia di un agente](guida/lavorare-nella-copia-di-un-agente.md). Come correggi tu quello che un agente ha scritto, prima di approvarlo.
 - [Chi risponde di quale agente](gara/responsabilita.md). La tabella delle responsabilità: un agente lavora solo per la persona
   che ne risponde.
 - [Nota tecnica: dove finisce il lavoro degli agenti](guida/nota-tecnica-repository-locale.md). Perché il giro non tocca mai il

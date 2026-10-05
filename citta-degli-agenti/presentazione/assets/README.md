@@ -54,6 +54,9 @@ saranno diversi, ma il percorso è lo stesso.
 | `schermate/posta-stati.png` | le righe di stato dei lavori attesi | guida passo per passo; prova 4 |
 | `schermate/posta-rifiuto.png` | il rifiuto con il motivo | (di scorta) |
 | `schermate/posta-fermo.png` | un lavoro rifiutato e fermo, con «Fai ripartire» | prova 4; guida della posta |
+| `schermate/copia-dentro.png` | la finestra che lavora nella copia di un agente | guida «Lavorare nella copia di un agente» |
+| `schermate/copia-uscita.png` | la finestra di uscita con «Committa e pubblica» | guida «Lavorare nella copia di un agente» |
+| `schermate/scoperta.png`, `esiti.png`, `revisione.png`, `mancano.png` | ritagli delle schermate della posta | presentazione corta |
 | `schermate/esiti.png` | i messaggi del tecnico e del legale | «Lo stesso capitolato» |
 | `schermate/revisione.png` | due richieste da rivedere, con la scelta del destinatario | «Ti arrivano tre richieste» |
 | `schermate/avviso.png` | «Lavoro fuso nel ramo principale. Ho avvisato account-manager.» | «Approvare è passare il lavoro» |
