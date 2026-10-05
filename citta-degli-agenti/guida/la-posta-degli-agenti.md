@@ -22,8 +22,13 @@ da un agente si apre lì dentro, anche prima che tu lo approvi.
 | la lista con la spunta, in arancione | un lavoro **da approvare** | apri i file, poi **Autorizza**, **Ci metto mano** o **Rifiuta** |
 | il nodo, in viola | la **richiesta di un collega**: il suo agente chiede il lavoro del tuo | **Autorizza** o **Rifiuta**: il tuo agente parte solo se accetti |
 
-Aprire un messaggio lo segna come letto. Di partenza l'elenco mostra solo ciò che è ancora aperto: **Mostra tutti** fa rivedere
-anche i messaggi letti, **Segna tutti come letti** svuota l'elenco senza cancellare niente.
+Aprire un messaggio lo segna come letto: sparisce il pallino, ma il messaggio resta nell'elenco finché ti serve.
+
+## Archiviare
+
+Quando un messaggio non ti serve più, **Archivia** (in alto a destra nel dettaglio) lo toglie dall'elenco. Non lo cancella:
+**Archivio**, nella barra in alto, mostra i messaggi archiviati, e da lì **Riporta in posta** lo rimette nell'elenco.
+**Archivia tutti** svuota la posta in un gesto; i lavori da approvare restano, perché quelli vanno decisi.
 
 ## Gli artefatti di un messaggio
 
