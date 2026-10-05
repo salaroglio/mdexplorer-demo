@@ -26,6 +26,11 @@ prima di cominciare.
 - [La gara, passo per passo](presentazione/guida-passo-passo.md): cosa fare e dove cliccare, in tre parti e nove gesti:
   cerca il bando, avvia il giro e leggi una scheda, approva e decidi.
 
+## Per chi vuole capire cosa c'è sotto
+
+- [Nota tecnica: dove finisce il lavoro degli agenti](guida/nota-tecnica-repository-locale.md). Perché il giro non tocca mai il
+  demo pubblico su GitHub.
+
 ## Il percorso
 
 | # | Pagina | Cosa provi | Tempo |

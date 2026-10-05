@@ -64,6 +64,8 @@ repository su cui poter scrivere, che nel linguaggio di git si chiama `origin`.
 - Se invece hai clonato il demo a mano, `origin` è il repository pubblico, su cui non puoi scrivere: la consegna
   non riesce e ti arriva un messaggio che lo dice. Fai prima un **fork** sul tuo account e lavora su quello.
 
+Per sapere cosa succede davvero, leggi la [nota tecnica sul repository locale](../guida/nota-tecnica-repository-locale.md).
+
 ## Perché è spenta di partenza
 
 Una città accesa può svegliare agenti AI e farli parlare, e ogni risveglio consuma il tuo abbonamento. Per questo

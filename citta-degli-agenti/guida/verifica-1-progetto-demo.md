@@ -41,6 +41,9 @@ mdexplorer-demo
 mdexplorer-demo.origin.git
 ```
 
+Che cosa sia quella cartella e perché protegge il demo pubblico è spiegato nella
+[nota tecnica sul repository locale](nota-tecnica-repository-locale.md).
+
 **Manca la seconda?** Hai clonato il demo a mano, oppure l'app è più vecchia del 3 ottobre 2026. Gli agenti lavoreranno, ma la
 consegna non riuscirà e nella posta ti arriverà un messaggio che lo dice. Ricrea il progetto con «Crea progetto demo».
 
