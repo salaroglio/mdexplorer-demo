@@ -10,9 +10,9 @@ Un agente è un file di testo nel progetto: chiunque può modificarlo, anche dop
 agente parte finché non lo **abiliti** tu, uno per uno, dopo aver letto cosa fa e cosa può fare sul tuo computer. In
 MdExplorer questo gesto si chiama «Concedi trust».
 
-- Si fa dal **registro** (icona delle due persone): per ogni agente leggi una finestra con due blocchi distinti.
-- Un blocco è scritto dall'**autore** dell'agente (non verificato); l'altro lo **calcola l'app** dagli strumenti.
-- Se qualcuno cambia la scheda dopo il tuo sì, l'abilitazione **decade** e va rifatta.
+- Prima dici **di chi sono**: un agente lavora solo per la persona che ne risponde, e senza un responsabile non parte.
+- Poi li abiliti dal **registro** (icona delle due persone), leggendo per ognuno una finestra con due blocchi distinti.
+- Un blocco è scritto dall'**autore** (non verificato), l'altro lo **calcola l'app**; se la scheda cambia, l'abilitazione **decade**.
 
 ## Apri il registro
 
@@ -25,6 +25,27 @@ questo caso interessano quattro righe, tutte «Non fidato»:
 | `responsabile-tecnico` | scrive la scheda di fattibilità tecnica |
 | `responsabile-legale` | scrive la scheda contrattuale |
 | `responsabile-delivery` | scrive la scheda di team e piano |
+
+Sotto il nome di ognuno leggi, in arancione, **«Senza responsabile: non parte»**.
+
+## Prima di tutto: di chi sono
+
+Ogni agente lavora per una persona: gira solo sul suo computer, ed è lei a valutare ciò che l'agente scrive. In un'azienda vera i
+quattro agenti sarebbero di quattro persone diverse, e ognuna abiliterebbe il suo dal proprio computer. Qui le parti le fai
+tutte tu.
+
+1. In cima al registro leggi chi sei per questo progetto: è la tua **email git**.
+2. Sotto, una riga arancione dice che quattro agenti non hanno un responsabile. Clicca **Sono tutti miei**.
+3. Ora sotto ogni nome leggi, in verde, **«Risponde a te: lavora su questo computer»**, e compare il pulsante «Concedi trust».
+
+Che cosa è successo: MdExplorer ha scritto quattro righe, con il tuo nome, nel documento
+[Chi risponde di quale agente](../gara/responsabilita.md). È un file del progetto, e lo vedi aprirsi dietro la finestra. Finché un
+agente non compare lì non parte e non si può abilitare; se fosse di un collega, lavorerebbe sul computer del collega e non sul tuo.
+
+> Il documento ora contiene il tuo nome e la tua email, e risulta «da committare». Nel progetto creato con «Crea progetto demo»
+> resta sul tuo computer.
+
+## Che cosa mostra ogni riga
 
 Ogni riga mostra il ruolo, un riassunto di due o tre righe e gli strumenti dichiarati. Gli strumenti che cambiano le
 cose (`edit`, `shell`) sono **in rosso**. Gli altri agenti che vedi nell'elenco non fanno parte di questa prova.

@@ -6,12 +6,12 @@ title: Verifica 3 - i quattro agenti sono abilitati
 
 ## TL;DR
 
-Nessun agente parte finché non lo abiliti tu, uno per uno. Questa pagina dice come controllare nel registro che i quattro
-agenti della gara siano «Fidato» e, se non lo sono, come abilitarli leggendo prima che cosa fanno.
+Un agente parte solo se ha un responsabile e se quel responsabile lo ha abilitato. Questa pagina dice come controllare nel
+registro che i quattro agenti della gara siano tuoi e «Fidato» e, se non lo sono, come sistemarli.
 Se la scheda di un agente cambia dopo il tuo sì, l'abilitazione decade e va rifatta.
 
 - Il registro si apre dall'icona delle **due persone**.
-- I quattro agenti della gara devono avere il segno verde **Fidato**.
+- Sotto ogni nome deve esserci **«Risponde a te»**, e in alto a destra il segno verde **Fidato**.
 - `a2a-ping` può restare «Non fidato»: in questo caso non serve.
 
 ## Il controllo: quattro «Fidato»
@@ -29,6 +29,15 @@ alto a destra della loro scheda.
 ![Il registro con gli agenti abilitati](../presentazione/assets/schermate/registro-fidati.png)
 
 Nell'immagine `account-manager` e `responsabile-delivery` sono abilitati; `a2a-ping` no, e va bene così.
+
+## Se un agente dice «Senza responsabile: non parte»
+
+Nessuno ha ancora detto di chi è. In cima al registro clicca **Sono tutti miei** (oppure **È mio** sulla singola scheda): MdExplorer
+scrive il tuo nome nel documento [Chi risponde di quale agente](../gara/responsabilita.md) e sotto il nome compare, in verde,
+«Risponde a te: lavora su questo computer». Solo a quel punto l'agente si può abilitare.
+
+In cima al registro leggi anche chi sei per questo progetto: è la tua email git. Se manca, impostala con
+`git config user.email` nella cartella del progetto.
 
 ## Se un agente dice «Non fidato»
 

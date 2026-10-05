@@ -56,7 +56,7 @@ accanto. La parte 1 arriva fino al messaggio dell'account manager; le parti succ
 <div style="flex:1; background:#fff; border-top:8px solid #5f6368; border-radius:14px; padding:16px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
 <div style="font-size:1.3em; font-weight:800; color:#5f6368">3</div>
 <div style="font-size:.7em; font-weight:700; margin-top:4px">I quattro agenti sono abilitati</div>
-<div style="font-size:.55em; line-height:1.35; margin-top:6px">Nel registro, ciascuno dei quattro ha il segno verde «Fidato».</div>
+<div style="font-size:.55em; line-height:1.35; margin-top:6px">Nel registro, ciascuno dei quattro «risponde a te» e ha il segno verde «Fidato».</div>
 <div style="font-size:.58em; margin-top:10px; font-weight:700">
 
 [Come lo verifico →](../guida/verifica-3-agenti-abilitati.md)

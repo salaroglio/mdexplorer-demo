@@ -17,3 +17,5 @@ project:
   participants: []
 harness:
   target: copilot
+agentCity:
+  ownershipDoc: citta-degli-agenti/gara/responsabilita.md

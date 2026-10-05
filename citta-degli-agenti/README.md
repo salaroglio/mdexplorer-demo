@@ -28,6 +28,8 @@ prima di cominciare.
 
 ## Per chi vuole capire cosa c'è sotto
 
+- [Chi risponde di quale agente](gara/responsabilita.md). La tabella delle responsabilità: un agente lavora solo per la persona
+  che ne risponde.
 - [Nota tecnica: dove finisce il lavoro degli agenti](guida/nota-tecnica-repository-locale.md). Perché il giro non tocca mai il
   demo pubblico su GitHub.
 
