@@ -23,8 +23,8 @@ prima di cominciare.
 ## Le presentazioni
 
 - [Un assistente per ogni persona](presentazione/citta-degli-agenti.md): l'idea, in sedici slide.
-- [La gara, passo per passo](presentazione/guida-passo-passo.md): cosa fare e dove cliccare, in tre parti e nove gesti:
-  cerca il bando, avvia il giro e leggi una scheda, approva e decidi.
+- [La gara, passo per passo](presentazione/guida-passo-passo.md): cosa fare e dove cliccare, in tre parti e otto gesti, con le
+  schermate dell'app di oggi: la posta a tutto schermo, il documento aperto dalla copia dell'agente, l'archivio.
 
 ## Per chi vuole capire cosa c'è sotto
 

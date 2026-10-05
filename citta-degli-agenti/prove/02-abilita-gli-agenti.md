@@ -34,6 +34,8 @@ Ogni agente lavora per una persona: gira solo sul suo computer, ed è lei a valu
 quattro agenti sarebbero di quattro persone diverse, e ognuna abiliterebbe il suo dal proprio computer. Qui le parti le fai
 tutte tu.
 
+![Il registro: quattro agenti senza responsabile e il pulsante «Sono tutti miei»](../presentazione/assets/schermate/registro-responsabili.png)
+
 1. In cima al registro leggi chi sei per questo progetto: è la tua **email git**.
 2. Sotto, una riga arancione dice che quattro agenti non hanno un responsabile. Clicca **Sono tutti miei**.
 3. Ora sotto ogni nome leggi, in verde, **«Risponde a te: lavora su questo computer»**, e compare il pulsante «Concedi trust».

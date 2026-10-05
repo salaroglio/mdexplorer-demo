@@ -28,7 +28,8 @@ alto a destra della loro scheda.
 
 ![Il registro con gli agenti abilitati](../presentazione/assets/schermate/registro-fidati.png)
 
-Nell'immagine `account-manager` e `responsabile-delivery` sono abilitati; `a2a-ping` no, e va bene così.
+Nell'immagine `account-manager` e `responsabile-delivery` rispondono a te e sono abilitati: sotto il nome c'è «Risponde a te: lavora su
+questo computer», a destra «Fidato».
 
 ## Se un agente dice «Senza responsabile: non parte»
 

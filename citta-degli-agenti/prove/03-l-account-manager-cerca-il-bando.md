@@ -4,10 +4,6 @@ title: L'account manager cerca il bando
 
 # Prova 3: l'account manager cerca il bando
 
-> **La posta è cambiata.** Dove questa pagina dice «Posta in arrivo» e «Lavoro degli agenti», oggi il fumetto apre un elenco solo, a
-> tutto schermo, e un documento si legge con **Apri** senza passare da «Ci metto mano». Vedi
-> [La posta degli agenti](../guida/la-posta-degli-agenti.md). Le schermate qui sotto sono ancora quelle di prima.
-
 ## TL;DR
 
 Sei l'account manager di Pentagroup e hai un agente che controlla per te il sito dei bandi di Nordica. Lo lanci, lui legge
@@ -34,7 +30,7 @@ nella barra degli strumenti compare un numero.
 
 ## Leggi il messaggio
 
-Clicca il fumetto: la scheda **Posta in arrivo** ha un messaggio di `account-manager`. Le parole cambiano, perché dietro c'è
+Clicca il fumetto: si apre la posta degli agenti, a tutto schermo. Nell'elenco a sinistra c'è un messaggio di `account-manager`: cliccalo. Le parole cambiano, perché dietro c'è
 un modello, ma il contenuto è questo:
 
 ```text
@@ -84,7 +80,7 @@ Questo è il gesto che ti viene chiesto in tutto il caso: **verifichi**, non ti 
 
 - **Nessun avviso dopo due minuti.** Il motore AI non risponde: controlla che la riga di comando (`copilot`, `claude` o
   `opencode`) sia installata e con l'accesso fatto, o scegli un altro motore nella finestra di lancio.
-- **Il fumetto non ha il numero.** Apri «Posta in arrivo» e clicca **Aggiorna**.
+- **Il fumetto non ha il numero.** Apri la posta e clicca la freccia circolare in alto a destra.
 - **L'agente dice che non trova i file.** Controlla di aver aperto la cartella giusta: gli agenti cercano i documenti in
   `citta-degli-agenti/gara/`.
 

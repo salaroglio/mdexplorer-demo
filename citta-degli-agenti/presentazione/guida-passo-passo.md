@@ -73,9 +73,41 @@ Ogni riquadro porta a una pagina con le schermate: **cosa guardare, e cosa fare 
 </div>
 
 Note:
-Dal 5 ottobre la posta degli agenti è una pagina a tutto schermo, con messaggi e lavori da approvare in un elenco solo: le schermate di questa guida mostrano ancora la finestra di prima. La pagina «La posta degli agenti», nella cartella guida, la descrive.
 I tre link aprono tre pagine di verifica, con le schermate di ciò che si deve vedere e i passi da fare se qualcosa manca.
 Dalla pagina si torna alla guida con il link in fondo o con la freccia indietro di MdExplorer.
+
+---
+
+<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
+
+## Prima di tutto: gli agenti sono tuoi
+
+<div style="display:flex; gap:28px; align-items:center; justify-content:center">
+
+<img src="assets/schermate/registro-responsabili.png" alt="Il registro degli agenti: quattro agenti senza responsabile e il pulsante Sono tutti miei" width="540" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+
+<div style="width:540px; text-align:left; font-size:.6em; line-height:1.4">
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Un agente lavora per una persona</b><br>Finché non ha un responsabile non parte. Nel registro leggi «Senza responsabile: non parte».
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>1. Sono tutti miei</b><br>Apri il registro (le due persone nella barra) e clicca il pulsante in alto: i quattro agenti rispondono a te.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>2. Concedi trust</b><br>Ora su ogni agente c'è «Concedi trust»: leggi cosa fa e abilitalo. Vale per i tuoi agenti, non per quelli degli altri.
+</div>
+
+</div>
+
+</div>
+
+Note:
+In un'azienda vera i quattro agenti sarebbero di quattro persone, e ognuna farebbe questo gesto dal proprio computer sul proprio
+agente. Qui le parti le fa una persona sola. In cima al registro c'è scritto chi sei per il progetto: è l'email git.
+Il gesto scrive quattro righe nel documento «Chi risponde di quale agente», che si apre dietro la finestra.
 
 ---
 
@@ -208,40 +240,72 @@ La finestra si chiude e compare «Agente avviato in background».
 
 ## Aspetta un minuto
 
-<div style="display:flex; gap:26px; justify-content:center; margin-top:18px; text-align:left">
+<div style="display:flex; gap:26px; justify-content:center; margin-top:12px; text-align:left">
 
-<div style="flex:1; background:#fff; border-radius:14px; padding:18px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="flex:1; background:#fff; border-radius:14px; padding:16px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
 <div style="font-size:.55em; color:#5f6368; font-weight:800; letter-spacing:.08em">INTANTO LUI</div>
-<div style="font-size:.64em; line-height:1.5; margin-top:6px">
+<div style="font-size:.62em; line-height:1.5; margin-top:6px">
 legge il sito dei bandi<br>
 lo confronta con il registro<br>
-applica i cinque criteri<br>
-conta i giorni alla scadenza
+applica il primo filtro: natura e tempo<br>
+scrive la ricerca e ti manda il messaggio
 </div>
 </div>
 
-<div style="flex:1; background:#fff; border-radius:14px; padding:18px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="flex:1; background:#fff; border-radius:14px; padding:16px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
 <div style="font-size:.55em; color:#5f6368; font-weight:800; letter-spacing:.08em">TU VEDI</div>
-<div style="font-size:.64em; line-height:1.5; margin-top:6px">
-<b>1.</b> un avviso in basso: «🤖 Agente … completato»<br>
-<b>2.</b> un <b>numero rosso sul fumetto</b>, nella barra in alto<br>
-<b>3.</b> clicca il fumetto: si apre la <b>Posta in arrivo</b>
+<div style="font-size:.62em; line-height:1.5; margin-top:6px">
+<b>1.</b> nella barra un <b>robot giallo</b> con un anello che gira: qualcuno lavora<br>
+<b>2.</b> un avviso in basso: «🤖 Agente … completato»<br>
+<b>3.</b> il robot sparisce e sul <b>fumetto</b> compare un numero rosso
 </div>
 </div>
 
 </div>
 
-<img src="assets/schermate/barra-fumetto.png" alt="La barra degli strumenti: il fumetto con il numero rosso" width="520" style="margin:18px 0 0 0; border-radius:8px; box-shadow:0 6px 18px rgba(15,27,45,.28)">
+<img src="assets/schermate/robot-al-lavoro.png" alt="La barra degli strumenti con il robot giallo e l'elenco degli agenti al lavoro" width="500" style="margin:14px 0 0 0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
-<div class="fragment fade-up" style="margin-top:10px; font-size:.62em; color:#5f6368">
+<div class="fragment fade-up" style="margin-top:8px; font-size:.6em; color:#5f6368">
 
 Dopo due minuti niente? Il motore AI non risponde: controlla che sia installato e con l'accesso fatto.
 
 </div>
 
 Note:
-Circa un minuto. Mentre lavora si può dire cosa sta facendo: non è magia, sono quattro passi che la sua scheda gli chiede.
-Il fumetto è l'icona «Messaggi degli agenti» nella barra degli strumenti.
+Circa un minuto. Cliccando il robot giallo si vede chi sta lavorando, su quale motore e da quanti minuti. Quando l'agente
+finisce il robot sparisce: se è ancora lì, sta ancora lavorando.
+
+---
+
+<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
+
+## Apri la posta degli agenti
+
+<div style="display:flex; gap:28px; align-items:center; justify-content:center">
+
+<img src="assets/schermate/posta-messaggio.png" alt="La posta degli agenti a tutto schermo: elenco a sinistra, messaggio a destra" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+
+<div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Clicca il fumetto</b><br>Si apre la posta, a tutto schermo, sopra il progetto. Si chiude con la ✕ in alto a destra.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #5f6368; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>A sinistra: l'elenco</b><br>Chi ti ha scritto e quando. Il pallino blu segna ciò che non hai letto; «Da approvare» è un lavoro che aspetta te.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #5f6368; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>A destra: il dettaglio</b><br>Il messaggio intero, gli <b>artefatti</b> che cita e la casella per rispondere.
+</div>
+
+</div>
+
+</div>
+
+Note:
+La posta è un elenco solo: i messaggi degli agenti e i lavori da approvare stanno insieme. Dopo la ricerca le voci sono due,
+tutte e due dell'account manager: il messaggio e il suo documento da approvare.
 
 ---
 
@@ -249,22 +313,55 @@ Il fumetto è l'icona «Messaggi degli agenti» nella barra degli strumenti.
 
 ## Leggi cosa ti ha scritto
 
-<div style="display:flex; gap:34px; align-items:center; justify-content:center">
-
-<img src="assets/schermate/scoperta.png" alt="Il messaggio dell'account manager con i tre bandi nuovi" height="540" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
-
-<div style="width:500px; text-align:left; font-size:.62em; line-height:1.4">
+<div style="display:flex; flex-direction:column; gap:2px; margin-top:6px; text-align:left; font-size:.64em; line-height:1.4">
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Uno compatibile</b><br>NC-2027-014: merita il giro dei tre responsabili.
+<b>Uno compatibile</b><br>NC-2027-014: supera il primo filtro, merita il giro dei tre responsabili.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #c62828; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
 <b>Due scartati, con il motivo</b><br>Licenze: fuori attività e solo 16 giorni. Immobili: fuori attività.
 </div>
 
-<div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12)">
-<b>Dove sta il documento, e una domanda</b><br>Il percorso della ricerca, e «Vuoi che avvii il giro?»
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Dove sta il documento, e una domanda</b><br>L'ultima riga è il percorso della ricerca. Poi: «Vuoi che avvii il giro?»
+</div>
+
+</div>
+
+<div class="fragment fade-up" style="margin-top:14px; font-size:.7em">
+
+L'assistente produce sempre **due cose**: il messaggio, breve, e il documento con il ragionamento.
+
+</div>
+
+Note:
+Le parole cambiano a ogni prova, perché dietro c'è un modello; la struttura no: una riga per bando, il verdetto, il motivo, il
+percorso del documento e una domanda. «Compatibile» qui vuol dire «merita il giro», non «conviene partecipare»: quello lo
+diranno le schede dei responsabili. Le due procedure già nel registro non compaiono: non sono nuove.
+
+---
+
+<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
+
+## Gesto 3: apri il documento
+
+<div style="display:flex; gap:28px; align-items:center; justify-content:center">
+
+<img src="assets/schermate/posta-documento.png" alt="Il documento della ricerca aperto dentro la posta, con l'etichetta Dalla copia dell'agente" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+
+<div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>1. Clicca «Apri»</b><br>Sotto il messaggio, in <b>Artefatti</b>, c'è il file della ricerca. Si apre lì accanto, impaginato.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>2. Guarda l'etichetta in alto</b><br>«Dalla copia dell'agente: non è ancora nel progetto». Lo stai leggendo prima di approvarlo.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>3. Clicca «Torna»</b><br>Riporta al messaggio. Il documento lo approvi quando vuoi: per avviare il giro non serve.
 </div>
 
 </div>
@@ -272,11 +369,9 @@ Il fumetto è l'icona «Messaggi degli agenti» nella barra degli strumenti.
 </div>
 
 Note:
-Le parole cambiano a ogni prova, perché dietro c'è un modello; la struttura no: una riga per bando, il verdetto, il motivo,
-il percorso del documento e in fondo una domanda. Le due procedure già nel registro non compaiono: non sono nuove.
-L'assistente produce sempre due cose: il messaggio, breve, e il documento con il ragionamento completo, archiviato in
-gara/ricerche. Il documento compare tra le cose da rivedere, come le schede: lo si approva quando si vuole, anche dopo.
-Nella schermata il messaggio è quello di una versione precedente: oggi ha una riga in più, con il percorso del documento.
+Il documento sta in una copia a parte dell'agente: nel progetto entra solo con «Autorizza». Dentro: la tabella delle procedure
+con i giorni che mancano, e per ogni procedura i cinque criteri. I due che bloccano li giudica l'account manager; gli altri tre
+dicono «da valutare nel giro» e da chi.
 
 ---
 
@@ -367,147 +462,127 @@ arriva fino alla lettura di una scheda. L'approvazione è nella parte 3.
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Gesto 3: rispondi «avvia»
+## Gesto 4: rispondi «avvia»
 
-<div style="display:flex; gap:40px; align-items:center; justify-content:center; margin-top:8px">
+<div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/risposta.png" alt="La risposta avvia NC-2027-014 nella posta" width="560" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/posta-risposta.png" alt="La casella di risposta con scritto avvia NC-2027-014" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
-<div style="width:520px; text-align:left; font-size:.66em; line-height:1.45">
+<div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
-1. Sei ancora nella **Posta in arrivo**, sul messaggio dell'account manager.
-2. Nella casella **La tua risposta** scrivi:
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>1. Resta sul messaggio</b><br>Quello dell'account manager, con la domanda in fondo.
+</div>
 
-<div style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-left:8px solid #f29900; margin:6px 0 12px 0"><b>avvia NC-2027-014</b></div>
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>2. Scrivi nella casella</b><br><code>avvia NC-2027-014</code>
+</div>
 
-3. Clicca **Rispondi**.
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>3. Clicca «Rispondi»</b><br>L'assistente si sveglia, incarica i tre responsabili e te lo conferma con un messaggio.
+</div>
 
 </div>
 
 </div>
 
 Note:
-La risposta va scritta nello stesso messaggio: così l'assistente si risveglia nella stessa conversazione. Il codice del bando
-è quello che lui stesso ha proposto.
+Non c'è un pulsante «avvia il giro»: l'avvio è una risposta, scritta dalla persona. Dopo mezzo minuto arriva la conferma:
+«Giro avviato su NC-2027-014: incarichi inviati ai tre responsabili».
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Lui conferma: il giro è partito
+## Aspetta cinque minuti
 
-<div style="display:flex; flex-direction:column; align-items:center; gap:20px; margin-top:6px">
+<div style="display:flex; gap:26px; justify-content:center; margin-top:12px; text-align:left">
 
-<img src="assets/schermate/giro-avviato.png" alt="Il messaggio dell'account manager: giro avviato, incarichi inviati ai tre responsabili" width="640" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
-
-<div style="display:flex; gap:14px; align-items:center; font-size:.62em">
-<div style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; font-weight:800; color:#f29900">account manager</div>
-<div class="fragment fade-in" style="font-size:1.3em; color:#8a99ad">→ un incarico a ciascuno →</div>
-<div class="fragment fade-in" style="display:flex; gap:10px">
-<div style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-top:6px solid #1a73e8">tecnico</div>
-<div style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-top:6px solid #7b61ff">legale</div>
-<div style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-top:6px solid #188038">delivery</div>
+<div style="flex:1; background:#fff; border-radius:14px; padding:16px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:.55em; color:#5f6368; font-weight:800; letter-spacing:.08em">INTANTO LORO</div>
+<div style="font-size:.62em; line-height:1.5; margin-top:6px">
+il <b>tecnico</b> legge i requisiti<br>
+il <b>legale</b> legge le clausole<br>
+il <b>delivery</b> legge persone e date<br>
+ognuno scrive <b>la sua scheda</b>, senza guardare le altre
 </div>
 </div>
+
+<div style="flex:1; background:#fff; border-radius:14px; padding:16px 22px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:.55em; color:#5f6368; font-weight:800; letter-spacing:.08em">TU VEDI</div>
+<div style="font-size:.62em; line-height:1.5; margin-top:6px">
+<b>1.</b> il <b>robot giallo</b> nella barra: cliccalo per sapere chi sta lavorando<br>
+<b>2.</b> la posta che si riempie, una voce alla volta<br>
+<b>3.</b> il robot che sparisce: hanno finito tutti
+</div>
+</div>
+
+</div>
+
+<div class="fragment fade-up" style="margin-top:22px; font-size:.7em">
+
+Lavorano **uno alla volta**: è normale che la prima scheda arrivi dopo due minuti e l'ultima dopo cinque.
 
 </div>
 
 Note:
-Dopo circa mezzo minuto arriva questo messaggio. Dietro le quinte l'account manager ha scritto ai tre colleghi un messaggio
-che comincia con [INCARICO]: il bando, la scadenza, dove sta il capitolato e dove scrivere la scheda.
+Circa cinque minuti in tutto. Ogni assistente legge solo il capitolato e il suo capitolo del profilo: non vede le schede dei
+colleghi. È voluto: tre punti di vista indipendenti, che poi la sintesi mette a confronto.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Aspetta quattro o cinque minuti
+## La posta si riempie
 
-<div style="display:flex; gap:18px; justify-content:center; margin-top:10px; text-align:center">
+<div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<div style="flex:1; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-top:8px solid #1a73e8; padding:14px 16px">
-<img src="assets/agente-tecnico.svg" alt="" width="80" style="margin:0">
-<div style="font-size:.6em; font-weight:800; color:#1a73e8">TECNICO</div>
-<div style="font-size:.52em; line-height:1.35; margin-top:4px">legge il capitolato e il capitolo <b>Tecnica</b> di Pentagroup<br>scrive <code>schede/tecnica.md</code></div>
+<img src="assets/schermate/posta-elenco.png" alt="L'elenco della posta con i messaggi dei tre responsabili e le tre voci Da approvare" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+
+<div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Tre messaggi</b><br>Uno per responsabile: gli indicatori, il rischio più grave, il punto che lo convince meno, il percorso della scheda.
 </div>
 
-<div style="flex:1; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-top:8px solid #7b61ff; padding:14px 16px">
-<img src="assets/agente-legale.svg" alt="" width="80" style="margin:0">
-<div style="font-size:.6em; font-weight:800; color:#7b61ff">LEGALE</div>
-<div style="font-size:.52em; line-height:1.35; margin-top:4px">legge il capitolato e il capitolo <b>Contratti</b><br>scrive <code>schede/contrattuale.md</code></div>
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Tre voci «Da approvare»</b><br>Una per scheda. Sono i documenti veri: aspettano la tua decisione.
 </div>
 
-<div style="flex:1; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-top:8px solid #188038; padding:14px 16px">
-<img src="assets/agente-delivery.svg" alt="" width="80" style="margin:0">
-<div style="font-size:.6em; font-weight:800; color:#188038">DELIVERY</div>
-<div style="font-size:.52em; line-height:1.35; margin-top:4px">legge il capitolato e il capitolo <b>Delivery e persone</b><br>scrive <code>schede/delivery.md</code></div>
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #5f6368; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Più le voci di prima</b><br>La conferma dell'account manager, e la sua ricerca ancora da approvare.
 </div>
 
 </div>
-
-<div class="fragment fade-up" style="margin-top:18px; font-size:.64em">
-
-Lavorano **due alla volta**: il terzo parte quando uno dei primi due ha finito.
 
 </div>
 
 Note:
-Lo stesso capitolato, tre capitoli diversi del profilo dell'azienda: per questo le tre schede dicono cose diverse. I posti di
-lavoro sono due, quindi il terzo assistente aspetta il suo turno. Intanto non c'è niente da fare: è il momento di spiegare.
+Ogni responsabile produce due cose, come l'account manager: il messaggio e la scheda. Il messaggio è di quattro righe e dice
+dove guardare; la scheda è il documento. Nell'elenco stanno insieme, in ordine di arrivo.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Arrivano tre messaggi
+## Gesto 5: apri una scheda
 
-<div style="display:flex; gap:34px; align-items:center; justify-content:center">
+<div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/esito-delivery.png" alt="Il messaggio del responsabile delivery" height="430" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/posta-da-approvare.png" alt="Una voce Da approvare: il file con il pulsante Apri, a chi passa il lavoro e i tre gesti" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
-<div style="width:470px; text-align:left; font-size:.62em; line-height:1.4">
+<div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
-Ogni assistente ti scrive **tre righe**:
-
-<div class="fragment fade-up" style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-left:8px solid #188038; margin:10px 0">
-<b>1. Gli indicatori</b><br>i numeri della sua scheda
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>1. Scegli una voce «Da approvare»</b><br>Per esempio quella di <code>responsabile-tecnico</code>.
 </div>
 
-<div class="fragment fade-up" style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-left:8px solid #c62828; margin:10px 0">
-<b>2. Il rischio più grave</b><br>con la sezione del capitolato
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>2. Leggi chi l'ha scritta</b><br>In alto il riassunto dell'agente; sotto il file che ha consegnato.
 </div>
 
-<div class="fragment fade-up" style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-left:8px solid #f29900; margin:10px 0">
-<b>3. Il punto che lo convince meno</b><br>dove dovrai guardare tu
-</div>
-
-</div>
-
-</div>
-
-Note:
-I tre messaggi arrivano nella Posta in arrivo, uno per assistente. Sono un riassunto: la scheda vera è un documento, e arriva
-come richiesta da approvare. Le parole cambiano a ogni prova.
-
----
-
-<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
-
-## E tre richieste da rivedere
-
-<div style="display:flex; gap:34px; align-items:center; justify-content:center">
-
-<img src="assets/schermate/richiesta-delivery.png" alt="La richiesta del responsabile delivery in Lavoro degli agenti" width="600" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
-
-<div style="width:500px; text-align:left; font-size:.62em; line-height:1.4">
-
-Nel fumetto, apri la scheda **Lavoro degli agenti**. Ogni richiesta dice:
-
-- **chi** ha lavorato e che cosa fa;
-- **quale file** ha scritto;
-- **a chi passa** il lavoro dopo l'approvazione.
-
-<div class="fragment fade-up" style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-left:8px solid #c62828; margin-top:12px">
-<b>Non premere ancora «Autorizza».</b><br>Prima si legge.
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>3. Clicca «Apri» sul file</b><br>La scheda si apre lì accanto, com'è nella consegna dell'agente.
 </div>
 
 </div>
@@ -515,67 +590,8 @@ Nel fumetto, apri la scheda **Lavoro degli agenti**. Ogni richiesta dice:
 </div>
 
 Note:
-Una richiesta per scheda. Nessuna scheda è ancora nel progetto: ognuna sta su un ramo a parte, in attesa. Il blocco «a chi passa
-il lavoro» si usa nella parte 3.
-
----
-
-<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
-
-## Gesto 4: «Ci metto mano»
-
-<div style="display:flex; gap:34px; align-items:center; justify-content:center">
-
-<img src="assets/schermate/sessione-aperta.png" alt="La richiesta dopo Ci metto mano: l'agente è in coda" width="600" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
-
-<div style="width:500px; text-align:left; font-size:.64em; line-height:1.45">
-
-1. Sulla richiesta di **responsabile-delivery** clicca **Ci metto mano**.
-2. La richiesta cambia: «Stai lavorando in questa cartella: l'agente è in coda».
-3. Clicca **Chiudi**, in basso.
-
-<div class="fragment fade-up" style="margin-top:12px; font-size:.85em; color:#5f6368">
-Si apre anche una finestra del computer con la cartella dell'assistente: puoi chiuderla.
-</div>
-
-</div>
-
-</div>
-
-Note:
-«Ci metto mano» vuol dire: voglio guardare, e magari correggere, quello che ha scritto. Finché non chiudi, l'assistente non
-tocca quella cartella. Scegliamo la scheda delivery perché ha un calcolo facile da controllare.
-
----
-
-<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
-
-## Gesto 5: apri «Differenze» e clicca il file
-
-<div style="display:flex; gap:34px; align-items:center; justify-content:center">
-
-<div style="display:flex; flex-direction:column; gap:14px; align-items:center">
-<img src="assets/schermate/differenze-elenco.png" alt="Il pannello Differenze con il file delivery.md" width="560" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
-<img src="assets/schermate/schede-pannello.png" alt="Le schede in fondo al pannello di sinistra" width="420" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
-</div>
-
-<div style="width:480px; text-align:left; font-size:.64em; line-height:1.45">
-
-1. In fondo al pannello di sinistra clicca **Differenze**.
-2. In alto leggi di chi è il lavoro: **responsabile-delivery**.
-3. Clicca **una volta** sul file `delivery.md`.
-
-<div class="fragment fade-up" style="margin-top:12px; font-size:.85em; color:#5f6368">
-Ignora la scritta «usa Pubblica»: pubblicare lo farà «Autorizza».
-</div>
-
-</div>
-
-</div>
-
-Note:
-La scheda Differenze di solito mostra il tuo lavoro. Dopo «Ci metto mano» mostra quello dell'assistente. Un secondo clic sul
-file richiude il contenuto: se sparisce, cliccalo di nuovo.
+Per leggere non serve più «Ci metto mano»: quello resta il gesto per correggere tu il documento prima di approvarlo. Sotto
+il file c'è già la scelta di chi riceverà il lavoro dopo l'approvazione: la si usa nel gesto successivo.
 
 ---
 
@@ -583,17 +599,17 @@ file richiude il contenuto: se sparisce, cliccalo di nuovo.
 
 ## Leggi la scheda
 
-<img src="assets/schermate/differenze-scheda.png" alt="La scheda del responsabile delivery letta nelle differenze" width="1040" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/posta-scheda.png" alt="La scheda tecnica aperta dentro la posta" width="820" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
-<div style="margin-top:10px; font-size:.62em">
+<div style="margin-top:10px; font-size:.6em; color:#5f6368">
 
-Ogni riga con il **+** è una riga nuova scritta dall'assistente. Il testo è markdown non impaginato: le tabelle hanno le barre.
+In alto: il percorso del file e «Dalla copia dell'agente: non è ancora nel progetto». **Torna** riporta alla richiesta.
 
 </div>
 
 Note:
-È la scheda intera, così com'è stata scritta. Non è impaginata come un documento, ma si legge. Nelle versioni dell'app precedenti
-al 4 ottobre 2026 qui compariva la pagina di benvenuto se non c'era nessun documento aperto: basta aprirne uno prima.
+La scheda è un documento vero, impaginato come gli altri: riassunto, indicatori, tabella dei requisiti, rischi, domande per il
+committente e, in fondo, i tre punti in cui l'agente è meno sicuro.
 
 ---
 
@@ -629,34 +645,6 @@ Questo è il lavoro della persona, ed è quello che dà valore al giro. Tre cont
 
 ---
 
-<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
-
-## Gesto 6: «Ho finito»
-
-<div style="display:flex; gap:34px; align-items:center; justify-content:center">
-
-<img src="assets/schermate/sessione-aperta.png" alt="La richiesta con il pulsante Ho finito" width="560" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
-
-<div style="width:500px; text-align:left; font-size:.64em; line-height:1.45">
-
-1. Clicca il **fumetto** e torna su **Lavoro degli agenti**.
-2. Sulla richiesta clicca **Ho finito**.
-3. La richiesta torna com'era, con **Autorizza**, **Ci metto mano** e **Rifiuta**.
-
-<div class="fragment fade-up" style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-left:8px solid #c62828; margin-top:12px; font-size:.9em">
-«Annulla e rimanda all'agente» butta via le tue correzioni e gli fa rifare il lavoro.
-</div>
-
-</div>
-
-</div>
-
-Note:
-«Ho finito» chiude la tua sessione: se hai corretto qualcosa, le correzioni restano. Ripeti la lettura per le altre due schede,
-se vuoi; per la demo ne basta una.
-
----
-
 <!-- .slide: data-background-color="#0f1b2d" data-background-image="assets/citta-sfondo.svg" -->
 
 <img src="assets/agente-account.svg" alt="" width="130" style="margin:0">
@@ -673,20 +661,24 @@ cartella. È la parte in cui si vede che il lavoro passa di mano solo per un tuo
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Gesto 7: scegli a chi passa, poi «Autorizza»
+## Gesto 6: scegli a chi passa, poi «Autorizza»
 
-<div style="display:flex; gap:34px; align-items:center; justify-content:center">
+<div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/richiesta-ultima.png" alt="Una richiesta con la scelta del destinatario e il pulsante Autorizza" width="600" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/posta-da-approvare.png" alt="La richiesta con la scelta del collega e il pulsante Autorizza" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
-<div style="width:500px; text-align:left; font-size:.63em; line-height:1.45">
+<div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
-1. Guarda il riquadro **«Dopo l'approvazione, a chi passa il lavoro?»**
-2. È già scelto **account-manager**: lascialo così.
-3. Clicca **Autorizza**.
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>1. Guarda «Dopo l'approvazione, a chi passa il lavoro?»</b><br>La scheda dell'agente dichiara a chi: qui all'account manager. Puoi anche scegliere «nessuno».
+</div>
 
-<div class="fragment fade-up" style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-left:8px solid #f29900; margin-top:12px; font-size:.92em">
-<b>«A nessuno»</b> approva la scheda senza avvisare: il collega non saprebbe che è pronta.
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>2. Clicca «Autorizza»</b><br>La scheda entra nel repository e il collega viene avvisato, a nome tuo.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>3. Oppure</b><br>«Ci metto mano» per correggerla tu, «Rifiuta» per scartarla.
 </div>
 
 </div>
@@ -694,8 +686,8 @@ cartella. È la parte in cui si vede che il lavoro passa di mano solo per un tuo
 </div>
 
 Note:
-Il destinatario è scritto nella scheda dell'agente. Con un solo destinatario è già selezionato; se fossero due, il pulsante
-resterebbe spento finché non scegli. Comincia dalla scheda che hai letto, poi le altre.
+Con un solo destinatario la scelta è già fatta; con più di uno la persona deve scegliere, e il pulsante resta spento finché
+non lo fa. L'agente del collega non si sveglia mai da solo: lo sveglia questo clic.
 
 ---
 
@@ -731,24 +723,22 @@ che ha approvato. È ciò che rende il passaggio una decisione e non un automati
 
 ## L'account manager ti dice cosa manca
 
-<div style="display:flex; gap:34px; align-items:center; justify-content:center">
+<div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/mancano-due.png" alt="Due messaggi dell'account manager: mancano due schede, poi ne manca una" height="560" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/posta-mancano.png" alt="Il messaggio dell'account manager: ha ricevuto una scheda, ne mancano due" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
-<div style="width:470px; text-align:left; font-size:.63em; line-height:1.45">
+<div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
-Dopo ogni approvazione, in circa mezzo minuto, ti scrive:
-
-<div class="fragment fade-up" style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-left:8px solid #1a73e8; margin:10px 0">
-<b>Dopo la prima</b><br>«Mancano le schede contrattuale e delivery.»
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Dopo la prima</b><br>«Ho ricevuto la scheda tecnica. Mancano contrattuale e delivery.»
 </div>
 
-<div class="fragment fade-up" style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-left:8px solid #7b61ff; margin:10px 0">
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #9334e6; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
 <b>Dopo la seconda</b><br>«Manca la scheda delivery.»
 </div>
 
-<div class="fragment fade-up" style="margin-top:10px">
-Approva <b>una scheda alla volta</b> e aspetta il suo messaggio: vedi il lavoro avanzare.
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #5f6368; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Tu</b><br>Approva <b>una scheda alla volta</b> e aspetta il suo messaggio, circa mezzo minuto: vedi il lavoro avanzare.
 </div>
 
 </div>
@@ -756,8 +746,8 @@ Approva <b>una scheda alla volta</b> e aspetta il suo messaggio: vedi il lavoro 
 </div>
 
 Note:
-L'assistente non scrive una sintesi su un lavoro incompleto: controlla quali schede approvate ci sono e dice quali mancano.
-Nella posta, il messaggio più recente è in alto: se non lo vedi, clicca «Aggiorna».
+A ogni approvazione l'assistente dell'account manager si sveglia, guarda quali schede ci sono e risponde. Non ricorda le volte
+precedenti: lo stato sta nei file, ed è per questo che la risposta è sempre giusta.
 
 ---
 
@@ -765,22 +755,22 @@ Nella posta, il messaggio più recente è in alto: se non lo vedi, clicca «Aggi
 
 ## Dopo la terza: scrive la sintesi
 
-<div style="display:flex; gap:34px; align-items:center; justify-content:center">
+<div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/esito-sintesi.png" alt="Il messaggio finale dell'account manager con la raccomandazione" width="600" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/posta-sintesi.png" alt="Il messaggio con la raccomandazione e l'artefatto sintesi.md" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
-<div style="width:490px; text-align:left; font-size:.63em; line-height:1.45">
+<div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
-Aspetta circa **un minuto**. Poi nella posta arriva:
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Un messaggio</b><br>La raccomandazione e i cinque indicatori, una riga ciascuno.
+</div>
 
-- la **raccomandazione**: qui, *non andare*;
-- i **rischi aperti** per area;
-- i **punti da chiarire** con il committente;
-- le **scadenze**, con i giorni che mancano;
-- **cosa serve** da ciascun responsabile.
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Un artefatto</b><br><code>gara/schede/sintesi.md</code>, in attesa della tua approvazione.
+</div>
 
-<div class="fragment fade-up" style="margin-top:10px; font-size:.9em; color:#5f6368">
-Le parole e a volte la raccomandazione cambiano da una prova all'altra.
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #5f6368; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Una voce «Da approvare»</b><br>Con due file: la sintesi e il registro dei bandi, con la riga nuova.
 </div>
 
 </div>
@@ -788,55 +778,26 @@ Le parole e a volte la raccomandazione cambiano da una prova all'altra.
 </div>
 
 Note:
-Sono i cinque indicatori che interessano all'account manager. Il messaggio è un riassunto: il documento completo è la sintesi,
-che arriva come richiesta. Dire che il modello non dà due volte le stesse parole.
+Circa un minuto dopo la terza approvazione. La raccomandazione può essere «andare», «andare a condizioni» o «non andare»:
+dipende da ciò che hanno scritto i tre responsabili, e cambia da una prova all'altra.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Una quarta richiesta: la sintesi
+## Leggi la sintesi
 
-<div style="display:flex; gap:34px; align-items:center; justify-content:center">
+<img src="assets/schermate/posta-sintesi-documento.png" alt="La sintesi aperta dentro la posta" width="820" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
-<img src="assets/schermate/sintesi-richiesta.png" alt="La richiesta dell'account manager con la sintesi e il registro" width="620" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<div style="margin-top:10px; font-size:.6em; color:#5f6368">
 
-<div style="width:480px; text-align:left; font-size:.63em; line-height:1.45">
-
-In **Lavoro degli agenti** c'è una richiesta nuova, di **account-manager**, con due file:
-
-- **`sintesi.md`**, nuovo;
-- **`registro-bandi.md`**, modificato: il bando ora è nel registro.
-
-<div class="fragment fade-up" style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-left:8px solid #5f6368; margin-top:12px">
-Non c'è «a chi passa il lavoro»: <b>il giro finisce qui</b>.
-</div>
-
-</div>
+Stesso gesto di prima: **Apri** sull'artefatto, oppure sul file dentro la voce «Da approvare».
 
 </div>
 
 Note:
-Anche il lavoro dell'account manager passa dalla tua approvazione: nessun agente è esente. Se la richiesta non compare, clicca
-la freccia circolare in alto a destra del riquadro.
-
----
-
-<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
-
-## Leggi la sintesi, come prima
-
-<img src="assets/schermate/sintesi-differenze.png" alt="La sintesi letta nel pannello Differenze" width="1010" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
-
-<div style="margin-top:8px; font-size:.62em">
-
-Gli stessi gesti della parte 2: **Ci metto mano** → **Differenze** → clic su `sintesi.md` → leggi → **Ho finito**.
-
-</div>
-
-Note:
-A sinistra i due file della richiesta, a destra la sintesi. Nell'elenco puoi cliccare anche il registro, per vedere la riga
-aggiunta.
+La sintesi usa solo ciò che c'è nelle tre schede, e ogni dato cita la scheda da cui viene. La parte che vale di più è «Dove le
+schede si sommano o si contraddicono»: è lì che tre punti di vista indipendenti diventano una decisione.
 
 ---
 
@@ -872,7 +833,7 @@ Se un punto non regge, è un buon motivo per non approvare.
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Gesto 8: approva la sintesi, oppure no
+## Gesto 7: approva la sintesi, oppure no
 
 <div style="display:flex; gap:26px; justify-content:center; margin-top:10px; text-align:left">
 
@@ -902,7 +863,7 @@ Per la demo si approva. L'avviso questa volta dice solo «Lavoro fuso nel ramo p
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Gesto 9: porta le schede nella tua cartella
+## Gesto 8: porta le schede nella tua cartella
 
 <div style="display:flex; gap:34px; align-items:center; justify-content:center">
 
@@ -934,11 +895,43 @@ gesto con cui ogni collega riceve le schede approvate dagli altri.
 
 ## Il risultato: la sintesi, impaginata
 
-<img src="assets/schermate/sintesi-impaginata.png" alt="La sintesi aperta in MdExplorer con i cinque indicatori" width="1010" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/sintesi-impaginata.png" alt="La sintesi aperta in MdExplorer con i cinque indicatori" width="820" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 
 Note:
 Ora la sintesi è un documento del progetto come gli altri: a sinistra le quattro schede, a destra i cinque indicatori
 dell'account manager. Da qui si può esportare, presentare o mandare ai colleghi.
+
+---
+
+<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
+
+## Metti in ordine: archivia
+
+<div style="display:flex; gap:28px; align-items:center; justify-content:center">
+
+<img src="assets/schermate/posta-fine.png" alt="La posta a fine giro: l'artefatto risulta approvato, in alto Archivia tutti e Archivio" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+
+<div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Archivia</b><br>Nel dettaglio di un messaggio, in alto a destra: il messaggio esce dall'elenco.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Archivia tutti</b><br>Nella barra in alto: svuota la posta. I lavori da approvare restano, perché vanno decisi.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #5f6368; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Non cancella niente</b><br>«Archivio» mostra ciò che hai archiviato; «Riporta in posta» lo rimette nell'elenco.
+</div>
+
+</div>
+
+</div>
+
+Note:
+Un messaggio letto resta in elenco finché serve: leggere toglie solo il pallino. Archiviare è il gesto con cui dici «questo
+è a posto». Dopo «Autorizza» un artefatto dice «approvato: arriva con Scarica tutto».
 
 ---
 
@@ -984,43 +977,49 @@ chiarire con il committente» sono la lista con cui presentarsi all'incontro tec
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## I nove gesti, in fila
+## Gli otto gesti, in fila
 
-<div style="display:flex; gap:22px; justify-content:center; margin-top:4px; text-align:left; font-size:.56em; line-height:1.5">
+<div style="display:flex; gap:20px; justify-content:center; margin-top:8px; text-align:left">
 
-<div style="flex:1; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-top:8px solid #f29900; padding:12px 18px">
-<div style="font-weight:800; color:#f29900; letter-spacing:.06em">PARTE 1 · CERCA</div>
+<div style="flex:1; background:#fff; border-top:8px solid #f29900; border-radius:14px; padding:14px 18px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:.5em; color:#f29900; font-weight:800; letter-spacing:.08em">PARTE 1 · CERCA</div>
+<div style="font-size:.56em; line-height:1.6; margin-top:6px">
 <b>1.</b> trova il robot<br>
 <b>2.</b> scrivi cosa vuoi e lancia<br>
-<span style="color:#5f6368">poi leggi e controlla il messaggio</span>
+<b>3.</b> Apri il documento della ricerca<br>
+<span style="color:#5f6368">poi controlla tu: due minuti</span>
+</div>
 </div>
 
-<div style="flex:1; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-top:8px solid #1a73e8; padding:12px 18px">
-<div style="font-weight:800; color:#1a73e8; letter-spacing:.06em">PARTE 2 · AVVIA E LEGGI</div>
-<b>3.</b> rispondi «avvia»<br>
-<b>4.</b> Ci metto mano<br>
-<b>5.</b> Differenze, clic sul file<br>
-<b>6.</b> Ho finito
+<div style="flex:1; background:#fff; border-top:8px solid #1a73e8; border-radius:14px; padding:14px 18px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:.5em; color:#1a73e8; font-weight:800; letter-spacing:.08em">PARTE 2 · AVVIA E LEGGI</div>
+<div style="font-size:.56em; line-height:1.6; margin-top:6px">
+<b>4.</b> rispondi «avvia»<br>
+<b>5.</b> Apri una scheda<br>
+<span style="color:#5f6368">cinque minuti di attesa, col robot giallo nella barra</span>
+</div>
 </div>
 
-<div style="flex:1; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-top:8px solid #188038; padding:12px 18px">
-<div style="font-weight:800; color:#188038; letter-spacing:.06em">PARTE 3 · APPROVA E DECIDI</div>
-<b>7.</b> Autorizza le tre schede<br>
-<b>8.</b> Autorizza la sintesi<br>
-<b>9.</b> Scarica tutto
+<div style="flex:1; background:#fff; border-top:8px solid #188038; border-radius:14px; padding:14px 18px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
+<div style="font-size:.5em; color:#188038; font-weight:800; letter-spacing:.08em">PARTE 3 · APPROVA E DECIDI</div>
+<div style="font-size:.56em; line-height:1.6; margin-top:6px">
+<b>6.</b> Autorizza le tre schede<br>
+<b>7.</b> Autorizza la sintesi<br>
+<b>8.</b> Scarica tutto
+</div>
 </div>
 
 </div>
 
-<div style="margin-top:20px; font-size:.7em">
+<div class="fragment fade-up" style="margin-top:18px; font-size:.72em">
 
-Circa **venti minuti**, di cui dieci di attesa.
+Prima di cominciare, una volta sola: **Sono tutti miei** e **Concedi trust**.
 
 </div>
 
 Note:
-Riepilogo da tenere a portata di mano durante la demo. I tempi sono quelli misurati su Linux con Copilot: un minuto per la
-ricerca, quattro o cinque per le tre schede, mezzo minuto dopo ogni approvazione, un minuto per la sintesi.
+Otto gesti, quasi tutti dentro la posta degli agenti. Circa venti minuti, di cui una decina di attesa. I gesti si ripetono: Apri
+e Autorizza sono gli stessi per la ricerca, per le schede e per la sintesi.
 
 ---
 
