@@ -255,7 +255,7 @@ Il fumetto è l'icona «Messaggi degli agenti» nella barra degli strumenti.
 <div style="width:500px; text-align:left; font-size:.62em; line-height:1.4">
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Uno compatibile</b><br>NC-2027-014, con i suoi dubbi.
+<b>Uno compatibile</b><br>NC-2027-014: merita il giro dei tre responsabili.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #c62828; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
@@ -263,7 +263,7 @@ Il fumetto è l'icona «Messaggi degli agenti» nella barra degli strumenti.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12)">
-<b>Una domanda per te</b><br>«Vuoi che avvii il giro?»
+<b>Dove sta il documento, e una domanda</b><br>Il percorso della ricerca, e «Vuoi che avvii il giro?»
 </div>
 
 </div>
@@ -272,7 +272,10 @@ Il fumetto è l'icona «Messaggi degli agenti» nella barra degli strumenti.
 
 Note:
 Le parole cambiano a ogni prova, perché dietro c'è un modello; la struttura no: una riga per bando, il verdetto, il motivo,
-e in fondo una domanda. Le due procedure già nel registro non compaiono: non sono nuove.
+il percorso del documento e in fondo una domanda. Le due procedure già nel registro non compaiono: non sono nuove.
+L'assistente produce sempre due cose: il messaggio, breve, e il documento con il ragionamento completo, archiviato in
+gara/ricerche. Il documento compare tra le cose da rivedere, come le schede: lo si approva quando si vuole, anche dopo.
+Nella schermata il messaggio è quello di una versione precedente: oggi ha una riga in più, con il percorso del documento.
 
 ---
 
@@ -320,7 +323,7 @@ si faccia la demo.
 <div style="font-size:.62em; line-height:1.55; margin-top:6px">
 ✔ letto tre documenti<br>
 ✔ scartato due bandi, dicendo perché<br>
-✔ proposto un bando<br>
+✔ scritto la ricerca in un documento<br>
 ✔ chiuso con una domanda
 </div>
 </div>
@@ -330,7 +333,7 @@ si faccia la demo.
 <div style="font-size:.62em; line-height:1.55; margin-top:6px">
 ✘ non ha avviato niente<br>
 ✘ non ha scritto ai colleghi<br>
-✘ non ha modificato nessun file<br>
+✘ non ha messo niente nel progetto: il documento aspetta la tua approvazione<br>
 ✘ non ha deciso al posto tuo
 </div>
 </div>
@@ -338,8 +341,8 @@ si faccia la demo.
 </div>
 
 Note:
-La colonna di destra è quella che rassicura. L'assistente ha gli strumenti per scrivere, ma la sua scheda dice di proporre e
-aspettare. L'avvio del giro è una risposta tua.
+La colonna di destra è quella che rassicura. L'assistente scrive la sua ricerca, ma in una copia a parte: nel progetto entra
+solo quando la approvi. E la sua scheda dice di proporre e aspettare: l'avvio del giro è una risposta tua.
 
 ---
 

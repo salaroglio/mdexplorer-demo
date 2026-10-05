@@ -82,7 +82,8 @@ stop
 | [portale-nordica/bandi.md](portale-nordica/bandi.md) | **simula** il sito dei bandi del committente: tre procedure in corso |
 | [registro-bandi.md](registro-bandi.md) | i bandi che Pentagroup ha già visto |
 | [profilo-pentagroup.md](profilo-pentagroup.md) | chi è Pentagroup, un capitolo per responsabile, e i criteri per decidere se partecipare |
-| `schede/` | non c'è ancora: lo creano gli agenti |
+| `ricerche/` | l'esito di ogni ricerca dell'account manager sul portale |
+| `schede/` | le tre schede dei responsabili e la sintesi: le scrivono gli agenti |
 
 Gli agenti stanno in [.github/agents](../../.github/agents/account-manager.agent.md): file markdown come gli altri. Il blocco
 `a2a:` in alto dice chi sono, che cosa fanno e a chi possono passare il lavoro; il testo sotto dice come lavorano.

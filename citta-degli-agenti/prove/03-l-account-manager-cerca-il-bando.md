@@ -7,12 +7,12 @@ title: L'account manager cerca il bando
 ## TL;DR
 
 Sei l'account manager di Pentagroup e hai un agente che controlla per te il sito dei bandi di Nordica. Lo lanci, lui legge
-le procedure in corso, le confronta con quelle già viste e con i criteri di Pentagroup, e ti scrive **un messaggio**: cosa
-c'è di nuovo, cosa scarta e perché, cosa ti propone. Non avvia niente da solo.
+le procedure in corso, le confronta con quelle già viste e con i criteri di Pentagroup, e produce **due cose**: un documento
+con l'esito della ricerca e un messaggio breve che ti dice cosa propone. Non avvia niente da solo.
 
 - Si lancia con l'icona del robot sul suo file, nel pannello di sinistra.
-- Legge tre cose: il sito dei bandi (simulato), il registro dei bandi già visti e il profilo di Pentagroup.
-- Il risultato arriva nella posta in arrivo, come messaggio che comincia con `[ESITO]`.
+- **Il documento** va in `gara/ricerche/`: è il ragionamento completo, e lo approvi tu come ogni cosa scritta da un agente.
+- **Il messaggio** arriva nella posta: poche righe che cominciano con `[ESITO]`, con il percorso del documento.
 
 ## Lancialo
 
@@ -35,13 +35,26 @@ un modello, ma il contenuto è questo:
 
 ```text
 [ESITO]
-NC-2027-014 — compatibile: piattaforma per enti locali coerente; dubbi sull'esperienza nella riscossione
-coattiva e su tempi e condizioni (portale, profilo criteri 2–4).
-NC-2027-012 — non compatibile: fornitura licenze fuori attività e scadenza tra 16 giorni, sotto i 21 richiesti
-(portale, profilo criteri 1 e 5).
-NC-2027-011 — non compatibile: manutenzione immobili fuori attività (portale, profilo criterio 1).
+NC-2027-014 — compatibile: piattaforma per tributi degli Enti Locali, con 53 giorni per rispondere.
+NC-2027-012 — non compatibile: fornitura di licenze esclusa; mancano solo 16 giorni.
+NC-2027-011 — non compatibile: manutenzione immobiliare, non servizi gestiti o piattaforme.
+Documento: `citta-degli-agenti/gara/ricerche/ricerca-2027-03-08.md`
 Vuoi che avvii il giro su NC-2027-014? Rispondi `avvia NC-2027-014`.
 ```
+
+## Leggi il documento
+
+Il messaggio è il riassunto; il ragionamento sta nel documento. Nella stessa finestra apri la scheda **Da rivedere**: c'è una
+richiesta di `account-manager` con un file, `gara/ricerche/ricerca-2027-03-08.md`. Dentro trovi:
+
+- la tabella delle procedure trovate, con i giorni che mancano alla scadenza;
+- per ogni procedura i cinque criteri: i due che bloccano (la natura del bando e il tempo per rispondere) li giudica
+  l'account manager; gli altri tre dicono «da valutare nel giro», e da chi;
+- le procedure già nel registro, che non ha valutato.
+
+**Compatibile** qui vuol dire «merita il giro dei tre responsabili», non «conviene partecipare»: quello lo diranno le loro schede.
+
+Clicca **Autorizza** per archiviare la ricerca nel progetto. Puoi farlo anche più tardi: per avviare il giro non serve.
 
 ## Controllalo
 
@@ -57,8 +70,9 @@ Questo è il gesto che ti viene chiesto in tutto il caso: **verifichi**, non ti 
 
 - L'agente ha letto tre file, e solo quelli: sono i suoi documenti.
 - Ha **scartato** due procedure con un motivo che puoi controllare, e ne ha proposta una.
+- Ha prodotto **due output**: il documento della ricerca e il messaggio. Il messaggio non contiene il documento, dice dov'è.
 - Ha chiuso con una **domanda** e non con un'azione: l'avvio del giro lo decidi tu, con una risposta.
-- Non ha modificato nessun file: nella cartella non è cambiato niente.
+- Nella tua cartella non è cambiato niente: il documento sta in una copia a parte finché non lo approvi.
 
 ## E se non succede niente
 
