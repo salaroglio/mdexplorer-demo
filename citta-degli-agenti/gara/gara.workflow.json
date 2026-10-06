@@ -1,0 +1,27 @@
+{
+  "mde_workflow": 1,
+  "title": "Gara: dal bando alla sintesi",
+  "steps": [
+    { "id": "ricerca", "agent": "account-manager", "title": "Cerca i bandi",
+      "trigger": { "launch": true }, "start": "manual",
+      "produces": ["citta-degli-agenti/gara/ricerche/ricerca-*.md"] },
+    { "id": "avvio", "agent": "account-manager",
+      "trigger": { "reply": "avvia-giro", "to": "ricerca" }, "start": "auto" },
+    { "id": "tecnica", "agent": "responsabile-tecnico",
+      "trigger": { "assignment": "avvio" }, "start": "ask-owner",
+      "produces": ["citta-degli-agenti/gara/schede/tecnica.md"] },
+    { "id": "contratto", "agent": "responsabile-legale",
+      "trigger": { "assignment": "avvio" }, "start": "ask-owner",
+      "produces": ["citta-degli-agenti/gara/schede/contrattuale.md"] },
+    { "id": "delivery", "agent": "responsabile-delivery",
+      "trigger": { "assignment": "avvio" }, "start": "ask-owner",
+      "produces": ["citta-degli-agenti/gara/schede/delivery.md"] },
+    { "id": "sintesi", "agent": "account-manager",
+      "trigger": { "approval": ["tecnica", "contratto", "delivery"], "wait": "all" }, "start": "auto",
+      "produces": ["citta-degli-agenti/gara/schede/sintesi.md"] }
+  ],
+  "loops": [
+    { "id": "rifacimento", "steps": ["tecnica", "contratto", "delivery"],
+      "on": "rejected", "restart": "manual", "max": 2, "then": "stop" }
+  ]
+}
