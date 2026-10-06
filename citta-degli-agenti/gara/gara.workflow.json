@@ -1,7 +1,10 @@
 {
-  "mde_workflow": 1,
+  "mde_workflow": 2,
   "title": "Gara: dal bando alla sintesi",
   "description": "Dal bando trovato sul portale alla sintesi che l'account manager usa per decidere se partecipare.",
+  "variables": {
+    "codice": "il codice del bando su cui si fa il giro, scelto con «Avvia il giro»"
+  },
   "steps": [
     {
       "id": "ricerca",
@@ -23,16 +26,20 @@
         "reply": "avvia-giro",
         "to": "ricerca"
       },
-      "start": "auto"
+      "start": "auto",
+      "brief": "La persona ha scelto il bando {codice}: avvia il giro dei tre responsabili."
     },
     {
       "id": "tecnica",
       "agent": "responsabile-tecnico",
       "title": "Scheda tecnica",
       "trigger": {
-        "assignment": "avvio"
+        "after": [
+          "avvio"
+        ]
       },
       "start": "ask-owner",
+      "brief": "Scrivi la scheda di fattibilità tecnica sul bando {codice}.",
       "produces": [
         "citta-degli-agenti/gara/schede/tecnica.md"
       ]
@@ -42,9 +49,12 @@
       "agent": "responsabile-legale",
       "title": "Scheda contrattuale",
       "trigger": {
-        "assignment": "avvio"
+        "after": [
+          "avvio"
+        ]
       },
       "start": "ask-owner",
+      "brief": "Scrivi la scheda contrattuale sul bando {codice}.",
       "produces": [
         "citta-degli-agenti/gara/schede/contrattuale.md"
       ]
@@ -54,9 +64,12 @@
       "agent": "responsabile-delivery",
       "title": "Scheda di delivery",
       "trigger": {
-        "assignment": "avvio"
+        "after": [
+          "avvio"
+        ]
       },
       "start": "ask-owner",
+      "brief": "Scrivi la scheda di delivery (team e tempi) sul bando {codice}.",
       "produces": [
         "citta-degli-agenti/gara/schede/delivery.md"
       ]
@@ -66,7 +79,7 @@
       "agent": "account-manager",
       "title": "Sintesi per decidere",
       "trigger": {
-        "approval": [
+        "after": [
           "tecnica",
           "contratto",
           "delivery"
@@ -74,6 +87,7 @@
         "wait": "all"
       },
       "start": "auto",
+      "brief": "Le tre schede sul bando {codice} sono approvate: scrivi la sintesi per decidere se partecipare.",
       "produces": [
         "citta-degli-agenti/gara/schede/sintesi.md"
       ]
@@ -87,10 +101,8 @@
         "contratto",
         "delivery"
       ],
-      "on": "rejected",
-      "restart": "manual",
-      "max": 2,
-      "then": "stop"
+      "until": "approved",
+      "restart": "manual"
     }
   ]
 }

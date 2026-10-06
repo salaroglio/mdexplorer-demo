@@ -9,12 +9,12 @@ workflow: gara.workflow.json
 ## TL;DR
 
 Questo documento dice come le persone della gara e i loro agenti si passano il lavoro: chi incarica chi, chi avvia ogni
-agente, chi aspetta chi. La regola sta in [gara.workflow.json](gara.workflow.json): MdExplorer la legge e la applica, e il
+agente, chi aspetta chi. Il piano sta in [gara.workflow.json](gara.workflow.json): MdExplorer lo legge e lo esegue, e il
 diagramma qui sotto lo disegna da lì, quindi non va mai aggiornato a mano.
 
 - Il giro lo comincia l'account manager, a mano; le tre schede le avvia ciascun responsabile.
 - La sintesi aspetta tutte e tre le schede approvate.
-- Una scheda rifiutata si può far ripartire al massimo due volte.
+- Una scheda rifiutata si rifà quando la persona preme «Fai ripartire», senza un limite di volte.
 
 ## Il giro
 
