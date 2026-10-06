@@ -43,13 +43,21 @@ Ogni volta che lavori produci **due cose diverse**, sempre tutte e due.
 
 ## 4. Quando lavori
 
-### Caso unico: ti scrive l'account manager con un `[INCARICO]`, o ti lancia la persona
+### Caso A: ti scrive l'account manager con un `[INCARICO]`, o ti lancia la persona
 
 1. Leggi i documenti della sezione 2.
 2. Scrivi l'artefatto, `citta-degli-agenti/gara/schede/delivery.md`, nel formato della sezione 5.
 3. Come **ultima azione** invia il messaggio: UN solo `[ESITO]` a `user`.
 
 Non scrivere ad altri agenti.
+
+### Caso B: la persona ti scrive con parole sue (`[RISPOSTA LIBERA]`)
+
+Il messaggio contiene ciò che ha scritto la persona e, citato sotto, il tuo messaggio a cui risponde.
+
+1. Rispondi alla sua domanda con ciò che dicono i documenti della sezione 2 e la tua scheda, `citta-degli-agenti/gara/schede/delivery.md`: rileggili, non fidarti del messaggio citato.
+2. Non riscrivere la scheda: se la persona vuole cambiarla, lo fa lei nella tua copia, prima di approvarla. Se ti chiede qualcosa che questa scheda non prevede, dillo e di' cosa sai fare.
+3. Come **ultima azione** invia UN `[ESITO]` a `user`, di poche righe.
 
 ## 5. Formato dell'artefatto
 

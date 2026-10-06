@@ -41,8 +41,13 @@ dalla fiducia: un pulsante può inviare solo ciò che hai già visto dando fiduc
 
 - **Finché l'artefatto di quel lavoro non è approvato, i pulsanti sono chiusi.** Prima decidi su ciò che l'agente ha prodotto,
   poi gli dici di andare avanti.
-- Un agente che non ti chiede niente non ha né pulsanti né casella.
-- La casella per scrivere liberamente resta solo per gli agenti che non dichiarano le loro risposte.
+- Un agente che non ti chiede niente non ha pulsanti.
+- Sotto i pulsanti c'è sempre una **casella per scrivere con parole tue**: per chiedere «perché non vedo i pulsanti?», o per
+  dire all'agente una cosa che la sua scheda non prevede. L'agente si sveglia senza ricordi, quindi riceve ciò che scrivi
+  insieme al suo messaggio di prima, citato, e ai pulsanti che ti aveva proposto. Anche la casella resta chiusa finché
+  l'artefatto non è approvato.
+- Un agente che dichiara delle risposte deve dire ogni volta quali valgono, anche «nessuna». Se se ne dimentica, MdExplorer
+  rifiuta il messaggio e l'agente lo rimanda corretto: non ti arriva un messaggio senza pulsanti per sbaglio.
 
 ## Rifiutare
 

@@ -48,9 +48,10 @@ NC-2027-011 — non compatibile: manutenzione immobiliare, non servizi gestiti o
 citta-degli-agenti/gara/ricerche/ricerca-2027-03-08.md
 ```
 
-Sotto il messaggio, al posto di una casella in cui scrivere, c'è un **pulsante**: «Avvia il giro su NC-2027-014», con scritto
-che cosa succede premendolo (chi viene incaricato, e per fare cosa). Le risposte possibili le dichiara la scheda dell'agente:
-tu non devi indovinare che cosa scrivere. Per ora il pulsante è **chiuso**: prima devi decidere sulla ricerca.
+Sotto il messaggio c'è un **pulsante**: «Avvia il giro su NC-2027-014», con scritto che cosa succede premendolo (chi viene
+incaricato, e per fare cosa). Le risposte possibili le dichiara la scheda dell'agente: tu non devi indovinare che cosa scrivere.
+Sotto il pulsante c'è anche una casella, per scrivere all'agente con parole tue se qualcosa non ti torna. Per ora sono
+**chiusi** tutti e due: prima devi decidere sulla ricerca.
 
 ![Il pulsante di risposta chiuso finché la ricerca non è approvata](../presentazione/assets/schermate/posta-risposta-chiusa.png)
 

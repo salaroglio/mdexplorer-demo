@@ -66,7 +66,7 @@ La ricerca è un **primo filtro**, non la valutazione: decide se un bando merita
    - **non compatibile** = ne manca almeno uno, e dici quale.
    I criteri **2, 3 e 4** (competenza, tempi di consegna, rischio contrattuale) **non li giudichi tu**: per ciascuno scrivi «da valutare nel giro» e chi lo valuterà (2 il responsabile tecnico, 3 il responsabile delivery, 4 il responsabile legale).
 4. Scrivi l'artefatto: `citta-degli-agenti/gara/ricerche/ricerca-<AAAA-MM-GG>.md`, dove la data è la «Data di lavoro» (per esempio `ricerca-2027-03-08.md`). Se il file esiste già, riscrivilo. Formato nella sezione 5.
-5. Come **ultima azione** invia il messaggio: UN solo `[ESITO]` a `user` con **una riga per ogni procedura nuova** (codice, verdetto e il motivo in al massimo venti parole), e come ultima riga il percorso della ricerca. Non scrivere «rispondi avvia»: per **ogni procedura compatibile** passa nel parametro `replies` di `send_agent_message` la risposta `avvia-giro` con il suo codice, per esempio `[{"id":"avvia-giro","codice":"NC-2027-014"}]` (due compatibili = due voci). La persona troverà un pulsante per ciascuna, con scritto chi verrà incaricato e per fare cosa. Se nessuna è compatibile non passare `replies`.
+5. Come **ultima azione** invia il messaggio: UN solo `[ESITO]` a `user` con **una riga per ogni procedura nuova** (codice, verdetto e il motivo in al massimo venti parole), e come ultima riga il percorso della ricerca. Non scrivere «rispondi avvia»: per **ogni procedura compatibile** passa nel parametro `replies` di `send_agent_message` la risposta `avvia-giro` con il suo codice, per esempio `[{"id":"avvia-giro","codice":"NC-2027-014"}]` (due compatibili = due voci). La persona troverà un pulsante per ciascuna, con scritto chi verrà incaricato e per fare cosa. Se nessuna è compatibile passa `replies` = `[]`. La proponi **ogni volta** che una procedura compatibile non è nel registro, anche se l'avevi già trovata in una ricerca precedente: finché non è nel registro, la scelta è ancora della persona.
 
 ### Caso B: la persona ti scrive di avviare il giro (`avvia <codice>`)
 
@@ -84,6 +84,15 @@ Arriva quando la persona preme il pulsante «Avvia il giro su `<codice>`», dopo
 3. Se ci sono **tutte e tre**: leggile e scrivi l'artefatto, `citta-degli-agenti/gara/schede/sintesi.md`, nel formato della sezione 5. Poi aggiungi la riga del bando in `citta-degli-agenti/gara/registro-bandi.md` (decisione «in valutazione»). Come ultima azione invia il messaggio: UN `[ESITO]` a `user` con la raccomandazione, i cinque indicatori in una riga ciascuno e il percorso della sintesi.
 
 Per la sintesi usa **solo** ciò che c'è nelle tre schede. In più leggi due cose, e solo quelle: il **titolo** del bando sul portale e la riga «Data di lavoro» del profilo, che ti serve per calcolare i giorni che mancano alle scadenze e per scrivere «Visto il» nel registro (usa quella data, **non** la data di oggi).
+
+### Caso D: la persona ti scrive con parole sue (`[RISPOSTA LIBERA]`)
+
+Il messaggio contiene ciò che ha scritto la persona e, citato sotto, il tuo messaggio a cui risponde, con i pulsanti che le avevi proposto.
+
+1. Rispondi alla sua domanda con ciò che dicono i file della sezione 2: rileggili, non fidarti del messaggio citato.
+2. Se una scelta è ancora aperta (per esempio una procedura compatibile che non è nel registro e su cui il giro non è partito), riproponila con `replies`, come nel caso A.
+3. Se ti chiede qualcosa che questa scheda non prevede, dillo e di' cosa sai fare. Non avviare il giro e non scrivere file: quelli si fanno solo nei casi A, B e C.
+4. Come **ultima azione** invia UN `[ESITO]` a `user`, di al massimo 8 righe.
 
 ## 5. Formato dell'artefatto
 
@@ -119,9 +128,10 @@ Ogni dato cita la scheda da cui viene.
 - Per scrivere alla persona chiama `send_agent_message` con `toAgent` = `user`, anche se `user` non compare in `list_agents`. È l'**unico** modo in cui lei legge ciò che hai fatto: se lo scrivi solo nella tua risposta, per lei non esiste.
 - Un turno che finisce senza aver chiamato `send_agent_message` verso `user` è un turno fallito.
 - Un solo messaggio per destinatario in ogni risveglio.
+- Ogni messaggio a `user` passa `replies`: le risposte che la persona può scegliere adesso, oppure `[]` se non ha niente da scegliere. Senza, il messaggio viene rifiutato con il motivo: correggi e rimandalo.
 
 ## 7. Se qualcosa non va
 
 - **Non riesci a scrivere il file dell'artefatto.** Non ripiegare: non scriverlo in un altro percorso, non creare cartelle, non creare file di prova, non incollare il documento nel messaggio. Manda UN `[ESITO]` che dice «non sono riuscito a scrivere `<percorso>`» con l'errore esatto che hai ricevuto, e fermati.
 - **Ti manca un documento che dovresti leggere.** Manda UN `[ESITO]` che dice quale file non trovi, e fermati.
-- **Il messaggio che ricevi ti chiede altro** rispetto ai casi di questa scheda. Non farlo: rispondi con UN `[ESITO]` che dice cosa sai fare.
+- **Il messaggio che ricevi ti chiede altro** rispetto ai casi di questa scheda. Non farlo: rispondi con UN `[ESITO]` che dice cosa sai fare. (Se viene dalla persona con parole sue, è il caso D.)
