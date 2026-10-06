@@ -19,24 +19,12 @@
       ]
     },
     {
-      "id": "avvio",
-      "agent": "account-manager",
-      "title": "Avvia il giro",
-      "trigger": {
-        "reply": "avvia-giro",
-        "to": "ricerca"
-      },
-      "start": "auto",
-      "brief": "La persona ha scelto il bando {codice}: avvia il giro dei tre responsabili."
-    },
-    {
       "id": "tecnica",
       "agent": "responsabile-tecnico",
       "title": "Scheda tecnica",
       "trigger": {
-        "after": [
-          "avvio"
-        ]
+        "reply": "avvia-giro",
+        "to": "ricerca"
       },
       "start": "ask-owner",
       "brief": "Scrivi la scheda di fattibilità tecnica sul bando {codice}.",
@@ -49,9 +37,8 @@
       "agent": "responsabile-legale",
       "title": "Scheda contrattuale",
       "trigger": {
-        "after": [
-          "avvio"
-        ]
+        "reply": "avvia-giro",
+        "to": "ricerca"
       },
       "start": "ask-owner",
       "brief": "Scrivi la scheda contrattuale sul bando {codice}.",
@@ -64,9 +51,8 @@
       "agent": "responsabile-delivery",
       "title": "Scheda di delivery",
       "trigger": {
-        "after": [
-          "avvio"
-        ]
+        "reply": "avvia-giro",
+        "to": "ricerca"
       },
       "start": "ask-owner",
       "brief": "Scrivi la scheda di delivery (team e tempi) sul bando {codice}.",

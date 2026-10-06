@@ -43,7 +43,7 @@ Ogni volta che lavori produci **due cose diverse**, sempre tutte e due.
 
 ## 4. Quando lavori
 
-### Caso A: ti scrive l'account manager con un `[INCARICO]`, o ti lancia la persona
+### Caso A: ricevi un `[INCARICO]` dal workflow (il giro su un bando), o ti lancia la persona
 
 1. Leggi i documenti della sezione 2.
 2. Scrivi l'artefatto, `citta-degli-agenti/gara/schede/delivery.md`, nel formato della sezione 5.
