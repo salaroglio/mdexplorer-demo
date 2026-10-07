@@ -11,19 +11,19 @@ dopo lo dice il workflow, e MdExplorer lo fa partire. Dopo la terza approvazione
 sola, con i file delle tre schede.
 
 - Nella richiesta ci sono i tre gesti di sempre: **Autorizza**, **Ci metto mano**, **Rifiuta**.
-- Sotto il messaggio da cui hai avviato il giro, la riga di ogni scheda approvata diventa verde.
+- Nel giro, nella sezione «Giri», la riga di ogni scheda approvata diventa verde, e il suo messaggio entra nel giro.
 - Nessun agente si scrive con un altro: la sintesi la fa partire il giro.
 
 ## Approva la prima scheda
 
-1. Nella posta, sotto il messaggio di `responsabile-tecnico`, clicca la riga rientrata **Da approvare: l'artefatto**.
+1. Nella posta, in **Da fare**, sotto il messaggio di `responsabile-tecnico`, clicca la riga rientrata **Da approvare: l'artefatto**.
 
    ![La richiesta di approvazione della scheda tecnica](../presentazione/assets/schermate/posta-approva-scheda.png)
 
 2. Clicca **Autorizza**: la scheda entra nel ramo principale del repository.
 
-Ora clicca il messaggio dell'account manager da cui hai avviato il giro: la riga «Scheda tecnica» è diventata **verde**,
-approvato. Le altre due sono ancora ambra, in approvazione, e la sintesi aspetta.
+Ora clicca il giro nella sezione **Giri**: la riga «Scheda tecnica» è diventata **verde**, approvato, e il messaggio del
+responsabile tecnico è passato da «Da fare» dentro il giro. Le altre due schede sono ancora in approvazione, e la sintesi aspetta.
 
 ![Dopo la prima approvazione: una riga verde, due ambra, la sintesi che aspetta](../presentazione/assets/schermate/posta-giro-approvata.png)
 

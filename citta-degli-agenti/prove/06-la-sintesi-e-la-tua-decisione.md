@@ -63,6 +63,14 @@ incrociato le competenze e scritto cosa serve decidere. Ma non hanno deciso, e n
 riga di una sintesi, non un impegno. Se vuoi partecipare lo stesso, la scelta è dell'account manager, cioè tua, e la
 sintesi ti ha dato la lista delle condizioni da ottenere: i punti da chiarire con il committente.
 
+## Metti in ordine
+
+Il giro è concluso: nella sezione «Giri» dice «concluso: 5 su 5 passi». Selezionalo e premi **Archivia il giro**: esce dalla
+posta con tutti i suoi messaggi. Lo ritrovi in **Archivio**, nella barra in alto, con «Riporta in posta». Il registro del giro
+non cambia: archiviare riguarda solo la tua posta.
+
+![L'archivio: il giro concluso con i suoi messaggi](../presentazione/assets/schermate/posta-archivio.png)
+
 ## Dopo la prova
 
 Il demo ha creato un ramo e dei file nel tuo clone: per leggere la sintesi nella tua cartella, scarica gli aggiornamenti
@@ -70,7 +78,7 @@ con il pull dalla barra git. Se vuoi ripartire da zero, riapri il demo con «Cre
 
 ## E se non succede niente
 
-- **Non arriva il messaggio con la sintesi.** Nel giro, sotto il messaggio da cui l'hai avviato, le tre righe delle schede
+- **Non arriva il messaggio con la sintesi.** Nel giro, nella sezione «Giri», le tre righe delle schede
   devono essere verdi (approvato): se una è ancora ambra, quella scheda non è approvata.
 - **La sintesi dice che non può calcolare i giorni.** Non ha trovato la «Data di lavoro» nel profilo: controlla che il
   [profilo di Pentagroup](../gara/profilo-pentagroup.md) sia intatto.

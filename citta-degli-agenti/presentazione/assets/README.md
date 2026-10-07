@@ -49,9 +49,12 @@ saranno diversi, ma il percorso è lo stesso.
 | `schermate/registro.png` | l'elenco degli agenti con i loro riassunti | (disponibile, non usata) |
 | `schermate/scoperta.png` | il messaggio dell'account manager con i bandi nuovi | «Passo 1» |
 | `schermate/risposta.png` | il pulsante «Avvia il giro» sotto il messaggio | «Passo 2» |
-| `schermate/posta-risposta.png` | il messaggio con il pulsante di risposta aperto | guida passo per passo, gesto 4; prova 4 |
+| `schermate/posta-risposta.png` | il messaggio con il pulsante di risposta aperto (posta di prima delle sezioni) | (non più usata) |
 | `schermate/posta-risposta-chiusa.png` | lo stesso pulsante chiuso, prima dell'approvazione | prova 3 |
-| `schermate/posta-stati.png` | le righe di stato dei lavori attesi | guida passo per passo; prova 4 |
+| `schermate/posta-stati.png` | le righe di stato sotto il messaggio (posta di prima delle sezioni) | (non più usata) |
+| `schermate/posta-giro-righe.png`, `posta-da-avviare.png`, `posta-giro-lavorano.png`, `posta-approva-scheda.png`, `posta-giro-approvata.png`, `posta-giro-sintesi.png`, `posta-giro-concluso.png`, `posta-archivio.png` | la posta in tre sezioni (Da fare, Giri, Messaggi) lungo la gara, dal pulsante all'archivio (07/10) | prove 4-6; guida della posta |
+| `schermate/guida-*.png` | ritagli delle stesse schermate | guida passo per passo, parti 2 e 3 |
+| `schermate/slide-*.png` | ritagli delle stesse schermate | presentazione «Un assistente per ogni persona» |
 | `schermate/posta-rifiuto.png` | il rifiuto con il motivo | (di scorta) |
 | `schermate/posta-fermo.png` | un lavoro rifiutato e fermo, con «Fai ripartire» | prova 4; guida della posta |
 | `schermate/copia-dentro.png` | la finestra che lavora nella copia di un agente | guida «Lavorare nella copia di un agente» |

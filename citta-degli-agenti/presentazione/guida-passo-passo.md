@@ -466,7 +466,7 @@ pulsante, passa per l'avvio delle tre schede e arriva fino alla lettura di una s
 
 <div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/guida-avvia-il-giro.png" alt="Il pulsante Avvia il giro sotto il messaggio, e sotto il messaggio le righe del giro" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+<img src="assets/schermate/guida-avvia-il-giro.png" alt="Dopo il pulsante: in Da fare le tre schede da avviare, in Giri il giro con i suoi passi" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
 <div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
@@ -479,7 +479,7 @@ pulsante, passa per l'avvio delle tre schede e arriva fino alla lettura di una s
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>3. Premi «Avvia il giro su NC-2027-014»</b><br>Compaiono subito tre voci «Da avviare», e sotto il messaggio le righe del giro.
+<b>3. Premi «Avvia il giro su NC-2027-014»</b><br>Compaiono subito tre voci «Da avviare» in <b>Da fare</b>, e il giro in <b>Giri</b>.
 </div>
 
 </div>
@@ -537,12 +537,12 @@ la scheda a chi risponde dello stesso agente.
 
 <div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/guida-giro-lavorano.png" alt="Sotto il messaggio del pulsante, una riga per ogni passo del giro con il suo stato" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+<img src="assets/schermate/guida-giro-lavorano.png" alt="Il giro nella sezione Giri: i passi con chi ne risponde e lo stato" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
 <div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Una riga per passo</b><br>Sotto il messaggio da cui hai premuto, con il titolo del passo e chi ne risponde.
+<b>Il giro è una voce</b><br>Nella sezione «Giri», con una riga per passo: titolo e chi ne risponde. Cliccalo per il dettaglio.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
@@ -621,7 +621,7 @@ vista indipendenti, che poi la sintesi mette a confronto.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #5f6368; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>E le righe del giro</b><br>Sotto il messaggio dell'account manager: tre «in approvazione», e la sintesi che aspetta.
+<b>E il giro</b><br>In «Giri»: tre passi «in approvazione», e la sintesi che aspetta.
 </div>
 
 </div>
@@ -781,7 +781,7 @@ svegliato da questo clic finché le tre schede non sono tutte approvate.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>3. La sua riga diventa verde</b><br>sotto il messaggio da cui hai avviato il giro. La sintesi aspetta ancora.
+<b>3. La sua riga diventa verde</b><br>nel giro, e il suo messaggio entra nel giro. La sintesi aspetta ancora.
 </div>
 
 </div>
@@ -953,20 +953,20 @@ dell'account manager. Da qui si può esportare, presentare o mandare ai colleghi
 
 <div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/posta-fine.png" alt="La posta a fine giro: l'artefatto risulta approvato, in alto Archivia tutti e Archivio" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+<img src="assets/schermate/guida-archivio.png" alt="L'archivio: il giro concluso con i suoi messaggi e Riporta in posta" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
 <div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Archivia</b><br>Nel dettaglio di un messaggio, in alto a destra: il messaggio esce dall'elenco.
+<b>Archivia il giro</b><br>Nel dettaglio di un giro concluso: esce dalla posta con tutti i suoi messaggi.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Archivia tutti</b><br>Nella barra in alto: svuota la posta. I lavori da approvare restano, perché vanno decisi.
+<b>Archivia i letti</b><br>Nella barra in alto: toglie i messaggi già letti fuori dai giri. Le decisioni restano.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #5f6368; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Non cancella niente</b><br>«Archivio» mostra ciò che hai archiviato; «Riporta in posta» lo rimette nell'elenco.
+<b>Non cancella niente</b><br>«Archivio» mostra giri e messaggi archiviati; «Riporta in posta» li rimette nell'elenco.
 </div>
 
 </div>
@@ -974,8 +974,8 @@ dell'account manager. Da qui si può esportare, presentare o mandare ai colleghi
 </div>
 
 Note:
-Un messaggio letto resta in elenco finché serve: leggere toglie solo il pallino. Archiviare è il gesto con cui dici «questo
-è a posto». Dopo «Autorizza» un artefatto dice «approvato: arriva con Scarica tutto».
+A giro finito, la posta si mette in ordine con un gesto: il giro concluso si archivia con tutti i suoi messaggi. Il registro del
+giro, in git, non cambia: archiviare riguarda solo la propria posta.
 
 ---
 

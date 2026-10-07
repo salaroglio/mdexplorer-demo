@@ -300,12 +300,12 @@ registro in git: chi ha avviato, consegnato, approvato, e quando.
 
 <div style="display:flex; gap:30px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/slide-giro-lavorano.png" alt="Sotto il messaggio del pulsante, una riga per ogni passo del giro con il suo stato" width="680" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/slide-giro-lavorano.png" alt="Il giro nella sezione Giri: i passi con chi ne risponde e lo stato" width="680" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 
 <div style="width:440px; text-align:left; font-size:.62em; line-height:1.4">
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Una riga per passo del giro</b><br>Sotto il messaggio da cui hai premuto, con chi ne risponde. Cambia stato da sola.
+<b>Il giro è una voce</b><br>Nella sezione «Giri» della posta, con una riga per passo e chi ne risponde. Cambia stato da sola.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">

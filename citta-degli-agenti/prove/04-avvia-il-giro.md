@@ -12,7 +12,7 @@ avviare», la avvia, e il suo agente legge lo stesso capitolato con i **suoi** o
 l'hai avviato, e leggi ogni scheda prima di approvarla.
 
 - Il pulsante non sveglia l'account manager: apre il giro, e le tre schede compaiono «da avviare».
-- Sotto il messaggio c'è una riga per ogni passo del giro, che cambia stato da sola.
+- Nella sezione «Giri» della posta il giro è una voce, con una riga per ogni passo che cambia stato da sola.
 - Le tre schede arrivano in circa 3-5 minuti; una scheda si legge con **Apri**, prima di approvarla.
 
 ## Premi «Avvia il giro»
@@ -47,8 +47,9 @@ In un team c'è anche **Passa a un collega**, per darla a chi risponde dello ste
 
 ## Segui il giro
 
-Clicca il messaggio dell'account manager da cui hai premuto il pulsante. Nell'elenco, **sotto** di lui, c'è una riga per
-ogni passo del giro, con il suo titolo e chi ne risponde:
+Nella posta, la sezione **Giri** ha una voce nuova: «Gara: dal bando alla sintesi · NC-2027-014», con quanti passi sono
+conclusi. Sotto, una riga per ogni passo, con il suo titolo e chi ne risponde; cliccando il giro, a destra vedi i passi e i
+messaggi del giro. Le tre schede «da avviare» stanno invece in **Da fare**: aspettano te.
 
 | Riga | Che cosa vuol dire | Sfondo |
 |---|---|---|
@@ -59,7 +60,7 @@ ogni passo del giro, con il suo titolo e chi ne risponde:
 | rifiutato, fermo | il responsabile l'ha rifiutata: non riparte da sola | rosso |
 | aspetta i passi prima di lui | la sintesi: parte quando le tre schede sono approvate | grigio |
 
-![Sotto il messaggio, una riga per ogni passo del giro con il suo stato](../presentazione/assets/schermate/posta-giro-lavorano.png)
+![Il giro nella sezione Giri: una riga per ogni passo con il suo stato, e a destra il dettaglio](../presentazione/assets/schermate/posta-giro-lavorano.png)
 
 Le righe cambiano da sole, e quando una cambia lampeggia per qualche secondo. È quello che vede **chi ha avviato il giro**:
 qui l'account manager. Nel demo le quattro persone sei tu; in azienda queste righe gli dicono a che punto è ciascun
