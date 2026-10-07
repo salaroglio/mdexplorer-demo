@@ -27,7 +27,7 @@ Lui prepara. **Tu verifichi. Tu decidi.**
 Note:
 Aprire dicendo cosa si vedrà: una gara d'appalto vera nella forma, inventata nei nomi. Quattro persone, ognuna con un assistente
 AI. Il messaggio da portare a casa è uno: gli assistenti preparano il lavoro, ma nessun lavoro passa al passo successivo
-senza un gesto di una persona.
+senza un gesto di una persona. Chi viene dopo chi lo dice un piano scritto, il workflow, e lo esegue MdExplorer.
 
 ---
 
@@ -96,7 +96,7 @@ ogni responsabile deve leggerlo cercando cose diverse. In pratica ognuno legge l
 <div class="fragment fade-in" style="background:#fff; border-radius:16px; padding:22px 26px; box-shadow:0 8px 24px rgba(15,27,45,.12); width:250px">
 <div style="font-size:.5em; color:#5f6368; font-weight:800; letter-spacing:.08em">TU</div>
 <div style="font-size:1.35em; font-weight:800; color:#188038; margin:6px 0">DECIDI</div>
-<div style="font-size:.6em; line-height:1.3">a chi passare il lavoro, e se partecipare alla gara</div>
+<div style="font-size:.6em; line-height:1.3">quando parte un lavoro, chi lo fa, e se partecipare alla gara</div>
 </div>
 
 </div>
@@ -233,23 +233,64 @@ Onestà: il sito è un file nel progetto, in azienda l'assistente lo leggerebbe 
 
 <div style="display:flex; flex-direction:column; align-items:center; gap:18px; margin-top:6px">
 
-<img src="assets/schermate/risposta.png" alt="Il pulsante Avvia il giro su NC-2027-014 sotto il messaggio dell'account manager" width="640" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/slide-da-avviare.png" alt="Le tre schede «da avviare» nella posta, con l'incarico del giro" width="900" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 
 <div class="r-hstack" style="gap:16px; align-items:center; font-size:.62em">
-<div style="background:#fff; border-radius:12px; padding:10px 18px; box-shadow:0 6px 18px rgba(15,27,45,.12); font-weight:800; color:#f29900">account manager</div>
-<div class="fragment fade-in" style="font-size:1.4em; color:#8a99ad">→ incarico a →</div>
+<div style="background:#fff; border-radius:12px; padding:10px 18px; box-shadow:0 6px 18px rgba(15,27,45,.12); font-weight:800; color:#f29900">il tuo pulsante</div>
+<div class="fragment fade-in" style="font-size:1.4em; color:#8a99ad">→ il workflow →</div>
 <div class="fragment fade-in" style="display:flex; gap:10px">
 <div style="background:#fff; border-top:6px solid #1a73e8; border-radius:10px; padding:8px 14px; box-shadow:0 6px 18px rgba(15,27,45,.12)">tecnico</div>
 <div style="background:#fff; border-top:6px solid #7b61ff; border-radius:10px; padding:8px 14px; box-shadow:0 6px 18px rgba(15,27,45,.12)">legale</div>
 <div style="background:#fff; border-top:6px solid #188038; border-radius:10px; padding:8px 14px; box-shadow:0 6px 18px rgba(15,27,45,.12)">delivery</div>
 </div>
+<div class="fragment fade-in" style="font-size:1em; color:#b06000; font-weight:800">da avviare</div>
 </div>
 
 </div>
 
 Note:
-Un pulsante sotto il messaggio, con scritto chi viene incaricato e per fare cosa: è il tuo gesto, e si apre solo dopo che hai approvato la ricerca. L'assistente si risveglia nella stessa conversazione e incarica i tre
-responsabili. Da qui in poi lavorano per conto loro, in parallelo, ognuno nella propria copia del progetto.
+Un pulsante sotto il messaggio, con scritto che cosa succede: è il tuo gesto, e si apre solo dopo che hai approvato la ricerca.
+L'assistente dell'account manager non si sveglia e non incarica nessuno: MdExplorer legge nel workflow che questo pulsante fa
+partire le tre schede, e le mette «da avviare» nella posta di chi ne risponde. Ognuno la avvia quando vuole, con le sue
+indicazioni. Se un agente ha più responsabili, chi preme il pulsante sceglie chi lo fa.
+
+---
+
+<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
+
+## Chi viene dopo chi: il workflow
+
+<div style="display:flex; gap:30px; align-items:center; justify-content:center">
+
+<div style="width:640px">
+
+```plantuml(@workflow, ../gara/gara.workflow.json)
+```
+
+</div>
+
+<div style="width:440px; text-align:left; font-size:.62em; line-height:1.4">
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Un piano scritto</b><br>Un file del progetto: chi lavora dopo chi, chi avvia ogni passo, che cosa si aspetta.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>MdExplorer lo esegue</b><br>Ogni passaggio parte da un gesto di una persona o da ciò che il piano dice. Gli agenti non si scrivono tra loro.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Il disegno non si aggiorna a mano</b><br>È generato dal piano: quello che vedi è quello che succede.
+</div>
+
+</div>
+
+</div>
+
+Note:
+Il disegno lo fa MdExplorer dal file del workflow, quindi non può essere sbagliato rispetto a ciò che succede. Lo scrive chi
+organizza il lavoro, anche con l'aiuto di un modello, in un vocabolario fisso che MdExplorer controlla. Ogni giro lascia un
+registro in git: chi ha avviato, consegnato, approvato, e quando.
 
 ---
 
@@ -259,16 +300,16 @@ responsabili. Da qui in poi lavorano per conto loro, in parallelo, ognuno nella 
 
 <div style="display:flex; gap:30px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/posta-stati.png" alt="Sotto il messaggio Giro avviato, una riga per ogni scheda attesa con il suo stato" width="700" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/slide-giro-lavorano.png" alt="Sotto il messaggio del pulsante, una riga per ogni passo del giro con il suo stato" width="680" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 
 <div style="width:440px; text-align:left; font-size:.62em; line-height:1.4">
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Una riga per scheda attesa</b><br>Sotto «Giro avviato», e cambia stato da sola.
+<b>Una riga per passo del giro</b><br>Sotto il messaggio da cui hai premuto, con chi ne risponde. Cambia stato da sola.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Il colore dice lo stato</b><br>Sta lavorando, in approvazione, approvata, rifiutata.
+<b>Il colore dice lo stato</b><br>Da avviare, sta lavorando, in approvazione, approvata; la sintesi aspetta i passi prima di lei.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #d93025; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12)">
@@ -280,7 +321,8 @@ responsabili. Da qui in poi lavorano per conto loro, in parallelo, ognuno nella 
 </div>
 
 Note:
-È quello che vede chi aspetta: l'account manager sa a che punto è ogni collega senza chiederglielo. Il rifiuto è l'eccezione: di
+È quello che vede chi ha avviato il giro: l'account manager sa a che punto è ogni collega senza chiederglielo, anche se i
+colleghi lavorano su altri computer, perché ogni computer legge lo stesso registro del giro. Il rifiuto è l'eccezione: di
 solito una scheda che non convince si corregge e si approva. Se viene rifiutata resta ferma, così chi ne risponde può prima
 correggere le istruzioni dell'agente.
 
@@ -324,7 +366,7 @@ diverse. Notare che ogni affermazione cita la sezione del capitolato: la persona
 
 <div style="display:flex; gap:34px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/revisione.png" alt="La richiesta di approvazione della scheda tecnica, con la scelta del destinatario e i tre gesti" width="680" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="assets/schermate/slide-approva-scheda.png" alt="La richiesta di approvazione della scheda tecnica, con i tre gesti" width="680" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 
 <div style="width:470px; text-align:left; font-size:.62em; line-height:1.4">
 
@@ -337,7 +379,7 @@ diverse. Notare che ogni affermazione cita la sezione del capitolato: la persona
 </div>
 
 <div class="fragment fade-up" style="margin-top:12px; background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12)">
-<b>«A chi passa il lavoro?»</b><br>Sei <b>tu</b> a scegliere. L'agente non lo fa da solo.
+<b>Non passi il lavoro a nessuno</b><br>Approvi e basta: chi viene dopo lo dice il workflow.
 </div>
 
 </div>
@@ -346,8 +388,7 @@ diverse. Notare che ogni affermazione cita la sezione del capitolato: la persona
 
 Note:
 Questo è il momento in cui la scheda entra o non entra nel progetto. Ogni agente ha lavorato nella sua copia, quindi le richieste
-sono tre e distinte. Il blocco «a chi passa il lavoro» mostra il destinatario dichiarato nella scheda dell'agente: se fossero due,
-sceglieresti; se non vuoi avvisare nessuno, scegli «a nessuno».
+sono tre e distinte. Approvare non vuol dire scegliere a chi passare il lavoro: quello lo dice il workflow, e lo fa MdExplorer.
 
 ---
 
@@ -393,28 +434,26 @@ scrive «da chiarire» e non la inventa.
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Approvare è passare il lavoro
+## Approvare fa andare avanti il giro
 
 <div style="display:flex; flex-direction:column; align-items:center; gap:16px; margin-top:0">
-
-<img src="assets/schermate/avviso.png" alt="Lavoro fuso nel ramo principale. Ho avvisato account-manager." width="640" style="margin:0; border-radius:10px; box-shadow:0 8px 24px rgba(15,27,45,.28); border:1px solid #d6deea">
 
 <div style="display:flex; gap:14px; align-items:center; font-size:.58em; text-align:left">
 <div class="fragment fade-up" style="background:#fff; border-radius:12px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); width:240px"><b>1. Autorizza</b><br>la scheda entra nel progetto</div>
 <div style="font-size:1.4em; color:#8a99ad">→</div>
-<div class="fragment fade-up" style="background:#fff; border-radius:12px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); width:240px"><b>2. L'app avvisa</b><br>l'account manager, <b>a nome tuo</b></div>
+<div class="fragment fade-up" style="background:#fff; border-radius:12px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); width:240px"><b>2. Il registro del giro</b><br>scrive chi ha approvato, e quando</div>
 <div style="font-size:1.4em; color:#8a99ad">→</div>
-<div class="fragment fade-up" style="background:#fff; border-radius:12px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); width:240px"><b>3. Lui controlla</b><br>cosa ha già e cosa manca</div>
+<div class="fragment fade-up" style="background:#fff; border-radius:12px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); width:240px"><b>3. Alla terza</b><br>la sintesi parte da sola</div>
 </div>
 
-<img class="fragment fade-up" src="assets/schermate/mancano.png" alt="L'account manager dice che mancano le schede contrattuale e delivery" width="620" style="margin:0; border-radius:12px; box-shadow:0 8px 24px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img class="fragment fade-up" src="assets/schermate/slide-giro-approvata.png" alt="Dopo la prima approvazione: una riga verde, due in approvazione, la sintesi che aspetta" width="460" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 
 </div>
 
 Note:
-Un solo clic fa tre cose. Il punto è il passaggio due: è l'app che avvisa il collega, a nome della persona che ha premuto. Un
-agente non può passare il lavoro a un altro da solo. Dopo la prima approvazione l'account manager risponde «mancano le altre due»:
-non scrive una sintesi su un lavoro incompleto.
+Un clic, e il giro va avanti. Nessuno passa il lavoro a mano e nessun agente ne avvisa un altro: la sintesi aspetta che le
+tre schede siano approvate, poi parte da sola sul computer dell'account manager, con i percorsi delle tre schede. Non scrive
+una sintesi su un lavoro incompleto, perché non parte finché non è completo.
 
 ---
 
@@ -448,7 +487,7 @@ non scrive una sintesi su un lavoro incompleto.
 </div>
 
 Note:
-Con le tre schede approvate, l'account manager scrive la sintesi, con gli indicatori che interessano a lui. La parte più utile
+Con le tre schede approvate, la sintesi parte da sola: l'account manager scrive gli indicatori che interessano a lui. La parte più utile
 è «dove le schede si sommano»: un punto che compare in due schede con due nomi diversi, o due punti che da soli sembrano
 piccoli e insieme sono un problema. Anche la sintesi arriva da approvare: la leggi prima, come le altre.
 
@@ -536,7 +575,7 @@ a fine aprile; il legale segnala il recesso se il decreto ritarda. Ognuno ha una
 ✔ abiliti ogni agente<br>
 ✔ leggi e verifichi ogni scheda<br>
 ✔ approvi o rifiuti<br>
-✔ scegli a chi passare il lavoro<br>
+✔ avvii i lavori e scegli chi li fa<br>
 ✔ decidi se partecipare
 </div>
 </div>
@@ -546,7 +585,7 @@ a fine aprile; il legale segnala il recesso se il decreto ritarda. Ognuno ha una
 <div style="display:flex; gap:26px; justify-content:center; margin-top:18px; font-size:.58em">
 
 <div class="fragment fade-up" style="flex:1; background:#fdecea; border-radius:12px; padding:12px 18px; color:#8c1d18; text-align:left">
-<b>Non fa mai da solo:</b> eseguire comandi sul tuo computer · inserire una scheda nel progetto · passare il lavoro a un altro · decidere
+<b>Non fa mai da solo:</b> eseguire comandi sul tuo computer · inserire una scheda nel progetto · scrivere a un altro agente · decidere
 </div>
 
 </div>
@@ -554,7 +593,7 @@ a fine aprile; il legale segnala il recesso se il decreto ritarda. Ognuno ha una
 Note:
 Riepilogo senza giri di parole. Il confine è netto: l'assistente produce e documenta, la persona verifica e decide. E ci sono
 tre cose che non fa mai da solo, qualunque cosa sia scritta in un messaggio: non esegue comandi, non fa entrare una scheda nel
-progetto, non passa il lavoro. Un messaggio ricevuto da un altro agente è un dato da controllare, non un ordine.
+progetto, non scrive a un altro agente: chi lavora dopo lo fa partire il workflow. Un messaggio è un dato da controllare, non un ordine.
 
 ---
 
@@ -570,7 +609,7 @@ progetto, non passa il lavoro. Un messaggio ricevuto da un altro agente è un da
 Gli agenti e i modelli AI che li muovono<br>
 La lettura, il confronto e le schede<br>
 Le citazioni, i calcoli e gli errori che si trovano<br>
-La tua approvazione e l'avviso al collega<br>
+La tua approvazione e il giro che va avanti<br>
 La sintesi (cambia nelle parole a ogni prova)
 </div>
 </div>
