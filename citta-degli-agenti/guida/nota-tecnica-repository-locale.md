@@ -89,6 +89,7 @@ su cui si scrive; `upstream` è l'originale, da cui si prendono gli aggiornament
 | Leggere e modificare i documenti | la cartella del progetto |
 | Un agente consegna una scheda | un ramo nuovo su `origin` (locale) |
 | **Autorizza** | il ramo principale di `origin` (locale) |
+| Il registro dei giri del workflow (chi ha avviato, consegnato, approvato) | il ramo `mde/giri` di `origin` (locale), con una copia nascosta nella cartella `.git` |
 | **Scarica tutto** | da `origin` (locale) alla cartella del progetto |
 | Commit e pubblicazione dalla barra git | `origin` (locale) |
 | Aggiornare il demo a una versione nuova | da `upstream` (GitHub), con **Scarica gli aggiornamenti** |

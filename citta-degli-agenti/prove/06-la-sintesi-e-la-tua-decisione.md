@@ -6,7 +6,7 @@ title: La sintesi e la tua decisione
 
 ## TL;DR
 
-Con le tre schede approvate, l'account manager scrive la **sintesi** con i cinque indicatori che interessano a lui e
+Con le tre schede approvate, la sintesi parte da sola: l'account manager scrive i cinque indicatori che interessano a lui e
 aggiorna il registro dei bandi. È una **quarta richiesta**, e la approvi tu come le altre. La decisione di partecipare,
 invece, non è di nessun agente: è tua.
 
@@ -16,13 +16,13 @@ invece, non è di nessun agente: è tua.
 
 ## Leggi la sintesi
 
-1. Dopo l'approvazione della terza scheda, aspetta circa un minuto: `account-manager` ti scrive un messaggio con la
-   raccomandazione e i cinque indicatori.
+1. Dopo l'approvazione della terza scheda, aspetta un paio di minuti: `account-manager` ti scrive un messaggio con la
+   raccomandazione e i cinque indicatori. Nel giro, la riga «Sintesi per decidere» dice «in approvazione».
 2. Sotto quel messaggio c'è la riga **Da approvare: l'artefatto**: è la richiesta di `account-manager`, con due file,
    `schede/sintesi.md` e `registro-bandi.md`.
 3. Come nella prova 4: sul file `sintesi.md` clicca **Apri**, leggi, poi **Torna**.
 
-   ![Il messaggio con la raccomandazione e la sintesi da approvare](../presentazione/assets/schermate/posta-sintesi.png)
+   ![Il messaggio con la raccomandazione, la sintesi da approvare e il giro quasi finito](../presentazione/assets/schermate/posta-giro-sintesi.png)
 
 ## I cinque indicatori
 
@@ -49,12 +49,12 @@ alla frase originale. Se un punto non regge, ti sei appena guadagnato la ragione
 
 ## Approva, o no
 
-Approva la sintesi con **Autorizza**: non ha un destinatario a cui passarla, è la fine del giro. Il registro dei bandi ora
-contiene la gara, «in valutazione».
+Approva la sintesi con **Autorizza**: è l'ultimo passo del giro, e tutte le sue righe ora sono verdi. Il registro dei bandi
+ora contiene la gara, «in valutazione».
 
 Se non sei d'accordo, la strada normale è correggerla tu: entri nella copia dell'agente dal selettore del ramo («Worktree»),
 sistemi la sintesi, torni al tuo lavoro e la approvi. **Rifiuta** è l'eccezione: ti chiede il motivo e chiude lì. La sintesi
-l'avevi chiesta tu, quindi nessuno la aspetta: per riprovare rilanci l'account manager.
+è l'ultimo passo del giro, quindi nessuno la aspetta: dopo il rifiuto **Fai ripartire** la fa riscrivere con il tuo motivo.
 
 ## La decisione è tua
 
@@ -70,8 +70,8 @@ con il pull dalla barra git. Se vuoi ripartire da zero, riapri il demo con «Cre
 
 ## E se non succede niente
 
-- **Non arriva il messaggio con la sintesi.** Sotto «Giro avviato» le tre righe devono essere verdi (approvato): se una è
-  ancora ambra, quella scheda non è approvata. Poi leggi cosa ha scritto l'account manager dopo l'ultima.
+- **Non arriva il messaggio con la sintesi.** Nel giro, sotto il messaggio da cui l'hai avviato, le tre righe delle schede
+  devono essere verdi (approvato): se una è ancora ambra, quella scheda non è approvata.
 - **La sintesi dice che non può calcolare i giorni.** Non ha trovato la «Data di lavoro» nel profilo: controlla che il
   [profilo di Pentagroup](../gara/profilo-pentagroup.md) sia intatto.
 

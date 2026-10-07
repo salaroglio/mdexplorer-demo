@@ -8,7 +8,7 @@ title: La città degli agenti
 
 In MdExplorer gli agenti AI possono abitare un progetto, ognuno con un nome, un ruolo e il lavoro di una persona. Questa
 sezione ti fa provare **come si lavora con loro**: ogni persona ha il suo agente, l'agente prepara, la persona verifica e
-decide se passare il lavoro al passo dopo. Il caso è una gara d'appalto di un'azienda inventata, Pentagroup.
+approva; chi lavora dopo chi lo dice il workflow del progetto, e lo fa partire MdExplorer. Il caso è una gara d'appalto di un'azienda inventata, Pentagroup.
 
 - Sei prove, in ordine, circa un'ora in tutto (la maggior parte è attesa).
 - Gli agenti **scrivono schede**, ma nessuna scheda entra nel progetto senza la tua approvazione.
@@ -17,7 +17,7 @@ decide se passare il lavoro al passo dopo. Il caso è una gara d'appalto di un'a
 ## Il caso
 
 Pentagroup riceve un invito a una gara di Nordica Crediti: un capitolato lungo, da leggere con occhi diversi prima di
-decidere se partecipare. [La gara di Nordica](gara/README.md) dice chi sono i quattro agenti, cosa fa ciascuno e come passa il lavoro: leggila
+decidere se partecipare. [La gara di Nordica](gara/README.md) dice chi sono i quattro agenti, cosa fa ciascuno e come gira il lavoro: leggila
 prima di cominciare.
 
 ## Le presentazioni
@@ -31,7 +31,9 @@ prima di cominciare.
 - [La posta degli agenti](guida/la-posta-degli-agenti.md). Dove leggi i messaggi, apri i documenti e approvi il lavoro.
 - [Lavorare nella copia di un agente](guida/lavorare-nella-copia-di-un-agente.md). Come correggi tu quello che un agente ha scritto, prima di approvarlo.
 - [Chi risponde di quale agente](gara/responsabilita.md). La tabella delle responsabilità: un agente lavora solo per la persona
-  che ne risponde.
+  che ne risponde (o per il team).
+- [Come si passano il lavoro](gara/workflow.md). Il workflow della gara: chi parte dopo chi, disegnato da MdExplorer dal
+  piano che esegue.
 - [Nota tecnica: dove finisce il lavoro degli agenti](guida/nota-tecnica-repository-locale.md). Perché il giro non tocca mai il
   demo pubblico su GitHub.
 
@@ -42,8 +44,8 @@ prima di cominciare.
 | 1 | [Accendi la città](prove/01-accendi-la-citta.md) | una casella nelle impostazioni, e dove consegnano gli agenti | 3 min |
 | 2 | [Abilita gli agenti](prove/02-abilita-gli-agenti.md) | leggi cosa fa e cosa può fare ciascun agente, poi lo abiliti | 7 min |
 | 3 | [L'account manager cerca il bando](prove/03-l-account-manager-cerca-il-bando.md) | lanci il primo agente e controlli ciò che propone | 5 min |
-| 4 | [Avvia il giro e leggi le schede](prove/04-avvia-il-giro.md) | approvi la ricerca, premi «Avvia il giro», segui le tre schede e le leggi prima di approvarle | 12 min |
-| 5 | [Approva e passa il lavoro](prove/05-approva-e-passa-il-lavoro.md) | approvi tre schede: ogni approvazione avvisa il collega | 10 min |
+| 4 | [Avvia il giro e leggi le schede](prove/04-avvia-il-giro.md) | premi «Avvia il giro», avvii le tre schede, segui il giro e le leggi prima di approvarle | 12 min |
+| 5 | [Approva, e il giro va avanti](prove/05-approva-e-passa-il-lavoro.md) | approvi tre schede: dopo la terza la sintesi parte da sola | 8 min |
 | 6 | [La sintesi e la tua decisione](prove/06-la-sintesi-e-la-tua-decisione.md) | leggi la sintesi, cerchi dove le schede si parlano, decidi | 8 min |
 
 ## Prima di cominciare

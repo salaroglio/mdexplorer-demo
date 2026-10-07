@@ -50,6 +50,20 @@ Ognuno dichiara suo il proprio agente dal proprio computer, e la tabella diventa
 | Delivery    | Luca Neri    | luca.neri@pentagroup.it   | responsabile-delivery |
 ```
 
+## Più persone per lo stesso agente
+
+Un agente può rispondere a un **team**: basta una riga per ogni persona, con lo stesso agente. Per esempio due
+responsabili tecnici (i nomi sono inventati):
+
+```text
+| Tecnica     | Marco Bianchi| marco.bianchi@pentagroup.it | responsabile-tecnico |
+| Tecnica (2) | Paolo Gialli | paolo.gialli@pentagroup.it  | responsabile-tecnico |
+```
+
+L'agente lavora sul computer di entrambi, ma **ogni lavoro è di una persona sola**: quando l'account manager preme «Avvia il
+giro», sceglie chi dei due farà la scheda tecnica, e da lì ne risponde quella persona (anche se la scheda va rifatta).
+Chi l'ha ricevuta la può passare a un collega del team con «Passa a un collega», per esempio prima delle ferie.
+
 Il documento è un file del progetto: sta in git, lo vede tutto il gruppo e ogni modifica ha un autore.
 
 [Il caso della gara](README.md) · [Indice della sezione](../README.md)

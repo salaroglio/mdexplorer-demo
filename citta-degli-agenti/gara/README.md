@@ -8,17 +8,19 @@ title: La gara di Nordica
 
 Pentagroup, un'azienda di servizi gestiti, riceve un invito a una gara di Nordica Crediti: un capitolato di molte pagine, da
 leggere con occhi diversi (tecnici, legali, di delivery) prima di decidere se partecipare. Ogni persona ha un agente che
-prepara la sua scheda; lei la verifica e decide se passarla avanti; alla fine l'account manager ha una sintesi.
+prepara la sua scheda; lei la verifica e la approva; alla fine l'account manager ha una sintesi. Chi lavora dopo chi lo
+dice il workflow del progetto, e lo fa partire MdExplorer.
 
 - Quattro persone e quattro agenti: l'account manager e tre responsabili (tecnico, legale, delivery).
-- **Gli agenti preparano, le persone decidono**: nessun lavoro passa al passo dopo senza l'approvazione di chi ne risponde.
+- **Gli agenti preparano, le persone decidono**: nessun lavoro passa al passo dopo senza l'approvazione di chi ne risponde;
+  i passaggi li fa MdExplorer, seguendo il workflow.
 - Tutto è inventato: l'azienda, il committente, la gara (derivata da un capitolato reale, riscritto) e il sito dei bandi.
 
 ## Chi c'è
 
 | Persona | Il suo agente | Cosa prepara | Dove |
 |---|---|---|---|
-| **Account manager** | `account-manager` | cerca i bandi nuovi e archivia la ricerca, avvia il giro, scrive la sintesi finale | `ricerche/ricerca-<data>.md`, `schede/sintesi.md` |
+| **Account manager** | `account-manager` | cerca i bandi nuovi e archivia la ricerca, scrive la sintesi finale | `ricerche/ricerca-<data>.md`, `schede/sintesi.md` |
 | **Responsabile tecnico** | `responsabile-tecnico` | la fattibilità tecnica: requisiti coperti e non | `schede/tecnica.md` |
 | **Responsabile legale** | `responsabile-legale` | le clausole: accettabili, da negoziare, critiche | `schede/contrattuale.md` |
 | **Responsabile delivery** | `responsabile-delivery` | il team e le date: se i tempi reggono | `schede/delivery.md` |
@@ -26,8 +28,8 @@ prepara la sua scheda; lei la verifica e decide se passarla avanti; alla fine l'
 Nel demo **le quattro parti le fai tu**, una dopo l'altra: è il modo più rapido per vedere come passa il lavoro. In
 un'azienda ciascuna sarebbe una persona diversa, sul proprio computer.
 
-**Ogni agente risponde a una persona.** Lavora solo sul computer di quella persona, ed è lei a valutare ciò che l'agente
-scrive; finché un agente non ha un responsabile, non parte. Chi risponde di chi sta scritto in
+**Ogni agente risponde a una persona, o a un team.** Lavora solo sul computer di chi ne risponde, ed è quella persona a
+valutare ciò che l'agente scrive; finché un agente non ha un responsabile, non parte. Chi risponde di chi sta scritto in
 [Chi risponde di quale agente](responsabilita.md): all'inizio la tabella è vuota, e la riempi tu con «Sono tutti miei».
 
 **Ogni agente produce due cose.** Il **documento** (la colonna «Dove»), che leggi e approvi, e un **messaggio** di poche
@@ -35,63 +37,28 @@ righe nella posta, con gli indicatori e il percorso del documento. Il messaggio 
 
 ## Come gira
 
-```plantuml
-@startuml
-!theme plain
-skinparam ActivityBackgroundColor #F1F3F4
-skinparam ActivityBorderColor #5F6368
-skinparam ArrowColor #5F6368
+Il giro lo disegna MdExplorer dal [workflow della gara](workflow.md): è lo stesso piano che esegue, quindi il disegno non
+va mai aggiornato a mano. Un clic su un riquadro apre la scheda dell'agente, un clic su un file apre il documento.
 
-|Prima di cominciare|
-start
-#E8F0FE:Ogni persona prende in carico\nil proprio agente;
-
-|Account manager|
-:Il suo agente cerca i bandi nuovi\ne scrive la ricerca;
-#FEF7E0:Legge la ricerca\ne avvia il giro;
-:Il suo agente incarica\ni tre responsabili;
-
-fork
-  |Responsabile tecnico|
-  :Il suo agente scrive\nla scheda tecnica;
-  #FEF7E0:La verifica, la approva\ne la passa avanti;
-fork again
-  |Responsabile legale|
-  :Il suo agente scrive\nla scheda contrattuale;
-  #FEF7E0:La verifica, la approva\ne la passa avanti;
-fork again
-  |Responsabile delivery|
-  :Il suo agente scrive\nla scheda di team e piano;
-  #FEF7E0:La verifica, la approva\ne la passa avanti;
-end fork
-
-|Account manager|
-:Il suo agente scrive la sintesi\ndalle tre schede approvate;
-#FEF7E0:Legge la sintesi\ne decide se partecipare;
-stop
-
-legend right
-  grigio = lo fa l'agente
-  <color:#F29900>ambra</color> = lo fa la persona: verifica e decide
-  <color:#1A73E8>blu</color> = una volta sola, all'inizio
-endlegend
-@enduml
+```plantuml(@workflow, ./gara.workflow.json)
 ```
 
 **Prima di cominciare**, ogni persona prende in carico il proprio agente: da quel momento ne risponde, e l'agente lavora
 solo sul suo computer. Poi:
 
-1. L'agente dell'account manager **legge il sito dei bandi**, fa un primo filtro (la natura del bando e il tempo per
-   rispondere) e scrive la **ricerca**: quali bandi sono nuovi, e quali meritano il giro. Non avvia niente da solo.
-2. **L'account manager** legge la ricerca e dice al suo agente di avviare il giro: l'agente incarica i tre responsabili.
-3. L'agente di ogni responsabile **legge il capitolato con gli occhi del suo responsabile** e scrive la sua scheda.
-4. **Ogni responsabile** verifica la scheda del proprio agente, la approva e sceglie di passarla all'account manager: è il suo
-   gesto che avvisa, non l'agente.
-5. Quando ci sono le tre schede approvate, l'agente dell'account manager scrive la **sintesi**. **L'account manager** la
-   legge e decide se partecipare.
+1. **L'account manager** lancia il suo agente: legge il sito dei bandi, fa un primo filtro (la natura del bando e il tempo
+   per rispondere) e scrive la **ricerca**. Per ogni bando che merita il giro propone un pulsante «Avvia il giro su …».
+2. L'account manager approva la ricerca e **preme il pulsante** del bando. Se un agente ha più responsabili (un team),
+   sceglie lì chi farà la sua scheda. Da questo momento i passaggi li fa MdExplorer: nessuno incarica nessuno a mano.
+3. **Ogni responsabile** trova nella posta la sua scheda «da avviare», con l'incarico. La avvia (con le sue indicazioni,
+   se vuole), la rifiuta dicendo perché, o la passa a un collega dello stesso team.
+4. L'agente scrive la scheda; **il responsabile** la verifica e la approva, o la rifiuta e la fa ripartire.
+5. Quando le tre schede sono approvate, **la sintesi parte da sola** sul computer dell'account manager, con i file delle
+   tre schede. L'account manager la legge e decide se partecipare.
 
-Nel grafico non c'è una corsia per «te»: ogni passo ambra è della persona di quella corsia. Nel demo le quattro persone sei
-tu, una dopo l'altra, e il passo blu lo fai una volta sola per tutti e quattro gli agenti («Sono tutti miei»).
+Ogni passo e ogni gesto restano scritti nel **registro del giro**, in git, su un ramo a parte (`mde/giri`): ogni computer
+lo legge e fa i passi delle sue persone, senza bisogno di un server che coordini. Nel demo le quattro persone sei tu,
+una dopo l'altra, su un computer solo.
 
 ## I file
 
@@ -105,11 +72,12 @@ tu, una dopo l'altra, e il passo blu lo fai una volta sola per tutti e quattro g
 | `schede/` | le tre schede dei responsabili e la sintesi: le scrivono gli agenti |
 
 Gli agenti stanno in [.github/agents](../../.github/agents/account-manager.agent.md): file markdown come gli altri. Il blocco
-`a2a:` in alto dice chi sono, che cosa fanno e a chi possono passare il lavoro; il testo sotto dice come lavorano.
+`a2a:` in alto dice chi sono, che cosa fanno e quali pulsanti possono proporre; il testo sotto dice come lavorano.
 
 ## Cosa non fanno gli agenti
 
-- **Non decidono.** Propongono; ogni passaggio al passo successivo è il gesto di una persona.
+- **Non decidono e non si passano il lavoro.** Propongono; ogni passo parte da un gesto di una persona (un pulsante,
+  un avvio, un'approvazione) o da ciò che il workflow dice, mai da un agente che scrive a un altro.
 - **Non scrivono nel progetto da soli.** Ogni documento resta in una copia a parte dell'agente finché non lo approvi.
 - **Non inventano.** Se un'informazione non c'è nel capitolato o nel profilo scrivono «da chiarire»; ogni affermazione
   cita la sezione del capitolato, così puoi controllarla.

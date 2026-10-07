@@ -20,7 +20,8 @@ da un agente si apre lì dentro, anche prima che tu lo approvi.
 |---|---|---|
 | il robot | un messaggio di un agente | lo leggi, apri gli artefatti, rispondi con i suoi pulsanti |
 | la lista con la spunta, in arancione, rientrata sotto un messaggio | l'artefatto di quel lavoro, **da approvare** | apri i file, poi **Autorizza**, **Ci metto mano** o **Rifiuta** |
-| una riga colorata, rientrata sotto un messaggio | un lavoro che quell'agente ha chiesto a un altro e che stai **aspettando** | niente: la riga cambia stato da sola |
+| il fermaglio con l'orologio, «Da avviare» | un passo di un giro che è **tuo**: l'incarico che il workflow ha scritto per il tuo agente | **Apri per avviare**, **Non lo avvio** (con il motivo), o **Passa a un collega** del team |
+| una riga colorata, rientrata sotto un messaggio | un passo del giro che hai avviato con un pulsante di quel messaggio, che stai **aspettando** | niente: la riga cambia stato da sola |
 | il nodo, in viola | la **richiesta di un collega**: il suo agente chiede il lavoro del tuo | **Autorizza** o **Rifiuta**: il tuo agente parte solo se accetti |
 
 Aprire un messaggio lo segna come letto: sparisce il pallino, ma il messaggio resta nell'elenco finché ti serve.
@@ -34,10 +35,12 @@ l'artefatto». Il legame è l'identificativo del turno di lavoro, non l'ora.
 ## Rispondere a un agente
 
 Sotto un messaggio trovi **che cosa puoi rispondere**: un pulsante per ogni risposta che l'agente accetta, con scritto che cosa
-succede premendolo (chi viene contattato, e per ottenere cosa). Le risposte le dichiara la scheda dell'agente, nel blocco coperto
+succede premendolo (chi viene contattato, e per ottenere cosa). Se il progetto ha un workflow e il pulsante fa partire dei
+passi (per esempio «Avvia il giro»), premendolo non svegli l'agente: apri un giro, e i passi arrivano «da avviare» a chi ne
+risponde. Se uno di quegli agenti ha più responsabili, sotto il pulsante scegli chi lo fa. Le risposte le dichiara la scheda dell'agente, nel blocco coperto
 dalla fiducia: un pulsante può inviare solo ciò che hai già visto dando fiducia all'agente.
 
-![Il pulsante di risposta con la sua descrizione](../presentazione/assets/schermate/posta-risposta.png)
+![Il pulsante di risposta, e sotto il messaggio le righe del giro che ha avviato](../presentazione/assets/schermate/posta-giro-righe.png)
 
 - **Finché l'artefatto di quel lavoro non è approvato, i pulsanti sono chiusi.** Prima decidi su ciò che l'agente ha prodotto,
   poi gli dici di andare avanti.
@@ -101,8 +104,10 @@ Un agente produce sempre due cose: il documento e il messaggio che ti dice dov'�
 
 1. Scegli nell'elenco una voce **Da approvare**.
 2. Su ogni file c'è **Apri**: leggi il documento com'è nella consegna dell'agente.
-3. Se l'agente dichiara a chi passa il lavoro, scegli il collega (o «nessuno»).
-4. **Autorizza**: il documento entra nel repository e la voce sparisce dall'elenco.
+3. **Autorizza**: il documento entra nel repository e la voce sparisce dall'elenco. Se il lavoro è un passo di un giro,
+   l'approvazione va anche nel registro del giro, e il workflow fa partire chi viene dopo.
+
+Senza workflow, se l'agente dichiara a chi passa il lavoro, prima di autorizzare scegli il collega da avvisare (o «nessuno»).
 
 Per leggere un documento non serve più «Ci metto mano»: quello resta il gesto per **correggerlo** tu prima di approvare.
 
