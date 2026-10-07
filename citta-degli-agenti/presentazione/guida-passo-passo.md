@@ -452,11 +452,11 @@ solo quando la approvi. E la sua scheda dice di proporre e aspettare: l'avvio de
 
 # Parte 2
 
-**Avvia il giro** e leggi una scheda prima di approvarla
+**Avvia il giro**, avvia le schede e leggine una prima di approvarla
 
 Note:
-La parte 1 è finita con la ricerca approvata e con un pulsante sotto il messaggio dell'account manager. La parte 2 comincia da quel pulsante e
-arriva fino alla lettura di una scheda. L'approvazione è nella parte 3.
+La parte 1 è finita con la ricerca approvata e con un pulsante sotto il messaggio dell'account manager. La parte 2 comincia da quel
+pulsante, passa per l'avvio delle tre schede e arriva fino alla lettura di una scheda. L'approvazione è nella parte 3.
 
 ---
 
@@ -466,7 +466,7 @@ arriva fino alla lettura di una scheda. L'approvazione è nella parte 3.
 
 <div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/posta-risposta.png" alt="Il pulsante Avvia il giro su NC-2027-014 sotto il messaggio, con la sua descrizione" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+<img src="assets/schermate/guida-avvia-il-giro.png" alt="Il pulsante Avvia il giro sotto il messaggio, e sotto il messaggio le righe del giro" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
 <div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
@@ -475,11 +475,11 @@ arriva fino alla lettura di una scheda. L'approvazione è nella parte 3.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>2. Leggi che cosa fa il pulsante</b><br>Incarica il responsabile tecnico, il legale e il delivery di scrivere ciascuno la sua scheda.
+<b>2. Leggi che cosa fa il pulsante</b><br>Le tre schede ricevono l'incarico, e ciascun responsabile avvia la sua.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>3. Premi «Avvia il giro su NC-2027-014»</b><br>L'assistente si sveglia, incarica i tre responsabili e te lo conferma con un messaggio.
+<b>3. Premi «Avvia il giro su NC-2027-014»</b><br>Compaiono subito tre voci «Da avviare», e sotto il messaggio le righe del giro.
 </div>
 
 </div>
@@ -487,32 +487,37 @@ arriva fino alla lettura di una scheda. L'approvazione è nella parte 3.
 </div>
 
 Note:
-Le risposte possibili le dichiara la scheda dell'agente e diventano pulsanti: la persona legge chi verrà contattato e per fare
-cosa, invece di indovinare che cosa scrivere. Il pulsante resta chiuso finché la ricerca non è approvata. Dopo mezzo minuto arriva
-la conferma, «Giro avviato su NC-2027-014», e sotto quel messaggio compare una riga per ogni scheda attesa, che cambia stato da sola.
+Le risposte possibili le dichiara la scheda dell'agente e diventano pulsanti: la persona legge che cosa succede premendo, invece
+di indovinare che cosa scrivere. Il pulsante resta chiuso finché la ricerca non è approvata. Premendolo non si sveglia l'account
+manager: MdExplorer legge nel workflow della gara che questo pulsante fa partire le tre schede, e le mette «da avviare». Se un
+agente avesse più responsabili, sotto il pulsante comparirebbe «Chi lo fa?»: si sceglie lì.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Intanto: a che punto sono le schede
+## Gesto 5: avvia le tre schede
 
 <div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/posta-stati.png" alt="Sotto il messaggio Giro avviato, una riga per ogni scheda attesa con il suo stato" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+<img src="assets/schermate/guida-avvia-scheda.png" alt="La finestra di lancio con l'incarico del giro, le indicazioni, il motore e il modello" width="520" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
 <div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Una riga per scheda attesa</b><br>Sta sotto il messaggio «Giro avviato», e cambia stato da sola.
+<b>1. Clicca una voce «Da avviare»</b><br>Leggi l'incarico: che scheda, su quale bando.
 </div>
 
-<div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Il colore dice lo stato</b><br>Azzurro: sta lavorando. Ambra: in approvazione. Verde: approvata. Rosso: rifiutata, ferma.
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>2. «Apri per avviare»</b><br>Si apre la finestra di lancio con l'incarico dentro. Puoi aggiungere le tue indicazioni e scegliere motore e modello.
 </div>
 
-<div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>È per chi aspetta</b><br>L'account manager vede a che punto è ogni collega, senza chiederglielo.
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>3. «Avvia»</b><br>Se chiede di salvare <code>.development.yml</code> e <code>responsabilita.md</code>: «Avvia senza salvare».
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #5f6368; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Ripeti per le altre due</b><br>Oppure «Non lo avvio», con il motivo, se una scheda non ti serve.
 </div>
 
 </div>
@@ -520,14 +525,47 @@ la conferma, «Giro avviato su NC-2027-014», e sotto quel messaggio compare una
 </div>
 
 Note:
-Una scheda rifiutata non riparte da sola: resta ferma, in rosso, finché chi ne risponde non preme «Fai ripartire». Nel frattempo
-può correggere la scheda dell'agente, se l'errore viene da lì.
+Ogni scheda la avvia chi ne risponde: nel demo sei tu tre volte. I due file che la finestra propone di salvare li hai cambiati
+nelle prove 1 e 2 e non servono all'agente: per questo «Avvia senza salvare». In un team c'è anche «Passa a un collega», per dare
+la scheda a chi risponde dello stesso agente.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Aspetta cinque minuti
+## Intanto: a che punto è il giro
+
+<div style="display:flex; gap:28px; align-items:center; justify-content:center">
+
+<img src="assets/schermate/guida-giro-lavorano.png" alt="Sotto il messaggio del pulsante, una riga per ogni passo del giro con il suo stato" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+
+<div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Una riga per passo</b><br>Sotto il messaggio da cui hai premuto, con il titolo del passo e chi ne risponde.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Il colore dice lo stato</b><br>Ambra: da avviare o in approvazione. Azzurro: sta lavorando. Verde: approvata. Rosso: rifiutata, ferma.
+</div>
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #5f6368; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>La sintesi aspetta</b><br>«Aspetta i passi prima di lui»: parte da sola quando le tre schede sono approvate.
+</div>
+
+</div>
+
+</div>
+
+Note:
+È quello che vede chi ha avviato il giro: l'account manager sa a che punto è ogni collega, senza chiederglielo. Una scheda
+rifiutata non riparte da sola: resta ferma, in rosso, finché chi ne risponde non preme «Fai ripartire».
+
+---
+
+<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
+
+## Aspetta qualche minuto
 
 <div style="display:flex; gap:26px; justify-content:center; margin-top:12px; text-align:left">
 
@@ -545,8 +583,8 @@ ognuno scrive <b>la sua scheda</b>, senza guardare le altre
 <div style="font-size:.55em; color:#5f6368; font-weight:800; letter-spacing:.08em">TU VEDI</div>
 <div style="font-size:.62em; line-height:1.5; margin-top:6px">
 <b>1.</b> il <b>robot giallo</b> nella barra: cliccalo per sapere chi sta lavorando<br>
-<b>2.</b> la posta che si riempie, una voce alla volta<br>
-<b>3.</b> il robot che sparisce: hanno finito tutti
+<b>2.</b> le righe del giro che passano da «sta lavorando» a «in approvazione»<br>
+<b>3.</b> la posta che si riempie, una voce alla volta
 </div>
 </div>
 
@@ -554,13 +592,13 @@ ognuno scrive <b>la sua scheda</b>, senza guardare le altre
 
 <div class="fragment fade-up" style="margin-top:22px; font-size:.7em">
 
-Lavorano **uno alla volta**: è normale che la prima scheda arrivi dopo due minuti e l'ultima dopo cinque.
+Le schede arrivano **tra due e cinque minuti**: dipende da quante il computer ne fa lavorare insieme.
 
 </div>
 
 Note:
-Circa cinque minuti in tutto. Ogni assistente legge solo il capitolato e il suo capitolo del profilo: non vede le schede dei
-colleghi. È voluto: tre punti di vista indipendenti, che poi la sintesi mette a confronto.
+Ogni assistente legge solo il capitolato e il suo capitolo del profilo: non vede le schede dei colleghi. È voluto: tre punti di
+vista indipendenti, che poi la sintesi mette a confronto.
 
 ---
 
@@ -570,20 +608,20 @@ colleghi. È voluto: tre punti di vista indipendenti, che poi la sintesi mette a
 
 <div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/posta-elenco.png" alt="L'elenco della posta con i messaggi dei tre responsabili e le tre voci Da approvare" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+<img src="assets/schermate/guida-posta-schede.png" alt="I messaggi dei tre responsabili, ciascuno con la sua voce Da approvare, e le righe del giro in approvazione" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
 <div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Tre messaggi</b><br>Uno per responsabile: gli indicatori, il rischio più grave, il punto che lo convince meno, il percorso della scheda.
+<b>Tre messaggi</b><br>Uno per responsabile: gli indicatori, il rischio più grave, il percorso della scheda.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Tre voci «Da approvare»</b><br>Una per scheda. Sono i documenti veri: aspettano la tua decisione.
+<b>Tre voci «Da approvare»</b><br>Una per scheda, sotto il suo messaggio. Sono i documenti veri: aspettano la tua decisione.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #5f6368; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Più le voci di prima</b><br>La conferma dell'account manager, e la sua ricerca ancora da approvare.
+<b>E le righe del giro</b><br>Sotto il messaggio dell'account manager: tre «in approvazione», e la sintesi che aspetta.
 </div>
 
 </div>
@@ -591,18 +629,18 @@ colleghi. È voluto: tre punti di vista indipendenti, che poi la sintesi mette a
 </div>
 
 Note:
-Ogni responsabile produce due cose, come l'account manager: il messaggio e la scheda. Il messaggio è di quattro righe e dice
-dove guardare; la scheda è il documento. Nell'elenco stanno insieme, in ordine di arrivo.
+Ogni responsabile produce due cose, come l'account manager: il messaggio e la scheda. Il messaggio è di poche righe e dice dove
+guardare; la scheda è il documento. Nell'elenco stanno insieme, la scheda rientrata sotto il suo messaggio.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Gesto 5: apri una scheda
+## Gesto 6: apri una scheda
 
 <div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/posta-da-approvare.png" alt="Una voce Da approvare: il file con il pulsante Apri, a chi passa il lavoro e i tre gesti" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+<img src="assets/schermate/guida-da-approvare.png" alt="Una voce Da approvare: il riassunto dell'agente, il file con il pulsante Apri e i tre gesti" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
 <div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
@@ -623,8 +661,8 @@ dove guardare; la scheda è il documento. Nell'elenco stanno insieme, in ordine 
 </div>
 
 Note:
-Per leggere non serve più «Ci metto mano»: quello resta il gesto per correggere tu il documento prima di approvarlo. Sotto
-il file c'è già la scelta di chi riceverà il lavoro dopo l'approvazione: la si usa nel gesto successivo.
+Per leggere non serve «Ci metto mano»: quello resta il gesto per correggere tu il documento prima di approvarlo. Non c'è da
+scegliere a chi passare il lavoro: chi viene dopo lo dice il workflow.
 
 ---
 
@@ -684,34 +722,34 @@ Questo è il lavoro della persona, ed è quello che dà valore al giro. Tre cont
 
 # Parte 3
 
-**Approva, passa il lavoro, decidi**
+**Approva, e il giro va avanti. Poi decidi**
 
 Note:
 La parte 2 è finita con una scheda letta. La parte 3 comincia dal pulsante «Autorizza» e arriva fino alla sintesi nella tua
-cartella. È la parte in cui si vede che il lavoro passa di mano solo per un tuo gesto.
+cartella. È la parte in cui si vede che nessuno passa il lavoro a mano: lo fa partire il workflow, dopo il tuo gesto.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Gesto 6: scegli a chi passa, poi «Autorizza»
+## Gesto 7: «Autorizza» le tre schede
 
 <div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/posta-da-approvare.png" alt="La richiesta con la scelta del collega e il pulsante Autorizza" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+<img src="assets/schermate/guida-da-approvare.png" alt="La richiesta di approvazione di una scheda, con il file e i tre gesti" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
 <div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>1. Guarda «Dopo l'approvazione, a chi passa il lavoro?»</b><br>La scheda dell'agente dichiara a chi: qui all'account manager. Puoi anche scegliere «nessuno».
+<b>1. Hai letto la scheda e regge?</b><br>Clicca «Autorizza»: la scheda entra nel repository.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>2. Clicca «Autorizza»</b><br>La scheda entra nel repository e il collega viene avvisato, a nome tuo.
+<b>2. Non regge del tutto?</b><br>La correggi tu nella copia dell'agente («Ci metto mano»), poi «Autorizza». «Rifiuta» è l'eccezione: chiede il motivo e ferma il lavoro.
 </div>
 
-<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>3. Oppure</b><br>La correggi tu nella copia dell'agente. «Rifiuta» è l'eccezione: chiede il motivo e ferma il lavoro.
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>3. Non scegli a chi passarla</b><br>Chi viene dopo lo dice il workflow. Ripeti per le altre due schede.
 </div>
 
 </div>
@@ -719,8 +757,8 @@ cartella. È la parte in cui si vede che il lavoro passa di mano solo per un tuo
 </div>
 
 Note:
-Con un solo destinatario la scelta è già fatta; con più di uno la persona deve scegliere, e il pulsante resta spento finché
-non lo fa. L'agente del collega non si sveglia mai da solo: lo sveglia questo clic.
+Approvare è una decisione sulla scheda, non sul giro: il giro va avanti da sé, seguendo il workflow. Nessun agente viene
+svegliato da questo clic finché le tre schede non sono tutte approvate.
 
 ---
 
@@ -728,50 +766,22 @@ non lo fa. L'agente del collega non si sveglia mai da solo: lo sveglia questo cl
 
 ## Che cosa fa quel clic
 
-<div style="display:flex; flex-direction:column; align-items:center; gap:22px; margin-top:10px">
-
-<img src="assets/schermate/avviso.png" alt="Lavoro fuso nel ramo principale. Ho avvisato account-manager." width="680" style="margin:0; border-radius:10px; box-shadow:0 8px 24px rgba(15,27,45,.28); border:1px solid #d6deea">
-
-<div style="display:flex; gap:14px; align-items:stretch; font-size:.6em; text-align:left">
-<div class="fragment fade-up" style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; width:270px"><b>1. La scheda entra</b><br>nel ramo principale del progetto</div>
-<div class="fragment fade-up" style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; width:270px; border-top:6px solid #f29900"><b>2. Il collega viene avvisato</b><br><b>a nome tuo</b>, non dell'agente</div>
-<div class="fragment fade-up" style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; width:270px"><b>3. La richiesta sparisce</b><br>dall'elenco delle cose da rivedere</div>
-</div>
-
-</div>
-
-<div class="fragment fade-up" style="margin-top:20px; font-size:.7em">
-
-Un agente **non può** passare il lavoro a un altro da solo: lo fa il tuo clic.
-
-</div>
-
-Note:
-In basso compare l'avviso della schermata. Il punto da sottolineare è il secondo: il messaggio al collega parte dalla persona
-che ha approvato. È ciò che rende il passaggio una decisione e non un automatismo.
-
----
-
-<!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
-
-## L'account manager ti dice cosa manca
-
 <div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/posta-mancano.png" alt="Il messaggio dell'account manager: ha ricevuto una scheda, ne mancano due" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+<img src="assets/schermate/guida-giro-approvata.png" alt="Dopo la prima approvazione: la riga della scheda tecnica è verde, le altre in approvazione, la sintesi aspetta" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
 <div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Dopo la prima</b><br>«Ho ricevuto la scheda tecnica. Mancano contrattuale e delivery.»
+<b>1. La scheda entra</b><br>nel ramo principale del progetto.
 </div>
 
-<div class="fragment fade-up" style="background:#fff; border-left:8px solid #9334e6; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Dopo la seconda</b><br>«Manca la scheda delivery.»
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>2. Il registro del giro lo scrive</b><br>chi ha approvato e quando, sul ramo <code>mde/giri</code>.
 </div>
 
-<div class="fragment fade-up" style="background:#fff; border-left:8px solid #5f6368; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Tu</b><br>Approva <b>una scheda alla volta</b> e aspetta il suo messaggio, circa mezzo minuto: vedi il lavoro avanzare.
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>3. La sua riga diventa verde</b><br>sotto il messaggio da cui hai avviato il giro. La sintesi aspetta ancora.
 </div>
 
 </div>
@@ -779,30 +789,30 @@ che ha approvato. È ciò che rende il passaggio una decisione e non un automati
 </div>
 
 Note:
-A ogni approvazione l'assistente dell'account manager si sveglia, guarda quali schede ci sono e risponde. Non ricorda le volte
-precedenti: lo stato sta nei file, ed è per questo che la risposta è sempre giusta.
+Il registro del giro è ciò che fa andare avanti il lavoro, anche quando le persone sono su computer diversi: ogni computer lo
+legge e fa partire i passi delle sue persone. Un agente non può passare il lavoro a un altro da solo.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Dopo la terza: scrive la sintesi
+## Dopo la terza: la sintesi parte da sola
 
 <div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
-<img src="assets/schermate/posta-sintesi.png" alt="Il messaggio con la raccomandazione e l'artefatto sintesi.md" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
+<img src="assets/schermate/guida-sintesi.png" alt="Il messaggio con la raccomandazione, la sintesi da approvare e le righe del giro: tre verdi e la sintesi in approvazione" width="720" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #dfe3ea">
 
 <div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
+
+<div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
+<b>Nessuno la avvia</b><br>Il workflow dice che parte quando le tre schede sono approvate, sul computer dell'account manager.
+</div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
 <b>Un messaggio</b><br>La raccomandazione e i cinque indicatori, una riga ciascuno.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Un artefatto</b><br><code>gara/schede/sintesi.md</code>, in attesa della tua approvazione.
-</div>
-
-<div class="fragment fade-up" style="background:#fff; border-left:8px solid #5f6368; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
 <b>Una voce «Da approvare»</b><br>Con due file: la sintesi e il registro dei bandi, con la riga nuova.
 </div>
 
@@ -811,8 +821,9 @@ precedenti: lo stato sta nei file, ed è per questo che la risposta è sempre gi
 </div>
 
 Note:
-Circa un minuto dopo la terza approvazione. La raccomandazione può essere «andare», «andare a condizioni» o «non andare»:
-dipende da ciò che hanno scritto i tre responsabili, e cambia da una prova all'altra.
+Un paio di minuti dopo la terza approvazione. L'incarico che l'account manager riceve elenca i file delle tre schede approvate:
+la sintesi usa solo quelle. La raccomandazione può essere «andare», «andare a condizioni» o «non andare», e cambia da una prova
+all'altra.
 
 ---
 
@@ -866,7 +877,7 @@ Se un punto non regge, è un buon motivo per non approvare.
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Gesto 7: approva la sintesi, oppure no
+## Gesto 8: approva la sintesi, oppure no
 
 <div style="display:flex; gap:26px; justify-content:center; margin-top:10px; text-align:left">
 
@@ -890,13 +901,13 @@ Se un punto non regge, è un buon motivo per non approvare.
 <img class="fragment fade-up" src="assets/schermate/avviso-fine.png" alt="Lavoro fuso nel ramo principale." width="420" style="margin:26px 0 0 0; border-radius:10px; box-shadow:0 8px 24px rgba(15,27,45,.28); border:1px solid #d6deea">
 
 Note:
-Per la demo si approva. L'avviso questa volta dice solo «Lavoro fuso nel ramo principale»: non c'è nessuno da avvisare.
+Per la demo si approva. È l'ultimo passo del giro: dopo, tutte le sue righe sono verdi.
 
 ---
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Gesto 8: porta le schede nella tua cartella
+## Gesto 9: porta le schede nella tua cartella
 
 <div style="display:flex; gap:34px; align-items:center; justify-content:center">
 
@@ -987,7 +998,7 @@ scritto cosa c'è da decidere
 <div style="flex:1; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-top:8px solid #f29900; padding:16px 22px">
 <div style="font-size:.55em; color:#f29900; font-weight:800; letter-spacing:.08em">TU HAI</div>
 <div style="font-size:.62em; line-height:1.55; margin-top:6px">
-premuto «Avvia il giro»<br>
+premuto «Avvia il giro» e avviato le schede<br>
 letto e verificato a campione<br>
 approvato quattro volte<br>
 <b>e ora decidi se partecipare</b>
@@ -1010,7 +1021,7 @@ chiarire con il committente» sono la lista con cui presentarsi all'incontro tec
 
 <!-- .slide: data-background-image="assets/citta-sfondo-chiaro.svg" -->
 
-## Gli otto gesti, in fila
+## I nove gesti, in fila
 
 <div style="display:flex; gap:20px; justify-content:center; margin-top:8px; text-align:left">
 
@@ -1028,17 +1039,18 @@ chiarire con il committente» sono la lista con cui presentarsi all'incontro tec
 <div style="font-size:.5em; color:#1a73e8; font-weight:800; letter-spacing:.08em">PARTE 2 · AVVIA E LEGGI</div>
 <div style="font-size:.56em; line-height:1.6; margin-top:6px">
 <b>4.</b> premi «Avvia il giro»<br>
-<b>5.</b> Apri una scheda<br>
-<span style="color:#5f6368">cinque minuti di attesa, col robot giallo nella barra</span>
+<b>5.</b> avvia le tre schede<br>
+<b>6.</b> Apri una scheda<br>
+<span style="color:#5f6368">qualche minuto di attesa, col robot giallo nella barra</span>
 </div>
 </div>
 
 <div style="flex:1; background:#fff; border-top:8px solid #188038; border-radius:14px; padding:14px 18px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
 <div style="font-size:.5em; color:#188038; font-weight:800; letter-spacing:.08em">PARTE 3 · APPROVA E DECIDI</div>
 <div style="font-size:.56em; line-height:1.6; margin-top:6px">
-<b>6.</b> Autorizza le tre schede<br>
-<b>7.</b> Autorizza la sintesi<br>
-<b>8.</b> Scarica tutto
+<b>7.</b> Autorizza le tre schede<br>
+<b>8.</b> Autorizza la sintesi (parte da sola)<br>
+<b>9.</b> Scarica tutto
 </div>
 </div>
 
@@ -1051,7 +1063,7 @@ Prima di cominciare, una volta sola: **Sono tutti miei** e **Concedi trust**.
 </div>
 
 Note:
-Otto gesti, quasi tutti dentro la posta degli agenti. Circa venti minuti, di cui una decina di attesa. I gesti si ripetono: Apri
+Nove gesti, quasi tutti dentro la posta degli agenti. Circa venti minuti, di cui una decina di attesa. I gesti si ripetono: Apri
 e Autorizza sono gli stessi per la ricerca, per le schede e per la sintesi.
 
 ---

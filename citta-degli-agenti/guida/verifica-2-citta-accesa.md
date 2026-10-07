@@ -11,7 +11,7 @@ accesa e, se non lo è, come accenderla con una casella nelle impostazioni del p
 Accenderla cambia un solo file, che in questo demo non va committato.
 
 - Accesa, la barra degli strumenti ha **quattro icone in più**.
-- Si accende da «Impostazioni Progetto», sezione «Città degli agenti / Federazione».
+- Si accende da «Impostazioni Progetto», sezione «Città degli agenti / Federazione», dove c'è anche il documento del workflow.
 - Dopo averla accesa il progetto dice «1 da committare»: **non fare il commit**.
 
 ## Il controllo: quattro icone nella barra
@@ -40,7 +40,11 @@ Guarda la barra degli strumenti, in alto. Con la città accesa le ultime quattro
 
    ![La casella che accende la città](../presentazione/assets/schermate/impostazioni-citta.png)
 
-4. Clicca **Chiudi** e riapri il progetto cliccando sulla sua scheda.
+4. Nella stessa sezione controlla due campi, che il demo ha già compilati:
+   - **Documento delle responsabilità**: `citta-degli-agenti/gara/responsabilita.md`;
+   - **Documento del workflow (percorso relativo)**: `citta-degli-agenti/gara/workflow.md`. È il piano del giro: senza,
+     «Avvia il giro» sveglia l'account manager e basta, invece di far partire le tre schede.
+5. Clicca **Chiudi** e riapri il progetto cliccando sulla sua scheda.
 
 ## Cosa cambia nel progetto
 
