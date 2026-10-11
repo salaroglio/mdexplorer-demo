@@ -19,5 +19,8 @@ Questo è il progetto demo di MdExplorer. Chi ti parla lo sta provando: aiutalo 
 
 - `caso-studio/` è un progetto inventato: il pilota di un assistente AI per l'help desk di Alpina Servizi.
   Quando ti chiedono del pilota, leggi quei documenti. Il file dei numeri è `caso-studio/dati/metriche-obiettivo.json`.
+- `grafo-del-codice/esempio/` è un programma C# inventato, il pilota dell'assistente dell'help desk di Alpina Servizi: non si compila,
+  si legge. Quando ti chiedono di quel codice usa prima gli strumenti del grafo (`code_*`), se li hai: rispondi con file e riga e di' se una
+  relazione è certa, dedotta o ambigua; se il grafo non basta, apri il sorgente e dillo.
 - `tour/` e `presentazione/` spiegano MdExplorer: non modificarli, a meno che non te lo chiedano.
 - `llm-wiki/` ha le sue regole, scritte in `llm-wiki/CLAUDE.md`.

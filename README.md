@@ -1,7 +1,7 @@
 ---
 title: MdExplorer, il progetto demo
 author: Mark
-description: Progetto demo di MdExplorer. Una presentazione, otto prove da fare con le proprie mani e un caso di studio su cui far lavorare l'agente AI.
+description: Progetto demo di MdExplorer. Una presentazione, otto prove da fare con le proprie mani, un caso di studio su cui far lavorare l'agente AI, la città degli agenti e il grafo del codice.
 ---
 
 # MdExplorer, il progetto demo
@@ -22,6 +22,7 @@ cronologia è una sola, git.
 | mezz'ora | [Il percorso: prova tu](tour/01-documenti-vivi.md) | otto prove da fare |
 | un'ora | [Il caso di studio](caso-studio/README.md) | un progetto su cui far lavorare l'AI |
 | mezz'ora in più | [La città degli agenti](citta-degli-agenti/README.md) | gli agenti AI che abitano il progetto e si scrivono tra loro |
+| mezz'ora, per chi sviluppa | [Il grafo del codice](grafo-del-codice/README.md) | il codice letto da MdExplorer e interrogato da Mark |
 
 ## Il percorso: prova tu
 
@@ -41,6 +42,13 @@ cronologia è una sola, git.
 Gli agenti AI possono anche **abitare** il progetto: ognuno è l'assistente di una persona, prepara il lavoro e te lo
 consegna da verificare, e tu decidi se passarlo al passo dopo. [Sei prove](citta-degli-agenti/README.md) per vederlo con le
 tue mani, su una gara d'appalto: quattro persone, quattro agenti, una sintesi finale.
+
+## Il grafo del codice
+
+MdExplorer legge anche il **codice**: segni una cartella come ambiente di sviluppo e il programma diventa un grafo di classi,
+metodi e relazioni, con la riga e con quanto è sicura ogni relazione. Lo guardi, lo leggi in un report e lo interroghi con
+Mark, che risponde con fatti e cita le righe. [Cinque prove](grafo-del-codice/README.md) su un piccolo programma C# scritto apposta,
+il pilota dell'help desk del caso di studio.
 
 ## Il caso di studio
 
@@ -87,6 +95,9 @@ left side
 ** caso-studio
 ***_ requisiti, architettura, piano
 ***_ verbale e slide del comitato
+** grafo-del-codice
+***_ cinque prove sul codice
+***_ il programma dell'help desk
 ** llm-wiki
 ***_ un wiki mantenuto dall'AI
 @endmindmap

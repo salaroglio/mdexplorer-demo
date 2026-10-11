@@ -22,5 +22,8 @@ Questo è il progetto demo di MdExplorer. Chi ti parla lo sta provando: aiutalo 
 - `citta-degli-agenti/gara/` è la gara di Nordica Crediti (Progetto ATLANTE) per cui lavora Pentagroup, un'azienda inventata:
   il capitolato, il profilo dell'azienda, il registro dei bandi e le schede che scrivono gli agenti. Quando ti chiedono della gara,
   leggi quei documenti; ogni affermazione cita la sezione del capitolato.
+- `grafo-del-codice/esempio/` è un programma C# inventato, il pilota dell'assistente dell'help desk di Alpina Servizi: non si compila,
+  si legge. Quando ti chiedono di quel codice usa prima gli strumenti del grafo (`code_*`), se li hai: rispondi con file e riga e di' se una
+  relazione è certa, dedotta o ambigua; se il grafo non basta, apri il sorgente e dillo.
 - `tour/` e `presentazione/` spiegano MdExplorer: non modificarli, a meno che non te lo chiedano.
 - `llm-wiki/` ha le sue regole, scritte in `llm-wiki/CLAUDE.md`.
