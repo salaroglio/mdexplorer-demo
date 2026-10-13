@@ -107,6 +107,7 @@ la descrizione di quel metodo, non delle altre cento.
 | a che cosa serve un **file**, in una o due frasi | Mark, con «Analizza il codice con Mark» o dal tasto destro sul file | sotto il file nella pagina del grafo («Utilità dei file»), nel report, negli strumenti `code_outline` e `code_overview` |
 | che cosa fa un **simbolo**, che cosa restituisce, le avvertenze | Mark, come sopra, o dal tasto destro sul simbolo | nella scheda del simbolo, in `code_describe`, nella ricerca a testo |
 | che cosa rappresenta ogni **parametro** | Mark, come sopra | in `code_describe` |
+| i parametri con cui si lancia uno **script** (il `param()` di PowerShell) | Mark, come sopra; lo script stesso non ha una descrizione sua: è quella del file | nella scheda dello script, in «Dettagli», e in `code_describe` |
 
 Una descrizione sbagliata o incompleta la **corregge Mark parlando con te**: «la descrizione di `Gestisci` non dice
 che…, sistemala». Mark rilegge il sorgente e usa `code_set_description`; MdExplorer controlla la richiesta (un parametro
