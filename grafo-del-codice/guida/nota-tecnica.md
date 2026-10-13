@@ -7,8 +7,8 @@ title: "Nota tecnica: Fuseki, Java e le grammatiche"
 ## TL;DR
 
 Il grafo del codice vive in **Apache Jena Fuseki**, un database a grafo che MdExplorer include nel pacchetto e avvia
-da sé: serve **Java 21** sul computer, lo stesso che fa girare PlantUML. Per i linguaggi diversi dal C# si scarica una
-piccola grammatica da mdexplorer.net, una volta per linguaggio.
+da sé: serve **Java 21** sul computer, lo stesso che fa girare PlantUML. Per i linguaggi diversi dal C# e dal PowerShell
+si scarica una piccola grammatica da mdexplorer.net, una volta per linguaggio.
 
 - Nessun servizio da installare né da configurare: Fuseki parte con MdExplorer, su una porta locale, e si spegne con lui.
 - I dati stanno nella cartella dati di MdExplorer, fuori dal progetto; gli script nel progetto bastano a ricostruirli.
@@ -18,12 +18,13 @@ piccola grammatica da mdexplorer.net, una volta per linguaggio.
 
 | Cosa | Perché | Dove si controlla |
 |---|---|---|
-| **Java 21** o più recente | Fuseki 6 è scritto in Java 21; MdExplorer lo rifiuta più vecchio e lo dice | il controllo delle dipendenze all'avvio di MdExplorer; il percorso di Java nelle impostazioni |
+| **Java 21** o più recente | Fuseki 6 è scritto in Java 21; MdExplorer lo rifiuta più vecchio e lo dice | all'avvio MdExplorer controlla il Java impostato e, se l'aveva scelto lui ed è vecchio o sparito, lo sostituisce con il migliore che trova e lo dice; nelle impostazioni c'è «Rileva il migliore» |
 | **Rete**, una volta per linguaggio | per scaricare la grammatica tree-sitter (0,1-1,5 MB) | la finestra «Ambiente di sviluppo», pulsante «Scarica la grammatica» |
-| **Un motore AI** del progetto | per «Descrivi il codice con Mark» e per le domande nel tab Mark Agent | impostazioni del progetto, «Ambiente agentico» |
+| **Un motore AI** del progetto | per «Analizza il codice con Mark» e per le domande nel tab Mark Agent | impostazioni del progetto, «Ambiente agentico» |
 
 Per il **C# non serve niente**: l'estrattore è Roslyn, il compilatore, che MdExplorer si porta dietro e usa senza SDK,
-senza MSBuild e senza compilare davvero il programma.
+senza MSBuild e senza compilare davvero il programma. Lo stesso per il **PowerShell**: il parser ufficiale del
+linguaggio è nel pacchetto, e non serve `pwsh` installato.
 
 ## Fuseki, in due righe
 
@@ -34,8 +35,13 @@ interroga in **SPARQL**. MdExplorer ne avvia un'istanza propria, raggiungibile s
 
 Dentro, il vocabolario è l'ontologia `mde-code`: un simbolo è un `code:Symbol` con `code:kind`, `code:qualifiedName`,
 `code:signature`, `code:line`; una relazione è una tripla diretta (`code:calls`, `code:implements`…) più un nodo
-«arco» che porta la riga e la fiducia. La ricerca a testo pieno (`code_find_symbol` con un frammento) la fa l'indice
-Lucene di jena-text sui nomi e sulle descrizioni.
+«arco» (`code:Edge`) che porta la riga e la fiducia; una descrizione è un `code:Description` legato al simbolo, e a che
+cosa serve un file un `code:FileDescription` legato al file. La ricerca a testo pieno (`code_find_symbol` con un
+frammento) la fa l'indice Lucene di jena-text sui nomi e sulle descrizioni.
+
+Gli script di `.mde-code/` sono già queste triple, scritte in **Turtle**: MdExplorer li carica in Fuseki così come sono,
+un file per grafo, senza tradurli. Chi vuole può caricarli in un altro database RDF o interrogarli con gli strumenti di
+Apache Jena.
 
 ## Dove finiscono i dati
 
@@ -59,7 +65,8 @@ memoria per Fuseki. Le domande di Mark sul grafo rispondono in decine o centinai
 progetto così grande è l'unica che supera i tre secondi. Il programma d'esempio di questa sezione, quindici file, si
 analizza in meno di un secondo.
 
-«Descrivi il codice con Mark» è l'unico passo che consuma il tuo abbonamento AI: una chiamata per file sorgente, solo
-per i file con simboli da descrivere.
+«Analizza il codice con Mark» è l'unico passo che consuma il tuo abbonamento AI: una chiamata per file sorgente, solo
+per i file con qualcosa da analizzare; per i quindici file d'esempio, un paio di minuti. Le domande nel tab e le
+correzioni delle descrizioni costano quanto una normale conversazione con Mark.
 
 [Torna alla sezione](../README.md)

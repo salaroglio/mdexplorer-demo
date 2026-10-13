@@ -6,18 +6,20 @@ title: "Prova 3: chiedi a Mark"
 
 ## TL;DR
 
-Con il grafo caricato, Mark ha sette strumenti per interrogarlo e li usa da solo quando la domanda riguarda il codice.
+Con il grafo caricato, Mark ha nove strumenti per interrogarlo e li usa da solo quando la domanda riguarda il codice.
 Le risposte citano file e riga, distinguono ciò che è certo da ciò che è dedotto, e quando il grafo non basta Mark lo
-dice e apre il sorgente.
+dice e apre il sorgente. Le domande si scrivono nel tab, o si fanno dal grafo con il tasto destro.
 
-- Tre domande da copiare: chi implementa, cosa cambia se tocco una soglia, qual è il cammino fra due punti.
+- Tre domande da copiare: chi implementa, cosa cambia se tocco una soglia, qual è il cammino fra due punti; e una dal grafo.
 - Ogni risposta arriva in una ventina di secondi e costa una frazione di centesimo.
 - Serve il motore AI del progetto; con Claude Code o Copilot funziona così com'è.
 
 ## Prima di cominciare
 
-Apri la scheda **«Mark Agent»** in fondo al pannello di sinistra. Se l'hai già aperta prima di segnare la cartella,
-premi **«Nuova sessione chat»** (l'icona con il +): gli strumenti del grafo si accendono all'inizio di una conversazione.
+Apri la scheda **«Mark Agent»** in fondo al pannello di sinistra. Con Claude Code gli strumenti del grafo arrivano da
+soli anche in una conversazione già aperta. Con GitHub Copilot e opencode, se l'avevi aperta prima di segnare la
+cartella, premi **«Nuova sessione chat»** (l'icona con il +): per loro gli strumenti si accendono all'inizio di una
+conversazione.
 
 ## Domanda 1: chi implementa, chi chiama
 
@@ -52,25 +54,53 @@ tasso di primo contatto più basso.*
 aggiunge il cammino lungo, quello dei dati: `Main` passa l'oggetto `metriche` a `ServizioAssistente`, che lo aggiorna
 con `RegistraRisolto` e `RegistraScalato`, e alla fine `Main` legge il tasso.
 
+## Domanda 4: dal grafo, con il tasto destro
+
+Torna alla pagina del grafo della [prova 2](02-guarda-il-grafo.md), con la cascata di `Gestisci` aperta. Tasto destro su
+`Gestisci`:
+
+![Il menu del tasto destro su Gestisci](assets/schermate/menu-simbolo.png)
+
+Scegli **«Chiedi a MarkAgent di «Gestisci»»**. Non scrivi niente: la pagina dice a Mark quale simbolo, con il file, la
+riga, la firma e la descrizione che ha già, e gli chiede di spiegarlo usando il grafo e il sorgente. La risposta arriva
+nella finestra di Mark, nella stessa conversazione del tab:
+
+![La finestra di Mark con la spiegazione di Gestisci](assets/schermate/mark-spiega.png)
+
+Nel nostro giro la risposta aveva tutti e tre gli ingredienti. **Il fatto**: «Solo `Program.Main` (`Program.cs:25`), con
+relazione certa»; le chiamate con la riga, `Aggiungi` alla 31, `Proponi` alla 32, `Scala` alla 40. **La fiducia**:
+«certa; dedotta verso `MotoreRisposteDiProva` e `MotoreRisposteParoleChiave`… quale implementazione giri davvero lo
+decide `Main`». **Il limite**: «la notifica potrebbe usare la rete, ma dipende dall'implementazione di `INotifica`, che
+non ho aperto». E in più i punti delicati che nessuno aveva chiesto: il ticket viene archiviato *prima* di chiedere la
+proposta, quindi se `Proponi` solleva un'eccezione resta in archivio senza stato coerente. Lo userai nella
+[prova 4](04-analizza-il-codice.md).
+
+Lo stesso tasto destro funziona su un **file** («Chiedi a MarkAgent di spiegare «…» e i suoi legami») e su un **arco**
+(«Chiedi a MarkAgent: che cosa vuol dire «A → B»?»: utile sugli archi dedotti, quando non è chiaro perché due file sono
+collegati).
+
+![Il menu del tasto destro su un file](assets/schermate/menu-file.png)
+
 ## Altre domande da provare
 
 | Domanda | Strumento che Mark userà |
 |---|---|
-| «Cosa c'è in Conoscenza/CatalogoFaq.cs?» | `code_outline`: i simboli del file, in ordine di riga |
+| «Cosa c'è in Conoscenza/CatalogoFaq.cs?» | `code_outline`: a che cosa serve il file e i suoi simboli, in ordine di riga |
 | «Descrivimi ServizioAssistente.Conferma con i parametri» | `code_describe`: firma, parametri, descrizioni se ci sono |
 | «Cosa si rompe se cambio la firma di INotifica.Invia?» | `code_impact` a tre salti all'indietro |
 | «Fammi una panoramica del programma» | `code_overview`: quanti simboli, i più connessi, i file più grossi |
-| «Quale metodo calcola la quota di ticket chiusi al primo contatto?» | `code_find_symbol` sul testo: funziona davvero dopo la [prova 4](04-descrivi-il-codice.md) |
+| «Quale metodo calcola la quota di ticket chiusi al primo contatto?» | `code_find_symbol` sul testo: funziona davvero dopo la [prova 4](04-analizza-il-codice.md) |
+| «La descrizione di CatalogoFaq.Cerca è troppo vaga: riscrivila» | `code_set_description`: lo provi nella [prova 4](04-analizza-il-codice.md) |
 
 L'elenco completo, con un esempio per ciascuno, è in [Le domande che Mark sa fare](../guida/le-domande-di-mark.md).
 
 ## Se qualcosa non va
 
-- **Mark legge i file invece di usare il grafo**: la conversazione è cominciata prima che la cartella fosse segnata.
-  «Nuova sessione chat» e riprova.
+- **Mark legge i file invece di usare il grafo**: con Copilot o opencode, la conversazione è cominciata prima che la
+  cartella fosse segnata. «Nuova sessione chat» e riprova.
 - **«Il progetto non ha un grafo»**: l'analisi della prova 1 non è stata fatta, o il database di MdExplorer non è
   partito (serve Java 21: vedi la [nota tecnica](../guida/nota-tecnica.md)).
 - **Un nome ambiguo**: se chiedi di `Invia` e ce ne sono tre, Mark ti propone gli id fra cui scegliere. È il grafo che
   non indovina al posto tuo.
 
-[← Prova 2](02-guarda-il-grafo.md) · [Prova 4: fai scrivere le descrizioni →](04-descrivi-il-codice.md) · [Torna alla sezione](../README.md)
+[← Prova 2](02-guarda-il-grafo.md) · [Prova 4: fai analizzare il codice →](04-analizza-il-codice.md) · [Torna alla sezione](../README.md)

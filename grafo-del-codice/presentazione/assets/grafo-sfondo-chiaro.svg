@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" preserveAspectRatio="xMidYMid slice">
+<title>Sfondo chiaro: la rete del codice appena accennata in alto e in basso</title>
+<style>
+.st { animation: brilla 4s ease-in-out infinite; }
+.s2 { animation-duration: 5.5s; animation-delay: -1.3s; } .s3 { animation-duration: 3.2s; animation-delay: -2.1s; } .s4 { animation-duration: 6.5s; animation-delay: -3.4s; }
+@keyframes brilla { 0%,100% { opacity: .9; } 50% { opacity: .25; } }
+.nodo { animation: respira 5s ease-in-out infinite; }
+.n2 { animation-delay: -1.7s; animation-duration: 6s; } .n3 { animation-delay: -3.1s; animation-duration: 4.4s; }
+@keyframes respira { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
+.dedotto { stroke-dasharray: 7 7; animation: scorre 2.4s linear infinite; }
+@keyframes scorre { to { stroke-dashoffset: -28; } }
+</style>
+<defs><linearGradient id="carta" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f1f6fc"/></linearGradient></defs>
+<rect width="1280" height="720" fill="url(#carta)"/>
+<g stroke="#c5d5ec" stroke-width="2" fill="none" opacity="1">
+<path d="M577,682 L665,688" class="dedotto"/>
+<path d="M577,682 L505,645"/>
+<path d="M231,700 L104,663"/>
+<path d="M231,700 L-0,671"/>
+<path d="M231,700 L305,648"/>
+<path d="M104,663 L-0,671"/>
+<path d="M766,670 L665,688"/>
+<path d="M766,670 L884,656"/>
+<path d="M1141,685 L1297,715"/>
+<path d="M1141,685 L1041,663"/>
+<path d="M1141,685 L1226,642" class="dedotto"/>
+<path d="M1297,715 L1226,642"/>
+<path d="M396,657 L505,645"/>
+<path d="M396,657 L305,648"/>
+<path d="M884,656 L1041,663"/>
+<path d="M805,12 L941,12" class="dedotto"/>
+<path d="M805,12 L666,25"/>
+<path d="M86,24 L169,23" class="dedotto"/>
+<path d="M86,24 L250,27"/>
+<path d="M941,12 L1100,27" class="dedotto"/>
+<path d="M561,33 L390,-1"/>
+<path d="M561,33 L666,25"/>
+<path d="M390,-1 L250,27" class="dedotto"/>
+<path d="M1195,7 L1100,27" class="dedotto"/>
+<path d="M1195,7 L1279,0"/>
+<path d="M169,23 L250,27"/>
+<path d="M1100,27 L1279,0"/>
+</g>
+<circle r="3.6" fill="#9bbbe8"><animateMotion dur="4.8s" begin="-4.2s" repeatCount="indefinite" path="M390,-1 L250,27"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="4.8s" begin="-2.8s" repeatCount="indefinite"/></circle>
+<circle r="3.6" fill="#9bbbe8"><animateMotion dur="3.8s" begin="-0.8s" repeatCount="indefinite" path="M390,-1 L250,27"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.8s" begin="-2.0s" repeatCount="indefinite"/></circle>
+<circle r="3.6" fill="#9bbbe8"><animateMotion dur="6.0s" begin="-3.4s" repeatCount="indefinite" path="M1141,685 L1041,663"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6.0s" begin="-1.0s" repeatCount="indefinite"/></circle>
+<circle r="3.6" fill="#9bbbe8"><animateMotion dur="6.0s" begin="-3.4s" repeatCount="indefinite" path="M805,12 L666,25"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6.0s" begin="-1.9s" repeatCount="indefinite"/></circle>
+<circle r="3.6" fill="#9bbbe8"><animateMotion dur="6.4s" begin="-5.5s" repeatCount="indefinite" path="M396,657 L505,645"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="6.4s" begin="-3.9s" repeatCount="indefinite"/></circle>
+<circle class="nodo n2" cx="577" cy="682" r="9.4" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<circle class="nodo n3" cx="231" cy="700" r="8.1" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<g class="nodo n3"><rect x="82" y="649" width="44" height="28" rx="6" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/><path d="M91,659 h18 M91,667 h12" stroke="#c5d5ec" stroke-width="2.2" stroke-linecap="round" opacity=".7"/></g>
+<circle class="nodo n2" cx="766" cy="670" r="6.8" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<circle class="nodo n3" cx="1141" cy="685" r="6.5" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<circle class="nodo n1" cx="665" cy="688" r="8.4" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<circle class="nodo n1" cx="1297" cy="715" r="8.2" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<g class="nodo n1"><rect x="374" y="643" width="44" height="28" rx="6" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/><path d="M383,653 h18 M383,661 h12" stroke="#c5d5ec" stroke-width="2.2" stroke-linecap="round" opacity=".7"/></g>
+<circle class="nodo n3" cx="884" cy="656" r="9.7" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<circle class="nodo n3" cx="505" cy="645" r="9.2" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<circle class="nodo n3" cx="-0" cy="671" r="6.5" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<g class="nodo n1"><rect x="283" y="634" width="44" height="28" rx="6" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/><path d="M292,644 h18 M292,652 h12" stroke="#c5d5ec" stroke-width="2.2" stroke-linecap="round" opacity=".7"/></g>
+<circle class="nodo n3" cx="1041" cy="663" r="6.7" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<circle class="nodo n3" cx="1226" cy="642" r="7.8" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<circle class="nodo n2" cx="805" cy="12" r="7.1" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<circle class="nodo n2" cx="86" cy="24" r="8.0" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<circle class="nodo n2" cx="941" cy="12" r="7.7" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<g class="nodo n2"><rect x="539" y="19" width="44" height="28" rx="6" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/><path d="M548,29 h18 M548,37 h12" stroke="#c5d5ec" stroke-width="2.2" stroke-linecap="round" opacity=".7"/></g>
+<g class="nodo n3"><rect x="368" y="-15" width="44" height="28" rx="6" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/><path d="M377,-5 h18 M377,3 h12" stroke="#c5d5ec" stroke-width="2.2" stroke-linecap="round" opacity=".7"/></g>
+<g class="nodo n2"><rect x="1173" y="-7" width="44" height="28" rx="6" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/><path d="M1182,3 h18 M1182,11 h12" stroke="#c5d5ec" stroke-width="2.2" stroke-linecap="round" opacity=".7"/></g>
+<circle class="nodo n1" cx="169" cy="23" r="6.8" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<circle class="nodo n3" cx="1100" cy="27" r="6.1" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<circle class="nodo n2" cx="666" cy="25" r="6.5" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+<g class="nodo n1"><rect x="1257" y="-14" width="44" height="28" rx="6" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/><path d="M1266,-4 h18 M1266,4 h12" stroke="#c5d5ec" stroke-width="2.2" stroke-linecap="round" opacity=".7"/></g>
+<circle class="nodo n1" cx="250" cy="27" r="6.8" fill="#f3f7fc" stroke="#c5d5ec" stroke-width="2.4"/>
+</svg>

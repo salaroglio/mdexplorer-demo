@@ -22,8 +22,8 @@ dentro, tu scegli quali analizzare, e l'analisi parte: in pochi secondi il progr
    ![La finestra Ambiente di sviluppo: C#, 15 file, pronto](assets/schermate/ambiente-di-sviluppo.png)
 
 3. Leggi la finestra. Sotto «Linguaggi rilevati» c'è **C# · 15 file · pronto**: *pronto* vuol dire che l'estrattore c'è
-   già (per il C# è Roslyn, dentro MdExplorer). Per un progetto TypeScript, Python o Java vedresti invece un pulsante
-   «Scarica la grammatica»: una volta sola, pochi centinaia di KB.
+   già (per il C# è Roslyn, dentro MdExplorer; per il PowerShell è il parser ufficiale del linguaggio). Per un progetto
+   TypeScript, Python o Java vedresti invece un pulsante «Scarica la grammatica»: una volta sola, da 0,5 a 1,5 MB.
    La riga «Le modifiche si leggono da Git» dice come MdExplorer capirà, la prossima volta, cosa riparsare.
 4. Premi **«Salva e analizza»**.
 
@@ -39,7 +39,10 @@ In un paio di secondi la finestra mostra **«Analisi completata»**:
   carica gli script anche mentre vengono scritti, e il conto finale dice solo quelli caricati all'ultimo giro.
 
 La finestra ora offre tre strade: **«Apri il grafo»** ([prova 2](02-guarda-il-grafo.md)), **«Apri il report»** e
-**«Descrivi il codice con Mark»** ([prova 4](04-descrivi-il-codice.md)). Per adesso premi **«Apri il grafo»**.
+**«Analizza il codice con Mark»** ([prova 4](04-analizza-il-codice.md)). Per adesso premi **«Apri il grafo»**.
+
+Da questo momento Mark ha gli strumenti del grafo: MdExplorer li accende da solo dopo «Salva e analizza». Con Claude
+Code valgono anche nella conversazione già aperta; con GitHub Copilot e opencode, da una conversazione nuova.
 
 ## Cosa è cambiato nel progetto
 
@@ -48,11 +51,19 @@ Apri la scheda **«Differenze»** in fondo al pannello di sinistra: ci sono file
 | File | Che cos'è |
 |---|---|
 | `.development.yml` | la cartella `esempio` con il tag `program` e `codeGraph.languages: [csharp]` |
-| `.mde-code/grafo-del-codice/esempio/**/*.ast.jsonl` | uno script per sorgente: i simboli e le relazioni che l'estrattore ha letto |
+| `.mde-code/grafo-del-codice/esempio/**/*.ast.ttl` | uno script per sorgente: i simboli e le relazioni che l'estrattore ha letto |
 
-Apri uno script, per esempio `.mde-code/grafo-del-codice/esempio/Assistente/ServizioAssistente.cs.ast.jsonl`: è un file
-di testo, una riga per record. Ci trovi la classe, i suoi metodi con i parametri, e righe come «`Gestisci` *calls*
-`IMotoreRisposte.Proponi`, riga 32, *extracted*». È questo che va su Git, nella [prova 5](05-il-grafo-va-su-git.md).
+Apri uno script, per esempio `.mde-code/grafo-del-codice/esempio/Assistente/ServizioAssistente.cs.ast.ttl`: è un file
+di testo in **Turtle**, il formato standard dei grafi RDF, una riga per fatto. Ci trovi il file, la classe, i suoi metodi
+con i parametri, e gli archi con la relazione, la fiducia e la riga:
+
+```turtle
+<urn:mde:edge:86360773…:contains:a6549e2e…:14> a code:Edge ;
+    code:relation "contains" ; code:confidence "extracted" ; code:line 14 .
+```
+
+È questo che va su Git, nella [prova 5](05-il-grafo-va-su-git.md). Essendo Turtle lo legge anche chi non usa MdExplorer:
+qualsiasi strumento di Apache Jena, o un altro database RDF.
 
 ## Se qualcosa non va
 
@@ -61,6 +72,6 @@ di testo, una riga per record. Ci trovi la classe, i suoi metodi con i parametri
 - **Dopo un aggiornamento dell'albero la cartella ha perso l'icona** e il menu non mostra più «Grafo del codice»:
   riapri il progetto dalla pagina dei progetti. Il tag è salvato; è l'albero che non lo ha riletto.
 - **«Nessun file di un linguaggio conosciuto»**: la cartella non contiene sorgenti dei linguaggi che MdExplorer sa leggere
-  (C#, TypeScript, JavaScript, Python, Java).
+  (C#, PowerShell, TypeScript, JavaScript, Python, Java).
 
 [Prova 2: guarda il grafo →](02-guarda-il-grafo.md) · [Torna alla sezione](../README.md)

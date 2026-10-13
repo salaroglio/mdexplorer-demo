@@ -47,8 +47,9 @@ tue mani, su una gara d'appalto: quattro persone, quattro agenti, una sintesi fi
 
 MdExplorer legge anche il **codice**: segni una cartella come ambiente di sviluppo e il programma diventa un grafo di classi,
 metodi e relazioni, con la riga e con quanto è sicura ogni relazione. Lo guardi, lo leggi in un report e lo interroghi con
-Mark, che risponde con fatti e cita le righe. [Cinque prove](grafo-del-codice/README.md) su un piccolo programma C# scritto apposta,
-il pilota dell'help desk del caso di studio.
+Mark, che risponde con fatti e cita le righe; Mark scrive anche a che cosa serve ogni file e ogni metodo, e lo corregge
+quando glielo chiedi. [Cinque prove](grafo-del-codice/README.md) su un piccolo programma C# scritto apposta, il pilota
+dell'help desk del caso di studio.
 
 ## Il caso di studio
 
