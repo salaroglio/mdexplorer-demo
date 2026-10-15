@@ -176,7 +176,7 @@ persone su quattro computer. Nel demo le interpreti tutte tu, ed è il modo più
 </div>
 
 <div class="fragment fade-up">
-<b>Questo agente non può eseguire comandi.</b> Tutto ciò che scrive resta in una copia a parte finché non lo approvi.
+<b>Questo agente non può eseguire comandi.</b> L'account manager sì, uno solo: il programma che scarica il documento di gara. Tutto ciò che scrivono resta in una copia a parte finché non lo approvi.
 </div>
 
 </div>
@@ -186,7 +186,8 @@ persone su quattro computer. Nel demo le interpreti tutte tu, ed è il modo più
 Note:
 Un agente è un file di testo, e un file si può modificare. Per questo nessun agente parte finché non lo abiliti, dopo aver letto
 questa finestra. Distinguere le due parti è importante: sopra c'è ciò che qualcuno ha scritto, sotto c'è ciò che l'app può
-garantire. Se cambia la scheda dopo il tuo sì, l'abilitazione decade e va rifatta.
+garantire. Se dopo il tuo sì cambiano gli strumenti dell'agente o la sua carta d'identità (il blocco `a2a`), l'abilitazione
+decade e va rifatta.
 
 ---
 
@@ -204,7 +205,8 @@ garantire. Se cambia la scheda dopo il tuo sì, l'abilitazione decade e va rifat
 
 1. Legge il **sito dei bandi** e il registro di quelli già visti.
 2. Li confronta con i **criteri di Pentagroup**.
-3. Ti scrive **un messaggio**: uno compatibile, due scartati, con il motivo.
+3. Per il bando compatibile **scarica il documento di gara** con un programma del progetto.
+4. Ti scrive **un messaggio**: uno compatibile, due scartati, con il motivo.
 
 </div>
 
@@ -222,7 +224,10 @@ Il sito dei bandi è un file di esempio: nel demo <b>simula</b> quello del commi
 
 Note:
 Il primo assistente fa il lavoro noioso: guardare ogni giorno cosa c'è di nuovo. Scarta due procedure con un motivo che si può
-controllare (una è fuori dall'attività, una ha pochi giorni per rispondere) e ne propone una. Non avvia niente: aspetta te.
+controllare (una è fuori dall'attività, una ha pochi giorni per rispondere) e ne propone una. Per quella scarica il documento di
+gara: non lo ricopia lui, lancia il programma `gara/strumenti/scarica-documento-di-gara.mjs`, che lo copia identico. Nella
+ricerca lascia una domanda a ciascun responsabile, sul criterio che tocca a lui. Da approvare arrivano due file: la ricerca e il
+documento di gara. Non avvia niente: aspetta te.
 Onestà: il sito è un file nel progetto, in azienda l'assistente lo leggerebbe con uno strumento di navigazione.
 
 ---
@@ -252,7 +257,9 @@ Note:
 Un pulsante sotto il messaggio, con scritto che cosa succede: è il tuo gesto, e si apre solo dopo che hai approvato la ricerca.
 L'assistente dell'account manager non si sveglia e non incarica nessuno: MdExplorer legge nel workflow che questo pulsante fa
 partire le tre schede, e le mette «da avviare» nella posta di chi ne risponde. Ognuno la avvia quando vuole, con le sue
-indicazioni. Se un agente ha più responsabili, chi preme il pulsante sceglie chi lo fa.
+indicazioni. Il pulsante porta con sé tre valori scelti dall'account manager: il codice del bando, il documento di gara scaricato
+e la ricerca. Finiscono nell'incarico di ciascun responsabile: è così che ricevono il documento su cui lavorare. Se un agente ha
+più responsabili, chi preme il pulsante sceglie chi lo fa.
 
 ---
 
@@ -356,7 +363,8 @@ correggere le istruzioni dell'agente.
 
 Note:
 Hanno letto lo stesso documento, ma ognuno ha letto il proprio capitolo del profilo di Pentagroup. Per questo trovano cose
-diverse. Notare che ogni affermazione cita la sezione del capitolato: la persona può andare a controllare.
+diverse. Ogni scheda comincia rispondendo alla domanda che l'account manager le ha lasciato nella ricerca: il criterio 2
+(competenza) per il tecnico, il 4 (rischio contrattuale) per il legale, il 3 (tempi di consegna) per il delivery. Notare che ogni affermazione cita la sezione del capitolato: la persona può andare a controllare.
 
 ---
 
@@ -487,7 +495,9 @@ una sintesi su un lavoro incompleto, perché non parte finché non è completo.
 </div>
 
 Note:
-Con le tre schede approvate, la sintesi parte da sola: l'account manager scrive gli indicatori che interessano a lui. La parte più utile
+Con le tre schede approvate, la sintesi parte da sola: l'account manager scrive gli indicatori che interessano a lui. Prima
+ci mette la tabella «I cinque criteri»: l'1 e il 5 come li aveva giudicati nella ricerca, il 2, il 3 e il 4 come li hanno
+chiusi le tre schede, ognuno con la scheda da cui viene. La parte più utile
 è «dove le schede si sommano»: un punto che compare in due schede con due nomi diversi, o due punti che da soli sembrano
 piccoli e insieme sono un problema. Anche la sintesi arriva da approvare: la leggi prima, come le altre.
 
@@ -585,14 +595,15 @@ a fine aprile; il legale segnala il recesso se il decreto ritarda. Ognuno ha una
 <div style="display:flex; gap:26px; justify-content:center; margin-top:18px; font-size:.58em">
 
 <div class="fragment fade-up" style="flex:1; background:#fdecea; border-radius:12px; padding:12px 18px; color:#8c1d18; text-align:left">
-<b>Non fa mai da solo:</b> eseguire comandi sul tuo computer · inserire una scheda nel progetto · scrivere a un altro agente · decidere
+<b>Non fa mai da solo:</b> eseguire comandi che la sua scheda non gli dà · inserire una scheda nel progetto · scrivere a un altro agente · decidere
 </div>
 
 </div>
 
 Note:
 Riepilogo senza giri di parole. Il confine è netto: l'assistente produce e documenta, la persona verifica e decide. E ci sono
-tre cose che non fa mai da solo, qualunque cosa sia scritta in un messaggio: non esegue comandi, non fa entrare una scheda nel
+cose che non fa mai da solo, qualunque cosa sia scritta in un messaggio: non esegue comandi se la sua scheda non glieli dà
+(nella gara solo l'account manager ne ha uno, il programma che scarica il documento di gara), non fa entrare una scheda nel
 progetto, non scrive a un altro agente: chi lavora dopo lo fa partire il workflow. Un messaggio è un dato da controllare, non un ordine.
 
 ---

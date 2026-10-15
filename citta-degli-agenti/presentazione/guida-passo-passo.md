@@ -148,7 +148,7 @@ meglio se chi guarda si sente quella persona.
 <div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #f29900; border-radius:14px; padding:14px 18px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
 <div style="font-size:.5em; color:#f29900; font-weight:800; letter-spacing:.08em">IL SITO DEI BANDI</div>
 <div style="font-size:.58em; line-height:1.35; margin-top:6px">Tre procedure in corso:<br><b>NC-2027-014</b> piattaforma ATLANTE<br><b>NC-2027-012</b> licenze software<br><b>NC-2027-011</b> manutenzione immobili</div>
-<div style="font-size:.45em; color:#5f6368; margin-top:8px">gara/portale-nordica/bandi.md</div>
+<div style="font-size:.45em; color:#5f6368; margin-top:8px">gara/portale-nordica/bandi.md, con i documenti di gara in documenti/</div>
 </div>
 
 <div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #f29900; border-radius:14px; padding:14px 18px; box-shadow:0 8px 24px rgba(15,27,45,.12)">
@@ -172,7 +172,8 @@ Il sito è un **file del progetto che lo simula**. In azienda sarebbe il sito ve
 </div>
 
 Note:
-Tre documenti, tutti nel progetto, tutti apribili. Vale la pena aprirne uno prima di lanciare l'agente, per esempio il sito dei
+Tre documenti, tutti nel progetto, tutti apribili. Il documento di gara di ogni bando sta accanto al sito, in
+`portale-nordica/documenti/`: l'assistente non lo legge, lo scarica per i responsabili. Vale la pena aprirne uno prima di lanciare l'agente, per esempio il sito dei
 bandi: così chi guarda sa cosa c'è dentro e potrà giudicare il risultato. Dire subito che il sito è simulato.
 
 ---
@@ -305,7 +306,8 @@ finisce il robot sparisce: se è ancora lì, sta ancora lavorando.
 
 Note:
 La posta è un elenco solo: i messaggi degli agenti e i lavori da approvare stanno insieme. Dopo la ricerca le voci sono due,
-tutte e due dell'account manager: il messaggio e il suo documento da approvare.
+tutte e due dell'account manager: il messaggio e il suo lavoro da approvare, con due file: la ricerca e il documento di gara
+scaricato.
 
 ---
 
@@ -324,7 +326,7 @@ tutte e due dell'account manager: il messaggio e il suo documento da approvare.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Dove sta il documento, e una domanda</b><br>L'ultima riga è il percorso della ricerca. Poi: «Vuoi che avvii il giro?»
+<b>Dove sta il documento, e un pulsante</b><br>L'ultima riga è il percorso della ricerca. Sotto, il pulsante «Avvia il giro su NC-2027-014», ancora chiuso.
 </div>
 
 </div>
@@ -337,7 +339,7 @@ L'assistente produce sempre **due cose**: il messaggio, breve, e il documento co
 
 Note:
 Le parole cambiano a ogni prova, perché dietro c'è un modello; la struttura no: una riga per bando, il verdetto, il motivo, il
-percorso del documento e una domanda. «Compatibile» qui vuol dire «merita il giro», non «conviene partecipare»: quello lo
+percorso del documento e il pulsante. «Compatibile» qui vuol dire «merita il giro», non «conviene partecipare»: quello lo
 diranno le schede dei responsabili. Le due procedure già nel registro non compaiono: non sono nuove.
 
 ---
@@ -371,7 +373,8 @@ diranno le schede dei responsabili. Le due procedure già nel registro non compa
 Note:
 Il documento sta in una copia a parte dell'agente: nel progetto entra solo con «Autorizza». Dentro: la tabella delle procedure
 con i giorni che mancano, e per ogni procedura i cinque criteri. I due che bloccano li giudica l'account manager; gli altri tre
-dicono «da valutare nel giro» e da chi.
+dicono «da valutare nel giro» e da chi. La sezione «Per i responsabili» lascia a ciascuno la sua domanda. Il secondo file da
+approvare è il documento di gara, in `documenti-di-gara/`: l'ha copiato identico un programma del progetto, non l'agente.
 
 ---
 
@@ -420,7 +423,8 @@ si faccia la demo.
 ✔ letto tre documenti<br>
 ✔ scartato due bandi, dicendo perché<br>
 ✔ scritto la ricerca in un documento<br>
-✔ chiuso con una domanda
+✔ scaricato il documento di gara, con il programma del progetto<br>
+✔ proposto un pulsante, chiuso finché non approvi
 </div>
 </div>
 
@@ -505,7 +509,7 @@ agente avesse più responsabili, sotto il pulsante comparirebbe «Chi lo fa?»: 
 <div style="width:440px; text-align:left; font-size:.6em; line-height:1.4">
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>1. Clicca una voce «Da avviare»</b><br>Leggi l'incarico: che scheda, su quale bando.
+<b>1. Clicca una voce «Da avviare»</b><br>Leggi l'incarico: che scheda, su quale bando, con il documento di gara e la ricerca.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
@@ -597,7 +601,8 @@ Le schede arrivano **tra due e cinque minuti**: dipende da quante il computer ne
 </div>
 
 Note:
-Ogni assistente legge solo il capitolato e il suo capitolo del profilo: non vede le schede dei colleghi. È voluto: tre punti di
+Ogni assistente legge solo il documento di gara indicato nell'incarico, la domanda che la ricerca gli lascia e il suo capitolo
+del profilo: non vede le schede dei colleghi. È voluto: tre punti di
 vista indipendenti, che poi la sintesi mette a confronto.
 
 ---
@@ -679,7 +684,8 @@ In alto: il percorso del file e «Dalla copia dell'agente: non è ancora nel pro
 </div>
 
 Note:
-La scheda è un documento vero, impaginato come gli altri: riassunto, indicatori, tabella dei requisiti, rischi, domande per il
+La scheda è un documento vero, impaginato come gli altri: riassunto, la risposta alla domanda dell'account manager («Criterio
+N»), indicatori, tabella dei requisiti, rischi, domande per il
 committente e, in fondo, i tre punti in cui l'agente è meno sicuro.
 
 ---
@@ -852,7 +858,7 @@ schede si sommano o si contraddicono»: è lì che tre punti di vista indipenden
 <div style="display:flex; flex-direction:column; gap:12px; margin-top:6px; text-align:left; font-size:.64em; line-height:1.4">
 
 <div class="fragment fade-up" style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-left:8px solid #c62828">
-<b>1. La raccomandazione regge?</b> Leggi il motivo: deve venire dalle schede, non da un'opinione.
+<b>1. La raccomandazione regge?</b> Leggi il motivo e la tabella «I cinque criteri»: ogni esito dice da dove viene, la ricerca o una scheda.
 </div>
 
 <div class="fragment fade-up" style="border-radius:10px; padding:10px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); background:#fff; border-left:8px solid #f29900">

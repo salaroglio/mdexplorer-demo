@@ -51,8 +51,8 @@ In cima al registro leggi anche chi sei per questo progetto: è la tua email git
 
 3. Clicca **Mi fido**.
 
-Gli agenti della gara possono leggere e scrivere file, e **non possono eseguire comandi**. Ciò che scrivono resta in una copia a
-parte finché non lo approvi tu.
+Gli agenti della gara possono leggere e scrivere file. **Non possono eseguire comandi**, tranne l'account manager, che ne lancia
+uno solo: il programma che scarica il documento di gara. Ciò che scrivono resta in una copia a parte finché non lo approvi tu.
 
 ## Se un agente dice «Trust decaduto»
 
