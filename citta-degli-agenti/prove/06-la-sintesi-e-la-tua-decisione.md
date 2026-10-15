@@ -11,6 +11,8 @@ aggiorna il registro dei bandi. È una **quarta richiesta**, e la approvi tu com
 invece, non è di nessun agente: è tua.
 
 - La sintesi mette insieme le tre schede e dice dove si sommano o si contraddicono.
+- La tabella **I cinque criteri** chiude il filtro della ricerca: l'1 e il 5 li aveva giudicati l'account manager, il 2, il 3 e il
+  4 li hanno chiusi le tre schede, ognuno con la scheda da cui viene.
 - La raccomandazione è una proposta («andare», «andare a condizioni», «non andare»).
 - Anche la sintesi ha «Da verificare da te»: il punto in cui il suo autore è meno sicuro.
 

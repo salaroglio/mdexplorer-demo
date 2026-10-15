@@ -12,6 +12,8 @@ con l'esito della ricerca e un messaggio breve che ti dice cosa propone. Non avv
 
 - Si lancia con l'icona del robot sul suo file, nel pannello di sinistra.
 - **Il documento** va in `gara/ricerche/`: è il ragionamento completo, e lo approvi tu come ogni cosa scritta da un agente.
+- **Il documento di gara** del bando compatibile l'agente lo **scarica** dal portale con un programma del progetto, in
+  `gara/documenti-di-gara/`: è il capitolato su cui lavoreranno i tre responsabili.
 - **Il messaggio** arriva nella posta: poche righe che cominciano con `[ESITO]`, con il percorso del documento.
 
 ## Lancialo
@@ -57,19 +59,27 @@ Sotto il pulsante c'è anche una casella, per scrivere all'agente con parole tue
 
 ## Leggi il documento
 
-Il messaggio è il riassunto; il ragionamento sta nel documento. Sotto il testo del messaggio, nella sezione **Artefatti**, c'è
-`gara/ricerche/ricerca-2027-03-08.md` con lo stato «nella copia dell'agente, in attesa della tua approvazione». Clicca **Apri**: il
-documento si apre lì accanto. Dentro trovi:
+Il messaggio è il riassunto; il ragionamento sta nel documento. Sotto il testo del messaggio, nella sezione **Artefatti**, ci sono
+**due file**, entrambi «nella copia dell'agente, in attesa della tua approvazione»:
+
+- `gara/ricerche/ricerca-2027-03-08.md`, la ricerca, scritta dall'agente;
+- `gara/documenti-di-gara/NC-2027-014-capitolato.md`, il capitolato del bando compatibile. Non l'ha scritto l'agente: l'ha
+  copiato byte per byte il programma `gara/strumenti/scarica-documento-di-gara.mjs`, che l'agente ha lanciato. Un documento
+  ufficiale non si ricopia a mano.
+
+Clicca **Apri** sulla ricerca: il documento si apre lì accanto. Dentro trovi:
 
 - la tabella delle procedure trovate, con i giorni che mancano alla scadenza;
 - per ogni procedura i cinque criteri: i due che bloccano (la natura del bando e il tempo per rispondere) li giudica
   l'account manager; gli altri tre dicono «da valutare nel giro», e da chi;
+- **Per i responsabili**: il documento di gara e la domanda che lascia a ciascuno (criterio 2 al tecnico, 3 al delivery, 4 al
+  legale);
 - le procedure già nel registro, che non ha valutato.
 
 **Compatibile** qui vuol dire «merita il giro dei tre responsabili», non «conviene partecipare»: quello lo diranno le loro schede.
 
 Clicca **Torna**. Nell'elenco a sinistra, **sotto** il messaggio dell'account manager, c'è la riga rientrata «Da approvare:
-l'artefatto»: è la richiesta di approvazione di questa ricerca. Cliccala e premi **Autorizza**: la ricerca entra nel progetto.
+l'artefatto»: è la richiesta di approvazione della ricerca e del capitolato. Cliccala e premi **Autorizza**: tutti e due entrano nel progetto.
 
 Solo adesso il pulsante «Avvia il giro» si apre. È una regola dell'app, non una cortesia dell'agente: un lavoro non passa
 avanti finché non hai approvato quello che lo giustifica.

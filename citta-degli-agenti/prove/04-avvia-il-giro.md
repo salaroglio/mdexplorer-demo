@@ -20,7 +20,8 @@ l'hai avviato, e leggi ogni scheda prima di approvarla.
 1. Clicca il fumetto e, nell'elenco, il messaggio di `account-manager` della prova 3.
 2. Sotto il testo c'è **Che cosa puoi rispondere a account-manager**, con il pulsante **Avvia il giro su NC-2027-014** e la
    sua descrizione: il responsabile tecnico, il legale e il delivery ricevono ciascuno l'incarico di scrivere la propria
-   scheda, e la avviano quando vogliono.
+   scheda **sul documento di gara scaricato**, con la ricerca per il criterio che spetta a ciascuno, e la avviano quando
+   vogliono. I percorsi del documento e della ricerca li ha messi l'agente nel pulsante.
 3. Premilo.
 
 Se il pulsante è chiuso e c'è scritto «Prima decidi sull'artefatto», non hai ancora approvato la ricerca: è il passo
@@ -28,7 +29,8 @@ finale della prova 3. Se un agente avesse più responsabili (un team), sotto il 
 l'elenco delle persone: si sceglie lì, prima di avviare il giro.
 
 Nell'elenco compaiono subito tre righe nuove, **Da avviare**: una per scheda, con l'incarico che il workflow ha scritto per
-quel responsabile e il bando a cui si riferisce. Lo chiede «il giro del workflow»: nessun agente ha scritto agli altri.
+quel responsabile: il bando, il **documento di gara** e la **ricerca**, con il criterio che gli tocca (per esempio «il
+criterio 2, competenza, tocca a te»). Lo chiede «il giro del workflow»: nessun agente ha scritto agli altri.
 
 ![Le tre schede «da avviare», con l'incarico del giro](../presentazione/assets/schermate/posta-da-avviare.png)
 
