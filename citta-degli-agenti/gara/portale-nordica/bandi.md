@@ -19,7 +19,7 @@ con uno strumento di navigazione.
 
 | Codice | Titolo | Pubblicata | Scadenza offerte | Documento di gara |
 |---|---|---|---|---|
-| NC-2027-014 | Piattaforma master per la riscossione coattiva dei tributi degli Enti Locali (Progetto ATLANTE) | 05/03/2027 | 30/04/2027, ore 15:00 | [Capitolato tecnico](../capitolato.md) |
+| NC-2027-014 | Piattaforma master per la riscossione coattiva dei tributi degli Enti Locali (Progetto ATLANTE) | 05/03/2027 | 30/04/2027, ore 15:00 | [Capitolato tecnico](documenti/NC-2027-014-capitolato.md) |
 | NC-2027-012 | Fornitura di licenze software per la gestione documentale | 05/03/2027 | 24/03/2027, ore 12:00 | non allegato (disponibile a richiesta) |
 | NC-2027-011 | Manutenzione ordinaria e straordinaria degli immobili in portafoglio | 01/03/2027 | 20/04/2027, ore 12:00 | non allegato (disponibile a richiesta) |
 

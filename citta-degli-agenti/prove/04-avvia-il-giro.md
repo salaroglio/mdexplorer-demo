@@ -88,7 +88,7 @@ Prendi il messaggio di `responsabile-delivery`: è quello con il calcolo più fa
 Cosa guardare, in ordine:
 
 - **«Da verificare da te»**, in fondo. L'agente ti dice dove è meno sicuro: controlla lì per primo.
-- **Ogni affermazione cita la sezione del capitolato** (per esempio «§7.4.7»). Aprila nel [capitolato](../gara/capitolato.md)
+- **Ogni affermazione cita la sezione del capitolato** (per esempio «§7.4.7»). Aprila nel [documento di gara](../gara/documenti-di-gara/README.md) scaricato dall'account manager
   e controlla che dica quello che la scheda dice.
 - **Il calcolo delle date.** La scheda delivery scrive il calcolo accanto al risultato: «9 mesi dalla firma» contro
   «attivazione entro il 01/01/2028». Rifallo a mano.

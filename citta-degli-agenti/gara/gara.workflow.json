@@ -3,7 +3,9 @@
   "title": "Gara: dal bando alla sintesi",
   "description": "Dal bando trovato sul portale alla sintesi che l'account manager usa per decidere se partecipare.",
   "variables": {
-    "codice": "il codice del bando su cui si fa il giro, scelto con «Avvia il giro»"
+    "codice": "il codice del bando su cui si fa il giro, scelto con «Avvia il giro»",
+    "capitolato": "il documento di gara che l'account manager ha scaricato dal portale per quel bando",
+    "ricerca": "la ricerca dell'account manager, con la domanda che lascia a ciascun responsabile"
   },
   "steps": [
     {
@@ -15,7 +17,8 @@
       },
       "start": "manual",
       "produces": [
-        "citta-degli-agenti/gara/ricerche/ricerca-*.md"
+        "citta-degli-agenti/gara/ricerche/ricerca-*.md",
+        "citta-degli-agenti/gara/documenti-di-gara/*-capitolato.md"
       ]
     },
     {
@@ -27,7 +30,7 @@
         "to": "ricerca"
       },
       "start": "ask-owner",
-      "brief": "Scrivi la scheda di fattibilità tecnica sul bando {codice}.",
+      "brief": "Scrivi la scheda di fattibilità tecnica sul bando {codice}.\nDocumento di gara: {capitolato}\nRicerca: {ricerca} (il criterio 2, competenza, tocca a te)",
       "produces": [
         "citta-degli-agenti/gara/schede/tecnica.md"
       ]
@@ -41,7 +44,7 @@
         "to": "ricerca"
       },
       "start": "ask-owner",
-      "brief": "Scrivi la scheda contrattuale sul bando {codice}.",
+      "brief": "Scrivi la scheda contrattuale sul bando {codice}.\nDocumento di gara: {capitolato}\nRicerca: {ricerca} (il criterio 4, rischio contrattuale, tocca a te)",
       "produces": [
         "citta-degli-agenti/gara/schede/contrattuale.md"
       ]
@@ -55,7 +58,7 @@
         "to": "ricerca"
       },
       "start": "ask-owner",
-      "brief": "Scrivi la scheda di delivery (team e tempi) sul bando {codice}.",
+      "brief": "Scrivi la scheda di delivery (team e tempi) sul bando {codice}.\nDocumento di gara: {capitolato}\nRicerca: {ricerca} (il criterio 3, tempi di consegna, tocca a te)",
       "produces": [
         "citta-degli-agenti/gara/schede/delivery.md"
       ]
@@ -73,7 +76,7 @@
         "wait": "all"
       },
       "start": "auto",
-      "brief": "Le tre schede sul bando {codice} sono approvate: scrivi la sintesi per decidere se partecipare.",
+      "brief": "Le tre schede sul bando {codice} sono approvate: scrivi la sintesi per decidere se partecipare, con i cinque criteri (1 e 5 dalla tua ricerca {ricerca}, 2, 3 e 4 dalle schede).",
       "produces": [
         "citta-degli-agenti/gara/schede/sintesi.md"
       ]

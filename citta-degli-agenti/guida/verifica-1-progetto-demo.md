@@ -23,7 +23,8 @@ Nel pannello di sinistra apri `citta-degli-agenti` e poi `gara`. Devi vedere que
 | Cosa | A cosa serve |
 |---|---|
 | `portale-nordica` | il sito dei bandi, simulato |
-| `capitolato.md` | la gara da valutare |
+| `documenti-di-gara` | i documenti di gara scaricati dal portale (all'inizio solo il README) |
+| `strumenti` | il programma che li scarica |
 | `profilo-pentagroup.md` | chi è l'azienda e con quali criteri sceglie un bando |
 | `registro-bandi.md` | i bandi già visti |
 

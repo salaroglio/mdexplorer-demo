@@ -64,11 +64,12 @@ una dopo l'altra, su un computer solo.
 
 | File | Cos'è |
 |---|---|
-| [capitolato.md](capitolato.md) | la gara di Nordica Crediti (Progetto ATLANTE), riscritta e abbreviata |
-| [portale-nordica/bandi.md](portale-nordica/bandi.md) | **simula** il sito dei bandi del committente: tre procedure in corso |
+| [portale-nordica/bandi.md](portale-nordica/bandi.md) | **simula** il sito dei bandi del committente: tre procedure in corso, con il documento di gara allegato in `portale-nordica/documenti/` (la gara di Nordica Crediti, Progetto ATLANTE, riscritta e abbreviata) |
 | [registro-bandi.md](registro-bandi.md) | i bandi che Pentagroup ha già visto |
 | [profilo-pentagroup.md](profilo-pentagroup.md) | chi è Pentagroup, un capitolo per responsabile, e i criteri per decidere se partecipare |
 | `ricerche/` | l'esito di ogni ricerca dell'account manager sul portale |
+| `documenti-di-gara/` | i documenti di gara che l'account manager scarica dal portale per i bandi compatibili: i responsabili lavorano su questi |
+| `strumenti/` | il programma che scarica un documento di gara, lanciato dall'account manager |
 | `schede/` | le tre schede dei responsabili e la sintesi: le scrivono gli agenti |
 
 Gli agenti stanno in [.github/agents](../../.github/agents/account-manager.agent.md): file markdown come gli altri. Il blocco
