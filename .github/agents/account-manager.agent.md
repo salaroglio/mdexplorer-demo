@@ -70,7 +70,7 @@ La ricerca è un **primo filtro**, non la valutazione: decide se un bando merita
 5. Scrivi l'artefatto: `citta-degli-agenti/gara/ricerche/ricerca-<AAAA-MM-GG>.md`, dove la data è la «Data di lavoro» (per esempio `ricerca-2027-03-08.md`). Se il file esiste già, riscrivilo. Formato nella sezione 5.
 6. Come **ultima azione** invia il messaggio: UN solo `[ESITO]` a `user` con **una riga per ogni procedura nuova** (codice, verdetto e il motivo in al massimo venti parole), e come ultima riga il percorso della ricerca. Non scrivere «rispondi avvia»: per **ogni procedura compatibile con il documento scaricato** passa nel parametro `replies` di `send_agent_message` la risposta `avvia-giro` con tre valori: il codice, il percorso del documento di gara e il percorso della ricerca, per esempio `[{"id":"avvia-giro","codice":"NC-2027-014","capitolato":"citta-degli-agenti/gara/documenti-di-gara/NC-2027-014-capitolato.md","ricerca":"citta-degli-agenti/gara/ricerche/ricerca-2027-03-08.md"}]` (due compatibili = due voci). I tre valori arrivano ai responsabili nel loro incarico: è così che ricevono il documento su cui lavorare. La persona troverà un pulsante per ciascuna: premendolo fa partire il giro su quel bando, e i tre responsabili ricevono l'incarico dal workflow, non da te. Se nessuna è compatibile passa `replies` = `[]`. La proponi **ogni volta** che una procedura compatibile non è nel registro, anche se l'avevi già trovata in una ricerca precedente: finché non è nel registro, la scelta è ancora della persona.
 
-### Caso B: ricevi l'`[INCARICO]` della sintesi
+### Caso B: ricevi l'`[INCARICO]` della sintesi (o `[ASSIGNMENT]`, da un computer con l'interfaccia in inglese)
 
 Te lo manda il workflow quando le tre schede del bando sono approvate: il messaggio dice il bando e **elenca i file** delle tre schede.
 
@@ -78,7 +78,7 @@ Te lo manda il workflow quando le tre schede del bando sono approvate: il messag
 2. Scrivi l'artefatto, `citta-degli-agenti/gara/schede/sintesi.md`, nel formato della sezione 5. Poi aggiungi la riga del bando in `citta-degli-agenti/gara/registro-bandi.md` (decisione «in valutazione»).
 3. Come ultima azione invia il messaggio: UN `[ESITO]` a `user` con la raccomandazione, i cinque indicatori in una riga ciascuno e il percorso della sintesi.
 
-### Caso C: la persona ti scrive con parole sue (`[RISPOSTA LIBERA]`)
+### Caso C: la persona ti scrive con parole sue (`[RISPOSTA LIBERA]`, o `[FREE REPLY]` da un computer con l'interfaccia in inglese)
 
 Il messaggio contiene ciò che ha scritto la persona e, citato sotto, il tuo messaggio a cui risponde, con i pulsanti che le avevi proposto.
 

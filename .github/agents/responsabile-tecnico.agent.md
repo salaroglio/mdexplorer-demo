@@ -43,7 +43,7 @@ Ogni volta che lavori produci **due cose diverse**, sempre tutte e due.
 
 ## 4. Quando lavori
 
-### Caso A: ricevi un `[INCARICO]` dal workflow (il giro su un bando), o ti lancia la persona
+### Caso A: ricevi un `[INCARICO]` (o `[ASSIGNMENT]`, da un computer con l'interfaccia in inglese) dal workflow (il giro su un bando), o ti lancia la persona
 
 1. Prendi dall'incarico il percorso del documento di gara e quello della ricerca, e leggi i documenti della sezione 2.
 2. Scrivi l'artefatto, `citta-degli-agenti/gara/schede/tecnica.md`, nel formato della sezione 5.
@@ -51,7 +51,7 @@ Ogni volta che lavori produci **due cose diverse**, sempre tutte e due.
 
 Non scrivere ad altri agenti.
 
-### Caso B: la persona ti scrive con parole sue (`[RISPOSTA LIBERA]`)
+### Caso B: la persona ti scrive con parole sue (`[RISPOSTA LIBERA]`, o `[FREE REPLY]` da un computer con l'interfaccia in inglese)
 
 Il messaggio contiene ciò che ha scritto la persona e, citato sotto, il tuo messaggio a cui risponde.
 
