@@ -43,7 +43,7 @@ Every time you work you produce **two different things**, always both.
 
 ## 4. When you work
 
-### Case A: you receive an `[INCARICO]` (assignment) from the workflow (the round on a call for tenders), or the person launches you
+### Case A: you receive an `[ASSIGNMENT]` (or `[INCARICO]`, from a computer with the interface in Italian) from the workflow (the round on a call for tenders), or the person launches you
 
 1. Take from the assignment the path of the tender document and the path of the search, and read the documents of section 2.
 2. Write the artifact, `agent-city/tender/sheets/delivery.md`, in the format of section 5.
@@ -51,7 +51,7 @@ Every time you work you produce **two different things**, always both.
 
 Do not write to other agents.
 
-### Case B: the person writes to you in their own words (`[RISPOSTA LIBERA]`, free reply)
+### Case B: the person writes to you in their own words (`[FREE REPLY]`, or `[RISPOSTA LIBERA]` from a computer with the interface in Italian)
 
 The message contains what the person wrote and, quoted below, your message they are replying to.
 

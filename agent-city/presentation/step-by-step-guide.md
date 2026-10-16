@@ -257,7 +257,7 @@ writes the search and sends you the message
 <div style="font-size:.55em; color:#5f6368; font-weight:800; letter-spacing:.08em">YOU SEE</div>
 <div style="font-size:.62em; line-height:1.5; margin-top:6px">
 <b>1.</b> in the bar a <b>yellow robot</b> with a spinning ring: someone is working<br>
-<b>2.</b> a notice at the bottom: «🤖 Agente … completato» (agent completed)<br>
+<b>2.</b> a notice at the bottom: «🤖 Agent "…" completed.»<br>
 <b>3.</b> the robot disappears and a red number appears on the <b>speech bubble</b>
 </div>
 </div>

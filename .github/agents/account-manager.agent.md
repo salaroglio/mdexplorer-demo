@@ -70,7 +70,7 @@ The search is a **first filter**, not the assessment: it decides whether a call 
 5. Write the artifact: `agent-city/tender/searches/search-<YYYY-MM-DD>.md`, where the date is the «Working date» (for example `search-2027-03-08.md`). If the file already exists, rewrite it. Format in section 5.
 6. As your **last action** send the message: ONE single `[RESULT]` to `user` with **one line for each new procedure** (code, verdict and the reason in at most twenty words), and as the last line the path of the search. Do not write «reply start»: for **each compatible procedure with the document downloaded** pass in the `replies` parameter of `send_agent_message` the reply `start-round` with three values: the code, the path of the tender document and the path of the search, for example `[{"id":"start-round","code":"NC-2027-014","specification":"agent-city/tender/tender-documents/NC-2027-014-specification.md","search":"agent-city/tender/searches/search-2027-03-08.md"}]` (two compatible = two entries). The three values reach the leads in their assignment: this is how they receive the document to work on. The person will find one button for each: pressing it starts the round on that call for tenders, and the three leads receive the assignment from the workflow, not from you. If none is compatible pass `replies` = `[]`. Propose it **every time** a compatible procedure is not in the register, even if you had already found it in an earlier search: as long as it is not in the register, the choice is still the person's.
 
-### Case B: you receive the `[INCARICO]` (assignment) for the synthesis
+### Case B: you receive the `[ASSIGNMENT]` (or `[INCARICO]`, from a computer with the interface in Italian) for the synthesis
 
 The workflow sends it to you when the three sheets of the call for tenders are approved: the message names the call for tenders and **lists the files** of the three sheets.
 
@@ -78,7 +78,7 @@ The workflow sends it to you when the three sheets of the call for tenders are a
 2. Write the artifact, `agent-city/tender/sheets/synthesis.md`, in the format of section 5. Then add the line of the call for tenders to `agent-city/tender/tender-register.md` (decision «under assessment»).
 3. As your last action send the message: ONE `[RESULT]` to `user` with the recommendation, the five indicators one line each and the path of the synthesis.
 
-### Case C: the person writes to you in their own words (`[RISPOSTA LIBERA]`, free reply)
+### Case C: the person writes to you in their own words (`[FREE REPLY]`, or `[RISPOSTA LIBERA]` from a computer with the interface in Italian)
 
 The message contains what the person wrote and, quoted below, your message they are replying to, with the buttons you had proposed.
 
