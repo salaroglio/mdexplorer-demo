@@ -1,0 +1,97 @@
+{
+  "mde_workflow": 2,
+  "title": "Tender: from the call for tenders to the synthesis",
+  "description": "From the call for tenders found on the portal to the synthesis the account manager uses to decide whether to bid.",
+  "variables": {
+    "code": "the code of the call for tenders the round is on, chosen with «Start the round»",
+    "specification": "the tender document the account manager downloaded from the portal for that call for tenders",
+    "search": "the account manager's search, with the question it leaves to each lead"
+  },
+  "steps": [
+    {
+      "id": "search",
+      "agent": "account-manager",
+      "title": "Find the calls for tenders",
+      "trigger": {
+        "launch": true
+      },
+      "start": "manual",
+      "produces": [
+        "agent-city/tender/searches/search-*.md",
+        "agent-city/tender/tender-documents/*-specification.md"
+      ]
+    },
+    {
+      "id": "technical",
+      "agent": "technical-lead",
+      "title": "Technical sheet",
+      "trigger": {
+        "reply": "start-round",
+        "to": "search"
+      },
+      "start": "ask-owner",
+      "brief": "Write the technical feasibility sheet on the call for tenders {code}.\nTender document: {specification}\nSearch: {search} (criterion 2, competence, is yours)",
+      "produces": [
+        "agent-city/tender/sheets/technical.md"
+      ]
+    },
+    {
+      "id": "contract",
+      "agent": "legal-lead",
+      "title": "Contract sheet",
+      "trigger": {
+        "reply": "start-round",
+        "to": "search"
+      },
+      "start": "ask-owner",
+      "brief": "Write the contract sheet on the call for tenders {code}.\nTender document: {specification}\nSearch: {search} (criterion 4, contract risk, is yours)",
+      "produces": [
+        "agent-city/tender/sheets/contract.md"
+      ]
+    },
+    {
+      "id": "delivery",
+      "agent": "delivery-lead",
+      "title": "Delivery sheet",
+      "trigger": {
+        "reply": "start-round",
+        "to": "search"
+      },
+      "start": "ask-owner",
+      "brief": "Write the delivery sheet (team and timing) on the call for tenders {code}.\nTender document: {specification}\nSearch: {search} (criterion 3, delivery timing, is yours)",
+      "produces": [
+        "agent-city/tender/sheets/delivery.md"
+      ]
+    },
+    {
+      "id": "synthesis",
+      "agent": "account-manager",
+      "title": "Synthesis for the decision",
+      "trigger": {
+        "after": [
+          "technical",
+          "contract",
+          "delivery"
+        ],
+        "wait": "all"
+      },
+      "start": "auto",
+      "brief": "The three sheets on the call for tenders {code} are approved: write the synthesis to decide whether to bid, with the five criteria (1 and 5 from your search {search}, 2, 3 and 4 from the sheets).",
+      "produces": [
+        "agent-city/tender/sheets/synthesis.md"
+      ]
+    }
+  ],
+  "loops": [
+    {
+      "id": "rework",
+      "steps": [
+        "technical",
+        "contract",
+        "delivery"
+      ],
+      "until": "approved",
+      "restart": "manual"
+    }
+  ]
+}

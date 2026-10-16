@@ -20,5 +20,8 @@ This is the demo project of MdExplorer. Whoever is talking to you is trying it o
 
 - `case-study/` is a made-up project: the pilot of an AI assistant for the help desk of Alpina Servizi.
   When asked about the pilot, read those documents. The numbers are in `case-study/data/target-metrics.json`.
+- `agent-city/tender/` is the tender of Nordica Crediti (ATLANTE project) that Pentagroup, a made-up company, is working on:
+  the specification, the company profile, the tender register and the sheets the agents write. When asked about the tender,
+  read those documents; every statement cites the section of the specification.
 - `tour/` and `presentation/` explain MdExplorer: do not change them unless you are asked to.
 - `llm-wiki/` has its own rules, written in `llm-wiki/CLAUDE.md`.
