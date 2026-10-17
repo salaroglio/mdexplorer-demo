@@ -1,7 +1,7 @@
 {
-  "mde_workflow": 2,
-  "title": "Gara: dal bando alla sintesi",
-  "description": "Dal bando trovato sul portale alla sintesi che l'account manager usa per decidere se partecipare.",
+  "mde_workflow": 3,
+  "title": "Gara: dal bando alla decisione",
+  "description": "Dal bando trovato sul portale alla decisione dell'account manager se partecipare.",
   "variables": {
     "codice": "il codice del bando su cui si fa il giro, scelto con «Avvia il giro»",
     "capitolato": "il documento di gara che l'account manager ha scaricato dal portale per quel bando",
@@ -11,61 +11,68 @@
     {
       "id": "ricerca",
       "agent": "account-manager",
+      "skill": "cerca-bandi",
       "title": "Cerca i bandi",
       "trigger": {
         "launch": true
       },
-      "start": "manual",
-      "produces": [
-        "citta-degli-agenti/gara/ricerche/ricerca-*.md",
-        "citta-degli-agenti/gara/documenti-di-gara/*-capitolato.md"
-      ]
+      "start": "manual"
     },
     {
       "id": "tecnica",
       "agent": "responsabile-tecnico",
+      "skill": "scheda-tecnica",
       "title": "Scheda tecnica",
       "trigger": {
         "reply": "avvia-giro",
         "to": "ricerca"
       },
       "start": "ask-owner",
-      "brief": "Scrivi la scheda di fattibilità tecnica sul bando {codice}.\nDocumento di gara: {capitolato}\nRicerca: {ricerca} (il criterio 2, competenza, tocca a te)",
-      "produces": [
-        "citta-degli-agenti/gara/schede/tecnica.md"
-      ]
+      "inputs": {
+        "codice": "{codice}",
+        "capitolato": "{capitolato}",
+        "ricerca": "{ricerca}",
+        "criterio": "2 — competenza"
+      }
     },
     {
       "id": "contratto",
       "agent": "responsabile-legale",
+      "skill": "scheda-contrattuale",
       "title": "Scheda contrattuale",
       "trigger": {
         "reply": "avvia-giro",
         "to": "ricerca"
       },
       "start": "ask-owner",
-      "brief": "Scrivi la scheda contrattuale sul bando {codice}.\nDocumento di gara: {capitolato}\nRicerca: {ricerca} (il criterio 4, rischio contrattuale, tocca a te)",
-      "produces": [
-        "citta-degli-agenti/gara/schede/contrattuale.md"
-      ]
+      "inputs": {
+        "codice": "{codice}",
+        "capitolato": "{capitolato}",
+        "ricerca": "{ricerca}",
+        "criterio": "4 — rischio contrattuale"
+      }
     },
     {
       "id": "delivery",
       "agent": "responsabile-delivery",
+      "skill": "scheda-delivery",
       "title": "Scheda di delivery",
       "trigger": {
         "reply": "avvia-giro",
         "to": "ricerca"
       },
       "start": "ask-owner",
-      "brief": "Scrivi la scheda di delivery (team e tempi) sul bando {codice}.\nDocumento di gara: {capitolato}\nRicerca: {ricerca} (il criterio 3, tempi di consegna, tocca a te)",
-      "produces": [
-        "citta-degli-agenti/gara/schede/delivery.md"
-      ]
+      "inputs": {
+        "codice": "{codice}",
+        "capitolato": "{capitolato}",
+        "ricerca": "{ricerca}",
+        "criterio": "3 — tempi di consegna"
+      }
     },
     {
       "id": "sintesi",
       "agent": "account-manager",
+      "skill": "sintesi-gara",
       "title": "Sintesi per decidere",
       "trigger": {
         "after": [
@@ -76,9 +83,42 @@
         "wait": "all"
       },
       "start": "auto",
-      "brief": "Le tre schede sul bando {codice} sono approvate: scrivi la sintesi per decidere se partecipare, con i cinque criteri (1 e 5 dalla tua ricerca {ricerca}, 2, 3 e 4 dalle schede).",
-      "produces": [
-        "citta-degli-agenti/gara/schede/sintesi.md"
+      "inputs": {
+        "codice": "{codice}",
+        "ricerca": "{ricerca}",
+        "schede": {
+          "from": [
+            "tecnica.scheda",
+            "contratto.scheda",
+            "delivery.scheda"
+          ]
+        }
+      }
+    },
+    {
+      "id": "decisione",
+      "person": "Account manager",
+      "title": "Decidi se partecipare",
+      "trigger": {
+        "after": [
+          "sintesi"
+        ]
+      },
+      "task": "Leggi la sintesi sul bando {codice} e decidi se Pentagroup partecipa.",
+      "inputs": {
+        "sintesi": {
+          "from": "sintesi.sintesi"
+        }
+      },
+      "outcomes": [
+        {
+          "id": "partecipa",
+          "label": "Partecipiamo"
+        },
+        {
+          "id": "rinuncia",
+          "label": "Non partecipiamo"
+        }
       ]
     }
   ],

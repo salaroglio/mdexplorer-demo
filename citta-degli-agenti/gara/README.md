@@ -30,7 +30,8 @@ un'azienda ciascuna sarebbe una persona diversa, sul proprio computer.
 
 **Ogni agente risponde a una persona, o a un team.** Lavora solo sul computer di chi ne risponde, ed è quella persona a
 valutare ciò che l'agente scrive; finché un agente non ha un responsabile, non parte. Chi risponde di chi sta scritto in
-[Chi risponde di quale agente](responsabilita.md): all'inizio la tabella è vuota, e la riempi tu con «Sono tutti miei».
+[Chi risponde di quale agente](responsabilita.md): all'inizio la tabella ha i quattro ruoli senza nessuno, e li prendi tu
+con «Sono tutti miei».
 
 **Ogni agente produce due cose.** Il **documento** (la colonna «Dove»), che leggi e approvi, e un **messaggio** di poche
 righe nella posta, con gli indicatori e il percorso del documento. Il messaggio dice dove guardare, non sostituisce il documento.
@@ -54,7 +55,9 @@ solo sul suo computer. Poi:
    se vuole), la rifiuta dicendo perché, o la passa a un collega dello stesso team.
 4. L'agente scrive la scheda; **il responsabile** la verifica e la approva, o la rifiuta e la fa ripartire.
 5. Quando le tre schede sono approvate, **la sintesi parte da sola** sul computer dell'account manager, con i file delle
-   tre schede. L'account manager la legge e decide se partecipare.
+   tre schede. L'account manager la approva.
+6. **L'account manager decide**: nella posta trova «Decidi se partecipare», con la sintesi, e preme «Partecipiamo» o
+   «Non partecipiamo». La decisione resta scritta nel registro del giro.
 
 Ogni passo e ogni gesto restano scritti nel **registro del giro**, in git, su un ramo a parte (`mde/giri`): ogni computer
 lo legge e fa i passi delle sue persone, senza bisogno di un server che coordini. Nel demo le quattro persone sei tu,
