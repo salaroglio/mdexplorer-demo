@@ -19,4 +19,5 @@ harness:
   target: copilot
 agentCity:
   ownershipDoc: citta-degli-agenti/gara/responsabilita.md
-  workflowDoc: citta-degli-agenti/gara/workflow.md
+  workflowDocs:
+  - citta-degli-agenti/gara/workflow.md
