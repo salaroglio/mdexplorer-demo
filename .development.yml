@@ -19,4 +19,5 @@ harness:
   target: copilot
 agentCity:
   ownershipDoc: agent-city/tender/responsibilities.md
-  workflowDoc: agent-city/tender/workflow.md
+  workflowDocs:
+  - agent-city/tender/workflow.md
