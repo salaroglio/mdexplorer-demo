@@ -8,22 +8,27 @@ title: Who answers for which agent
 ## TL;DR
 
 Every agent of the tender works for a person: it runs only on that person's computer, and that person assesses what the agent
-writes. This table says who. At the start it is empty: until an agent has an owner, it does not start.
+writes. This table says who. At the start it has the four **roles** but no person: until an agent has an owner, it does
+not start.
 
-- In a real company there would be four lines, one per person: account manager, technical, legal, delivery.
-- In this demo you play all the parts: you declare the four agents yours with one click.
-- MdExplorer writes the line when you say «It is mine»; the person is recognised by their git email.
+- The roles are the ones the workflow names: whoever decides whether to bid is the «Account manager», whoever that is.
+- In this demo you take all the roles, with one click: MdExplorer writes your name and email in the four lines.
+- The person is recognised by their git email; several people with the same role are a team.
 
 ## The table
 
-| Scope | Owner | Git Email | Agents |
-|--------|--------------|-----------|--------|
+| Role | Owner | Git Email | Agents |
+|------|-------|-----------|--------|
+| Account manager | | | account-manager |
+| Technical lead | | | technical-lead |
+| Legal lead | | | legal-lead |
+| Delivery lead | | | delivery-lead |
 
 ## How it gets filled in
 
 1. Open **City of agents** (the two people in the toolbar).
 2. At the top you read who you are for this project: it is your git email.
-3. Click **They are all mine**: MdExplorer adds four lines here with your name.
+3. Click **They are all mine**: MdExplorer writes your name and email in the four lines.
 
 From that moment the four agents answer to you and you can enable them.
 
@@ -43,11 +48,11 @@ MdExplorer applies three rules:
 Each person declares their own agent from their own computer, and the table becomes this (the names are made up):
 
 ```text
-| Scope       | Owner        | Git Email                   | Agents          |
-| Commercial  | Anna Rossi   | anna.rossi@pentagroup.it    | account-manager |
-| Technical   | Marco Bianchi| marco.bianchi@pentagroup.it | technical-lead  |
-| Contracts   | Sara Verdi   | sara.verdi@pentagroup.it    | legal-lead      |
-| Delivery    | Luca Neri    | luca.neri@pentagroup.it     | delivery-lead   |
+| Role            | Owner         | Git Email                   | Agents          |
+| Account manager | Anna Rossi    | anna.rossi@pentagroup.it    | account-manager |
+| Technical lead  | Marco Bianchi | marco.bianchi@pentagroup.it | technical-lead  |
+| Legal lead      | Sara Verdi    | sara.verdi@pentagroup.it    | legal-lead      |
+| Delivery lead   | Luca Neri     | luca.neri@pentagroup.it     | delivery-lead   |
 ```
 
 ## More people for the same agent
@@ -56,8 +61,8 @@ An agent can answer to a **team**: one line per person is enough, with the same 
 names are made up):
 
 ```text
-| Technical     | Marco Bianchi| marco.bianchi@pentagroup.it | technical-lead |
-| Technical (2) | Paolo Gialli | paolo.gialli@pentagroup.it  | technical-lead |
+| Technical lead | Marco Bianchi | marco.bianchi@pentagroup.it | technical-lead |
+| Technical lead | Paolo Gialli  | paolo.gialli@pentagroup.it  | technical-lead |
 ```
 
 The agent works on the computer of both, but **each piece of work belongs to one person only**: when the account manager presses

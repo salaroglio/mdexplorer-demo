@@ -30,7 +30,8 @@ a company each one would be a different person, on their own computer.
 
 **Each agent answers to one person, or to a team.** It works only on the computer of whoever answers for it, and it is that person who
 judges what the agent writes; as long as an agent has no owner, it does not start. Who answers for whom is written in
-[Who answers for which agent](responsibilities.md): at the start the table is empty, and you fill it with «They are all mine».
+[Who answers for which agent](responsibilities.md): at the start the table has the four roles with nobody, and you take them
+with «They are all mine».
 
 **Each agent produces two things.** The **document** (the «Where» column), which you read and approve, and a **message** of a few
 lines in the mailbox, with the indicators and the path of the document. The message says where to look, it does not replace the document.
@@ -54,7 +55,9 @@ only on their computer. Then:
    if they want), decline it saying why, or pass it to a colleague in the same team.
 4. The agent writes the sheet; **the lead** checks it and approves it, or rejects it and restarts it.
 5. When the three sheets are approved, **the synthesis starts by itself** on the account manager's computer, with the files of the
-   three sheets. The account manager reads it and decides whether to bid.
+   three sheets. The account manager approves it.
+6. **The account manager decides**: in the mailbox they find «Decide whether to bid», with the synthesis, and press «We bid»
+   or «We do not bid». The decision stays written in the round's log.
 
 Every step and every gesture stays written in the **round's log**, in git, on a separate branch (`mde/giri`): each computer
 reads it and does the steps of its people, without needing a server to coordinate. In the demo the four people are you,
