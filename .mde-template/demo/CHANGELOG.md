@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.3.0 — 2026-10-19
+- The presentation for the «Create new project» showcase (`slides`): what is in the demo and where to start. It needs MdExplorer 2026.10.19 or newer.
+
 ## 1.2.0 — 2026-10-18
 - The tender's workflow is now version 3, like the Italian demo: the agent cards say what each piece of work receives, reads and delivers, the account manager's decision is a step of the round («We bid» / «We do not bid»), the roles are ready in `responsibilities.md` and MdExplorer draws the diagram. Before this version the English workflow could not be read and the round did not start. The changed cards ask for trust again.
 
