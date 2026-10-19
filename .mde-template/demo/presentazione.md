@@ -1,7 +1,10 @@
 ---
 document_type: slides
+reveal:
+  theme: mde-space
 ---
 
+<!-- .slide: data-background-image="/mde-space/sfondi/alieni.svg" class="mde-cielo" -->
 # La demo di MdExplorer
 
 Un progetto che mostra che cosa fa MdExplorer **usando MdExplorer**.
@@ -10,7 +13,7 @@ Tutto ciò che vedi è un file markdown dentro un repository git.
 
 ---
 
-## Da dove partire
+## <img class="mde-icona" src="/mde-space/icone/telescopio.svg" alt=""> Da dove partire
 
 - **dieci minuti** — `presentazione/`: l'idea, in venti slide
 - **mezz'ora** — `tour/`: otto prove da fare con le tue mani
@@ -20,7 +23,7 @@ Tutto ciò che vedi è un file markdown dentro un repository git.
 
 ---
 
-## Il percorso: otto prove
+## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> Il percorso: otto prove
 
 1. Documenti vivi: file inclusi, comandi che si eseguono
 2. Diagrammi che rispondono a un clic
@@ -33,7 +36,7 @@ Tutto ciò che vedi è un file markdown dentro un repository git.
 
 ---
 
-## Il caso di studio e la città degli agenti
+## <img class="mde-icona" src="/mde-space/icone/ufo.svg" alt=""> Il caso di studio e la città degli agenti
 
 - **Alpina Servizi** (inventata) prova un assistente AI per il suo help desk: requisiti, architettura, piano, verbale.
   Nei documenti sono nascoste **tre incongruenze**: chiedi a MarkAgent di trovarle
@@ -41,7 +44,7 @@ Tutto ciò che vedi è un file markdown dentro un repository git.
 
 ---
 
-## Il grafo del codice
+## <img class="mde-icona" src="/mde-space/icone/satellite.svg" alt=""> Il grafo del codice
 
 - Segni una cartella come ambiente di sviluppo: il programma diventa un grafo di classi, metodi e relazioni
 - Lo guardi, lo leggi in un report, lo interroghi con Mark, che cita le righe
@@ -49,7 +52,8 @@ Tutto ciò che vedi è un file markdown dentro un repository git.
 
 ---
 
-## Quando sceglierla
+<!-- .slide: data-background-image="/mde-space/sfondi/orbite.svg" class="mde-sinistra" -->
+## <img class="mde-icona" src="/mde-space/icone/stella.svg" alt=""> Quando sceglierla
 
 - per conoscere MdExplorer prima di usarlo sul serio
 - per mostrarlo a qualcuno
