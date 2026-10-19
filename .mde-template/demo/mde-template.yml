@@ -3,11 +3,14 @@ id: demo
 kind: project
 title: "La demo di MdExplorer"
 description: "Un progetto da esplorare: caso studio, grafo del codice, wiki e la città degli agenti che prepara una gara."
-version: 1.1.0
+version: 1.2.0
 requires:
-  mde: 2026.10.18
+  mde: 2026.10.19
 languages:
   it: { structure: main }
   en: { structure: en }
+slides:
+  it: .mde-template/demo/presentazione.md
+  en: .mde-template/demo/presentation.md
 workflows:
   - citta-degli-agenti/gara/workflow.md
