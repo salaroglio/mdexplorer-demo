@@ -1,7 +1,10 @@
 ---
 document_type: slides
+reveal:
+  theme: mde-space
 ---
 
+<!-- .slide: data-background-image="/mde-space/sfondi/alieni.svg" class="mde-cielo" -->
 # The MdExplorer demo
 
 A project that shows what MdExplorer does **by using MdExplorer**.
@@ -10,7 +13,7 @@ Everything you see is a markdown file inside a git repository.
 
 ---
 
-## Where to start
+## <img class="mde-icona" src="/mde-space/icone/telescopio.svg" alt=""> Where to start
 
 - **ten minutes** — `presentation/`: the idea, in twenty slides
 - **half an hour** — `tour/`: eight things to try yourself
@@ -19,7 +22,7 @@ Everything you see is a markdown file inside a git repository.
 
 ---
 
-## Eight things to try
+## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> Eight things to try
 
 1. Living documents
 2. Diagrams that answer a click
@@ -32,7 +35,7 @@ Everything you see is a markdown file inside a git repository.
 
 ---
 
-## The case study and the agent city
+## <img class="mde-icona" src="/mde-space/icone/ufo.svg" alt=""> The case study and the agent city
 
 - **Alpina Servizi** (invented) tries an AI assistant for its help desk: requirements, architecture, plan, minutes.
   The documents hide **three inconsistencies**: ask MarkAgent to find them
@@ -40,7 +43,8 @@ Everything you see is a markdown file inside a git repository.
 
 ---
 
-## When to choose it
+<!-- .slide: data-background-image="/mde-space/sfondi/orbite.svg" class="mde-sinistra" -->
+## <img class="mde-icona" src="/mde-space/icone/stella.svg" alt=""> When to choose it
 
 - to get to know MdExplorer before using it for real
 - to show it to someone

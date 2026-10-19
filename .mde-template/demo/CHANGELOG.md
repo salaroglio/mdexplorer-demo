@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.4.0 — 2026-10-19
+- The presentation in MdExplorer's style (theme `mde-space`): the aliens to open, the orbits to close, an icon in each title. It needs MdExplorer 2026.10.19.11 or newer.
+
 ## 1.3.0 — 2026-10-19
 - The presentation for the «Create new project» showcase (`slides`): what is in the demo and where to start. It needs MdExplorer 2026.10.19 or newer.
 
