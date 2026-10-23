@@ -6,7 +6,7 @@ title: Le domande che Mark sa fare
 
 ## TL;DR
 
-Quando una cartella ha un grafo, Mark riceve nove **strumenti** (tool MCP del gruppo `code`): otto leggono il grafo e
+Quando una cartella ha un grafo, Mark riceve dieci **strumenti** (tool MCP del gruppo `code`): nove leggono il grafo e
 uno corregge le descrizioni. Li sceglie da solo in base alla domanda; non devi nominarli. Questa pagina dice cosa fa
 ciascuno e una domanda che lo fa scattare, così sai cosa aspettarti e cosa chiedere; e quali domande si fanno senza
 scrivere, dal grafo.
@@ -14,8 +14,9 @@ scrivere, dal grafo.
 - Tutti partono da un **simbolo**: un id, un nome qualificato, o una ricerca a testo (`code_find_symbol`).
 - Un nome ambiguo non viene indovinato: Mark ti propone gli id fra cui scegliere.
 - Le risposte citano file, riga e **fiducia** della relazione; dove il grafo tace, Mark legge il sorgente e lo dice.
+- Mark non scrive query al database: chiede a MdExplorer, che le fa al posto suo e risponde con i fatti.
 
-## I nove strumenti
+## I dieci strumenti
 
 | Strumento | Che cosa fa | Una domanda che lo fa scattare |
 |---|---|---|
@@ -26,6 +27,7 @@ scrivere, dal grafo.
 | `code_impact` | tutto ciò che, a ritroso, dipende da un simbolo (chi lo chiama, chi chiama chi lo chiama…) | «Cosa si rompe se cambio la firma di `INotifica.Invia`?» |
 | `code_path` | il cammino più corto fra due simboli | «Come si arriva da `Program.Main` a `TassoPrimoContatto`?» |
 | `code_overview` | la panoramica della cartella: quanti simboli per tipo, quante relazioni, i più connessi, i file più grossi con la loro utilità | «Fammi una panoramica del programma dell'help desk» |
+| `code_inventory` | che cosa c'è nel grafo, cartella per cartella: linguaggi, file e simboli letti, quanti hanno già una descrizione, l'ultimo giro di descrizione e quelli in corso | «A che punto è la descrizione del programma? È finita?» |
 | `code_roots` | dove sta il codice su questo computer: le cartelle del progetto e le radici esterne (codice che sta fuori, con un alias) | «Dove sta il codice del backend su questo computer?» |
 | `code_set_description` | **scrive**: corregge o completa una descrizione, del file o di un simbolo con ritorno, avvertenze e parametri; MdExplorer la controlla e aggiorna lo script `.doc.ttl` | «La descrizione di `Gestisci` non dice che il ticket è archiviato prima della proposta: aggiungilo» |
 
@@ -46,7 +48,8 @@ nella stessa conversazione del tab, e puoi continuare a chiedere da lì.
 | un simbolo | «Chiedi a MarkAgent di «X»» | di spiegarlo: a che cosa serve, che cosa riceve e restituisce, chi lo chiama, che cosa chiama, gli effetti, i punti delicati |
 | un file | «Chiedi a MarkAgent di spiegare «X» e i suoi legami» | a che cosa serve il file e perché è collegato agli altri, con i legami disegnati |
 | un arco | «Chiedi a MarkAgent: che cosa vuol dire «A → B»?» | di leggere i punti del codice da cui nasce l'arco e dire se è certo, dedotto o ambiguo |
-| un simbolo o un file | «Analizza con Mark» · «Rifai l'analisi con Mark» | di scrivere, o riscrivere, la descrizione di quel solo simbolo o file: questa non è una domanda, aggiorna lo script |
+| un simbolo | «Descrivi con Mark» · «Rifai la descrizione con Mark» | di scrivere, o riscrivere, la descrizione di quel solo simbolo: questa non è una domanda, aggiorna lo script |
+| un file | «Descrivi il file con Mark» · «Rifai la descrizione del file con Mark» | lo stesso, per a che cosa serve il file |
 
 ## Come leggere una risposta
 
@@ -66,7 +69,9 @@ che la cartella fosse segnata (con Copilot o opencode). «Nuova sessione chat» 
 
 - **«Chi legge `SogliaFiducia`?»** Le letture di un campo dentro un metodo non sono archi. Mark compensa con il sorgente.
 - **«Perché `Scala` manda un messaggio al secondo livello?»** Il grafo non ha i perché; le descrizioni di Mark
-  ([prova 4](../prove/04-analizza-il-codice.md)) sì, se hai fatto analizzare il codice.
+  ([prova 4](../prove/04-analizza-il-codice.md)) sì, se hai fatto descrivere il codice.
+- **Le descrizioni appena scritte, durante un giro lungo.** Mentre «Descrivi con Mark» lavora, le descrizioni entrano
+  nel database a gruppi, ogni 200 domande o ogni cinque minuti: le ultime Mark può non vederle ancora.
 - **«Cosa fa il template di questo componente Angular?»** I template HTML non sono nel grafo.
 - **«Qual è il cammino fra due classi lontane in un progetto enorme?»** Può passare per un `import` comune, che non
   dice niente: pesare le relazioni è il prossimo passo di MdExplorer.

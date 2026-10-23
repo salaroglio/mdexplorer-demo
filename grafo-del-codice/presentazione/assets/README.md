@@ -38,7 +38,7 @@ Un'illustrazione o una schermata è un'immagine dentro la slide:
 
 ```markdown
 <img src="assets/codice-in-grafo.svg" alt="Un file sorgente che diventa un grafo" width="500">
-<img src="../prove/assets/schermate/analisi-con-mark.png" alt="Analisi con Mark completata" width="440">
+<img src="../prove/assets/schermate/analisi-con-mark.png" alt="Descrizione con Mark completata" width="340">
 ```
 
 ## Come sono nati
@@ -46,6 +46,7 @@ Un'illustrazione o una schermata è un'immagine dentro la slide:
 Gli SVG li scrive un programma Python, `grafo.py`, che sta in `docs-internal/pitch/asset-generatori/` del repository di
 sviluppo di MdExplorer, accanto a quello degli asset della città degli agenti. Serve solo a chi vuole ritoccarli: le
 slide usano i file SVG, non il programma. Le schermate sono l'app vera, catturate durante una prova del 13/10/2026
-sul programma d'esempio.
+sul programma d'esempio; quelle della finestra «Ambiente di sviluppo» sono state rifatte il 23/10/2026, quando la
+finestra ha preso i due passi «Estrai la struttura» e «Descrivi con Mark».
 
 [Torna alla sezione](../../README.md)

@@ -28,7 +28,7 @@ rectangle "Estrattore\nRoslyn, PowerShell\no tree-sitter" as ext
 file "Script .ast.ttl\nuno per sorgente" as scripts
 database "Fuseki\nun grafo per cartella" as db
 rectangle "Vista del grafo\nReport" as view
-rectangle "Mark\n9 strumenti" as mark
+rectangle "Mark\n10 strumenti" as mark
 file "Descrizioni\n.doc.ttl" as doc
 
 src --> ext : legge
@@ -36,7 +36,7 @@ ext --> scripts : scrive
 scripts --> db : caricati
 db --> view
 db --> mark : interroga
-mark --> doc : «Analizza il codice\ncon Mark»\ncode_set_description
+mark --> doc : «Descrivi con Mark»\ncode_set_description
 doc --> db : caricate
 @enduml
 ```
@@ -50,10 +50,10 @@ doc --> db : caricate
 2. **Il database.** Gli script vengono caricati in **Apache Jena Fuseki**, un database a grafo che MdExplorer avvia
    da sé, sul tuo computer, senza che tu veda niente. Ogni cartella «program» ha il suo grafo. Da lì leggono la pagina
    «Grafo del codice», il report e gli strumenti di Mark.
-3. **Mark.** Nel tab «Mark Agent» l'agente ha nove strumenti per il grafo: otto lo leggono (trova un simbolo,
-   descrivilo, l'outline di un file, i vicini, l'impatto, il cammino, la panoramica, dove sta il codice) e uno scrive le
+3. **Mark.** Nel tab «Mark Agent» l'agente ha dieci strumenti per il grafo: nove lo leggono (trova un simbolo,
+   descrivilo, l'outline di un file, i vicini, l'impatto, il cammino, la panoramica, l'inventario, dove sta il codice) e uno scrive le
    descrizioni. Li usa da solo quando la domanda riguarda il codice; dalla pagina del grafo gli si chiede con il tasto
-   destro. Con «Analizza il codice con Mark» legge ogni sorgente e scrive a che cosa serve il file e, per ogni simbolo,
+   destro. Con «Descrivi con Mark» legge il codice e scrive a che cosa serve il file e, per ogni simbolo,
    una **descrizione** con il significato dei parametri e del ritorno: finiscono in un secondo script accanto al primo,
    e nel grafo.
 
@@ -93,18 +93,24 @@ file di testo leggibile per ogni sorgente, che qualsiasi strumento RDF (Apache J
 L'analisi non riparte mai da zero. Se la cartella sta in un repository Git, MdExplorer chiede a Git **quali file sono
 cambiati** dall'ultima analisi e riparsa solo quelli; fuori da Git confronta l'impronta di ogni file. Un sorgente
 cancellato porta via il suo script e le sue righe nel grafo. Un estrattore nuovo, cioè una versione nuova di MdExplorer
-che legge meglio, non rifà gli script in silenzio: la pagina del grafo dice quanti file sono stati letti con la versione
-precedente e offre «Aggiorna l'analisi».
+che legge meglio, non rifà gli script in silenzio: la pagina del grafo e la finestra «Ambiente di sviluppo» dicono
+quanti file sono stati letti con la versione precedente e offrono «Aggiorna la struttura».
 
-Le descrizioni di Mark seguono la stessa regola: «Analizza il codice con Mark» chiede all'AI solo i simboli **senza
-descrizione o con la firma cambiata**, e a che cosa serve il file solo quando manca. Rinominare un parametro fa riscrivere
-la descrizione di quel metodo, non delle altre cento.
+Le descrizioni di Mark seguono la stessa regola: «Descrivi con Mark» chiede all'AI solo i simboli **senza
+descrizione, con la firma cambiata o con il corpo cambiato**, e a che cosa serve il file solo quando manca. Rinominare un
+parametro fa riscrivere la descrizione di quel metodo, non delle altre cento.
+
+L'ordine viene dal grafo: prima le funzioni che non chiamano niente del programma, poi quelle che chiamano solo funzioni
+già descritte, e così via fino in cima. Così Mark descrive una funzione sapendo che cosa fanno quelle che chiama. Se una
+domanda non riesce, chi dipende da lei non parte, e il giro lo dice; «Riprendi» rifà solo quelle. Quando cambia la
+descrizione di una funzione chiamata, chi la chiama diventa **«da rivedere»**: non si rifà da solo, lo decidi tu con
+«Rivedi anche le N da rivedere».
 
 ## Le descrizioni: chi le scrive e chi le corregge
 
 | Cosa | Chi la scrive | Dove si vede |
 |---|---|---|
-| a che cosa serve un **file**, in una o due frasi | Mark, con «Analizza il codice con Mark» o dal tasto destro sul file | sotto il file nella pagina del grafo («Utilità dei file»), nel report, negli strumenti `code_outline` e `code_overview` |
+| a che cosa serve un **file**, in una o due frasi | Mark, con «Descrivi con Mark» o dal tasto destro sul file | sotto il file nella pagina del grafo («Utilità dei file»), nel report, negli strumenti `code_outline` e `code_overview` |
 | che cosa fa un **simbolo**, che cosa restituisce, le avvertenze | Mark, come sopra, o dal tasto destro sul simbolo | nella scheda del simbolo, in `code_describe`, nella ricerca a testo |
 | che cosa rappresenta ogni **parametro** | Mark, come sopra | in `code_describe` |
 | i parametri con cui si lancia uno **script** (il `param()` di PowerShell) | Mark, come sopra; lo script stesso non ha una descrizione sua: è quella del file | nella scheda dello script, in «Dettagli», e in `code_describe` |
@@ -114,8 +120,9 @@ che…, sistemala». Mark rilegge il sorgente e usa `code_set_description`; MdEx
 che non esiste, una firma vecchia: rifiutati, con il motivo), aggiorna lo script `.doc.ttl` e il grafo. Nessuno scrive a
 mano gli script: si rigenerano, e una modifica a mano si perderebbe alla prossima analisi.
 
-Ogni descrizione dice chi l'ha scritta (`writtenBy`) e per quale firma (`signatureHash`). Un limite di oggi: l'autore è
-uno per script, l'ultimo che l'ha toccato; la storia completa la tiene Git.
+Ogni descrizione dice chi l'ha scritta (`writtenBy`: le istruzioni, il motore e il modello, oppure
+`code_set_description` per una correzione) e per quale firma, quale corpo e quale contesto (`signatureHash`,
+`bodyHash`, `contextHash`). La storia completa, con le versioni precedenti, la tiene Git.
 
 ## Cosa il grafo non sa, oggi
 

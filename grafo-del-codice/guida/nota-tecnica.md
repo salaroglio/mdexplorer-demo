@@ -20,7 +20,7 @@ si scarica una piccola grammatica da mdexplorer.net, una volta per linguaggio.
 |---|---|---|
 | **Java 21** o più recente | Fuseki 6 è scritto in Java 21; MdExplorer lo rifiuta più vecchio e lo dice | all'avvio MdExplorer controlla il Java impostato e, se l'aveva scelto lui ed è vecchio o sparito, lo sostituisce con il migliore che trova e lo dice; nelle impostazioni c'è «Rileva il migliore» |
 | **Rete**, una volta per linguaggio | per scaricare la grammatica tree-sitter (0,1-1,5 MB) | la finestra «Ambiente di sviluppo», pulsante «Scarica la grammatica» |
-| **Un motore AI** del progetto | per «Analizza il codice con Mark» e per le domande nel tab Mark Agent | impostazioni del progetto, «Ambiente agentico» |
+| **Un motore AI** del progetto | per «Descrivi con Mark» e per le domande nel tab Mark Agent | impostazioni del progetto, «Ambiente agentico»; il modello per descrivere, nella finestra «Ambiente di sviluppo» |
 
 Per il **C# non serve niente**: l'estrattore è Roslyn, il compilatore, che MdExplorer si porta dietro e usa senza SDK,
 senza MSBuild e senza compilare davvero il programma. Lo stesso per il **PowerShell**: il parser ufficiale del
@@ -65,8 +65,11 @@ memoria per Fuseki. Le domande di Mark sul grafo rispondono in decine o centinai
 progetto così grande è l'unica che supera i tre secondi. Il programma d'esempio di questa sezione, quindici file, si
 analizza in meno di un secondo.
 
-«Analizza il codice con Mark» è l'unico passo che consuma il tuo abbonamento AI: una chiamata per file sorgente, solo
-per i file con qualcosa da analizzare; per i quindici file d'esempio, un paio di minuti. Le domande nel tab e le
-correzioni delle descrizioni costano quanto una normale conversazione con Mark.
+«Descrivi con Mark» è l'unico passo che consuma il tuo abbonamento AI: una domanda per ogni gruppo di simboli dello
+stesso file allo stesso livello, solo per quello che manca o è cambiato. Per i quindici file d'esempio sono 33 domande,
+un paio di minuti. Su PlantUML sarebbero 13.429 domande su 49 livelli, più 3.229 getter, setter e costanti che
+MdExplorer descrive da solo senza chiedere niente: per questo la finestra mostra il conto prima di partire, e per questo
+il modello per descrivere si sceglie a parte (con Claude Code il predefinito è `haiku`, il più leggero). Le domande nel
+tab e le correzioni delle descrizioni costano quanto una normale conversazione con Mark.
 
 [Torna alla sezione](../README.md)

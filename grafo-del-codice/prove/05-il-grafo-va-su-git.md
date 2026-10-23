@@ -49,14 +49,14 @@ carica in qualsiasi database RDF e si interroga in SPARQL anche senza MdExplorer
 | | Script in `.mde-code/` | Database Fuseki |
 |---|---|---|
 | dove sta | nel progetto, su Git | sul computer di chi lo usa |
-| chi lo scrive | l'estrattore; Mark, con l'analisi e le correzioni | MdExplorer, dagli script |
-| se si perde | si rianalizza (e si rifà l'analisi con Mark, a pagamento) | si ricostruisce dagli script, gratis |
+| chi lo scrive | l'estrattore; Mark, con le descrizioni e le correzioni | MdExplorer, dagli script |
+| se si perde | si rifà la struttura (e si rifanno le descrizioni con Mark, a pagamento) | si ricostruisce dagli script, gratis |
 | a cosa serve | verità, cronologia, revisione | domande veloci, ricerca, vista |
 
 La cronologia di Git vale anche per il grafo: un `git diff` su uno script dice quali simboli e quali relazioni ha
 aggiunto o tolto un commit, e `git blame` su un `.doc.ttl` dice quando è stata scritta, o corretta, una descrizione.
-Serve: lo script ricorda un solo autore, l'ultimo che l'ha toccato ([prova 4](04-analizza-il-codice.md)), mentre Git li
-ricorda tutti.
+Lo script dice chi ha scritto ogni descrizione oggi ([prova 4](04-analizza-il-codice.md)); Git ricorda anche le versioni
+di prima e chi le aveva scritte.
 
 ## E se tolgo il tag?
 

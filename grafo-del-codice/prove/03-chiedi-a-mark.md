@@ -6,7 +6,7 @@ title: "Prova 3: chiedi a Mark"
 
 ## TL;DR
 
-Con il grafo caricato, Mark ha nove strumenti per interrogarlo e li usa da solo quando la domanda riguarda il codice.
+Con il grafo caricato, Mark ha dieci strumenti per interrogarlo e li usa da solo quando la domanda riguarda il codice.
 Le risposte citano file e riga, distinguono ciò che è certo da ciò che è dedotto, e quando il grafo non basta Mark lo
 dice e apre il sorgente. Le domande si scrivono nel tab, o si fanno dal grafo con il tasto destro.
 
@@ -90,6 +90,7 @@ collegati).
 | «Cosa si rompe se cambio la firma di INotifica.Invia?» | `code_impact` a tre salti all'indietro |
 | «Fammi una panoramica del programma» | `code_overview`: quanti simboli, i più connessi, i file più grossi |
 | «Quale metodo calcola la quota di ticket chiusi al primo contatto?» | `code_find_symbol` sul testo: funziona davvero dopo la [prova 4](04-analizza-il-codice.md) |
+| «A che punto è la descrizione del programma d'esempio?» | `code_inventory`: file e simboli letti, quanti descritti, il giro in corso o l'ultimo |
 | «La descrizione di CatalogoFaq.Cerca è troppo vaga: riscrivila» | `code_set_description`: lo provi nella [prova 4](04-analizza-il-codice.md) |
 
 L'elenco completo, con un esempio per ciascuno, è in [Le domande che Mark sa fare](../guida/le-domande-di-mark.md).
@@ -103,4 +104,4 @@ L'elenco completo, con un esempio per ciascuno, è in [Le domande che Mark sa fa
 - **Un nome ambiguo**: se chiedi di `Invia` e ce ne sono tre, Mark ti propone gli id fra cui scegliere. È il grafo che
   non indovina al posto tuo.
 
-[← Prova 2](02-guarda-il-grafo.md) · [Prova 4: fai analizzare il codice →](04-analizza-il-codice.md) · [Torna alla sezione](../README.md)
+[← Prova 2](02-guarda-il-grafo.md) · [Prova 4: fai descrivere il codice a Mark →](04-analizza-il-codice.md) · [Torna alla sezione](../README.md)

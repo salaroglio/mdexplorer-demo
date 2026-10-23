@@ -234,7 +234,7 @@ l'impronta della firma.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12)">
-<b>3 · «Salva e analizza»</b><br>In un paio di secondi il programma è un grafo, e Mark ha gli strumenti per leggerlo.
+<b>3 · «Estrai la struttura»</b><br>In un paio di secondi il programma è un grafo, senza AI, e Mark ha gli strumenti per leggerlo.
 </div>
 
 </div>
@@ -390,13 +390,13 @@ Un documento markdown, riscritto a ogni analisi:
 Note:
 Il report è per le persone, o da incollare in una conversazione. Dice la salute del grafo: quanti archi sono incerti,
 quali simboli nessuno ha ancora descritto, quali descrizioni sono vecchie perché la firma è cambiata. I numeri sono
-quelli del programma d'esempio dopo l'analisi con Mark.
+quelli del programma d'esempio dopo la descrizione con Mark.
 
 ---
 
 <!-- .slide: data-background-image="assets/grafo-sfondo-chiaro.svg" -->
 
-## Mark con nove strumenti
+## Mark con dieci strumenti
 
 <div style="display:flex; gap:22px; justify-content:center; margin-top:4px; text-align:left">
 
@@ -409,6 +409,7 @@ quelli del programma d'esempio dopo l'analisi con Mark.
 <code>code_impact</code> «cosa si rompe se cambio <code>INotifica.Invia</code>?»<br>
 <code>code_path</code> «come si arriva da <code>Main</code> a <code>TassoPrimoContatto</code>?»<br>
 <code>code_overview</code> «fammi una panoramica»<br>
+<code>code_inventory</code> «a che punto è la descrizione?»<br>
 <code>code_roots</code> «dove sta il codice su questo computer?»
 </div>
 
@@ -421,7 +422,7 @@ quelli del programma d'esempio dopo l'analisi con Mark.
 </div>
 
 Note:
-Otto strumenti di sola lettura e uno che scrive, circa duemilacinquecento token in tutto. Mark li sceglie da solo:
+Nove strumenti di sola lettura e uno che scrive, circa duemilacinquecento token in tutto. Mark li sceglie da solo:
 nella prova, alla domanda «chi implementa, chi chiama» ha usato find e neighbors senza che nessuno glieli nominasse.
 L'unico che scrive corregge le descrizioni, mai i fatti letti dal parser.
 
@@ -434,7 +435,7 @@ L'unico che scrive corregge le descrizioni, mai i fatti letti dal parser.
 <div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
 <div style="display:flex; flex-direction:column; gap:14px; align-items:center">
-<img src="../prove/assets/schermate/menu-simbolo.png" alt="Il menu del tasto destro su Gestisci: Chiedi a MarkAgent, Rifai l'analisi con Mark, Nascondi, Chiudi le chiamate, Apri il sorgente" width="330" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="../prove/assets/schermate/menu-simbolo.png" alt="Il menu del tasto destro su Gestisci: Chiedi a MarkAgent, Rifai la descrizione con Mark, Nascondi, Chiudi le chiamate, Apri il sorgente" width="330" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 <div class="fragment fade-up" style="width:330px; text-align:left; font-size:.52em; line-height:1.4; background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 14px; box-shadow:0 6px 18px rgba(15,27,45,.12)">
 Anche su un <b>file</b> («spiega il file e i suoi legami») e su un <b>arco</b> («che cosa vuol dire questo legame»).
 </div>
@@ -460,14 +461,14 @@ Mark ha trovato anche un punto delicato: il ticket viene archiviato prima della 
 
 <!-- .slide: data-background-image="assets/grafo-sfondo-chiaro.svg" -->
 
-## «Analizza il codice con Mark»
+## «Descrivi con Mark»
 
 <div style="display:flex; gap:30px; align-items:center; justify-content:center">
 
 <div style="width:500px; text-align:left; font-size:.6em; line-height:1.4">
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #1a73e8; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
-<b>Una chiamata AI per file</b><br><b>Solo</b> per chi non ha descrizione o ha cambiato firma: la seconda volta non fa niente.
+<b>Dalle foglie in su</b><br>Prima chi non chiama nessuno, poi chi chiama funzioni già descritte. <b>Solo</b> ciò che manca o è cambiato: la seconda volta non fa niente.
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #7b61ff; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12); margin-bottom:12px">
@@ -475,20 +476,21 @@ Mark ha trovato anche un punto delicato: il ticket viene archiviato prima della 
 </div>
 
 <div class="fragment fade-up" style="background:#fff; border-left:8px solid #188038; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(15,27,45,.12)">
-<b>La forma la controlla il programma</b><br>Una riga sbagliata si scarta e si conta. Nel nostro giro: <b>71 in 15 file, 0 scartate</b>.
+<b>La forma la controlla il programma</b><br>Una riga sbagliata si scarta e si conta; una domanda fallita ferma chi dipende da lei. Nel nostro giro: <b>71 voci in 33 domande, 0 scartate</b>.
 </div>
 
 </div>
 
-<img src="../prove/assets/schermate/analisi-con-mark.png" alt="La finestra Ambiente di sviluppo alla fine: analisi con Mark completata, 71 simboli in 15 file, 0 righe scartate" width="440" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="../prove/assets/schermate/analisi-con-mark.png" alt="La finestra Ambiente di sviluppo alla fine: descrizione con Mark completata, 71 simboli in 33 domande, 0 righe scartate" width="340" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 
 </div>
 
 Note:
-Il grafo sa chi chiama chi, non a che cosa serve. Qui entra l'AI, nel posto giusto: legge ogni sorgente e scrive le
-descrizioni. Il programma le prende solo se hanno la forma giusta, e ricorda chi le ha scritte e con quale firma.
-Nella prova: 56 simboli e 15 file, cioè 71 voci, nessuna riga scartata. «Analizza il codice», senza «con Mark», è
-l'altra azione: rifà il grafo dei fatti, senza AI.
+Il grafo sa chi chiama chi, non a che cosa serve. Qui entra l'AI, nel posto giusto: è il secondo passo della finestra,
+dopo «Estrai la struttura». Mark descrive dalle foglie in su, così chi chiama una funzione la trova già descritta. Il
+programma prende le descrizioni solo se hanno la forma giusta, e ricorda chi le ha scritte, con quale modello, per quale
+firma e quale corpo. Nella prova: 56 simboli e 15 file, cioè 71 voci, in 33 domande su 5 livelli, nessuna riga
+scartata. Il modello per descrivere si sceglie a parte: con Claude Code il predefinito è haiku.
 
 ---
 
@@ -583,13 +585,13 @@ decine di millisecondi e Mark in venti secondi. E un dato onesto: un terzo degli
 
 # Provalo con le tue mani
 
-<p style="color:#cfd8e3; font-size:.75em">Cinque prove, mezz'ora: <b style="color:#ffe08a">segni, guardi, chiedi, fai analizzare, committi.</b></p>
+<p style="color:#cfd8e3; font-size:.75em">Cinque prove, mezz'ora: <b style="color:#ffe08a">segni, guardi, chiedi, fai descrivere, committi.</b></p>
 
 <div style="display:flex; gap:12px; justify-content:center; margin-top:18px; font-size:.5em">
 <div style="background:rgba(255,255,255,.08); border:1px solid #5f86bf; border-radius:12px; padding:10px 14px; color:#dbe6f5"><b style="color:#8fb3e6">1</b> Segna la cartella</div>
 <div style="background:rgba(255,255,255,.08); border:1px solid #5f86bf; border-radius:12px; padding:10px 14px; color:#dbe6f5"><b style="color:#8fb3e6">2</b> Guarda il grafo</div>
 <div style="background:rgba(255,255,255,.08); border:1px solid #5f86bf; border-radius:12px; padding:10px 14px; color:#dbe6f5"><b style="color:#8fb3e6">3</b> Chiedi a Mark</div>
-<div style="background:rgba(255,255,255,.08); border:1px solid #5f86bf; border-radius:12px; padding:10px 14px; color:#dbe6f5"><b style="color:#8fb3e6">4</b> Fai analizzare il codice</div>
+<div style="background:rgba(255,255,255,.08); border:1px solid #5f86bf; border-radius:12px; padding:10px 14px; color:#dbe6f5"><b style="color:#8fb3e6">4</b> Fai descrivere il codice</div>
 <div style="background:rgba(255,255,255,.08); border:1px solid #5f86bf; border-radius:12px; padding:10px 14px; color:#dbe6f5"><b style="color:#8fb3e6">5</b> Il grafo va su Git</div>
 </div>
 
