@@ -40,7 +40,7 @@ se una non va bene la fai correggere a Mark parlandogli.
    riga «Domande all'LLM» conta le risposte, e in basso a destra il riquadro **«Costruzione della conoscenza»** mostra
    lo stesso avanzamento, con «Ferma».
 
-   ![Durante il giro: 8 risposte su 33, e il riquadro Costruzione della conoscenza](assets/schermate/descrizione-in-corso.png)
+   ![Durante il giro: 13 risposte su 33, e il riquadro Costruzione della conoscenza](assets/schermate/descrizione-in-corso.png)
 
 5. Aspetta la riga finale: **«Descrizione con Mark completata: 71 simboli in 33 domande (0 righe scartate)»**. Sono i 56
    simboli più i 15 file: anche ogni file riceve la sua frase. Ora la tabella dice «0 simboli in 0 file» da descrivere.

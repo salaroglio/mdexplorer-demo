@@ -435,7 +435,7 @@ L'unico che scrive corregge le descrizioni, mai i fatti letti dal parser.
 <div style="display:flex; gap:28px; align-items:center; justify-content:center">
 
 <div style="display:flex; flex-direction:column; gap:14px; align-items:center">
-<img src="../prove/assets/schermate/menu-simbolo.png" alt="Il menu del tasto destro su Gestisci: Chiedi a MarkAgent, Rifai la descrizione con Mark, Nascondi, Chiudi le chiamate, Apri il sorgente" width="330" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
+<img src="../prove/assets/schermate/menu-simbolo.png" alt="Il menu del tasto destro su Gestisci: Chiedi a MarkAgent, Rifai la descrizione con Mark, Nascondi, Segui le chiamate, Apri il sorgente" width="330" style="margin:0; border-radius:12px; box-shadow:0 10px 30px rgba(15,27,45,.28); border:1px solid #d6deea">
 <div class="fragment fade-up" style="width:330px; text-align:left; font-size:.52em; line-height:1.4; background:#fff; border-left:8px solid #f29900; border-radius:10px; padding:10px 14px; box-shadow:0 6px 18px rgba(15,27,45,.12)">
 Anche su un <b>file</b> («spiega il file e i suoi legami») e su un <b>arco</b> («che cosa vuol dire questo legame»).
 </div>
