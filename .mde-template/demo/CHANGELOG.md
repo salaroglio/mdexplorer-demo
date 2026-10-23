@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.5.0 — 2026-10-23
+- No changes in English. The Italian demo updates its code-graph section, which the English demo does not have; the version rises in both languages so that they stay in step.
+
 ## 1.4.0 — 2026-10-19
 - The presentation in MdExplorer's style (theme `mde-space`): the aliens to open, the orbits to close, an icon in each title. It needs MdExplorer 2026.10.19.11 or newer.
 
