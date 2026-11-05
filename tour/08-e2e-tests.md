@@ -96,4 +96,4 @@ types them in at the right moment.
 - The components that drive the browser: the test window lists them and installs them on request.
 - To replay the scripts: the .NET development kit.
 
-Back: [Rules, skills and MCP](07-rules-skills-mcp.md) · [Back to the start](../README.md)
+Next: [Redmine issues](09-redmine.md) · Back: [Rules, skills and MCP](07-rules-skills-mcp.md) · [Back to the start](../README.md)

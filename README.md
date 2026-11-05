@@ -1,13 +1,13 @@
 ---
 title: MdExplorer, the demo project
 author: Mark
-description: The demo project of MdExplorer. A presentation, eight things to try with your own hands, and a case study for the AI agent to work on.
+description: The demo project of MdExplorer. A presentation, ten things to try with your own hands, and a case study for the AI agent to work on.
 ---
 
 # MdExplorer, the demo project
 
 > **TL;DR** — This project shows what MdExplorer does by using MdExplorer. There is a presentation to
-> watch, a tour of eight things to try, and a case study for MarkAgent, the AI agent, to work on.
+> watch, a tour of ten things to try, and a case study for MarkAgent, the AI agent, to work on.
 > Everything you see is a markdown file inside a git repository.
 
 MdExplorer is the place where people and AI agents work on the same documents. People read, correct and
@@ -18,7 +18,7 @@ present. Agents read, write and verify. There is one format, markdown, and one h
 | If you have | Open | What you find |
 |---|---|---|
 | ten minutes | [The presentation](presentation/mdexplorer.md) | the idea, in twenty slides |
-| half an hour | [The tour: try it yourself](tour/01-living-documents.md) | eight things to try |
+| half an hour | [The tour: try it yourself](tour/01-living-documents.md) | ten things to try |
 | an hour | [The case study](case-study/README.md) | a project for the AI to work on |
 | half an hour more | [The agent city](agent-city/README.md) | AI agents that live in the project and write to each other |
 
@@ -34,6 +34,8 @@ present. Agents read, write and verify. There is one format, markdown, and one h
 | 6 | [Git without the terminal](tour/06-git.md) | what changed, who changed it, how to save |
 | 7 | [Rules, skills and MCP](tour/07-rules-skills-mcp.md) | how the agent learns the way your team works |
 | 8 | [Tests written in plain language](tour/08-e2e-tests.md) | the agent checks a site and leaves the evidence |
+| 9 | [Redmine issues](tour/09-redmine.md) | MarkAgent reads and updates the issues, with your personal key |
+| 10 | [The Telegram remote control](tour/10-telegram.md) | your personal bot and the project notice channel |
 
 ## The agent city
 
@@ -82,7 +84,7 @@ mindmapDiagram {
 ***_ the MdExplorer presentation
 ***_ behind the scenes
 ** tour
-***_ eight things to try
+***_ ten things to try
 left side
 ** case-study
 ***_ requirements, architecture, plan

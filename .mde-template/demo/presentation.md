@@ -16,13 +16,13 @@ Everything you see is a markdown file inside a git repository.
 ## <img class="mde-icona" src="/mde-space/icone/telescopio.svg" alt=""> Where to start
 
 - **ten minutes** — `presentation/`: the idea, in twenty slides
-- **half an hour** — `tour/`: eight things to try yourself
+- **half an hour** — `tour/`: ten things to try yourself
 - **an hour** — `case-study/`: a project for the AI to work on
 - **half an hour more** — `agent-city/`: agents that live in the project
 
 ---
 
-## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> Eight things to try
+## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> Ten things to try
 
 1. Living documents
 2. Diagrams that answer a click
@@ -32,6 +32,8 @@ Everything you see is a markdown file inside a git repository.
 6. Git without the terminal
 7. Rules, skills and MCP
 8. Tests in plain language
+9. Redmine issues
+10. The Telegram remote control
 
 ---
 
