@@ -1,13 +1,13 @@
 ---
 title: MdExplorer, il progetto demo
 author: Mark
-description: Progetto demo di MdExplorer. Una presentazione, otto prove da fare con le proprie mani, un caso di studio su cui far lavorare l'agente AI, la città degli agenti e il grafo del codice.
+description: Progetto demo di MdExplorer. Una presentazione, dieci prove da fare con le proprie mani, un caso di studio su cui far lavorare l'agente AI, la città degli agenti e il grafo del codice.
 ---
 
 # MdExplorer, il progetto demo
 
 > **TL;DR** — Questo progetto mostra cosa fa MdExplorer usando MdExplorer. C'è una presentazione da
-> guardare, un percorso di otto prove da fare, e un caso di studio su cui far lavorare MarkAgent, l'agente AI.
+> guardare, un percorso di dieci prove da fare, e un caso di studio su cui far lavorare MarkAgent, l'agente AI.
 > Tutto ciò che vedi è un file markdown dentro un repository git.
 
 MdExplorer è il posto dove persone e agenti AI lavorano sugli stessi documenti. Le persone leggono,
@@ -19,7 +19,7 @@ cronologia è una sola, git.
 | Se hai | Apri | Cosa trovi |
 |---|---|---|
 | dieci minuti | [La presentazione](presentazione/mdexplorer.md) | l'idea, in venti slide |
-| mezz'ora | [Il percorso: prova tu](tour/01-documenti-vivi.md) | otto prove da fare |
+| mezz'ora | [Il percorso: prova tu](tour/01-documenti-vivi.md) | dieci prove da fare |
 | un'ora | [Il caso di studio](caso-studio/README.md) | un progetto su cui far lavorare l'AI |
 | mezz'ora in più | [La città degli agenti](citta-degli-agenti/README.md) | gli agenti AI che abitano il progetto e si scrivono tra loro |
 | mezz'ora, per chi sviluppa | [Il grafo del codice](grafo-del-codice/README.md) | il codice letto da MdExplorer e interrogato da Mark |
@@ -36,6 +36,8 @@ cronologia è una sola, git.
 | 6 | [Git senza terminale](tour/06-git.md) | cosa è cambiato, chi l'ha cambiato, come si salva |
 | 7 | [Regole, skill e MCP](tour/07-regole-skill-mcp.md) | come si insegna all'agente il modo di lavorare di casa |
 | 8 | [Test scritti in italiano](tour/08-test-e2e.md) | l'agente controlla un sito e lascia le prove |
+| 9 | [Le issue di Redmine](tour/09-redmine.md) | MarkAgent legge e aggiorna le issue, con la tua chiave personale |
+| 10 | [Il telecomando Telegram](tour/10-telegram.md) | il tuo bot personale e il canale degli avvisi del progetto |
 
 ## La città degli agenti
 
@@ -91,7 +93,7 @@ mindmapDiagram {
 ***_ la presentazione di MdExplorer
 ***_ dietro le quinte
 ** tour
-***_ otto prove da fare
+***_ dieci prove da fare
 left side
 ** caso-studio
 ***_ requisiti, architettura, piano

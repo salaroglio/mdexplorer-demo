@@ -16,14 +16,14 @@ Tutto ciò che vedi è un file markdown dentro un repository git.
 ## <img class="mde-icona" src="/mde-space/icone/telescopio.svg" alt=""> Da dove partire
 
 - **dieci minuti** — `presentazione/`: l'idea, in venti slide
-- **mezz'ora** — `tour/`: otto prove da fare con le tue mani
+- **mezz'ora** — `tour/`: dieci prove da fare con le tue mani
 - **un'ora** — `caso-studio/`: un progetto su cui far lavorare l'AI
 - **mezz'ora in più** — `citta-degli-agenti/`: agenti che abitano il progetto
 - **per chi sviluppa** — `grafo-del-codice/`: il codice letto e interrogato
 
 ---
 
-## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> Il percorso: otto prove
+## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> Il percorso: dieci prove
 
 1. Documenti vivi: file inclusi, comandi che si eseguono
 2. Diagrammi che rispondono a un clic
@@ -33,6 +33,8 @@ Tutto ciò che vedi è un file markdown dentro un repository git.
 6. Git senza terminale
 7. Regole, skill e MCP
 8. Test scritti in italiano
+9. Le issue di Redmine
+10. Il telecomando Telegram
 
 ---
 

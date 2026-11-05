@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.6.0 — 2026-11-05
+- Il percorso passa da otto a dieci prove. La 9 è sulle issue di Redmine: dove si configura il collegamento, cosa resta nel progetto e cosa resta sul tuo computer, cosa chiedere a MarkAgent. La 10 è sul telecomando Telegram: il bot personale e il canale degli avvisi del progetto. Schermate vere, in italiano e in inglese. Serve MdExplorer 2026.11.05 o più nuovo.
+
 ## 1.5.0 — 2026-10-23
 - Grafo del codice: la sezione racconta la finestra «Ambiente di sviluppo» com'è adesso. Due passi, «Estrai la struttura» (senza AI) e «Descrivi con Mark»; il modello per descrivere; la tabella con il preventivo delle domande; le descrizioni dalle foglie in su; la domanda che non riesce ferma chi dipende da lei, e «Riprendi». La pagina del grafo si apre sulla mappa delle parti. Dieci strumenti per Mark, con `code_inventory`. Schermate rifatte. Serve MdExplorer 2026.10.23 o più nuovo.
 

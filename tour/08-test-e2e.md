@@ -85,4 +85,4 @@ MdExplorer al momento giusto.
 - I componenti per guidare il browser: la finestra dei test li elenca e li installa su richiesta.
 - Per rigiocare gli script: il kit di sviluppo .NET.
 
-Indietro: [Regole, skill e MCP](07-regole-skill-mcp.md) · [Torna all'inizio](../README.md)
+Avanti: [Le issue di Redmine](09-redmine.md) · Indietro: [Regole, skill e MCP](07-regole-skill-mcp.md) · [Torna all'inizio](../README.md)
