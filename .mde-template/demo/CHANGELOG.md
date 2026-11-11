@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.7.1 — 2026-11-11
+- Grafo del codice: la guida «Come Mark verifica il grafo» ha lo schema delle classi dell'ontologia del grafo, in PlantUML: la struttura scritta dal parser, i fatti per le regole, quello che scrivono Mark e le regole approvate, con i legami fra loro.
+
 ## 1.7.0 — 2026-11-11
 - Grafo del codice: da cinque a sette prove. La 6 è su un secondo programma, in Visual Basic .NET (`esempio-vb/`): il file di progetto, un evento con il suo gestore, l'SQL scritto nelle stringhe con le tabelle lette e scritte e la procedura chiamata. La 7 è su Mark che verifica il grafo sul sorgente: il TBox con `code_ontology`, il metodo della skill `mde-code-check`, che cosa si corregge e chi lo fa. Una guida nuova, «Come Mark verifica il grafo»: il TBox, le regole, i linguaggi aggiunti con il loro `tbox.ttl`, le rilevazioni con «Invia diagnostica». Le prove 6 e 7 non hanno ancora schermate. Serve MdExplorer 2026.11.11 o più nuovo.
 

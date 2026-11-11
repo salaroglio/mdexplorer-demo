@@ -32,6 +32,170 @@ gli stessi tipi di nodi. Il **TBox**, la parte dello schema che descrive le clas
 | `Description`, `ParameterDescription`, `FileDescription`, `DescriptionSet` | le descrizioni scritte da Mark |
 | `CallResolution` | la scelta dell'LLM fra i candidati di una chiamata ambigua |
 
+Lo schema delle classi, con le proprietà principali e i legami fra loro. La struttura del codice sta al centro; sopra,
+i fatti che il parser registra per le regole; sotto, quello che scrivono Mark e le regole approvate. Le relazioni fra
+simboli (`calls`, `reads`, `writes`…) non sono disegnate una per una: sono tutte un `Edge`, con il nome nel campo
+`relation`.
+
+```plantuml
+@startuml
+!theme plain
+hide empty members
+hide circle
+skinparam classAttributeIconSize 0
+skinparam ClassBackgroundColor #F1F3F4
+skinparam ClassBorderColor #5F6368
+skinparam ArrowColor #5F6368
+skinparam PackageBorderColor #5F6368
+skinparam class {
+  BackgroundColor<<fatto>> #E4F7FB
+  BorderColor<<fatto>> #12B5CB
+  BackgroundColor<<scritto>> #F3E8FD
+  BorderColor<<scritto>> #9334E6
+}
+hide stereotype
+
+package "I fatti per le regole · scritti dal parser" {
+  class CallSite <<fatto>> {
+    callee
+    receiver
+    path · line
+  }
+  class StringArgument <<fatto>> {
+    position
+    value
+  }
+  class TypeArgument <<fatto>> {
+    position
+    typeName
+  }
+  class Annotation <<fatto>> {
+    name
+    typeName
+    line
+  }
+  class AnnotationArgument <<fatto>> {
+    element
+    value
+    typeName
+  }
+}
+
+package "La struttura · scritta dal parser" {
+  class File {
+    path
+    language
+    extractor
+    extractorVersion
+    contentHash
+  }
+  class Symbol {
+    kind
+    name
+    qualifiedName
+    language
+    path
+    lineStart · lineEnd
+    signature
+    visibility
+    bodyHash
+    guard
+  }
+  class Parameter {
+    position
+    name
+    type
+    direction
+  }
+  class Edge {
+    relation
+    confidence
+    path · line
+    guard
+  }
+}
+
+package "Scritto da Mark e dalle regole" {
+  class RuleSet <<scritto>> {
+    ruleId
+    description
+    writtenBy
+  }
+  class LinkDescription <<scritto>> {
+    path · line
+    summary
+  }
+  class DescriptionSet <<scritto>> {
+    path
+    writtenBy
+  }
+  class Description <<scritto>> {
+    summary
+    returnsDescription
+    remarks
+    signatureHash · bodyHash
+    writtenBy
+  }
+  class ParameterDescription <<scritto>> {
+    parameterName
+    description
+  }
+  class FileDescription <<scritto>> {
+    summary
+    writtenBy
+  }
+  class CallResolution <<scritto>> {
+    line
+  }
+}
+
+Symbol "0..*" -down- "0..1" File : inFile >
+Symbol "0..*" -- "0..1" Symbol : parent >
+Parameter "0..*" -right- "1" Symbol : parameterOf >
+Edge "0..*" -left- "1" Symbol : source >
+Edge "0..*" -left- "1" Symbol : target >
+Edge "0..*" -down- "0..1" RuleSet : rule >
+
+CallSite "0..*" -down- "1" Symbol : caller >
+CallSite "0..1" -- "0..1" CallSite : receiverSite >
+StringArgument "0..*" -down- "1" CallSite : argumentOf >
+TypeArgument "0..*" -down- "1" CallSite : argumentOf >
+Annotation "0..*" -down- "1" Symbol : annotationOf >
+AnnotationArgument "0..*" -down- "1" Annotation : argumentOf >
+
+LinkDescription "0..*" -left- "1" RuleSet : rule >
+Description "0..*" -up- "1" Symbol : describes >
+ParameterDescription "0..*" -up- "1" Symbol : describes >
+FileDescription "0..1" -up- "1" File : describes >
+CallResolution "0..*" -up- "1" Edge : chooses >
+CallResolution "0..*" -up- "0..*" Edge : rejects >
+
+note right of Edge
+  **relation**: contains, imports, inherits, implements,
+  references, calls, instantiates, jumps, dispatches,
+  includes, renders, resolvesTo, reads, writes
+  **confidence**: extracted, inferred, ambiguous,
+  llm-resolved, rule
+  Ogni arco è anche la tripla diretta
+  <source> code:<relation> <target>.
+end note
+
+
+note bottom of DescriptionSet
+  uno per sorgente descritto:
+  lo script .doc.ttl
+end note
+
+legend right
+  grigio = la struttura del codice, scritta dal parser
+  <color:#12B5CB>ciano</color> = i fatti che le regole leggono, scritti dal parser
+  <color:#9334E6>viola</color> = scritto da Mark (descrizioni) e dalle regole approvate
+  Un Symbol con kind = external è dichiarato fuori dal codice letto
+  (una libreria, una tabella, una procedura): solo il nome, niente file né righe.
+endlegend
+@enduml
+```
+
 `code_ontology` restituisce il TBox e, per ogni linguaggio del progetto, il profilo del suo parser: nome, versione, file
 letti, tipi di simbolo e relazioni prodotte, con i numeri. La skill del grafo chiede a Mark di leggerlo **una volta,
 all'inizio**: così non cerca ciò che il grafo non registra e non trascura ciò che registra (la fiducia di un arco, la
