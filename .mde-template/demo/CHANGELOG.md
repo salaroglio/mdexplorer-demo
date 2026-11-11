@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.7.1 — 2026-11-11
+- No changes in English. The Italian demo adds the class diagram of the code-graph ontology to its code-graph section; the version rises in both languages so that they stay in step.
+
 ## 1.7.0 — 2026-11-11
 - No changes in English. The Italian demo adds two things to try to its code-graph section (Visual Basic with the SQL in the code, and MarkAgent checking the graph against the source), which the English demo does not have; the version rises in both languages so that they stay in step. It needs MdExplorer 2026.11.11 or newer.
 
