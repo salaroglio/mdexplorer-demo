@@ -24,11 +24,11 @@ skinparam defaultFontSize 13
 left to right direction
 
 rectangle "Codice sorgente\n(cartella «program»)" as src
-rectangle "Estrattore\nRoslyn, PowerShell\no tree-sitter" as ext
+rectangle "Estrattore\nRoslyn (C#, VB), PowerShell\no tree-sitter" as ext
 file "Script .ast.ttl\nuno per sorgente" as scripts
 database "Fuseki\nun grafo per cartella" as db
 rectangle "Vista del grafo\nReport" as view
-rectangle "Mark\n10 strumenti" as mark
+rectangle "Mark\n20 strumenti" as mark
 file "Descrizioni\n.doc.ttl" as doc
 
 src --> ext : legge
@@ -42,17 +42,19 @@ doc --> db : caricate
 ```
 
 1. **Il parser.** Quando una cartella è segnata come «ambiente di sviluppo» e ha un linguaggio scelto, MdExplorer
-   legge i file di quel linguaggio con un estrattore: **Roslyn** per il C# (il compilatore stesso, che MdExplorer si
-   porta dietro: niente SDK da installare), il **parser ufficiale di PowerShell** per gli script `.ps1`, anche lui nel
+   legge i file di quel linguaggio con un estrattore: **Roslyn** per il C# e il Visual Basic .NET (il compilatore stesso,
+   che MdExplorer si porta dietro: niente SDK da installare; dal file di progetto, `.csproj` o `.vbproj`, prende lo spazio
+   dei nomi, le opzioni e le librerie riferite), il **parser ufficiale di PowerShell** per gli script `.ps1`, anche lui nel
    pacchetto, **tree-sitter** per TypeScript, JavaScript, Python e Java, con una grammatica per linguaggio scaricata al
    primo uso. L'estrattore scrive uno **script** per ogni sorgente, in **Turtle** (il formato standard dei grafi RDF): i
    simboli (classi, interfacce, metodi, proprietà, campi, con i parametri), le relazioni fra loro e la riga in cui stanno.
 2. **Il database.** Gli script vengono caricati in **Apache Jena Fuseki**, un database a grafo che MdExplorer avvia
    da sé, sul tuo computer, senza che tu veda niente. Ogni cartella «program» ha il suo grafo. Da lì leggono la pagina
    «Grafo del codice», il report e gli strumenti di Mark.
-3. **Mark.** Nel tab «Mark Agent» l'agente ha dieci strumenti per il grafo: nove lo leggono (trova un simbolo,
-   descrivilo, l'outline di un file, i vicini, l'impatto, il cammino, la panoramica, l'inventario, dove sta il codice) e uno scrive le
-   descrizioni. Li usa da solo quando la domanda riguarda il codice; dalla pagina del grafo gli si chiede con il tasto
+3. **Mark.** Nel tab «Mark Agent» l'agente ha una ventina di strumenti per il grafo: dieci per leggerlo e scrivere le
+   descrizioni (trova un simbolo, descrivilo, l'outline di un file, i vicini, l'impatto, il cammino, la panoramica,
+   l'inventario, dove sta il codice, correggi una descrizione), gli altri per capire com'è fatto e migliorarlo (vedi
+   [Come Mark verifica il grafo](come-mark-verifica-il-grafo.md)). Li usa da solo quando la domanda riguarda il codice; dalla pagina del grafo gli si chiede con il tasto
    destro. Con «Descrivi con Mark» legge il codice e scrive a che cosa serve il file e, per ogni simbolo,
    una **descrizione** con il significato dei parametri e del ritorno: finiscono in un secondo script accanto al primo,
    e nel grafo.
@@ -61,10 +63,21 @@ doc --> db : caricate
 
 | Nodi | Relazioni | Fiducia |
 |---|---|---|
-| file, classe, interfaccia, record, struct, enum, metodo, costruttore, proprietà, campo, parametro | `contains` (il file contiene la classe, la classe il metodo) · `inherits` · `implements` · `references` (il tipo di un campo, di un parametro, di un ritorno) · `calls` · `instantiates` · `imports` | **extracted**: letto nel codice, senza dubbi · **inferred**: dedotto, per esempio la chiamata su un'interfaccia verso ogni classe che la implementa · **ambiguous**: più candidati e la sola sintassi non sa scegliere |
+| file, classe, interfaccia, record, struct, enum, metodo, costruttore, proprietà, campo, evento, parametro | `contains` (il file contiene la classe, la classe il metodo) · `inherits` · `implements` · `references` (il tipo di un campo, di un parametro, di un ritorno) · `calls` · `instantiates` · `imports` · `reads` e `writes` (le tabelle dell'SQL scritto nel codice) | **extracted**: letto nel codice, senza dubbi · **inferred**: dedotto, per esempio la chiamata su un'interfaccia verso ogni classe che la implementa · **ambiguous**: più candidati e la sola sintassi non sa scegliere · **rule**: aggiunto da una regola che hai approvato |
 
 Un simbolo che non sta nella cartella, come `Console` o `Dictionary`, diventa un nodo **esterno** con il suo nome:
-il grafo sa che è usato, ma non lo descrive.
+il grafo sa che è usato, ma non lo descrive. Lo stesso vale per le tabelle e le procedure nominate dall'SQL.
+
+Nel C# e nel Visual Basic ci sono anche:
+
+- **gli eventi**: chi solleva un evento lo chiama, l'evento chiama i suoi gestori (`Handles`, `AddHandler`, `+=`); in VB
+  anche il campo `WithEvents`, cioè il controllo di un form o di una pagina, porta al suo gestore;
+- **l'SQL scritto nelle stringhe**: il metodo che scrive una query legge (`reads`) le tabelle di `FROM` e `JOIN`, scrive
+  (`writes`) quelle di `INSERT`, `UPDATE`, `DELETE`, `MERGE`, chiama le procedure di `BEGIN … END;`, `CALL`, `EXEC`. Conta
+  dove la frase è scritta, anche a pezzi, non dove viene eseguita; se il nome della tabella arriva da una variabile, il
+  bersaglio è il nodo `?`. Lo provi nella [prova 6](../prove/06-visual-basic-e-sql.md);
+- **i nomi nelle stringhe**, come fatti per le regole: un nome assegnato a una proprietà (`cmd.CommandText = "PKG.PROC"`),
+  passato a un costruttore, tenuto in una costante.
 
 ### Perché la fiducia conta
 
@@ -130,8 +143,11 @@ Ogni descrizione dice chi l'ha scritta (`writtenBy`: le istruzioni, il motore e 
   con le descrizioni, o lo legge nel sorgente quando risponde.
 - **Le letture di un campo dentro un metodo.** `SogliaFiducia` è usata in `Gestisci`, ma l'arco non c'è: il grafo
   registra i tipi dei campi, non chi li legge. Mark lo compensa aprendo il file (lo vedi nella [prova 3](../prove/03-chiedi-a-mark.md)).
-- **I template HTML di Angular**, i linguaggi senza estrattore (Go e Rust sono in arrivo), le dipendenze esterne
-  (pacchetti NuGet, npm): restano nodi esterni, senza struttura.
+- **I linguaggi senza estrattore** (Go e Rust sono in arrivo) e le dipendenze esterne (pacchetti NuGet, npm): restano
+  nodi esterni, senza struttura. Un linguaggio che MdExplorer non conosce si può aggiungere con un pacchetto (vedi
+  [Come Mark verifica il grafo](come-mark-verifica-il-grafo.md#i-linguaggi-aggiunti-con-il-loro-tbox)).
+- **L'SQL fuori dal codice** (file XML, configurazione, il database stesso) e lo schema del database: le tabelle sono
+  nomi, senza colonne.
 - **Quali relazioni valgono.** Su un progetto grande (PlantUML: 3.662 file Java) un terzo degli archi è ambiguo e il
   cammino più corto fra due classi lontane può passare per un `import` comune, che non dice niente. Decidere che cosa
   è conoscenza e che cosa è rumore è il prossimo passo di MdExplorer.

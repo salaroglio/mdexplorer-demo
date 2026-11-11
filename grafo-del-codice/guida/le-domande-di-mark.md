@@ -6,8 +6,8 @@ title: Le domande che Mark sa fare
 
 ## TL;DR
 
-Quando una cartella ha un grafo, Mark riceve dieci **strumenti** (tool MCP del gruppo `code`): nove leggono il grafo e
-uno corregge le descrizioni. Li sceglie da solo in base alla domanda; non devi nominarli. Questa pagina dice cosa fa
+Quando una cartella ha un grafo, Mark riceve gli **strumenti** del grafo (tool MCP del gruppo `code`): qui i dieci per
+leggerlo e correggere le descrizioni; quelli per capire com'è fatto e migliorarlo sono in [Come Mark verifica il grafo](come-mark-verifica-il-grafo.md#gli-strumenti). Li sceglie da solo in base alla domanda; non devi nominarli. Questa pagina dice cosa fa
 ciascuno e una domanda che lo fa scattare, così sai cosa aspettarti e cosa chiedere; e quali domande si fanno senza
 scrivere, dal grafo.
 
@@ -16,7 +16,7 @@ scrivere, dal grafo.
 - Le risposte citano file, riga e **fiducia** della relazione; dove il grafo tace, Mark legge il sorgente e lo dice.
 - Mark non scrive query al database: chiede a MdExplorer, che le fa al posto suo e risponde con i fatti.
 
-## I dieci strumenti
+## Gli strumenti per leggere il grafo
 
 | Strumento | Che cosa fa | Una domanda che lo fa scattare |
 |---|---|---|

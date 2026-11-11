@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.7.0 — 2026-11-11
+- Grafo del codice: da cinque a sette prove. La 6 è su un secondo programma, in Visual Basic .NET (`esempio-vb/`): il file di progetto, un evento con il suo gestore, l'SQL scritto nelle stringhe con le tabelle lette e scritte e la procedura chiamata. La 7 è su Mark che verifica il grafo sul sorgente: il TBox con `code_ontology`, il metodo della skill `mde-code-check`, che cosa si corregge e chi lo fa. Una guida nuova, «Come Mark verifica il grafo»: il TBox, le regole, i linguaggi aggiunti con il loro `tbox.ttl`, le rilevazioni con «Invia diagnostica». Le prove 6 e 7 non hanno ancora schermate. Serve MdExplorer 2026.11.11 o più nuovo.
+
 ## 1.6.0 — 2026-11-05
 - Il percorso passa da otto a dieci prove. La 9 è sulle issue di Redmine: dove si configura il collegamento, cosa resta nel progetto e cosa resta sul tuo computer, cosa chiedere a MarkAgent. La 10 è sul telecomando Telegram: il bot personale e il canale degli avvisi del progetto. Schermate vere, in italiano e in inglese. Serve MdExplorer 2026.11.05 o più nuovo.
 

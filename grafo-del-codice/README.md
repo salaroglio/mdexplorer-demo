@@ -12,8 +12,8 @@ interroga **Mark**, l'agente AI, che così risponde sul codice con fatti e non a
 quando glielo chiedi, a che cosa serve ogni file e ogni metodo. Questa sezione te lo fa provare su un programma piccolo,
 scritto apposta.
 
-- Cinque prove, in ordine, mezz'ora in tutto: segni una cartella, guardi il grafo, fai domande, fai descrivere il codice a Mark, committi.
-- Il programma è in **C#** e non chiede niente da installare: lo legge il compilatore che MdExplorer si porta dietro.
+- Sette prove, in ordine, una cinquantina di minuti: le prime cinque sul programma C#, la 6 e la 7 su un programma Visual Basic con l'SQL nel codice e sulla verifica del grafo.
+- I programmi sono in **C#** e in **Visual Basic .NET** e non chiedono niente da installare: li legge il compilatore che MdExplorer si porta dietro.
 - Per le prove 3 e 4 serve un motore AI configurato per il progetto (GitHub Copilot, Claude Code o opencode).
 
 ## Il caso
@@ -24,6 +24,9 @@ arriva, l'assistente propone una risposta cercando nelle FAQ, un operatore la co
 collega, e le metriche contano quanti ticket si chiudono al primo contatto. Due interfacce con due implementazioni
 ciascuna, una soglia che decide, un numero che il comitato vuole vedere: abbastanza per fare domande vere.
 
+Accanto c'è il **rapporto settimanale** dello stesso help desk, in Visual Basic, in [esempio-vb/](esempio-vb/README.md):
+due file che leggono i ticket dal database, scrivono lo storico e chiudono la settimana con una procedura.
+
 ## La presentazione
 
 - [Il codice, spiegato dal codice](presentazione/grafo-del-codice.md): l'idea e come funziona, in diciotto slide.
@@ -32,8 +35,10 @@ ciascuna, una soglia che decide, un numero che il comitato vuole vedere: abbasta
 
 - [Come funziona](guida/come-funziona.md). I due tempi, il parser e Mark; cosa c'è nel grafo; perché ogni relazione ha un
   grado di fiducia; le descrizioni di Mark e chi le corregge; cosa va su Git e cosa no; cosa il grafo non sa ancora.
-- [Le domande che Mark sa fare](guida/le-domande-di-mark.md). I dieci strumenti del grafo, con una domanda d'esempio per ciascuno,
+- [Le domande che Mark sa fare](guida/le-domande-di-mark.md). Gli strumenti per leggere il grafo, con una domanda d'esempio per ciascuno,
   e le domande dal tasto destro sul grafo.
+- [Come Mark verifica il grafo](guida/come-mark-verifica-il-grafo.md). Il TBox che dice com'è fatto il grafo, la verifica
+  sul sorgente, le regole, i linguaggi aggiunti con il loro TBox, le rilevazioni per chi mantiene MdExplorer.
 - [Nota tecnica: Fuseki, Java e le grammatiche](guida/nota-tecnica.md). Cosa serve sul computer, dove finiscono i dati, quanto costa.
 
 ## Il percorso
@@ -45,6 +50,8 @@ ciascuna, una soglia che decide, un numero che il comitato vuole vedere: abbasta
 | 3 | [Chiedi a Mark](prove/03-chiedi-a-mark.md) | chi implementa, chi chiama, cosa cambia se tocco una soglia; e il tasto destro sul grafo | 8 min |
 | 4 | [Fai descrivere il codice a Mark](prove/04-analizza-il-codice.md) | Mark scrive a che cosa serve ogni file e ogni simbolo, dalle foglie in su; tu cerchi per significato e gli fai correggere una descrizione | 10 min |
 | 5 | [Il grafo va su Git](prove/05-il-grafo-va-su-git.md) | gli script nel progetto, il commit, cosa trova un collega | 5 min |
+| 6 | [Visual Basic e l'SQL nel codice](prove/06-visual-basic-e-sql.md) | un programma VB, le tabelle che legge e scrive, la procedura che chiama, un evento e il suo gestore | 8 min |
+| 7 | [Mark controlla il grafo](prove/07-mark-controlla-il-grafo.md) | com'è fatto il grafo, una relazione verificata sul sorgente, che cosa si corregge e chi lo fa | 10 min |
 
 ## Prima di cominciare
 
@@ -58,7 +65,8 @@ ciascuna, una soglia che decide, un numero che il comitato vuole vedere: abbasta
 
 Il grafo di un programma grande (MdExplorer è stato provato su PlantUML, 3.662 file Java), gli altri linguaggi
 (PowerShell, che come il C# non chiede niente; TypeScript, JavaScript, Python e Java, con una grammatica scaricata al
-primo uso), il codice che sta fuori dal progetto (le radici esterne) e il passo successivo, che è decidere
-quali relazioni del grafo sono conoscenza e quali rumore. Le [guide](guida/come-funziona.md) ne parlano; il resto si mostra dal vivo.
+primo uso; quelli aggiunti con un pacchetto), il codice che sta fuori dal progetto (le radici esterne), una regola
+proposta da Mark e approvata nel wizard, e il passo successivo, che è decidere quali relazioni del grafo sono conoscenza
+e quali rumore. Le [guide](guida/come-funziona.md) ne parlano; il resto si mostra dal vivo.
 
 [Torna all'inizio](../README.md)

@@ -6,7 +6,7 @@ title: "Prova 3: chiedi a Mark"
 
 ## TL;DR
 
-Con il grafo caricato, Mark ha dieci strumenti per interrogarlo e li usa da solo quando la domanda riguarda il codice.
+Con il grafo caricato, Mark ha gli strumenti per interrogarlo e li usa da solo quando la domanda riguarda il codice.
 Le risposte citano file e riga, distinguono ciò che è certo da ciò che è dedotto, e quando il grafo non basta Mark lo
 dice e apre il sorgente. Le domande si scrivono nel tab, o si fanno dal grafo con il tasto destro.
 

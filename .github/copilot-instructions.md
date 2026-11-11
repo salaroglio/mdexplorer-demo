@@ -23,5 +23,8 @@ Questo è il progetto demo di MdExplorer. Chi ti parla lo sta provando: aiutalo 
   si legge. Quando ti chiedono di quel codice usa prima gli strumenti del grafo (`code_*`), se li hai: rispondi con file e riga e di' se una
   relazione è certa, dedotta o ambigua; se il grafo non basta, apri il sorgente e dillo. Se ti chiedono di correggere o completare
   una descrizione del codice, rileggi il sorgente e usa `code_set_description`: non scrivere mai a mano i file di `.mde-code/`.
+- `grafo-del-codice/esempio-vb/` è un secondo programma inventato, in Visual Basic .NET: il rapporto settimanale dello stesso help desk,
+  con l'SQL scritto nelle stringhe. Le stesse regole del programma C#. Quando ti chiedono se una relazione del grafo è vera, segui la
+  skill `mde-code-check`: apri il sorgente, punto per punto, prima di rispondere.
 - `tour/` e `presentazione/` spiegano MdExplorer: non modificarli, a meno che non te lo chiedano.
 - `llm-wiki/` ha le sue regole, scritte in `llm-wiki/CLAUDE.md`.
