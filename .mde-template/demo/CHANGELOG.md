@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.7.0 — 2026-11-11
+- No changes in English. The Italian demo adds two things to try to its code-graph section (Visual Basic with the SQL in the code, and MarkAgent checking the graph against the source), which the English demo does not have; the version rises in both languages so that they stay in step. It needs MdExplorer 2026.11.11 or newer.
+
 ## 1.6.0 — 2026-11-05
 - The tour goes from eight to ten things to try. Number 9 is about Redmine issues: where the connection is set up, what stays in the project and what stays on your computer, what to ask MarkAgent. Number 10 is about the Telegram remote control: the personal bot and the project notice channel. Real screenshots, in English and in Italian. It needs MdExplorer 2026.11.05 or newer.
 
