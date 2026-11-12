@@ -96,12 +96,14 @@ Mark segue la catena fino in fondo, e nota anche l'ordine: il gestore stampa pri
 
 - L'SQL che sta **fuori dal codice**: in un file XML, in una configurazione, in una tabella del database.
 - **Viste e sinonimi**: `OPERATORE` può essere una vista sopra altre tabelle; il grafo vede il nome scritto.
-- Lo **schema**: `OPERATORE` e `GEST.OPERATORE` sono due nodi diversi.
+- Lo **schema**: `OPERATORE` e `GEST.OPERATORE` sono due nodi diversi, finché il database non è nel grafo (prova 8).
 - Le letture di un campo dentro un metodo, come per il C#: `OperatoriAttivi` usa la costante `SqlOperatoriAttivi`, ma
   l'arco va dalla costante alla tabella, non dal metodo.
 
 ## Il prossimo passo
 
-La [prova 7](07-mark-controlla-il-grafo.md): chiedere a Mark se quello che il grafo dice è vero.
+La [prova 7](07-mark-controlla-il-grafo.md): chiedere a Mark se quello che il grafo dice è vero. E la
+[prova 8](08-il-codice-e-il-database.md): il database di questo programma, in PL/SQL, entra nel grafo, e le tabelle e la
+procedura smettono di essere solo nomi.
 
 [Torna alla sezione](../README.md)

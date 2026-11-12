@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.8.0 — 2026-11-12
+- Grafo del codice: la prova 8, «Il codice e il database». Il database del programma Visual Basic, in PL/SQL (`esempio-db/`: tabelle, una vista, il package `PKG_RAPPORTI`, un trigger, una funzione), letto dal pacchetto di linguaggio PL/SQL v2 che arriva con il progetto (`.mde-languages/plsql/`, con `database: true` e la skill `plsql-pacchetto`). Quando il database entra nel grafo, le frecce dell'SQL scritto nel Visual Basic passano dalle tabelle e dalla procedura come nomi agli oggetti veri, e la finestra lo dice. Schermate da un giro vero con Claude Code. Serve MdExplorer 2026.11.11.5 o più nuovo, con le correzioni del 12 novembre per il PL/SQL.
+
 ## 1.7.5 — 2026-11-12
 - Serve MdExplorer 2026.11.11.5 o più nuovo: è il pacchetto che porta tutto quello che le prove 6 e 7 usano.
 

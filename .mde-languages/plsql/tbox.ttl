@@ -1,0 +1,31 @@
+# Written by MdExplorer from language.yml: do not edit, it is rewritten whenever the rules change.
+@prefix code: <https://mdexplorer.net/ns/code#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://mdexplorer.net/ns/code/language/plsql> a code:LanguageProfile ;
+  code:language "plsql" ; rdfs:label "PL/SQL (Oracle)" ; code:packageVersion 2 ;
+  code:extensions ".sql", ".pks", ".pkb", ".pck", ".pls", ".plb", ".spc", ".bdy", ".prc", ".fnc", ".trg", ".vw", ".tab", ".tps", ".tpb" ; code:ignoreCase true ; code:database true ;
+  rdfs:comment "What the parser of this language package writes in MdExplorer's code graph. The classes of nodes and their properties are those of the code ontology (tool code_ontology); here: which symbol kinds and which relations this language produces, and from which rule of language.yml. A kind or a relation not listed here does not exist for this language." .
+
+# ---- symbols
+<https://mdexplorer.net/ns/code/language/plsql#kind-module> a code:ProducedKind ; code:kind "module" ; code:fromRule "module" ; rdfs:comment "one per source file; its name is the file name" .
+<https://mdexplorer.net/ns/code/language/plsql#kind-spec> a code:ProducedKind ; code:kind "interface" ; code:fromRule "blocks.spec" ; rdfs:comment "a block, from its begin line to its end line (inside: module); its parameters are code:Parameter nodes" .
+<https://mdexplorer.net/ns/code/language/plsql#kind-body> a code:ProducedKind ; code:kind "class" ; code:fromRule "blocks.body" ; rdfs:comment "a block, from its begin line to its end line (inside: module); its parameters are code:Parameter nodes" .
+<https://mdexplorer.net/ns/code/language/plsql#kind-proc> a code:ProducedKind ; code:kind "function" ; code:fromRule "blocks.proc" ; rdfs:comment "a block, from its begin line to its end line (inside: module, body, proc, func); its parameters are code:Parameter nodes" .
+<https://mdexplorer.net/ns/code/language/plsql#kind-func> a code:ProducedKind ; code:kind "function" ; code:fromRule "blocks.func" ; rdfs:comment "a block, from its begin line to its end line (inside: module, body, proc, func); its parameters are code:Parameter nodes" .
+<https://mdexplorer.net/ns/code/language/plsql#kind-trigger> a code:ProducedKind ; code:kind "function" ; code:fromRule "blocks.trigger" ; rdfs:comment "a block, from its begin line to its end line (inside: module); its parameters are code:Parameter nodes" .
+<https://mdexplorer.net/ns/code/language/plsql#kind-view> a code:ProducedKind ; code:kind "type" ; code:fromRule "blocks.view" ; rdfs:comment "a block, from its begin line to its end line (inside: module); its parameters are code:Parameter nodes" .
+<https://mdexplorer.net/ns/code/language/plsql#kind-decl> a code:ProducedKind ; code:kind "function" ; code:fromRule "declarations.decl" ; rdfs:comment "a name declared on one line (inside: spec)" .
+<https://mdexplorer.net/ns/code/language/plsql#kind-type> a code:ProducedKind ; code:kind "type" ; code:fromRule "declarations.type" ; rdfs:comment "a name declared on one line (inside: module)" .
+<https://mdexplorer.net/ns/code/language/plsql#kind-table> a code:ProducedKind ; code:kind "record" ; code:fromRule "declarations.table" ; rdfs:comment "a name declared on one line (inside: module)" .
+<https://mdexplorer.net/ns/code/language/plsql#kind-external> a code:ProducedKind ; code:kind "external" ; code:fromRule "references" ; rdfs:comment "a name a reference rule could not find among the analysed files (only where the rule says unresolved: external): no file, no lines" .
+
+# ---- relations
+<https://mdexplorer.net/ns/code/language/plsql#relation-contains> a code:ProducedRelation ; code:relation "contains" ; code:fromRule "(structure)" ; code:targetIs "the module contains its blocks, a block its labels, declarations and fragments" .
+<https://mdexplorer.net/ns/code/language/plsql#relation-0> a code:ProducedRelation ; code:relation "calls" ; code:fromRule "references[0]" ; code:targetIs "a symbol of the rules proc, func, decl, searched in the same file first, then in all the analysed files (then inferred)" ; code:whenNotFound "an external node with the name as written" .
+<https://mdexplorer.net/ns/code/language/plsql#relation-1> a code:ProducedRelation ; code:relation "calls" ; code:fromRule "references[1]" ; code:targetIs "a symbol of the rules proc, func, searched in the same file" ; code:whenNotFound "no edge" .
+<https://mdexplorer.net/ns/code/language/plsql#relation-2> a code:ProducedRelation ; code:relation "calls" ; code:fromRule "references[2]" ; code:targetIs "a symbol of the rules proc, func, searched in the same file" ; code:whenNotFound "no edge" .
+<https://mdexplorer.net/ns/code/language/plsql#relation-3> a code:ProducedRelation ; code:relation "reads" ; code:fromRule "references[3]" ; code:targetIs "a symbol of the rules table, view, searched in the same file first, then in all the analysed files (then inferred)" ; code:whenNotFound "an external node with the name as written" .
+<https://mdexplorer.net/ns/code/language/plsql#relation-4> a code:ProducedRelation ; code:relation "writes" ; code:fromRule "references[4]" ; code:targetIs "a symbol of the rules table, view, searched in the same file first, then in all the analysed files (then inferred)" ; code:whenNotFound "an external node with the name as written" .
+<https://mdexplorer.net/ns/code/language/plsql#relation-5> a code:ProducedRelation ; code:relation "writes" ; code:fromRule "references[5]" ; code:targetIs "a symbol of the rules table, view, searched in the same file first, then in all the analysed files (then inferred)" ; code:whenNotFound "an external node with the name as written" .
+<https://mdexplorer.net/ns/code/language/plsql#relation-6> a code:ProducedRelation ; code:relation "references" ; code:fromRule "references[6]" ; code:targetIs "a symbol of the rules table, view, searched in the same file first, then in all the analysed files (then inferred)" ; code:whenNotFound "an external node with the name as written" .

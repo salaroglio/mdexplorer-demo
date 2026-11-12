@@ -1,0 +1,39 @@
+CREATE OR REPLACE PACKAGE BODY PKG_RAPPORTI AS
+
+  FUNCTION TICKET_APERTI(p_settimana IN NUMBER) RETURN NUMBER IS
+    v_n NUMBER;
+  BEGIN
+    SELECT COUNT(*) INTO v_n
+      FROM V_TICKET_APERTI
+     WHERE SETTIMANA = p_settimana;
+    RETURN v_n;
+  END TICKET_APERTI;
+
+  PROCEDURE SEGNA_CHIUSI(p_settimana IN NUMBER) IS
+  BEGIN
+    UPDATE TICKET
+       SET STATO = 'CHIUSO'
+     WHERE SETTIMANA = p_settimana;
+  END SEGNA_CHIUSI;
+
+  PROCEDURE CHIUDI_SETTIMANA(p_settimana IN NUMBER) IS
+    v_aperti NUMBER;
+  BEGIN
+    v_aperti := TICKET_APERTI(p_settimana);
+    IF v_aperti > 0 THEN
+      SEGNA_CHIUSI(p_settimana);
+    END IF;
+    BEGIN
+      INSERT INTO STORICO_RAPPORTI (SETTIMANA, TICKET, CHIUSO_IL)
+      VALUES (p_settimana, v_aperti, SYSDATE);
+    EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+        NULL;
+    END;
+    PKG_NOTIFICHE.AVVISA('Settimana chiusa');
+    DBMS_OUTPUT.PUT_LINE('chiusa la settimana ' || p_settimana);
+    COMMIT;
+  END CHIUDI_SETTIMANA;
+
+END PKG_RAPPORTI;
+/

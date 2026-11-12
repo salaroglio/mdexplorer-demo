@@ -50,8 +50,9 @@ tue mani, su una gara d'appalto: quattro persone, quattro agenti, una sintesi fi
 MdExplorer legge anche il **codice**: segni una cartella come ambiente di sviluppo e il programma diventa un grafo di classi,
 metodi e relazioni, con la riga e con quanto è sicura ogni relazione. Lo guardi, lo leggi in un report e lo interroghi con
 Mark, che risponde con fatti e cita le righe; Mark scrive anche a che cosa serve ogni file e ogni metodo, e lo corregge
-quando glielo chiedi. [Sette prove](grafo-del-codice/README.md) su due piccoli programmi scritti apposta, in C# e in
-Visual Basic, con l'SQL nel codice e Mark che verifica il grafo sul sorgente.
+quando glielo chiedi. [Otto prove](grafo-del-codice/README.md) su due piccoli programmi scritti apposta, in C# e in
+Visual Basic, e sul database in PL/SQL che il secondo usa: l'SQL nel codice arriva alle tabelle vere, e Mark verifica il
+grafo sul sorgente.
 
 ## Il caso di studio
 
@@ -99,7 +100,7 @@ left side
 ***_ requisiti, architettura, piano
 ***_ verbale e slide del comitato
 ** grafo-del-codice
-***_ sette prove sul codice
+***_ otto prove sul codice
 ***_ il programma dell'help desk
 ** llm-wiki
 ***_ un wiki mantenuto dall'AI

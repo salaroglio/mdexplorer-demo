@@ -79,6 +79,11 @@ Nel C# e nel Visual Basic ci sono anche:
 - **i nomi nelle stringhe**, come fatti per le regole: un nome assegnato a una proprietà (`cmd.CommandText = "PKG.PROC"`),
   passato a un costruttore, tenuto in una costante.
 
+Quando nel grafo c'è anche il database, letto da un pacchetto di linguaggio che si dichiara `database: true` (il PL/SQL
+della [prova 8](../prove/08-il-codice-e-il-database.md)), le frecce dell'SQL del codice non restano sui nomi: vanno alle
+tabelle e alle procedure vere. MdExplorer le sposta da solo ogni volta che gli script cambiano (dopo un'estrazione,
+all'apertura del progetto, dopo un pull), in qualunque ordine si analizzino le cartelle, e lo dice.
+
 ### Perché la fiducia conta
 
 Prendi `ServizioAssistente.Gestisci` nel [programma d'esempio](../esempio/README.md): chiama `_motore.Proponi(ticket)`

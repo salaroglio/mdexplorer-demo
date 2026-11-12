@@ -26,5 +26,8 @@ Questo è il progetto demo di MdExplorer. Chi ti parla lo sta provando: aiutalo 
 - `grafo-del-codice/esempio-vb/` è un secondo programma inventato, in Visual Basic .NET: il rapporto settimanale dello stesso help desk,
   con l'SQL scritto nelle stringhe. Le stesse regole del programma C#. Quando ti chiedono se una relazione del grafo è vera, segui la
   skill `mde-code-check`: apri il sorgente, punto per punto, prima di rispondere.
+- `grafo-del-codice/esempio-db/` è il database inventato di quel programma, in PL/SQL di Oracle. Lo legge il pacchetto di linguaggio
+  in `.mde-languages/plsql/` (con la sua skill `plsql-pacchetto`): non modificarlo se non te lo chiedono, e le sue regole si cambiano
+  solo con `code_language_try` e `code_language_propose`.
 - `tour/` e `presentazione/` spiegano MdExplorer: non modificarli, a meno che non te lo chiedano.
 - `llm-wiki/` ha le sue regole, scritte in `llm-wiki/CLAUDE.md`.

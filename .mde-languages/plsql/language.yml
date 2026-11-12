@@ -1,0 +1,146 @@
+# PL/SQL di Oracle: package (specifica e corpo), procedure e funzioni, trigger, tabelle e viste.
+# Pacchetto di linguaggio per il grafo del codice di MdExplorer: la cartella plsql/ intera va in
+# <progetto di documentazione>/.mde-languages/plsql/ («Importa linguaggio…»).
+#
+# database: true — i simboli di questo linguaggio sono oggetti del database: l'SQL scritto nel codice C# o Visual Basic
+# che li nomina (BEGIN PKG.PROC(…); END;, FROM TABELLA, INSERT INTO TABELLA) si ricollega a loro da solo.
+#
+# Le regole leggono RIGHE. Che cosa diventa che cosa:
+#   il file                              → il modulo
+#   CREATE PACKAGE X (la specifica)      → un'interfaccia X, con le procedure e funzioni che dichiara (X.NOME): se c'è
+#                                          anche il corpo, chi chiama X.NOME arriva alla procedura del corpo, non alla firma
+#   CREATE PACKAGE BODY X                → una classe X
+#   PROCEDURE / FUNCTION nel corpo, o CREATE PROCEDURE / FUNCTION → una funzione (X.NOME nel corpo di X)
+#   CREATE TRIGGER                       → una funzione
+#   CREATE TABLE                         → un record (la tabella)
+#   CREATE TYPE (.tps)                   → un tipo
+#   CREATE VIEW                          → un tipo (la vista), fino al punto e virgola o alla barra «/»
+#   FROM / JOIN                          → reads verso la tabella o la vista
+#   INSERT INTO, UPDATE, DELETE FROM, MERGE INTO → writes
+#   PKG.PROC(…) e PROC(…) dentro il package → calls
+#
+# Limiti noti (la skill plsql-pacchetto li misura sul codice vero):
+#   - una procedura finisce con «END nome;»: con un «END;» senza nome resta aperta fino al prossimo END con un nome;
+#   - i commenti /* … */ non si tolgono: una regola può leggere dentro un commento;
+#   - i parametri si leggono solo se stanno sulla riga di PROCEDURE/FUNCTION.
+schema: 1
+id: plsql
+name: PL/SQL (Oracle)
+version: 2
+extensions: [.sql, .pks, .pkb, .pck, .pls, .plb, .spc, .bdy, .prc, .fnc, .trg, .vw, .tab, .tps, .tpb]
+ignoreCase: true
+database: true
+
+lexical:
+  lineComment: '--'
+  string: "'"
+
+blocks:
+  - id: spec
+    kind: interface
+    begin: '^\s*CREATE\s+(?:OR\s+REPLACE\s+)?(?:(?:NON)?EDITIONABLE\s+)?PACKAGE\s+(?!BODY\b)(?:"?[\w$#]+"?\.)?"?(?<name>[A-Za-z_][\w$#]*)"?'
+    end: '^\s*END\s+(?!IF\b|LOOP\b|CASE\b)"?[A-Za-z_][\w$#]*"?\s*;'
+    signature: 'PACKAGE {name}'
+  - id: body
+    kind: class
+    begin: '^\s*CREATE\s+(?:OR\s+REPLACE\s+)?(?:(?:NON)?EDITIONABLE\s+)?PACKAGE\s+BODY\s+(?:"?[\w$#]+"?\.)?"?(?<name>[A-Za-z_][\w$#]*)"?'
+    end: '^\s*END\s+(?!IF\b|LOOP\b|CASE\b)"?[A-Za-z_][\w$#]*"?\s*;'
+    signature: 'PACKAGE BODY {name}'
+  # nel corpo di un package, o da sola (CREATE PROCEDURE); non una dichiarazione che finisce con «;» sulla stessa riga
+  - id: proc
+    kind: function
+    in: [module, body, proc, func]
+    begin: '^\s*(?:CREATE\s+(?:OR\s+REPLACE\s+)?(?:(?:NON)?EDITIONABLE\s+)?)?PROCEDURE\s+(?:"?[\w$#]+"?\.)?"?(?<name>[A-Za-z_][\w$#]*)"?\s*(?:\((?<params>[^)]*)\)?)?(?!.*;\s*$)'
+    end: '^\s*END\s+(?!IF\b|LOOP\b|CASE\b)"?[A-Za-z_][\w$#]*"?\s*;'
+    signature: 'PROCEDURE {name}'
+  - id: func
+    kind: function
+    in: [module, body, proc, func]
+    begin: '^\s*(?:CREATE\s+(?:OR\s+REPLACE\s+)?(?:(?:NON)?EDITIONABLE\s+)?)?FUNCTION\s+(?:"?[\w$#]+"?\.)?"?(?<name>[A-Za-z_][\w$#]*)"?\s*(?:\((?<params>[^)]*)\)?)?(?:\s*RETURN\s+(?<type>[\w$#.%]+))?(?!.*;\s*$)'
+    end: '^\s*END\s+(?!IF\b|LOOP\b|CASE\b)"?[A-Za-z_][\w$#]*"?\s*;'
+    signature: 'FUNCTION {name}'
+  # un trigger finisce spesso con «END;» senza nome
+  - id: trigger
+    kind: function
+    begin: '^\s*CREATE\s+(?:OR\s+REPLACE\s+)?(?:(?:NON)?EDITIONABLE\s+)?TRIGGER\s+(?:"?[\w$#]+"?\.)?"?(?<name>[A-Za-z_][\w$#]*)"?'
+    end: '^\s*END\s*(?:"?[A-Za-z_][\w$#]*"?\s*)?;'
+    signature: 'TRIGGER {name}'
+  - id: view
+    kind: type
+    begin: '^\s*CREATE\s+(?:OR\s+REPLACE\s+)?(?:(?:NO\s+)?FORCE\s+)?(?:(?:NON)?EDITIONABLE\s+)?(?:MATERIALIZED\s+)?VIEW\s+(?:"?[\w$#]+"?\.)?"?(?<name>[A-Za-z_][\w$#]*)"?'
+    # il primo «;» a fine riga, o la barra «/» da sola su una riga (un file .vw scritto da uno strumento)
+    end: ';\s*$|^\s*/\s*$'
+    signature: 'VIEW {name}'
+
+declarations:
+  # una procedura o funzione dichiarata nella specifica di un package: la firma
+  - id: decl
+    kind: function
+    in: [spec]
+    at: '^\s*(?:PROCEDURE|FUNCTION)\s+"?(?<name>[A-Za-z_][\w$#]*)"?\s*(?:\((?<params>[^)]*)\)?)?(?:\s*RETURN\s+(?<type>[\w$#.%]+))?'
+    name: '{name}'
+  # un tipo: CREATE TYPE X AS OBJECT (…), AS TABLE OF …, IS VARRAY …
+  - id: type
+    kind: type
+    at: '^\s*CREATE\s+(?:OR\s+REPLACE\s+)?(?:(?:NON)?EDITIONABLE\s+)?TYPE\s+(?!BODY\b)(?:"?[\w$#]+"?\.)?"?(?<name>[A-Za-z_][\w$#]*)"?'
+    name: '{name}'
+  - id: table
+    kind: record
+    at: '^\s*CREATE\s+(?:(?:GLOBAL\s+|PRIVATE\s+)?TEMPORARY\s+)?TABLE\s+(?:"?[\w$#]+"?\.)?"?(?<name>[A-Za-z_][\w$#]*)"?'
+    name: '{name}'
+
+parameters:
+  item: '(?<name>[A-Za-z_][\w$#]*)\s+(?:(?<direction>IN\s+OUT|IN|OUT)\s+)?(?:NOCOPY\s+)?(?<type>[\w$#.%]+)'
+  direction: { IN: in, OUT: out, 'IN OUT': ref }
+  default: in
+
+references:
+  # una procedura o funzione di un altro package: PKG.PROC(…) o PKG.PROC; — i package di Oracle restano fuori
+  - relation: calls
+    pattern: '(?<![\w$#.:])(?!(?:DBMS|UTL|OWA|HTP|HTF|APEX|SYS|STANDARD)\w*\.)(?<target>[A-Za-z_][\w$#]*\.[A-Za-z_][\w$#]*)\s*(?:\(|;)'
+    text: code
+    strip: '^[\w$#]+\.'
+    resolve: symbol
+    rules: [proc, func, decl]
+    unresolved: external
+  # una procedura o funzione dello stesso file, senza il package davanti
+  - relation: calls
+    pattern: '(?<![\w$#.:])(?<target>[A-Za-z_][\w$#]*)\s*\('
+    text: code
+    resolve: symbol
+    rules: [proc, func]
+    scope: module
+  - relation: calls
+    pattern: '^\s*(?<target>[A-Za-z_][\w$#]*)\s*;'
+    text: code
+    resolve: symbol
+    rules: [proc, func]
+    scope: module
+  # le tabelle e le viste lette (non il FROM di DELETE FROM, che scrive)
+  - relation: reads
+    pattern: '(?<!\bDELETE\s+)\b(?:FROM|JOIN)\s+(?:"?[\w$#]+"?\.)?"?(?<target>[A-Za-z_][\w$#]*)"?(?!\s*\()'
+    text: code
+    ignore: [DUAL]
+    resolve: symbol
+    rules: [table, view]
+    unresolved: external
+  - relation: writes
+    pattern: '\b(?:INSERT\s+(?:ALL\s+)?INTO|MERGE\s+INTO|DELETE\s+FROM|TRUNCATE\s+TABLE)\s+(?:"?[\w$#]+"?\.)?"?(?<target>[A-Za-z_][\w$#]*)"?'
+    text: code
+    resolve: symbol
+    rules: [table, view]
+    unresolved: external
+  # UPDATE all'inizio della riga (non il FOR UPDATE di un cursore)
+  - relation: writes
+    pattern: '^\s*UPDATE\s+(?:"?[\w$#]+"?\.)?"?(?<target>[A-Za-z_][\w$#]*)"?'
+    text: code
+    resolve: symbol
+    rules: [table, view]
+    unresolved: external
+  # il trigger e la sua tabella
+  - relation: references
+    pattern: '\bON\s+(?:"?[\w$#]+"?\.)?"?(?<target>[A-Za-z_][\w$#]*)"?\s*(?:FOR\s+EACH\s+ROW|REFERENCING|$)'
+    text: code
+    resolve: symbol
+    rules: [table, view]
+    unresolved: external
