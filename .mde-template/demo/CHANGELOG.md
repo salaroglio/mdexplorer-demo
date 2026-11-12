@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.7.4 — 2026-11-12
+- Serve MdExplorer 2026.11.11.6 o più nuovo. La 1.7.3 chiedeva per errore la 2026.11.12, una versione che non esiste.
+
 ## 1.7.3 — 2026-11-12
 - Grafo del codice: le prove 6 e 7 hanno le schermate, prese da un giro vero con Claude Code. La finestra «Ambiente di sviluppo» sul programma Visual Basic, la struttura estratta, e quattro risposte di Mark: le tabelle lette e scritte, l'evento, com'è fatto il grafo (dove Mark corregge da solo due sue risposte di prima), la verifica di `Archivia` sul sorgente. Serve MdExplorer 2026.11.12 o più nuovo: con le versioni di prima il file del gestore di un evento dichiarato in un altro file restava fuori dal grafo.
 
