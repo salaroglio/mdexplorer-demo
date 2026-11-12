@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.7.5 — 2026-11-12
+- It needs MdExplorer 2026.11.11.5 or newer.
+
 ## 1.7.4 — 2026-11-12
 - It needs MdExplorer 2026.11.11.6 or newer. Version 1.7.3 asked by mistake for 2026.11.12, a version that does not exist.
 
