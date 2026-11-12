@@ -10,13 +10,14 @@ Il grafo è una **affermazione** sul codice, il sorgente è la **verità**. A un
 legge com'è fatto il grafo (`code_ontology`), poi prende i collegamenti, apre il sorgente punto per punto e dà un verdetto,
 con i numeri. Se un collegamento è sbagliato dice chi l'ha prodotto e che cosa si può correggere.
 
-- Tre domande da copiare sul programma della [prova 6](06-visual-basic-e-sql.md): la struttura del grafo, una relazione da verificare, un buco da trovare.
+- Tre domande da copiare sul programma della [prova 6](06-visual-basic-e-sql.md): la struttura del grafo, una relazione da verificare, un buco da trovare; nella schermata della prima Mark corregge da solo due sue risposte.
 - Mark segue la skill `mde-code-check`, che MdExplorer installa nel progetto insieme a quella del grafo.
 - Niente si cambia da solo: una correzione è una proposta che approvi tu, o una **rilevazione** che va a chi mantiene MdExplorer.
 
 ## Prima di cominciare
 
-Fai prima la prova 6: questa usa il grafo di `esempio-vb`. Serve il motore AI del progetto.
+Fai prima la prova 6: questa usa il grafo di `esempio-vb`, e le schermate sono la continuazione della stessa
+conversazione. Serve il motore AI del progetto.
 
 ## Domanda 1: com'è fatto il grafo
 
@@ -33,6 +34,13 @@ Mark chiama `code_ontology`. Lo strumento restituisce due cose.
 
 È il passo che la skill chiede a Mark per primo: sapere che cosa c'è prima di cercarlo, e dire subito quando una domanda
 chiede una relazione che quel linguaggio non produce.
+
+![Mark spiega com'è fatto il grafo, elenca che cosa ha prodotto il parser del Visual Basic e corregge due sue risposte di prima](assets/schermate/mark-ontologia.png)
+
+Nella schermata, fatta dopo le domande della prova 6, succede qualcosa che vale la prova: leggendo la struttura del grafo
+Mark **corregge da solo due sue risposte di prima**. Aveva detto che il grafo non aveva la scrittura di `Archivia`: c'è,
+verso il nodo `?`. E aveva detto che il grafo non mostrava la lettura di `OPERATORE` fatta da `OperatoriAttivi`: i conti
+dicono che c'è, collegata alla costante e non al metodo. Il secondo punto lo dichiara come probabile, non verificato.
 
 ## Domanda 2: una relazione da verificare
 
@@ -51,11 +59,17 @@ La risposta onesta qui è *non decidibile dalla sola `Archivia`*: la tabella la 
 chiamante, `Avvio.Prepara`, passa `"STORICO_RAPPORTI"`; un chiamante nuovo potrebbe passarne un'altra. Il nodo `?` del
 grafo è giusto: dice proprio questo.
 
+![Mark: sì, ma solo per come viene chiamata oggi; il metodo è Public e cancella da qualunque tabella gli si passi](assets/schermate/mark-verifica.png)
+
+Mark risponde così: «sì, ma solo per come viene chiamata oggi, non per come è scritta». Cerca tutte le chiamate, ne trova
+una, la confronta con il grafo, e precisa il «solo»: su `STORICO_RAPPORTI` scrive anche `Prepara`.
+
 ## Domanda 3: un buco del grafo
 
 > Nel programma esempio-vb c'è SQL che il grafo non ha collegato? Controlla tutte le stringhe.
 
-Mark cerca le stringhe nel sorgente e le confronta con le relazioni del grafo. Una risposta completa nota due casi. `Conta`, con
+Questa domanda non ha una schermata. Mark cerca le stringhe nel sorgente e le confronta con le relazioni del grafo. Una
+risposta completa nota due casi. `Conta`, con
 `"SELECT COUNT(*) FROM (" & sql & ")"`: nessuna tabella, ed è giusto, la tabella sta nella query che arriva da fuori. E
 `OperatoriAttivi`, che legge `OPERATORE` attraverso la costante: il grafo collega la costante alla tabella, non il metodo,
 perché non registra chi legge un campo. È un limite noto, scritto nella [guida](../guida/come-funziona.md#cosa-il-grafo-non-sa-oggi).

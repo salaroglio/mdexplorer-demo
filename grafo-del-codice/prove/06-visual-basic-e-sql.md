@@ -17,10 +17,20 @@ su questa tabella?» ha una risposta nel grafo, anche quando la query è costrui
 ## Cosa fare
 
 1. Nell'albero apri `grafo-del-codice`, tasto destro su **`esempio-vb`**, **«Segna come ambiente di sviluppo»**.
-2. Nella finestra «Ambiente di sviluppo» scegli **Visual Basic .NET** e premi **«Estrai la struttura»**. Come per il C#,
-   non serve installare niente: il Visual Basic lo legge Roslyn, lo stesso compilatore che MdExplorer si porta dietro.
-3. Apri il tab **«Mark Agent»** e fai le domande qui sotto. Se la conversazione era già aperta prima del passo 2 e usi
-   Copilot o opencode, premi **«Nuova sessione chat»**.
+2. Nella finestra «Ambiente di sviluppo» c'è **Visual Basic .NET · 2 file · pronto**, già spuntato. Come per il C#, non
+   serve installare niente: il Visual Basic lo legge Roslyn, lo stesso compilatore che MdExplorer si porta dietro. Sotto
+   «Descrizione del codice con l'LLM» scegli **«Solo su richiesta»**, come nella prova 1.
+
+   ![La finestra Ambiente di sviluppo: Visual Basic .NET, 2 file, pronto; Solo su richiesta](assets/schermate/ambiente-di-sviluppo-vb.png)
+
+3. Premi **«Estrai la struttura»**. In un paio di secondi la finestra dice **«Struttura estratta»**: 2 file, 2 script
+   caricati nel database, 0 falliti.
+
+   ![Struttura estratta: 2 file nel perimetro, 2 riparsati, 2 script caricati, 0 falliti](assets/schermate/struttura-estratta-vb.png)
+
+4. Apri il tab **«Mark Agent»** e fai le domande qui sotto. Se la conversazione era già aperta prima del passo 3 e usi
+   Copilot o opencode, premi **«Nuova sessione chat»**. Le schermate di questa pagina sono di Claude Code con Sonnet, con
+   la conversazione allargata (l'icona accanto al motore).
 
 ## Che cosa c'è nel grafo
 
@@ -39,7 +49,8 @@ Il programma ha due file `.vb`. Il grafo ha due classi, `RapportoSettimanale` e 
 
 Tabelle e procedure sono **nodi esterni**: il grafo ne conosce il nome, non la struttura, perché lo schema del database
 non è fra i file analizzati. Le relazioni con l'SQL sono **dedotte**: vengono dal testo della stringa, non da un
-interprete SQL.
+interprete SQL. La pagina «Grafo del codice» disegna i simboli del programma, non i nodi esterni: le tabelle le trovi
+chiedendo a Mark.
 
 ## Domanda 1: chi scrive su una tabella
 
@@ -47,6 +58,13 @@ interprete SQL.
 
 Il grafo ha la risposta senza aprire il codice: `Prepara` scrive su `STORICO_RAPPORTI` alla riga 24 e legge `TICKET` e
 `OPERATORE` alla riga 20. La query di `Prepara` è scritta su tre righe con `&`: MdExplorer la legge come una frase sola.
+
+![Mark risponde: Prepara scrive su STORICO_RAPPORTI e legge TICKET e OPERATORE, con file, riga e fiducia; Archivia cancella dalla tabella che riceve](assets/schermate/mark-sql.png)
+
+Mark cita file, riga e fiducia di ogni relazione, e trova da solo anche `Archivia`, aprendo il sorgente. Guarda però il
+punto 2: dice che il grafo *non ha* la scrittura di `Archivia`, e non è vero, la ha verso il nodo `?`. Se ne accorge da
+solo alla domanda 1 della [prova 7](07-mark-controlla-il-grafo.md), quando legge com'è fatto il grafo: è la ragione per cui
+quella prova esiste.
 
 C'è un dettaglio da notare. La query parte da `Prepara` ma la esegue `Conta`, e l'`INSERT` lo esegue `Esegui`. Il grafo
 collega l'SQL a **dove è scritto**, non a dove viene eseguito: è la domanda che conta in un'analisi («quale funzione
@@ -69,6 +87,10 @@ Nel codice nessuno chiama `QuandoPronto`: il legame è la parola `Handles` sulla
 relazione: `Prepara` solleva `RapportoPronto` (certa), l'evento porta a `QuandoPronto` (dedotta). Anche il campo
 `WithEvents` `_rapporto` porta allo stesso gestore: in un form o in una pagina è il **controllo** (il pulsante, la
 griglia), ed è la strada per seguire «clic sul pulsante → gestore → logica».
+
+![Mark segue l'evento: RaiseEvent alla riga 26, Handles in Avvio.vb:14, la stampa sulla console e la seconda lettura di OPERATORE](assets/schermate/mark-evento.png)
+
+Mark segue la catena fino in fondo, e nota anche l'ordine: il gestore stampa prima che `Archivia` pulisca lo storico.
 
 ## Che cosa il grafo non vede
 
