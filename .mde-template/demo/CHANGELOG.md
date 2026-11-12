@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.9.0 — 2026-11-12
+- No changes in English. The Italian demo adds a ninth thing to try to its code-graph section (Web Forms pages with their code-behind, with a language package); the version rises in both languages so that they stay in step.
+
 ## 1.8.0 — 2026-11-12
 - No changes in English. The Italian demo adds an eighth thing to try to its code-graph section (the database in PL/SQL, with its language package); the version rises in both languages so that they stay in step.
 
