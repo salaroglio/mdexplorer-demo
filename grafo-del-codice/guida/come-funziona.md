@@ -84,6 +84,10 @@ della [prova 8](../prove/08-il-codice-e-il-database.md)), le frecce dell'SQL del
 tabelle e alle procedure vere. MdExplorer le sposta da solo ogni volta che gli script cambiano (dopo un'estrazione,
 all'apertura del progetto, dopo un pull), in qualunque ordine si analizzino le cartelle, e lo dice.
 
+Le pagine con un code-behind (ASP.NET Web Forms, [prova 9](../prove/09-le-pagine-web.md)) si collegano alla loro classe
+C# o Visual Basic: la classe `renders` la pagina, il controllo `calls` il metodo scritto nel suo `OnClick=`, la pagina
+`calls` il suo `Page_Load`. La cartella va segnata con tutti e due i linguaggi.
+
 ### Perché la fiducia conta
 
 Prendi `ServizioAssistente.Gestisci` nel [programma d'esempio](../esempio/README.md): chiama `_motore.Proponi(ticket)`

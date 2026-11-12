@@ -1,0 +1,18 @@
+# Written by MdExplorer from language.yml: do not edit, it is rewritten whenever the rules change.
+@prefix code: <https://mdexplorer.net/ns/code#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://mdexplorer.net/ns/code/language/webforms> a code:LanguageProfile ;
+  code:language "webforms" ; rdfs:label "ASP.NET Web Forms" ; code:packageVersion 1 ;
+  code:extensions ".aspx", ".ascx", ".master" ; code:ignoreCase true ; code:database false ;
+  rdfs:comment "What the parser of this language package writes in MdExplorer's code graph. The classes of nodes and their properties are those of the code ontology (tool code_ontology); here: which symbol kinds and which relations this language produces, and from which rule of language.yml. A kind or a relation not listed here does not exist for this language." .
+
+# ---- symbols
+<https://mdexplorer.net/ns/code/language/webforms#kind-module> a code:ProducedKind ; code:kind "module" ; code:fromRule "module" ; rdfs:comment "one per source file; its name is the file name" .
+<https://mdexplorer.net/ns/code/language/webforms#kind-control> a code:ProducedKind ; code:kind "control" ; code:fromRule "template" ; rdfs:comment "an element of a page with an event or a javascript: link; the page is the module" .
+<https://mdexplorer.net/ns/code/language/webforms#kind-external> a code:ProducedKind ; code:kind "external" ; code:fromRule "references" ; rdfs:comment "a name a reference rule could not find among the analysed files (only where the rule says unresolved: external): no file, no lines" .
+
+# ---- relations
+<https://mdexplorer.net/ns/code/language/webforms#relation-contains> a code:ProducedRelation ; code:relation "contains" ; code:fromRule "(structure)" ; code:targetIs "the module contains its blocks, a block its labels, declarations and fragments" .
+<https://mdexplorer.net/ns/code/language/webforms#relation-includes> a code:ProducedRelation ; code:relation "includes" ; code:fromRule "template" ; code:targetIs "the page a directive includes; code:guard holds the condition in the page" .
+<https://mdexplorer.net/ns/code/language/webforms#relation-calls-template> a code:ProducedRelation ; code:relation "calls" ; code:fromRule "template" ; code:targetIs "the function a control's event calls" .

@@ -1,0 +1,44 @@
+# ASP.NET Web Forms: pagine (.aspx), controlli utente (.ascx), master page (.master).
+# Pacchetto di linguaggio per il grafo del codice di MdExplorer: la cartella webforms/ intera va in
+# <progetto di documentazione>/.mde-languages/webforms/ («Importa linguaggio…»).
+#
+# Che cosa diventa che cosa:
+#   la pagina (il file)                         → il modulo
+#   un elemento con un evento lato server (OnClick="…", OnSelectedIndexChanged="…"…) o lato browser (onclick="…")
+#                                               → un controllo
+#   <%@ Page/Control/Master Inherits="X.Y" %>   → la classe X.Y (C# o VB) «renders» la pagina
+#   OnClick="btnCerca_Click"                    → il controllo «calls» il metodo btnCerca_Click di quella classe
+#   AutoEventWireup="true"                      → la pagina «calls» i Page_Load, Page_Init… della sua classe
+#   MasterPageFile="~/Site.master"              → la pagina «includes» la master page
+#   <%@ Register Src="~/Controlli/Filtro.ascx" %> → la pagina «includes» il controllo utente
+#   <!-- #include file="x.inc" -->              → la pagina «includes» il file
+#
+# Il code-behind (.aspx.vb, .aspx.cs, e i .designer con i campi WithEvents dei controlli) lo legge MdExplorer con il
+# linguaggio Visual Basic o C#: la cartella va segnata anche con quello.
+schema: 1
+id: webforms
+name: ASP.NET Web Forms
+version: 1
+extensions: [.aspx, .ascx, .master]
+ignoreCase: true
+
+template:
+  # gli eventi lato browser restano quelli dell'HTML (onclick="alert(…)"): il loro JavaScript si legge come sempre;
+  # gli eventi lato server (OnClick="metodo") sono i riconoscitori «handler» qui sotto
+  events: ['^on[a-z]+$']
+  recognizers:
+    - role: call
+      match: '<%@\s*(?:Page|Control|Master)\b[^%]*?\bInherits\s*=\s*"(?<a0>[\w.]+)"'
+      callee: codebehind
+    - role: call
+      match: '<%@\s*(?:Page|Control|Master)\b[^%]*?\bAutoEventWireup\s*=\s*"(?<a0>true)"'
+      callee: autowire
+    - role: call
+      match: '\bOn(?!Client)[A-Z]\w*\s*=\s*"(?<a0>[A-Za-z_]\w*)"'
+      callee: handler
+    - role: include
+      match: '<%@\s*(?:Page|Master)\b[^%]*?\bMasterPageFile\s*=\s*"~?/?(?<arg>[^"]+)"'
+    - role: include
+      match: '<%@\s*Register\b[^%]*?\bSrc\s*=\s*"~?/?(?<arg>[^"]+)"'
+    - role: include
+      match: '<!--\s*#include\s+(?:file|virtual)\s*=\s*"(?<arg>[^"]+)"\s*-->'

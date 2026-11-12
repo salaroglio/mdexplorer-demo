@@ -1,0 +1,10 @@
+<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="Alpina.Web.Site" %>
+<!DOCTYPE html>
+<html>
+<head runat="server"><title>Help desk</title></head>
+<body>
+  <form id="form1" runat="server">
+    <asp:ContentPlaceHolder ID="Contenuto" runat="server" />
+  </form>
+</body>
+</html>

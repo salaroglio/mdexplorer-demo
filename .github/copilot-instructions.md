@@ -29,5 +29,7 @@ Questo è il progetto demo di MdExplorer. Chi ti parla lo sta provando: aiutalo 
 - `grafo-del-codice/esempio-db/` è il database inventato di quel programma, in PL/SQL di Oracle. Lo legge il pacchetto di linguaggio
   in `.mde-languages/plsql/` (con la sua skill `plsql-pacchetto`): non modificarlo se non te lo chiedono, e le sue regole si cambiano
   solo con `code_language_try` e `code_language_propose`.
+- `grafo-del-codice/esempio-web/` sono le pagine web inventate di quel programma, in ASP.NET Web Forms con il code-behind in Visual Basic.
+  Le pagine le legge il pacchetto `.mde-languages/webforms/` (skill `webforms-pacchetto`), il code-behind il Visual Basic; stesse regole.
 - `tour/` e `presentazione/` spiegano MdExplorer: non modificarli, a meno che non te lo chiedano.
 - `llm-wiki/` ha le sue regole, scritte in `llm-wiki/CLAUDE.md`.

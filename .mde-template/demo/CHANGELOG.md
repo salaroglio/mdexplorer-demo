@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.9.0 — 2026-11-12
+- Grafo del codice: la prova 9, «Le pagine web». Le pagine ASP.NET Web Forms del programma Visual Basic (`esempio-web/`: una pagina di ricerca, una master page, un controllo utente, con il code-behind), lette dal pacchetto di linguaggio Web Forms che arriva con il progetto (`.mde-languages/webforms/`, skill `webforms-pacchetto`). La classe di code-behind è collegata alla sua pagina, ogni pulsante al metodo che risponde (`OnClick=` nella pagina, o `Handles` nel Visual Basic), la pagina al suo `Page_Load`; con la prova 8, il percorso va dal pulsante alle tabelle. Schermate da un giro vero con Claude Code. Serve MdExplorer 2026.11.11.5 o più nuovo, con le aggiunte del 12 novembre per le pagine con code-behind.
+
 ## 1.8.0 — 2026-11-12
 - Grafo del codice: la prova 8, «Il codice e il database». Il database del programma Visual Basic, in PL/SQL (`esempio-db/`: tabelle, una vista, il package `PKG_RAPPORTI`, un trigger, una funzione), letto dal pacchetto di linguaggio PL/SQL v2 che arriva con il progetto (`.mde-languages/plsql/`, con `database: true` e la skill `plsql-pacchetto`). Quando il database entra nel grafo, le frecce dell'SQL scritto nel Visual Basic passano dalle tabelle e dalla procedura come nomi agli oggetti veri, e la finestra lo dice. Schermate da un giro vero con Claude Code. Serve MdExplorer 2026.11.11.5 o più nuovo, con le correzioni del 12 novembre per il PL/SQL.
 

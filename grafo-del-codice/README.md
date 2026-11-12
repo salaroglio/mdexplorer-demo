@@ -12,7 +12,7 @@ interroga **Mark**, l'agente AI, che così risponde sul codice con fatti e non a
 quando glielo chiedi, a che cosa serve ogni file e ogni metodo. Questa sezione te lo fa provare su un programma piccolo,
 scritto apposta.
 
-- Otto prove, in ordine, un'ora: le prime cinque sul programma C#, la 6 e la 7 su un programma Visual Basic con l'SQL nel codice e sulla verifica del grafo, la 8 sul suo database in PL/SQL.
+- Nove prove, in ordine, poco più di un'ora: le prime cinque sul programma C#, la 6 e la 7 su un programma Visual Basic con l'SQL nel codice e sulla verifica del grafo, la 8 sul suo database in PL/SQL, la 9 sulle pagine web in Web Forms.
 - I programmi sono in **C#** e in **Visual Basic .NET** e non chiedono niente da installare: li legge il compilatore che MdExplorer si porta dietro.
 - Per le prove 3 e 4 serve un motore AI configurato per il progetto (GitHub Copilot, Claude Code o opencode).
 
@@ -27,7 +27,9 @@ ciascuna, una soglia che decide, un numero che il comitato vuole vedere: abbasta
 Accanto c'è il **rapporto settimanale** dello stesso help desk, in Visual Basic, in [esempio-vb/](esempio-vb/README.md):
 due file che leggono i ticket dal database, scrivono lo storico e chiudono la settimana con una procedura. E il
 **database** che usa, in PL/SQL, in [esempio-db/](esempio-db/README.md): le tabelle, il package con la procedura, un
-trigger; lo legge il pacchetto di linguaggio in `.mde-languages/plsql/`.
+trigger; lo legge il pacchetto di linguaggio in `.mde-languages/plsql/`. E le **pagine web** in ASP.NET Web Forms, in
+[esempio-web/](esempio-web/README.md), con il loro code-behind in Visual Basic; le legge il pacchetto in
+`.mde-languages/webforms/`.
 
 ## La presentazione
 
@@ -55,6 +57,7 @@ trigger; lo legge il pacchetto di linguaggio in `.mde-languages/plsql/`.
 | 6 | [Visual Basic e l'SQL nel codice](prove/06-visual-basic-e-sql.md) | un programma VB, le tabelle che legge e scrive, la procedura che chiama, un evento e il suo gestore | 8 min |
 | 7 | [Mark controlla il grafo](prove/07-mark-controlla-il-grafo.md) | com'è fatto il grafo, una relazione verificata sul sorgente, che cosa si corregge e chi lo fa | 10 min |
 | 8 | [Il codice e il database](prove/08-il-codice-e-il-database.md) | il database in PL/SQL con il suo pacchetto di linguaggio; le frecce dal Visual Basic passano alle tabelle e alla procedura vere | 8 min |
+| 9 | [Le pagine web](prove/09-le-pagine-web.md) | le pagine Web Forms con il loro code-behind: dal pulsante al metodo che risponde, fino al database | 8 min |
 
 ## Prima di cominciare
 
@@ -68,7 +71,7 @@ trigger; lo legge il pacchetto di linguaggio in `.mde-languages/plsql/`.
 
 Il grafo di un programma grande (MdExplorer è stato provato su PlantUML, 3.662 file Java), gli altri linguaggi
 (PowerShell, che come il C# non chiede niente; TypeScript, JavaScript, Python e Java, con una grammatica scaricata al
-primo uso; quelli aggiunti con un pacchetto, oltre al PL/SQL della prova 8), il codice che sta fuori dal progetto (le radici esterne), una regola
+primo uso; quelli aggiunti con un pacchetto, oltre al PL/SQL della prova 8 e alle Web Forms della prova 9), il codice che sta fuori dal progetto (le radici esterne), una regola
 proposta da Mark e approvata nel wizard, e il passo successivo, che è decidere quali relazioni del grafo sono conoscenza
 e quali rumore. Le [guide](guida/come-funziona.md) ne parlano; il resto si mostra dal vivo.
 

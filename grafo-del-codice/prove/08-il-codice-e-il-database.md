@@ -99,4 +99,6 @@ il punto citato.
 Su un progetto vero la skill `plsql-pacchetto` fa contare a MarkAgent queste forme, correggere le regole con il tuo sì e
 scrivere una rilevazione per chi mantiene il pacchetto.
 
+La [prova 9](09-le-pagine-web.md) aggiunge l'ultimo pezzo: le pagine web, dal pulsante al metodo che risponde.
+
 [Torna alla sezione](../README.md)
