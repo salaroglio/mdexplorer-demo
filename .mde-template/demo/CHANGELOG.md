@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.7.2 — 2026-11-12
+- No changes in English. The Italian demo updates the slide of MarkAgent's code-graph tools in its code-graph section; the version rises in both languages so that they stay in step.
+
 ## 1.7.1 — 2026-11-11
 - No changes in English. The Italian demo adds the class diagram of the code-graph ontology to its code-graph section; the version rises in both languages so that they stay in step.
 
