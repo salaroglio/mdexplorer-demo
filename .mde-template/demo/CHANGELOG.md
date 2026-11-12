@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.7.3 — 2026-11-12
+- No changes in English. The Italian demo adds the screenshots of two things to try in its code-graph section; the version rises in both languages so that they stay in step. It needs MdExplorer 2026.11.12 or newer.
+
 ## 1.7.2 — 2026-11-12
 - No changes in English. The Italian demo updates the slide of MarkAgent's code-graph tools in its code-graph section; the version rises in both languages so that they stay in step.
 
