@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.7.2 — 2026-11-12
+- Grafo del codice: nella presentazione la slide degli strumenti di Mark passa da dieci a venti, in tre colonne: quelli che leggono il grafo, quelli che dicono com'è fatto e che cosa contiene (`code_ontology`, `code_schema`, `code_query`, `code_rules`), quelli che lo migliorano con il tuo sì (descrizioni, regole, linguaggi, file da analizzare).
+
 ## 1.7.1 — 2026-11-11
 - Grafo del codice: la guida «Come Mark verifica il grafo» ha lo schema delle classi dell'ontologia del grafo, in PlantUML: la struttura scritta dal parser, i fatti per le regole, quello che scrivono Mark e le regole approvate, con i legami fra loro.
 

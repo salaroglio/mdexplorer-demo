@@ -396,35 +396,48 @@ quelli del programma d'esempio dopo la descrizione con Mark.
 
 <!-- .slide: data-background-image="assets/grafo-sfondo-chiaro.svg" -->
 
-## Mark con dieci strumenti
+## Mark con venti strumenti
 
-<div style="display:flex; gap:22px; justify-content:center; margin-top:4px; text-align:left">
+<div style="display:flex; gap:16px; justify-content:center; margin-top:4px; text-align:left">
 
-<div style="flex:2; background:#fff; border-top:8px solid #1a73e8; border-radius:14px; padding:12px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12); font-size:.5em; line-height:1.55">
-<div style="font-size:1.05em; color:#1a73e8; font-weight:800; letter-spacing:.08em">LEGGONO</div>
+<div style="flex:1.25; border-top:8px solid #1a73e8; background:#fff; border-radius:14px; padding:10px 16px; box-shadow:0 8px 24px rgba(15,27,45,.12); font-size:.42em; line-height:1.5">
+<div style="font-size:1.1em; color:#1a73e8; font-weight:800; letter-spacing:.08em">LEGGONO</div>
 <code>code_find_symbol</code> «chi calcola la quota di ticket chiusi al primo contatto?»<br>
 <code>code_describe</code> «descrivimi <code>Conferma</code> con i parametri»<br>
-<code>code_outline</code> «a che cosa serve <code>CatalogoFaq.cs</code>, e che cosa c'è?»<br>
+<code>code_outline</code> «a che cosa serve <code>CatalogoFaq.cs</code>?»<br>
 <code>code_neighbors</code> «chi implementa <code>IMotoreRisposte</code>?»<br>
 <code>code_impact</code> «cosa si rompe se cambio <code>INotifica.Invia</code>?»<br>
-<code>code_path</code> «come si arriva da <code>Main</code> a <code>TassoPrimoContatto</code>?»<br>
+<code>code_path</code> «da <code>Main</code> a <code>TassoPrimoContatto</code>?»<br>
 <code>code_overview</code> «fammi una panoramica»<br>
 <code>code_inventory</code> «a che punto è la descrizione?»<br>
-<code>code_roots</code> «dove sta il codice su questo computer?»
+<code>code_roots</code> «dove sta il codice?»
 </div>
 
-<div class="fragment fade-up" style="flex:1; background:#fff; border-top:8px solid #f29900; border-radius:14px; padding:12px 20px; box-shadow:0 8px 24px rgba(15,27,45,.12); font-size:.5em; line-height:1.55">
-<div style="font-size:1.05em; color:#f29900; font-weight:800; letter-spacing:.08em">SCRIVE</div>
-<code>code_set_description</code><br>«la descrizione di <code>Gestisci</code> è incompleta, sistemala»<br><br>
-<span style="color:#5f6368">L'unico che scrive, e solo le descrizioni: il codice e il grafo dei fatti non li tocca.</span>
+<div class="fragment fade-up" style="flex:1; border-top:8px solid #9334e6; background:#fff; border-radius:14px; padding:10px 16px; box-shadow:0 8px 24px rgba(15,27,45,.12); font-size:.42em; line-height:1.5">
+<div style="font-size:1.1em; color:#9334e6; font-weight:800; letter-spacing:.08em">CAPISCONO</div>
+<code>code_ontology</code> «com'è fatto il grafo, che cosa ha prodotto ogni parser?»<br>
+<code>code_schema</code> «che cosa c'è in questo grafo, quali regole sono attive?»<br>
+<code>code_query</code> «che cosa il codice usa e il grafo conosce solo per nome?»<br>
+<code>code_rules</code> «quali regole hai già fatto approvare?»
+</div>
+
+<div class="fragment fade-up" style="flex:1.15; border-top:8px solid #f29900; background:#fff; border-radius:14px; padding:10px 16px; box-shadow:0 8px 24px rgba(15,27,45,.12); font-size:.42em; line-height:1.5">
+<div style="font-size:1.1em; color:#f29900; font-weight:800; letter-spacing:.08em">MIGLIORANO</div>
+<code>code_set_description</code> «la descrizione di <code>Gestisci</code> è incompleta»<br>
+<code>code_rule_try</code> · <code>code_rule_propose</code> · <code>code_rule_remove</code> «collega la stringa al metodo che parte»<br>
+<code>code_language_try</code> · <code>code_language_propose</code> «leggi anche questo linguaggio»<br>
+<code>code_analysis_propose</code> «servono questi file nel grafo»<br><br>
+<span style="color:#5f6368">Mark propone, tu approvi: i fatti letti dal parser non li tocca nessuno.</span>
 </div>
 
 </div>
 
 Note:
-Nove strumenti di sola lettura e uno che scrive, circa duemilacinquecento token in tutto. Mark li sceglie da solo:
-nella prova, alla domanda «chi implementa, chi chiama» ha usato find e neighbors senza che nessuno glieli nominasse.
-L'unico che scrive corregge le descrizioni, mai i fatti letti dal parser.
+Nove strumenti leggono il grafo, quattro dicono com'è fatto e che cosa contiene, sette lo migliorano. Mark li sceglie
+da solo: nella prova, alla domanda «chi implementa, chi chiama» ha usato find e neighbors senza che nessuno glieli
+nominasse. Quelli che migliorano non cambiano mai i fatti letti dal parser: correggono una descrizione, oppure
+propongono una regola o un linguaggio, che entrano nel grafo solo con il sì dell'utente. Il ritiro di una regola
+sbagliata avviene dopo che l'utente è d'accordo.
 
 ---
 
