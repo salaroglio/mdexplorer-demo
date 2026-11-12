@@ -3,9 +3,9 @@ id: demo
 kind: project
 title: "La demo di MdExplorer"
 description: "Un progetto da esplorare: caso studio, grafo del codice, wiki e la città degli agenti che prepara una gara."
-version: 1.7.4
+version: 1.7.5
 requires:
-  mde: 2026.11.11.6
+  mde: 2026.11.11.5
 languages:
   it: { structure: main }
   en: { structure: en }

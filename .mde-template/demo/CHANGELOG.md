@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.7.5 — 2026-11-12
+- Serve MdExplorer 2026.11.11.5 o più nuovo: è il pacchetto che porta tutto quello che le prove 6 e 7 usano.
+
 ## 1.7.4 — 2026-11-12
 - Serve MdExplorer 2026.11.11.6 o più nuovo. La 1.7.3 chiedeva per errore la 2026.11.12, una versione che non esiste.
 
