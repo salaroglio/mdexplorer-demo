@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.7.4 — 2026-11-12
+- It needs MdExplorer 2026.11.11.6 or newer. Version 1.7.3 asked by mistake for 2026.11.12, a version that does not exist.
+
 ## 1.7.3 — 2026-11-12
 - No changes in English. The Italian demo adds the screenshots of two things to try in its code-graph section; the version rises in both languages so that they stay in step. It needs MdExplorer 2026.11.12 or newer.
 

@@ -3,9 +3,9 @@ id: demo
 kind: project
 title: "The MdExplorer demo"
 description: "A project to explore: case study, code graph, wiki and the agent city preparing a tender."
-version: 1.7.3
+version: 1.7.4
 requires:
-  mde: 2026.11.12
+  mde: 2026.11.11.6
 languages:
   it: { structure: main }
   en: { structure: en }
