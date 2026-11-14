@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.9.1 — 2026-11-14
+- Trial 8, "Tests written in plain language": the test of the site follows the new MdExplorer site (www.mdexplorer.net, rewritten in November 2026). It checks the title and a text of the English home page, and the way from the home page to the code graph.
+
 ## 1.9.0 — 2026-11-12
 - No changes in English. The Italian demo adds a ninth thing to try to its code-graph section (Web Forms pages with their code-behind, with a language package); the version rises in both languages so that they stay in step.
 

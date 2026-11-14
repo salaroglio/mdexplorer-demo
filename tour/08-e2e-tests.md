@@ -22,14 +22,14 @@ Its first test is this:
 ```markdown
 ## T1 — La pagina iniziale si apre
 1. Apri `/`
-2. ✔ Il titolo della pagina è "MdExplorer — Editor Markdown per Spec Driven Development e LLM Wiki"
-3. ✔ Compare il testo "Perché Spec Driven Development?"
+2. ✔ Il titolo della pagina è "MdExplorer — Where people and AI agents work on the same documents"
+3. ✔ Compare il testo "An IDE, but the language is yours"
 ```
 
 A numbered line is a step. A line with **✔** is a check: if it does not hold, the test fails.
 
 The steps are in Italian for a reason: the wording of steps and checks is defined by the `mde-e2e` skill,
-which today is written in Italian, and the site under test shows Italian texts. This is what the lines mean:
+which today is written in Italian. The texts it checks are those of the English site. This is what the lines mean:
 
 | In the test | Meaning |
 |---|---|

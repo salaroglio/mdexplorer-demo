@@ -9,14 +9,14 @@ e2e:
 
 ## T1 — La pagina iniziale si apre
 1. Apri `/`
-2. ✔ Il titolo della pagina è "MdExplorer — Editor Markdown per Spec Driven Development e LLM Wiki"
-3. ✔ Compare il testo "Perché Spec Driven Development?"
+2. ✔ Il titolo della pagina è "MdExplorer — Where people and AI agents work on the same documents"
+3. ✔ Compare il testo "An IDE, but the language is yours"
 
-## T2 — Dalla pagina iniziale alla pagina LLM Wiki
+## T2 — Dalla pagina iniziale al grafo del codice
 1. Apri `/`
-2. Premi il link "Scopri il pattern completo →"
-3. ✔ L'URL contiene "/docs/llm-wiki.html"
-4. ✔ Compare il testo "Cos'è un LLM Wiki?"
+2. Premi il link "How the code graph works →"
+3. ✔ L'URL contiene "/code-graph/"
+4. ✔ Compare il testo "A map that does not guess"
 
 ## Artefatti
 
