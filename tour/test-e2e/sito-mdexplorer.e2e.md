@@ -8,15 +8,15 @@ e2e:
 # Il sito di MdExplorer
 
 ## T1 — La pagina iniziale si apre
-1. Apri `/`
-2. ✔ Il titolo della pagina è "MdExplorer — Editor Markdown per Spec Driven Development e LLM Wiki"
-3. ✔ Compare il testo "Perché Spec Driven Development?"
+1. Apri `/it/`
+2. ✔ Il titolo della pagina è "MdExplorer — Dove persone e agenti AI lavorano sugli stessi documenti"
+3. ✔ Compare il testo "Un IDE, ma il linguaggio è il tuo"
 
-## T2 — Dalla pagina iniziale alla pagina LLM Wiki
-1. Apri `/`
-2. Premi il link "Scopri il pattern completo →"
-3. ✔ L'URL contiene "/docs/llm-wiki.html"
-4. ✔ Compare il testo "Cos'è un LLM Wiki?"
+## T2 — Dalla pagina iniziale al grafo del codice
+1. Apri `/it/`
+2. Premi il link "Come funziona il grafo del codice →"
+3. ✔ L'URL contiene "/it/code-graph/"
+4. ✔ Compare il testo "Una mappa che non indovina"
 
 ## Artefatti
 

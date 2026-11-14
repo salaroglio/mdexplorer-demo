@@ -21,9 +21,9 @@ Il suo primo test è questo:
 
 ```markdown
 ## T1 — La pagina iniziale si apre
-1. Apri `/`
-2. ✔ Il titolo della pagina è "MdExplorer — Editor Markdown per Spec Driven Development e LLM Wiki"
-3. ✔ Compare il testo "Perché Spec Driven Development?"
+1. Apri `/it/`
+2. ✔ Il titolo della pagina è "MdExplorer — Dove persone e agenti AI lavorano sugli stessi documenti"
+3. ✔ Compare il testo "Un IDE, ma il linguaggio è il tuo"
 ```
 
 Una riga numerata è un passo. Una riga con **✔** è una verifica: se non torna, il test fallisce.

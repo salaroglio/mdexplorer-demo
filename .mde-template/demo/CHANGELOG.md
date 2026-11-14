@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.9.1 — 2026-11-14
+- Prova 8, «Test scritti in italiano»: il test del sito segue il sito nuovo di MdExplorer (www.mdexplorer.net, riscritto a novembre 2026). Controlla il titolo e un testo della pagina iniziale italiana, e il passaggio dalla pagina iniziale al grafo del codice.
+
 ## 1.9.0 — 2026-11-12
 - Grafo del codice: la prova 9, «Le pagine web». Le pagine ASP.NET Web Forms del programma Visual Basic (`esempio-web/`: una pagina di ricerca, una master page, un controllo utente, con il code-behind), lette dal pacchetto di linguaggio Web Forms che arriva con il progetto (`.mde-languages/webforms/`, skill `webforms-pacchetto`). La classe di code-behind è collegata alla sua pagina, ogni pulsante al metodo che risponde (`OnClick=` nella pagina, o `Handles` nel Visual Basic), la pagina al suo `Page_Load`; con la prova 8, il percorso va dal pulsante alle tabelle. Schermate da un giro vero con Claude Code. Serve MdExplorer 2026.11.11.5 o più nuovo, con le aggiunte del 12 novembre per le pagine con code-behind.
 
